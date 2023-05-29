@@ -6,7 +6,10 @@ using System.IO;
 
 public class SaveData
 {
-    public string name;
+    public string name;       // 저장 슬롯 이름
+    //public int ID;            // 대화 ID
+    //public int sceneNum;      // 저장될 씬 넘버
+
 }
 
 public class DataManager : MonoBehaviour
@@ -15,8 +18,7 @@ public class DataManager : MonoBehaviour
 
     public SaveData saveData = new SaveData();
 
-    string path;
-    string fileName = "save";
+    public string path;
     public int nowSlot;
 
     private void Awake()
@@ -33,7 +35,7 @@ public class DataManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         #endregion
 
-        path = Application.persistentDataPath + '/';
+        path = Application.persistentDataPath + "/save";
     }
 
     private void Start()
@@ -44,13 +46,19 @@ public class DataManager : MonoBehaviour
     public void Save()
     {
         string data = JsonUtility.ToJson(saveData);
-        File.WriteAllText(path + fileName + nowSlot.ToString(), data);
+        File.WriteAllText(path + nowSlot.ToString(), data);
     }
 
     public void Load()
     {
-        string data = File.ReadAllText(path + fileName + nowSlot.ToString());
+        string data = File.ReadAllText(path + nowSlot.ToString());
         saveData = JsonUtility.FromJson<SaveData>(data);
+    }
+
+    public void DataClear()
+    {
+        nowSlot = -1;
+        saveData = new SaveData();
     }
 
 }

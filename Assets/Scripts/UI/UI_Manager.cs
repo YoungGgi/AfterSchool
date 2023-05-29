@@ -34,7 +34,9 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private GameObject chapterSelectObj;               // 챕터 선택 목록
 
-    public GameManager gameManager;
+    public GameObject savePanel;
+
+    public GameObject gameManager;
 
 
     #region Button Click Next Scene
@@ -140,6 +142,12 @@ public class UI_Manager : MonoBehaviour
 
     public void Save()
     {
-
+        savePanel.gameObject.SetActive(true);
     }
+
+    public void SaveOff()
+    {
+        savePanel.gameObject.SetActive(false);
+    }
+
 }
