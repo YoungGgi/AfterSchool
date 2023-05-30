@@ -60,6 +60,12 @@ public class FileSelect : MonoBehaviour
         creatPanel.gameObject.SetActive(true);
     }
 
+    public void Save()
+    {
+        DataManager.instance.Save();
+        creatPanel.gameObject.SetActive(false);
+    }
+
     public void GoHome()          // 씬 이동 (씬 넘버를 따로 저장해서 그 씬으로 이동할 수 있을까?)
     {
         if(!saveFile[DataManager.instance.nowSlot])
@@ -67,7 +73,7 @@ public class FileSelect : MonoBehaviour
             DataManager.instance.saveData.name = newFileName.text;
             DataManager.instance.Save();
         }
-        
-        SceneManager.LoadScene(0);
+
+        //씬이동
     }
 }

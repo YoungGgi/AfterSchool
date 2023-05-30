@@ -11,10 +11,10 @@ public class Dialogue_Base : ScriptableObject
     {
         [TextArea(3, 12)]
         public string myText;
-        /*
+        
         [Header("대화 인덱스")]
         public int dialogueIndex;
-        */
+        
         [Header("캐릭터 이름")]
         public Name charName;
 

@@ -56,10 +56,11 @@ public class A_Dialogue : MonoBehaviour
     [Header("Direction")]
     public Animator fadeManager;                // 페이드 인 / 아웃 전용 효과
 
+    /*
     [Header("DialogueNum")]
     public int dialogueID;                     // 해당 대화씬 ID
     public int dialogueIndex;                  // 대화 인덱스
-
+    */
     
     public Scene NowScene;
     public int SceneNum;
@@ -70,11 +71,7 @@ public class A_Dialogue : MonoBehaviour
     private void Start()
     {
         dialogueInfo = new Queue<Dialogue_Base.Info>();
-        dialogueIndex = dialogueIndex - 1;
 
-        // 현재 진행중인 대화와 대화 인덱스를 GameManager 함수에 저장
-        //dialogueID = GameManager.instance.dialgoueID;
-        //dialogueIndex = GameManager.instance.dialogueIndex;
     }
 
     private void Update()
@@ -265,7 +262,6 @@ public class A_Dialogue : MonoBehaviour
 
         dialogueTxt.text = "";
         StartCoroutine(TypeText(info));
-        dialogueIndex++;
     }
 
     // 텍스트 입력 코루틴
