@@ -39,14 +39,14 @@ public class FileSelect : MonoBehaviour
 
     }
 
-    public void Slot(int number)    // 저장 슬롯 클릭 함수
+    public void Slot(int number)    // 저장 슬롯 클릭 함수, 불러오기 시스템에 넣으면 될 듯. (세이브는?)
     {
         DataManager.instance.nowSlot = number;
 
         if(saveFile[number])   // 저장된 데이터가 있을때 (저장된)씬으로 이동
         {
             DataManager.instance.Load();
-            GoHome();  // 임시
+            GoHome();
         }
         else           // 저장된 데이터가 없을때 Create() 호출
         {
@@ -55,13 +55,14 @@ public class FileSelect : MonoBehaviour
         
     }
 
-    public void Create()          // 이름 팝업
+    public void Create()          // 파일 이름 팝업 노출
     {
         creatPanel.gameObject.SetActive(true);
     }
 
-    public void Save()
+    public void Save()          // 세이브 함수, 저장은 되는 거 같은데 텍스트를 바로 저장하게 할 수 있을까?
     {
+        DataManager.instance.saveData.name = newFileName.text;
         DataManager.instance.Save();
         creatPanel.gameObject.SetActive(false);
     }
