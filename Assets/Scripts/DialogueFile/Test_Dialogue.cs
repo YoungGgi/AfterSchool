@@ -10,6 +10,8 @@ public class Test_Dialogue : MonoBehaviour
     public bool isAuto;
     public float dealyCool;
 
+    public GameObject autoText;
+
     void Start()
     {
         A_Dialogue.instance.EnqueuDialogue(dialogue);
@@ -26,6 +28,7 @@ public class Test_Dialogue : MonoBehaviour
        
         if(UI_Manager.instance.isAuto == true && A_Dialogue.instance.isTextComplete == true)
         {
+            autoText.gameObject.SetActive(true);
             StartCoroutine(NextDelay());
             A_Dialogue.instance.DequeueDialogue();
         }

@@ -31,6 +31,9 @@ public class Dialogue_Base : ScriptableObject
         [Header("연출 체크")]
         public bool isCheck;
 
+        [Header("단서획득")]
+        public bool UI_Off;
+
         [Header("배경 이미지")]
         public Sprite backGround;
 

@@ -18,8 +18,6 @@ public class A_Dialogue : MonoBehaviour
             instance = this;
     }
 
-    
-
     [Header("DialogueGroup")]
     public TextMeshProUGUI dialogueTxt;       
     public TextMeshProUGUI nameTxt;
@@ -28,13 +26,6 @@ public class A_Dialogue : MonoBehaviour
     public GameObject textPrefab;              // 백로그 전용 텍스트 프리팹
     public Transform parentContents;           // 백로그의 Contents에서 출력됨
 
-    /*
-    [Header("DialogueSprite")]
-    public Image character01;                  // 전학생 캐릭터
-    public Image character02;                  // 친구 캐릭터
-    public Image character03;                  // 도서부원 캐릭터
-    public Image character04;                  // 양아치 캐릭터
-    */
     [Header("TextTypingGroup")]
     public float delay;                        //텍스트 출력 딜레이 
     private bool isTextTyping;                 // 텍스트 출력 여부 확인
@@ -45,6 +36,7 @@ public class A_Dialogue : MonoBehaviour
 
     [Header("DialogueEnd")]
     public GameObject dialogueUI;              // 대화씬 전용 UI
+    public GameObject dialoguePanelText;
     public GameObject InGameUI;                // 인게임 전용 UI
 
     [Header("Animation")]
@@ -55,6 +47,7 @@ public class A_Dialogue : MonoBehaviour
 
     [Header("Direction")]
     public Animator fadeManager;                // 페이드 인 / 아웃 전용 효과
+    public GameObject invenTest;
 
     /*
     [Header("DialogueNum")]
@@ -245,6 +238,27 @@ public class A_Dialogue : MonoBehaviour
         {
             fadeManager.Play("FadeOut");
         }
+
+        if (info.UI_Off)
+        {
+            dialoguePanelText.gameObject.SetActive(false);
+        }
+        else
+        {
+            dialoguePanelText.gameObject.SetActive(true);
+        }
+        #endregion
+
+        #region Inven
+        if (info.isCheck)
+        {
+            invenTest.gameObject.SetActive(true);
+        }
+        else
+        {
+            invenTest.gameObject.SetActive(false);
+        }
+
         #endregion
 
         #region BackLog
