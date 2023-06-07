@@ -9,11 +9,7 @@ using System.IO;
 public class FileSelect : MonoBehaviour
 {
     [SerializeField]
-    private GameObject creatPanel;
-    [SerializeField]
     private TextMeshProUGUI[] slotText;
-    [SerializeField]
-    private TextMeshProUGUI newFileName;
 
     bool[] saveFile = new bool[4];          // 저장 슬롯 수대로 변경 예정
 
@@ -48,30 +44,17 @@ public class FileSelect : MonoBehaviour
             DataManager.instance.Load();
             GoHome();
         }
-        else           // 저장된 데이터가 없을때 Create() 호출
-        {
-            Create();
-        }
         
     }
-
-    public void Create()          // 파일 이름 팝업 노출
-    {
-        creatPanel.gameObject.SetActive(true);
-    }
-
     public void Save()          // 세이브 함수, 저장은 되는 거 같은데 텍스트를 바로 저장하게 할 수 있을까?
     {
-        DataManager.instance.saveData.name = newFileName.text;
         DataManager.instance.Save();
-        creatPanel.gameObject.SetActive(false);
     }
 
     public void GoHome()          // 씬 이동 (씬 넘버를 따로 저장해서 그 씬으로 이동할 수 있을까?)
     {
         if(!saveFile[DataManager.instance.nowSlot])
         {
-            DataManager.instance.saveData.name = newFileName.text;
             DataManager.instance.Save();
         }
 
