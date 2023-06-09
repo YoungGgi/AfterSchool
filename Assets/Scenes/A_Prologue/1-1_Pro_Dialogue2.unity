@@ -4035,37 +4035,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529885079}
   m_CullTransparentMesh: 1
---- !u!1 &1530046903
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1530046904}
-  m_Layer: 0
-  m_Name: DialogueController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1530046904
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530046903}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1849747255}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536197801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5295,8 +5264,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1849747257}
-        m_TargetAssemblyTypeName: Test_Dialogue, Assembly-CSharp
+      - m_Target: {fileID: 1849747256}
+        m_TargetAssemblyTypeName: Dia_Pro2, Assembly-CSharp
         m_MethodName: Next
         m_Mode: 1
         m_Arguments:
@@ -5924,8 +5893,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849747255}
+  - component: {fileID: 1849747258}
   - component: {fileID: 1849747256}
-  - component: {fileID: 1849747257}
   m_Layer: 0
   m_Name: DialogueMgn
   m_TagString: Untagged
@@ -5944,8 +5913,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1530046904}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1849747256
 MonoBehaviour:
@@ -5956,7 +5925,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849747254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e50235c3b8d80944b4029e28d7f9b2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d81fa99138a72049a4405788cc3e147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: c081f9b8ff2022d418a8902a19cd7671, type: 2}
+  prologue2: {fileID: 1849747258}
+  isAuto: 0
+  dealyCool: 1.5
+  autoText: {fileID: 1840727514}
+--- !u!114 &1849747258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849747254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8313ed0d9045a884a9bc86bb3c5ab728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTxt: {fileID: 2001386877}
@@ -5970,30 +5956,16 @@ MonoBehaviour:
   dialogueUI: {fileID: 576274342}
   dialoguePanelText: {fileID: 44418354}
   InGameUI: {fileID: 1094803141}
+  hujung_sprite: {fileID: 542433368}
+  youngjin_sprite: {fileID: 1805072095}
   Hujung: {fileID: 542433370}
   YoungJin: {fileID: 1805072097}
-  MinSeok: {fileID: 515261717}
   fadeManager: {fileID: 1180097288}
   invenTest: {fileID: 1215345312}
+  titleObj: {fileID: 0}
   NowScene:
     m_Handle: 0
   SceneNum: 0
---- !u!114 &1849747257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849747254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 861f02d5b8acd834d9678dca35c43534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 0ca1588c53014524087ae44c4d31ac67, type: 2}
-  isAuto: 0
-  dealyCool: 1.5
-  autoText: {fileID: 1840727514}
 --- !u!1 &1856843833
 GameObject:
   m_ObjectHideFlags: 0

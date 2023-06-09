@@ -2,32 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test_Dialogue : MonoBehaviour
+public class Dia_Pro2 : MonoBehaviour
 {
-
-    public Dialogue_Base dialogue;
-    public A_Dialogue a_Dialogue;
+    public PrologueBase2 dialogue;
+    public Prologue2 prologue2;
 
     public bool isAuto;
     public float dealyCool;
 
     public GameObject autoText;
 
-    void Start()
+    private void Start()
     {
-        a_Dialogue.EnqueuDialogue(dialogue);
+        prologue2.EnqueuDialogue(dialogue);
     }
 
-    void Update()
+    private void Update()
     {
-        if(UI_Manager.instance.isAuto == true && a_Dialogue.isTextComplete == true)
+        if (UI_Manager.instance.isAuto == true && prologue2.isTextComplete == true)
         {
             autoText.gameObject.SetActive(true);
             StartCoroutine(NextDelay());
-            a_Dialogue.DequeueDialogue();
+            prologue2.DequeueDialogue();
         }
 
     }
+
 
     IEnumerator NextDelay()
     {
@@ -37,8 +37,8 @@ public class Test_Dialogue : MonoBehaviour
 
     public void Next()
     {
-        a_Dialogue.DequeueDialogue();
+        prologue2.DequeueDialogue();
     }
-    
+
 
 }
