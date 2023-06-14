@@ -291,15 +291,21 @@ public class A_Dialogue : MonoBehaviour
 
         #region BackLog
         // 백로그 텍스트 등록
-        GameObject clone = Instantiate(textPrefab, parentContents);
-        if(info.charName == Name.Blank)
+        if(dialogueTxt.text != "")
         {
-            clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
+            GameObject clone = Instantiate(textPrefab, parentContents);
+
+            if (info.charName == Name.Blank)
+            {
+                clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
+            }
+            else
+            {
+                clone.GetComponent<TextMeshProUGUI>().text = nameTxt.text + " : " + dialogueTxt.text;
+            }
         }
-        else
-        {
-            clone.GetComponent<TextMeshProUGUI>().text = nameTxt.text + " : " + dialogueTxt.text;
-        }
+
+        
         #endregion
 
         dialogueTxt.text = "";
