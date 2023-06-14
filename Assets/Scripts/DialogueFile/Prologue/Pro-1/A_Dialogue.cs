@@ -37,7 +37,11 @@ public class A_Dialogue : MonoBehaviour
 
     [Header("Direction")]
     public Animator fadeManager;                // 페이드 인 / 아웃 전용 효과
-    public GameObject invenTest;
+    public GameObject invenClue1;
+    public GameObject invenClue2;
+    public GameObject invenClue3;
+    public GameObject invenClue4;
+
     public GameObject titleObj;
 
     /*
@@ -121,10 +125,7 @@ public class A_Dialogue : MonoBehaviour
         #endregion
 
         #region CharacterName
-        if (info.isCheck == true)
-        {
-            Debug.Log("CheckOn");
-        }
+        
 
         if (info.charName == Name.Blank)
         {
@@ -250,13 +251,40 @@ public class A_Dialogue : MonoBehaviour
         #endregion
 
         #region Inven
-        if (info.isCheck)
+        if (info.isFirstClue)
         {
-            invenTest.gameObject.SetActive(true);
+            invenClue1.gameObject.SetActive(true);
         }
         else
         {
-            invenTest.gameObject.SetActive(false);
+            invenClue1.gameObject.SetActive(false);
+        }
+
+        if (info.isSecondClue)
+        {
+            invenClue2.gameObject.SetActive(true);
+        }
+        else
+        {
+            invenClue2.gameObject.SetActive(false);
+        }
+
+        if (info.isThirdClue)
+        {
+            invenClue3.gameObject.SetActive(true);
+        }
+        else
+        {
+            invenClue3.gameObject.SetActive(false);
+        }
+
+        if (info.isForthClue)
+        {
+            invenClue4.gameObject.SetActive(true);
+        }
+        else
+        {
+            invenClue4.gameObject.SetActive(false);
         }
 
         #endregion

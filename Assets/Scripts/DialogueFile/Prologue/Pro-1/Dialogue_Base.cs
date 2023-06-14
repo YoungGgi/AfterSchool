@@ -28,10 +28,13 @@ public class Dialogue_Base : ScriptableObject
         [Header("ø¨√‚»ø∞˙")]
         public Direction direction;
 
-        [Header("ø¨√‚ √º≈©")]
-        public bool isCheck;
+        [Header("¥‹º≠ »πµÊ")]
+        public bool isFirstClue;
+        public bool isSecondClue;
+        public bool isThirdClue;
+        public bool isForthClue;
 
-        [Header("¥‹º≠»πµÊ")]
+        [Header("¥Î»≠√¢≤Ù±‚")]
         public bool UI_Off;
 
         [Header("≈∏¿Ã∆≤")]
