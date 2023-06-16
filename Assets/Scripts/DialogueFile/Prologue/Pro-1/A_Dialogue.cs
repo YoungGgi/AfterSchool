@@ -32,6 +32,7 @@ public class A_Dialogue : MonoBehaviour
     [Header("Animation")]
     public Animator Hujung;                    // 효정 전용 애니메이터
     public Animator YoungJin;                  // 용진 전용 애니메이터
+    public Animator Jisu;                      // 지수 전용 애니메이터
     public Animator MinSeok;                   // 민석 전용 애니메이터
     
 
@@ -181,6 +182,11 @@ public class A_Dialogue : MonoBehaviour
         {
             Hujung.Play("H_Start");
         }
+
+        if(info.h_Anim == H_Anim.Bangbang)
+        {
+            Hujung.Play("H_Bangbang");
+        }
         #endregion
 
         #region YoungJinAnim
@@ -198,6 +204,29 @@ public class A_Dialogue : MonoBehaviour
         {
             YoungJin.Play("Y_Start");
         }
+
+        if(info.y_Anim == Y_Anim.Y_Bangbang)
+        {
+            YoungJin.Play("Y_Bangbang");
+        }
+        #endregion
+
+        #region JisuAnim
+        if (info.j_Anim == J_Anim.J_Appear)
+        {
+            Jisu.Play("J_Appear");
+        }
+
+        if (info.j_Anim == J_Anim.J_DisAppear)
+        {
+            Jisu.Play("J_DisAppear");
+        }
+
+        if(info.j_Anim == J_Anim.J_DisAppear)
+        {
+            Jisu.Play("J_Start");
+        }
+
         #endregion
 
         #region MinSeokAnim

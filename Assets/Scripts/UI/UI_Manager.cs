@@ -18,15 +18,15 @@ public class UI_Manager : MonoBehaviour
     }
     #endregion
 
+    [Header("대화 관련 UI")]
     [SerializeField]
     private GameObject backLogScrollView;              // 백로그 스크롤뷰
-
-   [SerializeField]
+    [SerializeField]
     private GameObject pausePopup;                     // 설정(타블렛) 버튼
     
-
     public bool isAuto;                                // 오토 텍스트 기능
 
+    [Header("메인 로비")]
     [SerializeField]
     private GameObject popUpObj;                       // 팝업창
     [SerializeField]
@@ -34,9 +34,24 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private GameObject chapterSelectObj;               // 챕터 선택 목록
 
+    [Header("미니 게임")]
+    [SerializeField]
+    private GameObject thinkGoNext;
+
     public GameObject savePanel;
 
     public GameObject gameManager;
+
+
+    public Scene NowScene;
+    public int SceneNum;
+
+
+    private void Update()
+    {
+        NowScene = SceneManager.GetActiveScene(); // 매 프레임마다 현재 씬 확인하기
+        SceneNum = NowScene.buildIndex;
+    }
 
 
     #region Button Click Next Scene
@@ -137,6 +152,14 @@ public class UI_Manager : MonoBehaviour
         popUpObj.gameObject.SetActive(false);
     }
 
+
+    #endregion
+
+    #region ThinkGame
+    public void GoToDialogueScene()
+    {
+        SceneManager.LoadScene(SceneNum + 1);
+    }
 
     #endregion
 

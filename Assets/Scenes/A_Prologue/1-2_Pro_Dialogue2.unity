@@ -7150,6 +7150,7 @@ MonoBehaviour:
   InGameUI: {fileID: 1094803141}
   Hujung: {fileID: 542433370}
   YoungJin: {fileID: 1805072097}
+  Jisu: {fileID: 2060034391}
   MinSeok: {fileID: 515261717}
   fadeManager: {fileID: 1180097288}
   invenClue1: {fileID: 1215345312}
@@ -7212,8 +7213,12 @@ MonoBehaviour:
   popUpObj: {fileID: 0}
   gameOptionObj: {fileID: 0}
   chapterSelectObj: {fileID: 0}
+  thinkGoNext: {fileID: 0}
   savePanel: {fileID: 1135092343}
   gameManager: {fileID: 0}
+  NowScene:
+    m_Handle: 0
+  SceneNum: 0
 --- !u!4 &1856843835
 Transform:
   m_ObjectHideFlags: 0
@@ -8156,6 +8161,7 @@ GameObject:
   - component: {fileID: 2060034388}
   - component: {fileID: 2060034390}
   - component: {fileID: 2060034389}
+  - component: {fileID: 2060034391}
   m_Layer: 5
   m_Name: CharSprite_Jisu
   m_TagString: Untagged
@@ -8180,7 +8186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 779, y: -360}
+  m_AnchoredPosition: {x: 1384, y: -360}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2060034389
@@ -8221,6 +8227,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060034387}
   m_CullTransparentMesh: 1
+--- !u!95 &2060034391
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060034387}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d784e055881ef0d4496d00dd42941c75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2061804510
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,8 @@ public class Dialogue_Base : ScriptableObject
         public H_Anim h_Anim;
         [Header("용진 애니메이션")]
         public Y_Anim y_Anim;
+        [Header("지수 애니메이션")]
+        public J_Anim j_Anim;
         [Header("민석 애니메이션")]
         public M_Anim m_Anim;
 
@@ -67,7 +69,8 @@ public enum H_Anim
     Idle,
     H_Appear,
     H_DisAppear,
-    Start
+    Start,
+    Bangbang
 }
 
 public enum Y_Anim
@@ -75,6 +78,15 @@ public enum Y_Anim
     Idle,
     Y_Appear,
     Y_DisAppear,
+    Start,
+    Y_Bangbang
+}
+
+public enum J_Anim
+{
+    Idle,
+    J_Appear,
+    J_DisAppear,
     Start
 }
 
