@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Prologue2 : MonoBehaviour
 {
-
+    /*
     [Header("DialogueGroup")]
     public TextMeshProUGUI dialogueTxt;
     public TextMeshProUGUI nameTxt;
@@ -45,13 +45,13 @@ public class Prologue2 : MonoBehaviour
     public Scene NowScene;
     public int SceneNum;
 
-    public Queue<PrologueBase2.Pro2> prologueInfo = new Queue<PrologueBase2.Pro2>();
+    public Queue<Dialogue_Base.second> dialoguesecond = new Queue<Dialogue_Base.second>();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        prologueInfo = new Queue<PrologueBase2.Pro2>();
+        dialoguesecond = new Queue<Dialogue_Base.second>();
     }
 
     // Update is called once per frame
@@ -61,17 +61,17 @@ public class Prologue2 : MonoBehaviour
         SceneNum = NowScene.buildIndex;
     }
 
-    public void EnqueuDialogue(PrologueBase2 db)
+    public void EnqueuDialogue(Dialogue_Base db)
     {
         if (isDialoge) return;
 
         isDialoge = true;
 
-        prologueInfo.Clear();
+        dialoguesecond.Clear();
 
-        foreach (PrologueBase2.Pro2 info in db.dialogueInfo)
+        foreach (Dialogue_Base.second info in db.dialogueSecond)
         {
-            prologueInfo.Enqueue(info);
+            dialoguesecond.Enqueue(info);
         }
 
         DequeueDialogue();
@@ -85,7 +85,7 @@ public class Prologue2 : MonoBehaviour
         isTextComplete = false;
 
         // 해당 대사 리스트가 전부 끝났다면 대화 종료 함수로 이동
-        if (prologueInfo.Count == 0)
+        if (dialoguesecond.Count == 0)
         {
             Debug.Log("End");
             EndDialogue();
@@ -105,23 +105,18 @@ public class Prologue2 : MonoBehaviour
 
         #region DequeueCon
 
-        PrologueBase2.Pro2 info = prologueInfo.Dequeue();
+        Dialogue_Base.second info = dialoguesecond.Dequeue();
 
         completeText = info.myText;
 
         dialogueTxt.text = info.myText;
 
-        backGroundImg.sprite = info.backGround;
         #endregion
 
 
 
         #region CharacterName
-        if (info.isCheck == true)
-        {
-            Debug.Log("CheckOn");
-        }
-
+        
         if (info.charName == Name.Blank)
         {
             nameTxt.text = "";
@@ -158,79 +153,6 @@ public class Prologue2 : MonoBehaviour
         }
         #endregion
 
-        #region CharacterAnim
-
-        #region HujungAnim
-        // 효정 애니메이션 재생
-        if (info.h_Anim == H_Anim.H_Appear)
-        {
-            Hujung.Play("H_Appear");
-        }
-
-        if (info.h_Anim == H_Anim.H_DisAppear)
-        {
-            Hujung.Play("H_DisAppear");
-        }
-
-        if (info.h_Anim == H_Anim.Start)
-        {
-            Hujung.Play("H_Start");
-        }
-        #endregion
-
-        #region YoungJinAnim
-        if (info.y_Anim == Y_Anim.Y_Appear)
-        {
-            YoungJin.Play("Y_Appear");
-        }
-
-        if (info.y_Anim == Y_Anim.Y_DisAppear)
-        {
-            YoungJin.Play("Y_DisAppear");
-        }
-
-        if (info.y_Anim == Y_Anim.Start)
-        {
-            YoungJin.Play("Y_Start");
-        }
-        #endregion
-
-        #endregion
-
-        #region Direction
-        if (info.direction == Direction.FadeIn)
-        {
-            fadeManager.Play("FadeIn");
-        }
-
-        if (info.direction == Direction.FadeOut)
-        {
-            fadeManager.Play("FadeOut");
-        }
-
-        if (info.UI_Off)
-        {
-            dialoguePanelText.gameObject.SetActive(false);
-        }
-        else
-        {
-            dialoguePanelText.gameObject.SetActive(true);
-        }
-
-        #endregion
-
-        #region Inven
-        if (info.isCheck)
-        {
-            invenTest.gameObject.SetActive(true);
-        }
-        else
-        {
-            invenTest.gameObject.SetActive(false);
-        }
-
-        #endregion
-
         #region BackLog
         // 백로그 텍스트 등록
         GameObject clone = Instantiate(textPrefab, parentContents);
@@ -248,7 +170,7 @@ public class Prologue2 : MonoBehaviour
         StartCoroutine(TypeText(info));
     }
 
-    IEnumerator TypeText(PrologueBase2.Pro2 info)
+    IEnumerator TypeText(Dialogue_Base.second info)
     {
         isTextTyping = true;
         next.SetActive(false);
@@ -281,5 +203,5 @@ public class Prologue2 : MonoBehaviour
         //ChapterCheck.instance.isPrologueComplete = true;
         SceneManager.LoadScene(SceneNum + 1);
     }
-
+    */
 }

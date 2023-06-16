@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Dia_Pro2 : MonoBehaviour
 {
-    public PrologueBase2 dialogue;
+    /*
+    public Dialogue_Base dialogue;
     public Prologue2 prologue2;
 
     public bool isAuto;
@@ -40,5 +41,5 @@ public class Dia_Pro2 : MonoBehaviour
         prologue2.DequeueDialogue();
     }
 
-
+    */
 }

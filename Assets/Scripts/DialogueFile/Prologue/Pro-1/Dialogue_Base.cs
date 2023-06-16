@@ -49,8 +49,6 @@ public class Dialogue_Base : ScriptableObject
     }
 
     public Info[] dialogueInfo;
-    
-
 }
 
 public enum Name
