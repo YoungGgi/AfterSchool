@@ -27,6 +27,11 @@ public class Test_Dialogue : MonoBehaviour
             a_Dialogue.DequeueDialogue();
         }
 
+        if(Input.GetButtonUp("Jump"))
+        {
+            a_Dialogue.DequeueDialogue();
+        }
+
     }
 
     IEnumerator NextDelay()

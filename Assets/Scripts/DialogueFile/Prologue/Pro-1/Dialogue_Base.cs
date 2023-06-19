@@ -20,12 +20,18 @@ public class Dialogue_Base : ScriptableObject
 
         [Header("효정 애니메이션")]
         public H_Anim h_Anim;
+        public H_Direction h_Direction;
+
         [Header("용진 애니메이션")]
         public Y_Anim y_Anim;
+        public Y_Direction y_Direction;
+
         [Header("지수 애니메이션")]
         public J_Anim j_Anim;
+
         [Header("민석 애니메이션")]
         public M_Anim m_Anim;
+
 
         [Header("연출효과")]
         public Direction direction;
@@ -71,6 +77,13 @@ public enum H_Anim
     Bangbang
 }
 
+public enum H_Direction
+{
+    Center,
+    Right,
+    Left
+}
+
 public enum Y_Anim
 {
     Idle,
@@ -78,6 +91,13 @@ public enum Y_Anim
     Y_DisAppear,
     Start,
     Y_Bangbang
+}
+
+public enum Y_Direction
+{
+    Center,
+    Right,
+    Left
 }
 
 public enum J_Anim

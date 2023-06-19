@@ -29,6 +29,13 @@ public class A_Dialogue : MonoBehaviour
     public GameObject dialoguePanelText;
     public GameObject InGameUI;                // 인게임 전용 UI
 
+    [Header("Character")]
+    public Image hujungImg;                   // 효정 캐릭터 스프라이트
+    public Image youngjinImg;                 // 용진 캐릭터 스프라이트
+    public Transform center;
+    public Transform left;
+    public Transform right;
+
     [Header("Animation")]
     public Animator Hujung;                    // 효정 전용 애니메이터
     public Animator YoungJin;                  // 용진 전용 애니메이터
@@ -248,6 +255,47 @@ public class A_Dialogue : MonoBehaviour
         #endregion
 
         #endregion
+
+        #region CharacterDirection
+
+        #region HujungImgDirection
+        if (info.h_Direction == H_Direction.Center)
+        {
+            hujungImg.transform.position = center.transform.position;
+        }
+
+        if (info.h_Direction == H_Direction.Right)
+        {
+            hujungImg.transform.position = right.transform.position;
+        }
+
+        if (info.h_Direction == H_Direction.Left)
+        {
+            hujungImg.transform.position = left.transform.position;
+        }
+        #endregion
+
+        #region YoungjinImgDirection
+
+        if (info.y_Direction == Y_Direction.Center)
+        {
+            youngjinImg.transform.position = center.transform.position;
+        }
+
+        if (info.y_Direction == Y_Direction.Right)
+        {
+            youngjinImg.transform.position = right.transform.position;
+        }
+
+        if (info.y_Direction == Y_Direction.Left)
+        {
+            youngjinImg.transform.position = left.transform.position;
+        }
+
+        #endregion
+
+        #endregion
+
 
         #region Direction
         if (info.direction == Direction.FadeIn)
