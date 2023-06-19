@@ -27,7 +27,6 @@ public class A_Dialogue : MonoBehaviour
     [Header("DialogueEnd")]
     public GameObject dialogueUI;              // 대화씬 전용 UI
     public GameObject dialoguePanelText;
-    public GameObject InGameUI;                // 인게임 전용 UI
 
     [Header("Character")]
     public Image hujungImg;                   // 효정 캐릭터 스프라이트
@@ -52,11 +51,11 @@ public class A_Dialogue : MonoBehaviour
 
     public GameObject titleObj;
 
-    /*
+    
     [Header("DialogueNum")]
     public int dialogueID;                     // 해당 대화씬 ID
     public int dialogueIndex;                  // 대화 인덱스
-    */
+    
     
     public Scene NowScene;
     public int SceneNum;
@@ -123,7 +122,7 @@ public class A_Dialogue : MonoBehaviour
         // Dequeue, info(Dialogue_Base)에 있는 정보 담기
         Dialogue_Base.Info info = dialogueInfo.Dequeue();
 
-        //dialogueIndex = info.dialogueIndex;
+        dialogueIndex = info.dialogueIndex;
         
         completeText = info.myText;
 
@@ -171,7 +170,38 @@ public class A_Dialogue : MonoBehaviour
         }
         #endregion
 
-        #region CharacterAnim
+        CharacterAnim(info);
+
+        CharacterDirection(info);
+
+        BackGroundDirection(info);
+ 
+
+        #region BackLog
+        // 백로그 텍스트 등록
+        if(dialogueTxt.text != "")
+        {
+            GameObject clone = Instantiate(textPrefab, parentContents);
+
+            if (info.charName == Name.Blank)
+            {
+                clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
+            }
+            else
+            {
+                clone.GetComponent<TextMeshProUGUI>().text = nameTxt.text + " : " + dialogueTxt.text;
+            }
+        }
+
+        
+        #endregion
+
+        dialogueTxt.text = "";
+        StartCoroutine(TypeText(info));
+    }
+
+    public void CharacterAnim(Dialogue_Base.Info info)
+    {
 
         #region HujungAnim
         // 효정 애니메이션 재생
@@ -180,7 +210,7 @@ public class A_Dialogue : MonoBehaviour
             Hujung.Play("H_Appear");
         }
 
-        if(info.h_Anim == H_Anim.H_DisAppear)
+        if (info.h_Anim == H_Anim.H_DisAppear)
         {
             Hujung.Play("H_DisAppear");
         }
@@ -190,7 +220,7 @@ public class A_Dialogue : MonoBehaviour
             Hujung.Play("H_Start");
         }
 
-        if(info.h_Anim == H_Anim.Bangbang)
+        if (info.h_Anim == H_Anim.Bangbang)
         {
             Hujung.Play("H_Bangbang");
         }
@@ -212,7 +242,7 @@ public class A_Dialogue : MonoBehaviour
             YoungJin.Play("Y_Start");
         }
 
-        if(info.y_Anim == Y_Anim.Y_Bangbang)
+        if (info.y_Anim == Y_Anim.Y_Bangbang)
         {
             YoungJin.Play("Y_Bangbang");
         }
@@ -229,7 +259,7 @@ public class A_Dialogue : MonoBehaviour
             Jisu.Play("J_DisAppear");
         }
 
-        if(info.j_Anim == J_Anim.J_DisAppear)
+        if (info.j_Anim == J_Anim.J_DisAppear)
         {
             Jisu.Play("J_Start");
         }
@@ -254,8 +284,10 @@ public class A_Dialogue : MonoBehaviour
         }
         #endregion
 
-        #endregion
+    }
 
+    public void CharacterDirection(Dialogue_Base.Info info)
+    {
         #region CharacterDirection
 
         #region HujungImgDirection
@@ -296,7 +328,10 @@ public class A_Dialogue : MonoBehaviour
 
         #endregion
 
+    }
 
+    public void BackGroundDirection(Dialogue_Base.Info info)
+    {
         #region Direction
         if (info.direction == Direction.FadeIn)
         {
@@ -317,7 +352,7 @@ public class A_Dialogue : MonoBehaviour
             dialoguePanelText.gameObject.SetActive(true);
         }
 
-        if(info.Title_On)
+        if (info.Title_On)
         {
             titleObj.gameObject.SetActive(true);
         }
@@ -325,6 +360,7 @@ public class A_Dialogue : MonoBehaviour
         {
             titleObj.gameObject.SetActive(false);
         }
+
         #endregion
 
         #region Inven
@@ -365,28 +401,6 @@ public class A_Dialogue : MonoBehaviour
         }
 
         #endregion
-
-        #region BackLog
-        // 백로그 텍스트 등록
-        if(dialogueTxt.text != "")
-        {
-            GameObject clone = Instantiate(textPrefab, parentContents);
-
-            if (info.charName == Name.Blank)
-            {
-                clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
-            }
-            else
-            {
-                clone.GetComponent<TextMeshProUGUI>().text = nameTxt.text + " : " + dialogueTxt.text;
-            }
-        }
-
-        
-        #endregion
-
-        dialogueTxt.text = "";
-        StartCoroutine(TypeText(info));
     }
 
     // 텍스트 입력 코루틴

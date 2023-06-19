@@ -27,7 +27,7 @@ public class Test_Dialogue : MonoBehaviour
             a_Dialogue.DequeueDialogue();
         }
 
-        if(Input.GetButtonUp("Jump"))
+        if((Input.GetButtonUp("Jump")) || (Input.GetKeyUp(KeyCode.Return)))
         {
             a_Dialogue.DequeueDialogue();
         }
