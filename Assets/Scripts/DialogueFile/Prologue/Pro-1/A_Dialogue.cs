@@ -142,16 +142,21 @@ public class A_Dialogue : MonoBehaviour
         if (info.charName == Name.Player)
         {
             nameTxt.text = "주인공";
+            hujungImg.color = youngjinImg.color = Color.gray;
         }
 
         if (info.charName == Name.Hujung)
         {
             nameTxt.text = "정효정";
+            hujungImg.color = new Color(255, 255, 255);
+            youngjinImg.color = Color.gray;
         }
 
         if(info.charName == Name.YoungJin)
         {
             nameTxt.text = "이용진";
+            youngjinImg.color = new Color(255, 255, 255);
+            hujungImg.color = Color.gray;
         }
 
         if (info.charName == Name.Jisu)
