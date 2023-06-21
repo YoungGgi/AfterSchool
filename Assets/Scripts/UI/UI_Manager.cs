@@ -46,6 +46,7 @@ public class UI_Manager : MonoBehaviour
     public Scene NowScene;
     public int SceneNum;
 
+    public int saveSceneNum;
 
     private void Update()
     {
@@ -55,6 +56,11 @@ public class UI_Manager : MonoBehaviour
 
 
     #region Button Click Next Scene
+    public void GoMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    
     public void GameStart()
     {
         SceneManager.LoadScene(1);
@@ -162,6 +168,18 @@ public class UI_Manager : MonoBehaviour
     }
 
     #endregion
+
+    public void LoadScene()
+    {
+        StartCoroutine(SceneLoading());
+    }
+
+    IEnumerator SceneLoading()
+    {
+        yield return null;
+
+        SceneManager.LoadScene(SaveLoadMgn.instance.loadNum);
+    }
 
     public void Save()
     {

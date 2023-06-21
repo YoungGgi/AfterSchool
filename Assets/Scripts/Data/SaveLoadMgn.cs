@@ -1,18 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadMgn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static SaveLoadMgn instance;
+
+    private void Awake()
     {
-        
+        #region SingleTone
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
+        #endregion
+
+       
     }
 
-    // Update is called once per frame
-    void Update()
+    public int loadNum;
+    public Scene NowScene;
+    public int SceneNum;
+
+    private void Start()
     {
-        
+        LoadData();
     }
+
+    public void SaveData(int sceneNum)
+    {
+        PlayerPrefs.SetInt("nowScene", sceneNum);
+        PlayerPrefs.Save();
+
+        int num = PlayerPrefs.GetInt("nowScene");
+        loadNum = num;
+
+        //Debug.Log("nowScene");
+
+    }
+
+    public void LoadData()
+    {
+        if (!PlayerPrefs.HasKey("nowScene"))
+            return;
+        
+        int num = PlayerPrefs.GetInt("nowScene");
+        loadNum = num;
+
+    }
+
 }

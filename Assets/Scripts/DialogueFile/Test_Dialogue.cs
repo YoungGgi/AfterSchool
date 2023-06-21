@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using UnityEngine.SceneManagement;
 
 public class Test_Dialogue : MonoBehaviour
 {
@@ -13,14 +15,22 @@ public class Test_Dialogue : MonoBehaviour
 
     public GameObject autoText;
 
+    public Scene NowScene;
+    public int SceneNum;
     void Start()
     {
         a_Dialogue.EnqueuDialogue(dialogue);
+
+        NowScene = SceneManager.GetActiveScene();
+        SceneNum = NowScene.buildIndex;
+        SaveLoadMgn.instance.SaveData(SceneNum);
     }
 
     void Update()
     {
-        if(UI_Manager.instance.isAuto == true && a_Dialogue.isTextComplete == true)
+        
+
+        if (UI_Manager.instance.isAuto == true && a_Dialogue.isTextComplete == true)
         {
             autoText.gameObject.SetActive(true);
             StartCoroutine(NextDelay());

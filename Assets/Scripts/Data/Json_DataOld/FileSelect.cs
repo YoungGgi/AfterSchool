@@ -58,6 +58,5 @@ public class FileSelect : MonoBehaviour
             DataManager.instance.Save();
         }
 
-        //æ¿¿Ãµø
     }
 }
