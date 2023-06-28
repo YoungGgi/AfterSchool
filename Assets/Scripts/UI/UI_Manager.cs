@@ -30,6 +30,10 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private GameObject popUpObj;                       // 팝업창
     [SerializeField]
+    private GameObject nameQuestionPop;                // 이름 설정 팝업 여부(임시)
+    [SerializeField]
+    private GameObject nameSelectObj;                  // 이름 설정 팝업
+    [SerializeField]
     private GameObject gameOptionObj;                  // 메인 로비 기능 목록(임시)
     [SerializeField]
     private GameObject chapterSelectObj;               // 챕터 선택 목록
@@ -158,6 +162,21 @@ public class UI_Manager : MonoBehaviour
         popUpObj.gameObject.SetActive(false);
     }
 
+    public void namePopUpOn()
+    {
+        nameQuestionPop.gameObject.SetActive(true);
+    }
+
+    public void namePopUpOff()
+    {
+        nameQuestionPop.gameObject.SetActive(false);
+    }
+
+    public void nameSelectOn()
+    {
+        nameQuestionPop.gameObject.SetActive(false);
+        nameSelectObj.gameObject.SetActive(true);
+    }
 
     #endregion
 
@@ -169,6 +188,7 @@ public class UI_Manager : MonoBehaviour
 
     #endregion
 
+    #region SceneLoading
     public void LoadScene()
     {
         StartCoroutine(SceneLoading());
@@ -180,6 +200,7 @@ public class UI_Manager : MonoBehaviour
 
         SceneManager.LoadScene(SaveLoadMgn.instance.loadNum);
     }
+    #endregion
 
     public void Save()
     {

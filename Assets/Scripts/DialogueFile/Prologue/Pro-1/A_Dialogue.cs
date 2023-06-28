@@ -141,7 +141,7 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.charName == Name.Player)
         {
-            nameTxt.text = "¡÷¿Œ∞¯";
+            nameTxt.text = PlayerName.instance.player;
             hujungImg.color = youngjinImg.color = Color.gray;
         }
 
