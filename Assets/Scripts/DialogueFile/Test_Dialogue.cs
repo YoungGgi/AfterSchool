@@ -15,16 +15,32 @@ public class Test_Dialogue : MonoBehaviour
 
     public GameObject autoText;
 
+    public GameObject loadingTextGroup;
+
     public Scene NowScene;
     public int SceneNum;
+
     void Start()
     {
-        a_Dialogue.EnqueuDialogue(dialogue);
+        //a_Dialogue.EnqueuDialogue(dialogue);
+
+        StartCoroutine(LoadingAnim());
 
         NowScene = SceneManager.GetActiveScene();
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
     }
+
+    IEnumerator LoadingAnim()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        loadingTextGroup.gameObject.SetActive(false);
+
+        a_Dialogue.EnqueuDialogue(dialogue);
+
+    }
+
 
     void Update()
     {

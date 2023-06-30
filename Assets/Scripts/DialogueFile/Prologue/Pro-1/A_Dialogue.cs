@@ -52,10 +52,6 @@ public class A_Dialogue : MonoBehaviour
     public GameObject titleObj;
 
     
-    [Header("DialogueNum")]
-    public int dialogueID;                     // 해당 대화씬 ID
-    public int dialogueIndex;                  // 대화 인덱스
-    
     
     public Scene NowScene;
     public int SceneNum;
@@ -66,7 +62,14 @@ public class A_Dialogue : MonoBehaviour
     private void Start()
     {
         dialogueInfo = new Queue<Dialogue_Base.Info>();
+        dialogueUI.gameObject.SetActive(false);
+        StartCoroutine(Loading());
+    }
 
+    IEnumerator Loading()
+    {
+        yield return new WaitForSeconds(1.5f);
+        dialogueUI.gameObject.SetActive(true);
     }
 
     private void Update()
@@ -122,8 +125,6 @@ public class A_Dialogue : MonoBehaviour
         // Dequeue, info(Dialogue_Base)에 있는 정보 담기
         Dialogue_Base.Info info = dialogueInfo.Dequeue();
 
-        dialogueIndex = info.dialogueIndex;
-        
         completeText = info.myText;
 
         dialogueTxt.text = info.myText;
