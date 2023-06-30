@@ -42,7 +42,8 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private GameObject thinkGoNext;
 
-    public GameObject savePanel;
+    [Header("단서목록")]
+    public GameObject noteObject;
 
     public GameObject gameManager;
 
@@ -202,14 +203,18 @@ public class UI_Manager : MonoBehaviour
     }
     #endregion
 
-    public void Save()
+    #region Clue
+    public void ClueObjOn()
     {
-        savePanel.gameObject.SetActive(true);
+        noteObject.gameObject.SetActive(true);
     }
 
-    public void SaveOff()
+    public void ClueObjOff()
     {
-        savePanel.gameObject.SetActive(false);
+        noteObject.gameObject.SetActive(false);
     }
+
+    #endregion
+
 
 }
