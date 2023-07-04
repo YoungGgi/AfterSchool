@@ -17,13 +17,15 @@ public class Test_Dialogue : MonoBehaviour
 
     public GameObject loadingTextGroup;
 
+    bool isLoading;
+
     public Scene NowScene;
     public int SceneNum;
 
     void Start()
     {
         //a_Dialogue.EnqueuDialogue(dialogue);
-
+        isLoading = true;
         StartCoroutine(LoadingAnim());
 
         NowScene = SceneManager.GetActiveScene();
@@ -39,24 +41,31 @@ public class Test_Dialogue : MonoBehaviour
 
         a_Dialogue.EnqueuDialogue(dialogue);
 
+        isLoading = false;
+
     }
 
 
     void Update()
     {
+        if (isLoading)
+            return;
+        else
+        {
+            if (UI_Manager.instance.isAuto == true && a_Dialogue.isTextComplete == true)
+            {
+                autoText.gameObject.SetActive(true);
+                StartCoroutine(NextDelay());
+                a_Dialogue.DequeueDialogue();
+            }
+
+            if ((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))
+            {
+                a_Dialogue.DequeueDialogue();
+            }
+        }
+
         
-
-        if (UI_Manager.instance.isAuto == true && a_Dialogue.isTextComplete == true)
-        {
-            autoText.gameObject.SetActive(true);
-            StartCoroutine(NextDelay());
-            a_Dialogue.DequeueDialogue();
-        }
-
-        if((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))
-        {
-            a_Dialogue.DequeueDialogue();
-        }
 
     }
 
