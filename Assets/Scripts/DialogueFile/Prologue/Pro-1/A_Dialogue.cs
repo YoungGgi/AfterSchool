@@ -51,7 +51,11 @@ public class A_Dialogue : MonoBehaviour
 
     public GameObject titleObj;
 
-    
+    [Header("Add Clue")]
+    public ClueManager clue;
+    public ClueObject clueObj0;
+    public ClueObject clueObj1;
+    public ClueObject clueObj2;
     
     public Scene NowScene;
     public int SceneNum;
@@ -373,6 +377,7 @@ public class A_Dialogue : MonoBehaviour
         if (info.isFirstClue)
         {
             invenClue1.gameObject.SetActive(true);
+            clue.clues.Add(clueObj0);
         }
         else
         {
@@ -382,6 +387,7 @@ public class A_Dialogue : MonoBehaviour
         if (info.isSecondClue)
         {
             invenClue2.gameObject.SetActive(true);
+            clue.clues.Add(clueObj1);
         }
         else
         {
@@ -391,6 +397,7 @@ public class A_Dialogue : MonoBehaviour
         if (info.isThirdClue)
         {
             invenClue3.gameObject.SetActive(true);
+            clue.clues.Add(clueObj2);
         }
         else
         {

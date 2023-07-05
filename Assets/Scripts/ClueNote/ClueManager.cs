@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ClueManager : MonoBehaviour
 {
-    public ClueObject[] clues;
+    //public ClueObject[] clues;
+    public List<ClueObject> clues;
 
     public TextMeshProUGUI[] clueBtnName;
     public TextMeshProUGUI clueNameTxt;
     public TextMeshProUGUI clueExplainTxt;
 
-    private void Start()
+    public Button[] clueButtons;
+
+    private void Update()
     {
-        for(int i = 0; i < clues.Length; i++)
+        for(int i = 0; i < clues.Count; i++)
         {
             if(clues[i] != null)
             {
@@ -24,7 +28,11 @@ public class ClueManager : MonoBehaviour
                 clueBtnName[i].text = "단서 없음";
             }
             
+
+
         }
+
+        
     }
 
     public void ClueOn(int i)
@@ -34,11 +42,12 @@ public class ClueManager : MonoBehaviour
             clueNameTxt.text = clues[i].clueName;
             clueExplainTxt.text = clues[i].clueExplain;
         }
-        else
+        
+        if(!clues.Contains(clues[i]))
         {
             clueNameTxt.text = "단서 없음";
             clueExplainTxt.text = "획득하지 못한 단서입니다.";
         }
-       
+        
     }
 }
