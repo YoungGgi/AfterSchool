@@ -17,21 +17,26 @@ public class ClueManager : MonoBehaviour
 
     private void Update()
     {
-        for(int i = 0; i < clues.Count; i++)
+        for(int j = 0; j < clueButtons.Length; j++)
         {
-            if(clues[i] != null)
-            {
-                clueBtnName[i].text = clues[i].clueBtnName;
-            }
-            else
-            {
-                clueBtnName[i].text = "단서 없음";
-            }
+            clueButtons[j].enabled = false;
             
+            for (int i = 0; i < clues.Count; i++)
+            {
 
+                if (clues[i] != null)
+                {
+                    clueBtnName[i].text = clues[i].clueBtnName;
+                    clueButtons[i].enabled = true;
 
+                }
+                else
+                {
+                    clueBtnName[i].text = "단서 없음";
+                }
+
+            }
         }
-
         
     }
 

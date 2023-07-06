@@ -364,7 +364,7 @@ RectTransform:
   - {fileID: 2001386876}
   - {fileID: 515180303}
   m_Father: {fileID: 576274343}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -642,7 +642,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 673194126}
   - {fileID: 1267759320}
   - {fileID: 519027499}
   - {fileID: 1827782564}
@@ -2703,7 +2702,7 @@ RectTransform:
   - {fileID: 1594647954}
   - {fileID: 857715474}
   m_Father: {fileID: 110371519}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3223,6 +3222,7 @@ RectTransform:
   m_Children:
   - {fileID: 1986852056}
   - {fileID: 1421527790}
+  - {fileID: 673194126}
   - {fileID: 44418355}
   - {fileID: 1569747444}
   - {fileID: 1536197802}
@@ -3269,7 +3269,7 @@ RectTransform:
   - {fileID: 919801893}
   - {fileID: 2012285863}
   m_Father: {fileID: 576274343}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3379,8 +3379,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1096861640}
-  m_Father: {fileID: 110371519}
-  m_RootOrder: 0
+  m_Father: {fileID: 576274343}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4634,7 +4634,7 @@ RectTransform:
   m_Children:
   - {fileID: 1189790845}
   m_Father: {fileID: 576274343}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -5728,7 +5728,7 @@ RectTransform:
   - {fileID: 286484721}
   - {fileID: 308861598}
   m_Father: {fileID: 110371519}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6446,6 +6446,7 @@ MonoBehaviour:
   - {fileID: 20092622}
   clueNameTxt: {fileID: 824054810}
   clueExplainTxt: {fileID: 995165158}
+  clueButtons: []
 --- !u!4 &1506450748
 Transform:
   m_ObjectHideFlags: 0
@@ -6731,7 +6732,7 @@ RectTransform:
   m_Children:
   - {fileID: 1606434898}
   m_Father: {fileID: 576274343}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -6900,7 +6901,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 576274343}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -8468,7 +8469,7 @@ RectTransform:
   - {fileID: 1086275921}
   - {fileID: 2076794951}
   m_Father: {fileID: 110371519}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8716,6 +8717,10 @@ MonoBehaviour:
   invenClue3: {fileID: 673194125}
   invenClue4: {fileID: 673194125}
   titleObj: {fileID: 673194125}
+  clue: {fileID: 0}
+  clueObj0: {fileID: 0}
+  clueObj1: {fileID: 0}
+  clueObj2: {fileID: 0}
   NowScene:
     m_Handle: 0
   SceneNum: 0
@@ -8905,7 +8910,7 @@ RectTransform:
   - {fileID: 1250007892}
   - {fileID: 430729179}
   m_Father: {fileID: 110371519}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9628,7 +9633,7 @@ RectTransform:
   m_Children:
   - {fileID: 1379518958}
   m_Father: {fileID: 576274343}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}

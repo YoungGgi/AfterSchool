@@ -103,9 +103,7 @@ public class UI_Manager : MonoBehaviour
     public void GameExit()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.ExitPlaymode();
     }
-
     #endregion
 
     #region Dialogue Logic
