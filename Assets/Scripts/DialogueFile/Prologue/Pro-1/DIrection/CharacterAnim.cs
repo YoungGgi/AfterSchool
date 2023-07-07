@@ -10,10 +10,11 @@ public class CharacterAnim : MonoBehaviour
     public Animator Jisu;                      // 지수 전용 애니메이터
     public Animator MinSeok;                   // 민석 전용 애니메이터
 
+    public Dialogue_Base dialogue;
 
     public void Animation(Dialogue_Base.Info info)
     {
-
+        
         #region HujungAnim
         // 효정 애니메이션 재생
         if (info.h_Anim == H_Anim.H_Appear)

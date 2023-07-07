@@ -26,7 +26,6 @@ public class DialogueMaster : MonoBehaviour
     [Header("DialogueEnd")]
     public GameObject dialogueUI;              // 대화씬 전용 UI
     public GameObject dialoguePanelText;
-    public GameObject InGameUI;                // 인게임 전용 UI
 
     public Scene NowScene;
     public int SceneNum;
@@ -37,6 +36,7 @@ public class DialogueMaster : MonoBehaviour
 
     // Dialogue_Base 에서 선언한 Queue문 선언
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
+
 
     private void Start()
     {
