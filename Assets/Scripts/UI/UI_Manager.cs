@@ -19,10 +19,6 @@ public class UI_Manager : MonoBehaviour
     #endregion
 
     [Header("대화 관련 UI")]
-    [SerializeField]
-    private GameObject backLogScrollView;              // 백로그 스크롤뷰
-    [SerializeField]
-    private GameObject pausePopup;                     // 설정(타블렛) 버튼
     
     public bool isAuto;                                // 오토 텍스트 기능
 
@@ -42,12 +38,7 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private GameObject thinkGoNext;
 
-    [Header("단서목록")]
-    public GameObject noteObject;
-
-    public GameObject gameManager;
-
-
+    
     public Scene NowScene;
     public int SceneNum;
 
@@ -107,26 +98,7 @@ public class UI_Manager : MonoBehaviour
     #endregion
 
     #region Dialogue Logic
-    public void BackLogOn()
-    {
-        backLogScrollView.gameObject.SetActive(true); 
-    }
-
-    public void BackLogOff()
-    {
-        backLogScrollView.gameObject.SetActive(false);
-    }
-
-    public void Pause()
-    {
-        pausePopup.gameObject.SetActive(true);
-    }
-
-    public void PauseOut()
-    {
-        pausePopup.gameObject.SetActive(false);
-    }
-
+    
     public void AutoOn()
     {
         isAuto = true;
@@ -201,18 +173,6 @@ public class UI_Manager : MonoBehaviour
     }
     #endregion
 
-    #region Clue
-    public void ClueObjOn()
-    {
-        noteObject.gameObject.SetActive(true);
-    }
-
-    public void ClueObjOff()
-    {
-        noteObject.gameObject.SetActive(false);
-    }
-
-    #endregion
-
+   
 
 }
