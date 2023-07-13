@@ -61,6 +61,7 @@ public class Test_Dialogue : MonoBehaviour
 
             if ((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))
             {
+                StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
         }
