@@ -17,7 +17,7 @@ public class A_Dialogue : MonoBehaviour
     public Transform parentContents;           // 백로그의 Contents에서 출력됨
 
     [Header("TextTypingGroup")]
-    public float delay;                        //텍스트 출력 딜레이 
+    public float delay;                        //텍스트 출력 딜레이
     private bool isTextTyping;                 // 텍스트 출력 여부 확인
     public bool isTextComplete = false;               // 텍스트 출력 완성 여부 확인
     private string completeText;               // 완성된 텍스트
@@ -68,6 +68,9 @@ public class A_Dialogue : MonoBehaviour
         dialogueInfo = new Queue<Dialogue_Base.Info>();
         dialogueUI.gameObject.SetActive(false);
         StartCoroutine(Loading());
+
+
+
     }
 
     IEnumerator Loading()
@@ -424,7 +427,15 @@ public class A_Dialogue : MonoBehaviour
 
         foreach(char c in info.myText.ToCharArray())
         {
-            yield return new WaitForSeconds(delay);
+            if(StroyDataMgn.instance.isTwoSpeed)
+            {
+                float twoDelay = (float)(delay * 0.2);
+                yield return new WaitForSeconds(twoDelay);
+            }
+            else
+            {
+                yield return new WaitForSeconds(delay);
+            }
             dialogueTxt.text += c;
         }
         next.SetActive(true);

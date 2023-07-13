@@ -5,23 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour
 {
-    #region Singleton
-    public static UI_Manager instance;
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("fix this " + gameObject.name);
-        }
-        else
-            instance = this;
-    }
-    #endregion
-
-    [Header("대화 관련 UI")]
     
-    public bool isAuto;                                // 오토 텍스트 기능
-
     [Header("메인 로비")]
     [SerializeField]
     private GameObject popUpObj;                       // 팝업창
@@ -43,6 +27,14 @@ public class UI_Manager : MonoBehaviour
     public int SceneNum;
 
     public int saveSceneNum;
+
+    private void Start()
+    {
+        // StroyDataMgn의 isAutoLive가 true일 때 각 대화씬 오토 버튼 활성화인 상태로 두기
+
+        // 2배속도 마찬가지
+       
+    }
 
     private void Update()
     {
@@ -101,13 +93,24 @@ public class UI_Manager : MonoBehaviour
     
     public void AutoOn()
     {
-        isAuto = true;
+        StroyDataMgn.instance.isAutoLive = true;
     }
 
     public void AutoOff()
     {
-        isAuto = false;
+        StroyDataMgn.instance.isAutoLive = false;
     }
+
+    public void TwoSpeedOn()
+    {
+        StroyDataMgn.instance.isTwoSpeed = true;
+    }
+
+    public void TwoSpeedOff()
+    {
+        StroyDataMgn.instance.isTwoSpeed = false;
+    }
+
     #endregion
 
     #region GameOption

@@ -52,7 +52,7 @@ public class Test_Dialogue : MonoBehaviour
             return;
         else
         {
-            if (UI_Manager.instance.isAuto == true && a_Dialogue.isTextComplete == true)
+            if (StroyDataMgn.instance.isAutoLive == true && a_Dialogue.isTextComplete == true)
             {
                 autoText.gameObject.SetActive(true);
                 StartCoroutine(NextDelay());
@@ -64,9 +64,6 @@ public class Test_Dialogue : MonoBehaviour
                 a_Dialogue.DequeueDialogue();
             }
         }
-
-        
-
     }
 
     IEnumerator NextDelay()
