@@ -15,18 +15,20 @@ public class Dialogue_Base : ScriptableObject
         [Header("캐릭터 이름")]
         public Name charName;
 
-        [Header("효정 애니메이션")]
+        [Header("효정 연출")]
         public H_Anim h_Anim;
+        public H_Sprite h_sprite;
         public H_Direction h_Direction;
 
-        [Header("용진 애니메이션")]
+        [Header("용진 연출")]
         public Y_Anim y_Anim;
+        public Y_Sprite y_sprite;
         public Y_Direction y_Direction;
 
-        [Header("지수 애니메이션")]
+        [Header("지수 연출")]
         public J_Anim j_Anim;
 
-        [Header("민석 애니메이션")]
+        [Header("민석 연출")]
         public M_Anim m_Anim;
 
 
@@ -65,6 +67,7 @@ public enum Name
     Who
 }
 
+#region HujungEnum
 public enum H_Anim
 { 
     Idle,
@@ -81,6 +84,17 @@ public enum H_Direction
     Left
 }
 
+public enum H_Sprite
+{
+    Idle,
+    Angry,
+    Smile,
+    Sad
+}
+
+#endregion
+
+#region YoungjingEnum
 public enum Y_Anim
 {
     Idle,
@@ -96,6 +110,17 @@ public enum Y_Direction
     Right,
     Left
 }
+
+public enum Y_Sprite
+{
+    Idle,
+    Angry,
+    Smile,
+    Sad
+}
+
+#endregion
+
 
 public enum J_Anim
 {

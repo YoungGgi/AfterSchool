@@ -29,11 +29,15 @@ public class A_Dialogue : MonoBehaviour
     public GameObject dialoguePanelText;
 
     [Header("Character")]
-    public Image hujungImg;                   // 효정 캐릭터 스프라이트
-    public Image youngjinImg;                 // 용진 캐릭터 스프라이트
+    public Image hujungImg;                   // 효정 스프라이트
+    public Image youngjinImg;                 // 용진 스프라이트
     public Transform center;
     public Transform left;
     public Transform right;
+
+    [Header("Character_Emotion")]
+    public CharacterSprite hujung_Sprite;
+    public CharacterSprite youngjing_Sprite;
 
     [Header("Animation")]
     public Animator Hujung;                    // 효정 전용 애니메이터
@@ -141,49 +145,40 @@ public class A_Dialogue : MonoBehaviour
 
         #region CharacterName
         
-
-        if (info.charName == Name.Blank)
+        switch(info.charName)
         {
-            nameTxt.text = "";
-        }
-
-        if (info.charName == Name.Player)
-        {
-            nameTxt.text = PlayerName.instance.player;
-            hujungImg.color = youngjinImg.color = Color.gray;
-        }
-
-        if (info.charName == Name.Hujung)
-        {
-            nameTxt.text = "정효정";
-            hujungImg.color = new Color(255, 255, 255);
-            youngjinImg.color = Color.gray;
-        }
-
-        if(info.charName == Name.YoungJin)
-        {
-            nameTxt.text = "이용진";
-            youngjinImg.color = new Color(255, 255, 255);
-            hujungImg.color = Color.gray;
-        }
-
-        if (info.charName == Name.Jisu)
-        {
-            nameTxt.text = "은지수";
-        }
-
-        if (info.charName == Name.MinSeok)
-        {
-            nameTxt.text = "염민석";
-        }
-
-        if (info.charName == Name.Who)
-        {
-            nameTxt.text = "???";
+            case Name.Blank:
+                nameTxt.text = "";
+                break;
+            case Name.Player:
+                nameTxt.text = PlayerName.instance.player;
+                hujungImg.color = youngjinImg.color = Color.gray;
+                break;
+            case Name.Hujung:
+                nameTxt.text = "정효정";
+                hujungImg.color = new Color(255, 255, 255);
+                youngjinImg.color = Color.gray;
+                break;
+            case Name.YoungJin:
+                nameTxt.text = "이용진";
+                youngjinImg.color = new Color(255, 255, 255);
+                hujungImg.color = Color.gray;
+                break;
+            case Name.Jisu:
+                nameTxt.text = "은지수";
+                break;
+            case Name.MinSeok:
+                nameTxt.text = "염민석";
+                break;
+            case Name.Who:
+                nameTxt.text = "???";
+                break;
         }
         #endregion
 
         CharacterAnim(info);
+
+        CharacterEmotion(info);
 
         CharacterDirection(info);
 
@@ -302,6 +297,34 @@ public class A_Dialogue : MonoBehaviour
 
     }
 
+    public void CharacterEmotion(Dialogue_Base.Info info)
+    {
+        #region HujungEmotion
+        switch(info.h_sprite)
+        {
+            case H_Sprite.Idle:
+                hujungImg.sprite = hujung_Sprite.characterSprite[0];
+                break;
+            case H_Sprite.Angry:
+                hujungImg.sprite = hujung_Sprite.characterSprite[1];
+                break;
+        }
+        #endregion
+
+        #region YoungjinEmotion
+        switch(info.y_sprite)
+        {
+            case Y_Sprite.Idle:
+                youngjinImg.sprite = youngjing_Sprite.characterSprite[0];
+                break;
+            case Y_Sprite.Angry:
+                youngjinImg.sprite = youngjing_Sprite.characterSprite[1];
+                break;
+        }
+
+        #endregion
+    }
+
     public void CharacterDirection(Dialogue_Base.Info info)
     {
         #region CharacterDirection
@@ -321,22 +344,6 @@ public class A_Dialogue : MonoBehaviour
                 break;
         }
 
-        /*
-        if (info.h_Direction == H_Direction.Center)
-        {
-            hujungImg.transform.position = center.transform.position;
-        }
-
-        if (info.h_Direction == H_Direction.Right)
-        {
-            hujungImg.transform.position = right.transform.position;
-        }
-
-        if (info.h_Direction == H_Direction.Left)
-        {
-            hujungImg.transform.position = left.transform.position;
-        }
-        */
         #endregion
 
         #region YoungjinImgDirection
@@ -353,23 +360,6 @@ public class A_Dialogue : MonoBehaviour
                 youngjinImg.transform.position = left.transform.position;
                 break;
         }
-
-        /*
-        if (info.y_Direction == Y_Direction.Center)
-        {
-            youngjinImg.transform.position = center.transform.position;
-        }
-
-        if (info.y_Direction == Y_Direction.Right)
-        {
-            youngjinImg.transform.position = right.transform.position;
-        }
-
-        if (info.y_Direction == Y_Direction.Left)
-        {
-            youngjinImg.transform.position = left.transform.position;
-        }
-        */
         #endregion
 
         #endregion
