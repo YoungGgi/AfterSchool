@@ -217,29 +217,31 @@ public class A_Dialogue : MonoBehaviour
     {
 
         #region HujungAnim
-        // 효정 애니메이션 재생
+        // 헤정 애니메이션
         if (info.h_Anim == H_Anim.H_Appear)
         {
-            Hujung.Play("H_Appear");
+            YoungJin.Play("Y_Appear");
         }
 
         if (info.h_Anim == H_Anim.H_DisAppear)
         {
-            Hujung.Play("H_DisAppear");
+            YoungJin.Play("Y_DisAppear");
         }
 
         if (info.h_Anim == H_Anim.Start)
         {
-            Hujung.Play("H_Start");
+            YoungJin.Play("Y_Start");
         }
 
         if (info.h_Anim == H_Anim.Bangbang)
         {
-            Hujung.Play("H_Bangbang");
+            YoungJin.Play("Y_Bangbang");
         }
+
         #endregion
 
         #region YoungJinAnim
+        // 용진 애니메이션
         if (info.y_Anim == Y_Anim.Y_Appear)
         {
             YoungJin.Play("Y_Appear");
@@ -259,6 +261,7 @@ public class A_Dialogue : MonoBehaviour
         {
             YoungJin.Play("Y_Bangbang");
         }
+        
         #endregion
 
         #region JisuAnim
@@ -304,6 +307,21 @@ public class A_Dialogue : MonoBehaviour
         #region CharacterDirection
 
         #region HujungImgDirection
+
+        switch(info.h_Direction)
+        {
+            case H_Direction.Center:
+                hujungImg.transform.position = center.transform.position;
+                break;
+            case H_Direction.Right:
+                hujungImg.transform.position = right.transform.position;
+                break;
+            case H_Direction.Left:
+                hujungImg.transform.position = left.transform.position;
+                break;
+        }
+
+        /*
         if (info.h_Direction == H_Direction.Center)
         {
             hujungImg.transform.position = center.transform.position;
@@ -318,10 +336,25 @@ public class A_Dialogue : MonoBehaviour
         {
             hujungImg.transform.position = left.transform.position;
         }
+        */
         #endregion
 
         #region YoungjinImgDirection
 
+        switch (info.y_Direction)
+        {
+            case Y_Direction.Center:
+                youngjinImg.transform.position = center.transform.position;
+                break;
+            case Y_Direction.Right:
+                youngjinImg.transform.position = right.transform.position;
+                break;
+            case Y_Direction.Left:
+                youngjinImg.transform.position = left.transform.position;
+                break;
+        }
+
+        /*
         if (info.y_Direction == Y_Direction.Center)
         {
             youngjinImg.transform.position = center.transform.position;
@@ -336,7 +369,7 @@ public class A_Dialogue : MonoBehaviour
         {
             youngjinImg.transform.position = left.transform.position;
         }
-
+        */
         #endregion
 
         #endregion
