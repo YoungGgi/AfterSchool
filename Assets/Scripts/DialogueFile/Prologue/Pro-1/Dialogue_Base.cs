@@ -58,13 +58,7 @@ public class Dialogue_Base : ScriptableObject
 
 public enum Name
 {
-    Blank,
-    Player,
-    Hujung,
-    YoungJin,
-    Jisu,
-    MinSeok,
-    Who
+    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who
 }
 
 #region HujungEnum
@@ -97,26 +91,17 @@ public enum H_Sprite
 #region YoungjingEnum
 public enum Y_Anim
 {
-    Idle,
-    Y_Appear,
-    Y_DisAppear,
-    Start,
-    Y_Bangbang
+    Idle, Y_Appear, Y_DisAppear, Start, Y_Bangbang
 }
 
 public enum Y_Direction
 {
-    Center,
-    Right,
-    Left
+    Center, Right, Left
 }
 
 public enum Y_Sprite
 {
-    Idle,
-    Angry,
-    Smile,
-    Sad
+    Idle, Angry, Smile, Sad
 }
 
 #endregion
@@ -124,25 +109,17 @@ public enum Y_Sprite
 
 public enum J_Anim
 {
-    Idle,
-    J_Appear,
-    J_DisAppear,
-    Start
+    Idle, J_Appear, J_DisAppear, Start
 }
 
 public enum M_Anim
 {
-    Idle,
-    M_Appear,
-    M_DisAppear,
-    Start
+    Idle, M_Appear, M_DisAppear, Start
 }
 
 
 public enum Direction
 {
-    Blank,
-    FadeIn,
-    FadeOut
+    Blank, FadeIn, FadeOut
 }
 
