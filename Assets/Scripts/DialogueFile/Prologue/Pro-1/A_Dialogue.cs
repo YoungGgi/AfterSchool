@@ -27,6 +27,7 @@ public class A_Dialogue : MonoBehaviour
     [Header("DialogueEnd")]
     public GameObject dialogueUI;              // 대화씬 전용 UI
     public GameObject dialoguePanelText;
+    public GameObject dialogueSetting;
 
     [Header("Character")]
     public Image hujungImg;                   // 효정 스프라이트
@@ -382,10 +383,12 @@ public class A_Dialogue : MonoBehaviour
         if (info.UI_Off)
         {
             dialoguePanelText.gameObject.SetActive(false);
+            dialogueSetting.gameObject.SetActive(false);
         }
         else
         {
             dialoguePanelText.gameObject.SetActive(true);
+            dialogueSetting.gameObject.SetActive(true);
         }
 
         if (info.Title_On)
