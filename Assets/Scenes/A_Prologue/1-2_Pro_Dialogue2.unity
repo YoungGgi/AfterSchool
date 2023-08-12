@@ -857,14 +857,14 @@ RectTransform:
   m_GameObject: {fileID: 164317635}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0375, z: 1}
   m_Children: []
   m_Father: {fileID: 1725923876}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -27}
   m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164317637
@@ -1788,7 +1788,7 @@ GameObject:
   - component: {fileID: 448109720}
   - component: {fileID: 448109719}
   m_Layer: 5
-  m_Name: Clue0_Text
+  m_Name: Clue1_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 487009356}
   - component: {fileID: 487009355}
   m_Layer: 5
-  m_Name: ClueBtn0 (3)
+  m_Name: ClueBtn3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2151,9 +2151,9 @@ RectTransform:
   m_Father: {fileID: 1030990678}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 51, y: -63.14}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487009355
@@ -2186,8 +2186,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3656,7 +3656,7 @@ GameObject:
   - component: {fileID: 730432826}
   - component: {fileID: 730432825}
   m_Layer: 5
-  m_Name: ClueBtn0 (2)
+  m_Name: ClueBtn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3677,9 +3677,9 @@ RectTransform:
   m_Father: {fileID: 1030990678}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 51, y: -45.76}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &730432825
@@ -3712,8 +3712,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3864,7 +3864,7 @@ GameObject:
   - component: {fileID: 769129940}
   - component: {fileID: 769129939}
   m_Layer: 5
-  m_Name: ClueBtn0 (4)
+  m_Name: ClueBtn4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3885,9 +3885,9 @@ RectTransform:
   m_Father: {fileID: 1030990678}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 51, y: -80.52}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769129939
@@ -3920,8 +3920,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4729,7 +4729,7 @@ GameObject:
   - component: {fileID: 920547863}
   - component: {fileID: 920547862}
   m_Layer: 5
-  m_Name: ClueBtn0 (1)
+  m_Name: ClueBtn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4750,9 +4750,9 @@ RectTransform:
   m_Father: {fileID: 1030990678}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 51, y: -28.38}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920547862
@@ -4785,8 +4785,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -6649,7 +6649,7 @@ GameObject:
   - component: {fileID: 1237008558}
   - component: {fileID: 1237008557}
   m_Layer: 5
-  m_Name: Clue0_Text
+  m_Name: Clue4_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7861,15 +7861,18 @@ MonoBehaviour:
   clues: []
   clueBtnName:
   - {fileID: 1508173518}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 448109719}
+  - {fileID: 1660947628}
+  - {fileID: 1925362665}
+  - {fileID: 1237008557}
   clueNameTxt: {fileID: 400097125}
   clueExplainTxt: {fileID: 1756695850}
   clueButtons:
   - {fileID: 1578154449}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 920547862}
+  - {fileID: 730432825}
+  - {fileID: 487009355}
+  - {fileID: 769129939}
 --- !u!4 &1506450748
 Transform:
   m_ObjectHideFlags: 0
@@ -8278,9 +8281,9 @@ RectTransform:
   m_Father: {fileID: 1030990678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 51, y: -11}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578154449
@@ -8313,8 +8316,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 98ecd66df91e9e24cb7967a3265d0e77, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -9301,7 +9304,7 @@ GameObject:
   - component: {fileID: 1660947629}
   - component: {fileID: 1660947628}
   m_Layer: 5
-  m_Name: Clue0_Text
+  m_Name: Clue2_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9438,7 +9441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1672008860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9478,7 +9481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1725923876
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9700,7 +9703,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -559.07477, w: 0}
+  m_margin: {x: 0, y: 0, z: -701.1137, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9937,7 +9940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2197a1716d75c9d42bfd56c30e1ba02d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 341008f0265da4345971b5546d221302, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10767,8 +10770,8 @@ MonoBehaviour:
   center: {fileID: 2042986013}
   left: {fileID: 1308802118}
   right: {fileID: 365970025}
-  hujung_Sprite: {fileID: 0}
-  youngjing_Sprite: {fileID: 0}
+  hujung_Sprite: {fileID: 11400000, guid: 9fafcf8abfc80654c9cd746f0a838e7d, type: 2}
+  youngjing_Sprite: {fileID: 11400000, guid: f950d560db948d64e9028b96762d3ed3, type: 2}
   Hujung: {fileID: 542433370}
   YoungJin: {fileID: 1805072097}
   Jisu: {fileID: 2060034391}
@@ -11350,7 +11353,7 @@ GameObject:
   - component: {fileID: 1925362666}
   - component: {fileID: 1925362665}
   m_Layer: 5
-  m_Name: Clue0_Text
+  m_Name: Clue3_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
