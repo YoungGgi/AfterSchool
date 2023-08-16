@@ -27,9 +27,13 @@ public class Dialogue_Base : ScriptableObject
 
         [Header("지수 연출")]
         public J_Anim j_Anim;
+        public J_Sprite j_sprite;
+        public J_Direction j_Direction;
 
         [Header("민석 연출")]
         public M_Anim m_Anim;
+        public M_Sprite m_sprite;
+        public M_Direction m_Direction;
 
 
         [Header("연출효과")]
@@ -75,7 +79,8 @@ public enum H_Direction
 {
     Center,
     Right,
-    Left
+    Left,
+    Out
 }
 
 public enum H_Sprite
@@ -83,7 +88,7 @@ public enum H_Sprite
     Idle,
     Angry,
     Smile,
-    Sad
+    Surprise
 }
 
 #endregion
@@ -96,27 +101,52 @@ public enum Y_Anim
 
 public enum Y_Direction
 {
-    Center, Right, Left
+    Center, Right, Left, Out
 }
 
 public enum Y_Sprite
 {
-    Idle, Angry, Smile, Sad
+    Idle, Angry, Smile, Surprise
 }
 
 #endregion
 
-
+#region JisuEnum
 public enum J_Anim
 {
     Idle, J_Appear, J_DisAppear, Start
 }
 
+public enum J_Direction
+{
+    Center, Right, Left, Out
+}
+
+public enum J_Sprite
+{
+    Idle, Angry, Smile, Surprise
+}
+
+#endregion
+
+
+#region MinSeokEnum
 public enum M_Anim
 {
     Idle, M_Appear, M_DisAppear, Start
 }
 
+public enum M_Direction
+{
+    Center, Right, Left, Out
+}
+
+public enum M_Sprite
+{
+    Idle, Angry, Smile, Surprise
+}
+
+#endregion
 
 public enum Direction
 {

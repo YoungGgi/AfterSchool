@@ -881,6 +881,7 @@ RectTransform:
   - {fileID: 1515575243}
   - {fileID: 820554725}
   - {fileID: 744857082}
+  - {fileID: 2088404495}
   m_Father: {fileID: 576274343}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1106,7 +1107,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 549592493}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4182,7 +4183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4694,7 +4695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10197,10 +10198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe56b673de6ac3a4c81c10d9c61ee277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clues:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  clues: []
   clueBtnName:
   - {fileID: 1962403563}
   - {fileID: 1055925178}
@@ -10556,7 +10554,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1515972022}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 501820496}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 549592493}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1515972022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12805,11 +12827,16 @@ MonoBehaviour:
   dialogueSetting: {fileID: 1315379432}
   hujungImg: {fileID: 542433368}
   youngjinImg: {fileID: 1805072095}
+  jisuImg: {fileID: 2060034389}
+  minSeckImg: {fileID: 515261715}
   center: {fileID: 1515575243}
   left: {fileID: 820554725}
   right: {fileID: 744857082}
+  out_pos: {fileID: 2088404495}
   hujung_Sprite: {fileID: 11400000, guid: 9fafcf8abfc80654c9cd746f0a838e7d, type: 2}
   youngjing_Sprite: {fileID: 11400000, guid: f950d560db948d64e9028b96762d3ed3, type: 2}
+  jisu_Sprite: {fileID: 11400000, guid: c51270c15c3aa1543b2f06979dd0d860, type: 2}
+  minSeok_Sprite: {fileID: 11400000, guid: f1be61e7ea0c85e439a55da6c816ba1c, type: 2}
   Hujung: {fileID: 542433370}
   YoungJin: {fileID: 1805072097}
   Jisu: {fileID: 2060034391}
@@ -13709,7 +13736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14328,6 +14355,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072424053}
   m_CullTransparentMesh: 1
+--- !u!1 &2088404494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088404495}
+  m_Layer: 5
+  m_Name: CharacterPos_Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2088404495
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088404494}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 180629515}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3086, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2089656481
 GameObject:
   m_ObjectHideFlags: 0

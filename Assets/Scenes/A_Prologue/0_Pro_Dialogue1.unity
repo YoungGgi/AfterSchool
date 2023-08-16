@@ -1690,7 +1690,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 306049341}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 286196168}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 271951341}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &306049341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2021,7 +2045,7 @@ GameObject:
   - component: {fileID: 325502704}
   - component: {fileID: 325502703}
   m_Layer: 5
-  m_Name: ClueBtn3
+  m_Name: ClueBtn8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3346,7 +3370,7 @@ GameObject:
   - component: {fileID: 489147857}
   - component: {fileID: 489147856}
   m_Layer: 5
-  m_Name: Clue1_Text
+  m_Name: Clue6_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4004,7 +4028,7 @@ GameObject:
   - component: {fileID: 523133183}
   - component: {fileID: 523133182}
   m_Layer: 5
-  m_Name: ClueBtn1
+  m_Name: ClueBtn6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4124,7 +4148,7 @@ GameObject:
   - component: {fileID: 535315744}
   - component: {fileID: 535315743}
   m_Layer: 5
-  m_Name: Clue4_Text
+  m_Name: Clue9_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4354,7 +4378,7 @@ GameObject:
   - component: {fileID: 548743247}
   - component: {fileID: 548743246}
   m_Layer: 5
-  m_Name: ClueBtn2
+  m_Name: ClueBtn7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4649,7 +4673,7 @@ GameObject:
   - component: {fileID: 618117129}
   - component: {fileID: 618117128}
   m_Layer: 5
-  m_Name: Clue0_Text
+  m_Name: Clue5_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4783,7 +4807,7 @@ GameObject:
   - component: {fileID: 631919265}
   - component: {fileID: 631919264}
   m_Layer: 5
-  m_Name: Clue2_Text
+  m_Name: Clue7_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6227,6 +6251,7 @@ RectTransform:
   - {fileID: 2025890239}
   - {fileID: 1252587209}
   - {fileID: 1609091143}
+  - {fileID: 1003325400}
   m_Father: {fileID: 1622384564}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6482,6 +6507,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1003325399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003325400}
+  m_Layer: 5
+  m_Name: CharacterPos_Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1003325400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003325399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 942973913}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3086, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1041401089
 GameObject:
   m_ObjectHideFlags: 0
@@ -6532,7 +6592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6785,7 +6845,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 271951341}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -7288,7 +7348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9225,7 +9285,7 @@ GameObject:
   - component: {fileID: 1470026123}
   - component: {fileID: 1470026122}
   m_Layer: 5
-  m_Name: Clue3_Text
+  m_Name: Clue8_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9517,7 +9577,7 @@ GameObject:
   - component: {fileID: 1488680851}
   - component: {fileID: 1488680850}
   m_Layer: 5
-  m_Name: ClueBtn0
+  m_Name: ClueBtn5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9730,17 +9790,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe56b673de6ac3a4c81c10d9c61ee277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clues:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  clues: []
   clueBtnName:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  clueNameTxt: {fileID: 0}
-  clueExplainTxt: {fileID: 0}
-  clueButtons: []
+  - {fileID: 802865731}
+  - {fileID: 75499663}
+  - {fileID: 1317371172}
+  - {fileID: 1777434900}
+  - {fileID: 614272421}
+  clueNameTxt: {fileID: 733236061}
+  clueExplainTxt: {fileID: 1100655842}
+  clueButtons:
+  - {fileID: 1178065786}
+  - {fileID: 34986085}
+  - {fileID: 116723313}
+  - {fileID: 1696225654}
+  - {fileID: 765930768}
 --- !u!4 &1506450748
 Transform:
   m_ObjectHideFlags: 0
@@ -9836,7 +9900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12237,11 +12301,16 @@ MonoBehaviour:
   dialogueSetting: {fileID: 452421040}
   hujungImg: {fileID: 542433368}
   youngjinImg: {fileID: 1805072095}
+  jisuImg: {fileID: 2060034389}
+  minSeckImg: {fileID: 515261715}
   center: {fileID: 2025890239}
   left: {fileID: 1252587209}
   right: {fileID: 1609091143}
+  out_pos: {fileID: 1003325400}
   hujung_Sprite: {fileID: 11400000, guid: 9fafcf8abfc80654c9cd746f0a838e7d, type: 2}
   youngjing_Sprite: {fileID: 11400000, guid: f950d560db948d64e9028b96762d3ed3, type: 2}
+  jisu_Sprite: {fileID: 11400000, guid: c51270c15c3aa1543b2f06979dd0d860, type: 2}
+  minSeok_Sprite: {fileID: 11400000, guid: f1be61e7ea0c85e439a55da6c816ba1c, type: 2}
   Hujung: {fileID: 542433370}
   YoungJin: {fileID: 1805072097}
   Jisu: {fileID: 2060034391}
@@ -14015,7 +14084,7 @@ GameObject:
   - component: {fileID: 2117129985}
   - component: {fileID: 2117129984}
   m_Layer: 5
-  m_Name: ClueBtn4
+  m_Name: ClueBtn9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

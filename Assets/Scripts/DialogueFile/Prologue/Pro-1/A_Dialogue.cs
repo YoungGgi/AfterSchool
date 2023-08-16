@@ -32,13 +32,18 @@ public class A_Dialogue : MonoBehaviour
     [Header("Character")]
     public Image hujungImg;                   // 효정 스프라이트
     public Image youngjinImg;                 // 용진 스프라이트
+    public Image jisuImg;                     // 효정 스프라이트
+    public Image minSeckImg;                  // 민석 스프라이트
     public Transform center;
     public Transform left;
     public Transform right;
+    public Transform out_pos;
 
     [Header("Character_Emotion")]
     public CharacterSprite hujung_Sprite;
     public CharacterSprite youngjing_Sprite;
+    public CharacterSprite jisu_Sprite;
+    public CharacterSprite minSeok_Sprite;
 
     [Header("Animation")]
     public Animator Hujung;                    // 효정 전용 애니메이터
@@ -322,7 +327,36 @@ public class A_Dialogue : MonoBehaviour
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[1];
                 break;
         }
+        #endregion
 
+        #region JisuEmotion
+        switch (info.j_sprite)
+        {
+            case J_Sprite.Idle:
+                jisuImg.sprite = jisu_Sprite.characterSprite[0];
+                break;
+            case J_Sprite.Angry:
+                jisuImg.sprite = jisu_Sprite.characterSprite[1];
+                break;
+        }
+        #endregion
+
+        #region MinSeokEmotion
+        switch (info.m_sprite)
+        {
+            case M_Sprite.Idle:
+                minSeckImg.sprite = minSeok_Sprite.characterSprite[0];
+                break;
+            case M_Sprite.Angry:
+                youngjinImg.sprite = minSeok_Sprite.characterSprite[1];
+                break;
+            case M_Sprite.Smile:
+                youngjinImg.sprite = minSeok_Sprite.characterSprite[2];
+                break;
+            case M_Sprite.Surprise:
+                youngjinImg.sprite = minSeok_Sprite.characterSprite[3];
+                break;
+        }
         #endregion
     }
 
@@ -343,6 +377,9 @@ public class A_Dialogue : MonoBehaviour
             case H_Direction.Left:
                 hujungImg.transform.position = left.transform.position;
                 break;
+            case H_Direction.Out:
+                hujungImg.transform.position = out_pos.transform.position;
+                break;
         }
 
         #endregion
@@ -359,6 +396,48 @@ public class A_Dialogue : MonoBehaviour
                 break;
             case Y_Direction.Left:
                 youngjinImg.transform.position = left.transform.position;
+                break;
+            case Y_Direction.Out:
+                youngjinImg.transform.position = out_pos.transform.position;
+                break;
+
+        }
+        #endregion
+
+        #region JisuImgDirection
+
+        switch (info.j_Direction)
+        {
+            case J_Direction.Center:
+                jisuImg.transform.position = center.transform.position;
+                break;
+            case J_Direction.Right:
+                jisuImg.transform.position = right.transform.position;
+                break;
+            case J_Direction.Left:
+                jisuImg.transform.position = left.transform.position;
+                break;
+            case J_Direction.Out:
+                jisuImg.transform.position = out_pos.transform.position;
+                break;
+        }
+        #endregion
+
+        #region MinSeokImgDirection
+
+        switch (info.m_Direction)
+        {
+            case M_Direction.Center:
+                minSeckImg.transform.position = center.transform.position;
+                break;
+            case M_Direction.Right:
+                minSeckImg.transform.position = right.transform.position;
+                break;
+            case M_Direction.Left:
+                minSeckImg.transform.position = left.transform.position;
+                break;
+            case M_Direction.Out:
+                minSeckImg.transform.position = out_pos.transform.position;
                 break;
         }
         #endregion
