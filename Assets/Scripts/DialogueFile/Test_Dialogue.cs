@@ -48,7 +48,7 @@ public class Test_Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (isLoading)
+        if (isLoading || StroyDataMgn.instance.isSettingOn == true)
             return;
         else
         {
@@ -57,6 +57,11 @@ public class Test_Dialogue : MonoBehaviour
                 autoText.gameObject.SetActive(true);
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
+            }
+
+            if(StroyDataMgn.instance.isAutoLive == false)
+            {
+                autoText.gameObject.SetActive(false);
             }
 
             if ((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))

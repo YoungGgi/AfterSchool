@@ -111,48 +111,19 @@ public class UI_Manager : MonoBehaviour
         StroyDataMgn.instance.isTwoSpeed = false;
     }
 
-    #endregion
-
-    #region GameOption
-    public void ChapterListOn()
+    public void SettingOn()
     {
-        gameOptionObj.gameObject.SetActive(false);
-        chapterSelectObj.gameObject.SetActive(true);
+        StroyDataMgn.instance.isSettingOn = true;
     }
 
-    public void ChapterListOff()
+    public void SettingOff()
     {
-        chapterSelectObj.gameObject.SetActive(false);
-        gameOptionObj.gameObject.SetActive(true);
-    }
-
-    public void popUpOn()
-    {
-        popUpObj.gameObject.SetActive(true);
-    }
-
-    public void popUpOff()
-    {
-        popUpObj.gameObject.SetActive(false);
-    }
-
-    public void namePopUpOn()
-    {
-        nameQuestionPop.gameObject.SetActive(true);
-    }
-
-    public void namePopUpOff()
-    {
-        nameQuestionPop.gameObject.SetActive(false);
-    }
-
-    public void nameSelectOn()
-    {
-        nameQuestionPop.gameObject.SetActive(false);
-        nameSelectObj.gameObject.SetActive(true);
+        StroyDataMgn.instance.isSettingOn = false;
     }
 
     #endregion
+
+    
 
     #region ThinkGame
     public void GoToDialogueScene()

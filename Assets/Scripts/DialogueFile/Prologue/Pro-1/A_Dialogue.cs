@@ -79,7 +79,7 @@ public class A_Dialogue : MonoBehaviour
         dialogueUI.gameObject.SetActive(false);
         StartCoroutine(Loading());
 
-
+        StroyDataMgn.instance.isSettingOn = false;
 
     }
 

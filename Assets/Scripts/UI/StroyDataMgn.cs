@@ -25,4 +25,6 @@ public class StroyDataMgn : MonoBehaviour
 
     public bool isTwoSpeed;
 
+    public bool isSettingOn;
+
 }
