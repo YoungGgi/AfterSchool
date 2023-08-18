@@ -44,7 +44,6 @@ public class ClueManager : MonoBehaviour
                 if(isCheck)
                 {
                     redDot_ClueBtn[i].gameObject.SetActive(false);
-                    isCheck = false;
                 }
 
             }
