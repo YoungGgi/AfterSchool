@@ -28,14 +28,6 @@ public class UI_Manager : MonoBehaviour
 
     public int saveSceneNum;
 
-    private void Start()
-    {
-        // StroyDataMgn의 isAutoLive가 true일 때 각 대화씬 오토 버튼 활성화인 상태로 두기
-
-        // 2배속도 마찬가지
-       
-    }
-
     private void Update()
     {
         NowScene = SceneManager.GetActiveScene(); // 매 프레임마다 현재 씬 확인하기
