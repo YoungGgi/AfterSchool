@@ -15,8 +15,6 @@ public class ClueManager : MonoBehaviour
 
     public Button[] clueButtons;
 
-    public Image[] redDot_ClueBtn;
-    bool isCheck;
 
     public RedDotMgn redDotMgn;
 
@@ -31,7 +29,6 @@ public class ClueManager : MonoBehaviour
 
                 if (clues[i] != null)
                 {
-                    redDot_ClueBtn[i].gameObject.SetActive(true);
                     clueBtnName[i].text = clues[i].clueBtnName;
                     clueButtons[i].enabled = true;
 
@@ -39,11 +36,6 @@ public class ClueManager : MonoBehaviour
                 else
                 {
                     clueBtnName[i].text = "단서 없음";
-                }
-
-                if(isCheck)
-                {
-                    redDot_ClueBtn[i].gameObject.SetActive(false);
                 }
 
             }
@@ -71,7 +63,6 @@ public class ClueManager : MonoBehaviour
     {
         if(clues[i] != null)
         {
-            isCheck = true;
             clueNameTxt.text = clues[i].clueName;
             clueExplainTxt.text = clues[i].clueExplain;
         }
