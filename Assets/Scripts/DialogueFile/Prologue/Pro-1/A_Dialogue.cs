@@ -487,6 +487,7 @@ public class A_Dialogue : MonoBehaviour
         {
             invenClue1.gameObject.SetActive(true);
             clue.clues.Add(clueObj0);
+            clue.clueAddCount++;
             isClueUpdate = true;
         }
         else
@@ -498,6 +499,7 @@ public class A_Dialogue : MonoBehaviour
         {
             invenClue2.gameObject.SetActive(true);
             clue.clues.Add(clueObj1);
+            clue.clueAddCount++;
             isClueUpdate = true;
         }
         else
@@ -509,6 +511,7 @@ public class A_Dialogue : MonoBehaviour
         {
             invenClue3.gameObject.SetActive(true);
             clue.clues.Add(clueObj2);
+            clue.clueAddCount++;
             isClueUpdate = true;
         }
         else

@@ -9,12 +9,15 @@ public class RedDotMgn : MonoBehaviour
     public Image redDot;
     public Image redDot_Tablet;
 
-    public Image[] redDot_Btn;
+    public GameObject[] redDot_Btn;
     public TextMeshProUGUI[] clueText;
 
-    public bool[] isCheck = new bool[5];
+    public bool[] isCheck;
+
+    public int setActiveFalseCount;
 
     public A_Dialogue dialogue;
+    public ClueManager clue;
 
     private void Update()
     {
@@ -29,9 +32,10 @@ public class RedDotMgn : MonoBehaviour
         {
             for(int j = 0; j < redDot_Btn.Length; j++)
             {
-                if(clueText[i].text != "???" && dialogue.isClueUpdate)
+                if(clueText[i].text != "???" && dialogue.isClueUpdate && !isCheck[i])
                 {
                     redDot_Btn[i].gameObject.SetActive(true);
+                    break;
                 }
             }
         }
@@ -47,9 +51,22 @@ public class RedDotMgn : MonoBehaviour
 
     public void RedDotRemove(int i)
     {
-        redDot.gameObject.SetActive(false);
-        RedDotOff();
+        redDot_Btn[i].gameObject.SetActive(false);
         isCheck[i] = true;
+
+        if(setActiveFalseCount == clue.clueAddCount)
+        {
+            RedDotOff();
+        }
+        else
+        {
+            setActiveFalseCount++;
+
+            if (setActiveFalseCount == clue.clueAddCount)
+            {
+                RedDotOff();
+            }
+        }
 
     }
 

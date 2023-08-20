@@ -15,6 +15,7 @@ public class ClueManager : MonoBehaviour
 
     public Button[] clueButtons;
 
+    public int clueAddCount;
 
     private void Update()
     {
