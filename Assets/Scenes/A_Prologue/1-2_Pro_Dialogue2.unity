@@ -662,7 +662,6 @@ GameObject:
   - component: {fileID: 102577408}
   - component: {fileID: 102577407}
   - component: {fileID: 102577409}
-  - component: {fileID: 102577410}
   m_Layer: 5
   m_Name: ClueBtn1
   m_TagString: Untagged
@@ -785,33 +784,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1163846767}
-        m_TargetAssemblyTypeName: RedDot_Btn, Assembly-CSharp
+      - m_Target: {fileID: 947253711}
+        m_TargetAssemblyTypeName: RedDotMgn, Assembly-CSharp
         m_MethodName: RedDotRemove
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &102577410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102577405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb24cccdc5f59f4eb5b316d874b3477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 1
-  redDot: {fileID: 571839480}
-  clue: {fileID: 1506450747}
 --- !u!1 &117968520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,7 +2282,6 @@ GameObject:
   - component: {fileID: 497036191}
   - component: {fileID: 497036190}
   - component: {fileID: 497036192}
-  - component: {fileID: 497036193}
   m_Layer: 5
   m_Name: ClueBtn3
   m_TagString: Untagged
@@ -2421,33 +2404,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1163846767}
-        m_TargetAssemblyTypeName: RedDot_Btn, Assembly-CSharp
+      - m_Target: {fileID: 947253711}
+        m_TargetAssemblyTypeName: RedDotMgn, Assembly-CSharp
         m_MethodName: RedDotRemove
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &497036193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497036188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb24cccdc5f59f4eb5b316d874b3477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 3
-  redDot: {fileID: 1922881653}
-  clue: {fileID: 1506450747}
 --- !u!1 &515180302
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,18 +5240,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 947253711}
-        m_TargetAssemblyTypeName: RedDotMgn, Assembly-CSharp
-        m_MethodName: RedDotOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &914310774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5600,6 +5556,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redDot: {fileID: 1827515945}
   redDot_Tablet: {fileID: 727471428}
+  redDot_Btn:
+  - {fileID: 773754899}
+  - {fileID: 571839480}
+  - {fileID: 1370803668}
+  - {fileID: 1922881653}
+  - {fileID: 284490962}
+  clueText:
+  - {fileID: 1508173518}
+  - {fileID: 970445581}
+  - {fileID: 490934835}
+  - {fileID: 1808329910}
+  - {fileID: 991804956}
+  isCheck: 0000000000
   dialogue: {fileID: 1849747256}
 --- !u!4 &947253712
 Transform:
@@ -6786,7 +6755,6 @@ GameObject:
   - component: {fileID: 1070818363}
   - component: {fileID: 1070818362}
   - component: {fileID: 1070818364}
-  - component: {fileID: 1070818365}
   m_Layer: 5
   m_Name: ClueBtn2
   m_TagString: Untagged
@@ -6909,33 +6877,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1163846767}
-        m_TargetAssemblyTypeName: RedDot_Btn, Assembly-CSharp
+      - m_Target: {fileID: 947253711}
+        m_TargetAssemblyTypeName: RedDotMgn, Assembly-CSharp
         m_MethodName: RedDotRemove
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1070818365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070818360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb24cccdc5f59f4eb5b316d874b3477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 2
-  redDot: {fileID: 1370803668}
-  clue: {fileID: 1506450747}
 --- !u!1 &1121473594
 GameObject:
   m_ObjectHideFlags: 0
@@ -7437,7 +7390,6 @@ GameObject:
   - component: {fileID: 1163846765}
   - component: {fileID: 1163846764}
   - component: {fileID: 1163846763}
-  - component: {fileID: 1163846767}
   m_Layer: 5
   m_Name: ClueBtn4
   m_TagString: Untagged
@@ -7501,14 +7453,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1163846767}
-        m_TargetAssemblyTypeName: RedDot_Btn, Assembly-CSharp
+      - m_Target: {fileID: 947253711}
+        m_TargetAssemblyTypeName: RedDotMgn, Assembly-CSharp
         m_MethodName: RedDotRemove
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7572,21 +7524,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -80.52}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1163846767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163846762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb24cccdc5f59f4eb5b316d874b3477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 4
-  redDot: {fileID: 284490962}
-  clue: {fileID: 1506450747}
 --- !u!1 &1169173610
 GameObject:
   m_ObjectHideFlags: 0
@@ -9960,7 +9897,6 @@ MonoBehaviour:
   - {fileID: 1070818364}
   - {fileID: 497036192}
   - {fileID: 1163846763}
-  redDotMgn: {fileID: 947253711}
 --- !u!4 &1506450748
 Transform:
   m_ObjectHideFlags: 0
@@ -10550,7 +10486,6 @@ GameObject:
   - component: {fileID: 1578154451}
   - component: {fileID: 1578154450}
   - component: {fileID: 1578154449}
-  - component: {fileID: 1578154452}
   m_Layer: 5
   m_Name: ClueBtn0
   m_TagString: Untagged
@@ -10635,10 +10570,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1163846767}
-        m_TargetAssemblyTypeName: RedDot_Btn, Assembly-CSharp
+      - m_Target: {fileID: 947253711}
+        m_TargetAssemblyTypeName: RedDotMgn, Assembly-CSharp
         m_MethodName: RedDotRemove
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10685,21 +10620,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578154447}
   m_CullTransparentMesh: 1
---- !u!114 &1578154452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578154447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb24cccdc5f59f4eb5b316d874b3477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 0
-  redDot: {fileID: 773754899}
-  clue: {fileID: 1506450747}
 --- !u!1 &1586414221
 GameObject:
   m_ObjectHideFlags: 0
@@ -11007,14 +10927,14 @@ RectTransform:
   m_GameObject: {fileID: 1607001178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -305.66873}
-  m_LocalScale: {x: 1.2916112, y: 1.2924237, z: 1.2924237}
+  m_LocalScale: {x: 1.710328, y: 1.710328, z: 1.710328}
   m_Children: []
   m_Father: {fileID: 1169173611}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -698, y: 326}
+  m_AnchoredPosition: {x: -667, y: 312}
   m_SizeDelta: {x: 88, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607001180

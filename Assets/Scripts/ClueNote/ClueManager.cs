@@ -16,8 +16,6 @@ public class ClueManager : MonoBehaviour
     public Button[] clueButtons;
 
 
-    public RedDotMgn redDotMgn;
-
     private void Update()
     {
         for(int j = 0; j < clueButtons.Length; j++)
@@ -43,21 +41,6 @@ public class ClueManager : MonoBehaviour
         }
     }
 
-    /*
-    private void LateUpdate()
-    {
-        for(int j = 0; j < redDot_ClueBtn.Length; j++)
-        {
-            for(int i = 0; i < clues.Count; i++)
-            {
-                if(clues[i] != null)
-                {
-
-                }
-            }
-        }
-    }
-    */
 
     public void ClueOn(int i)
     {
