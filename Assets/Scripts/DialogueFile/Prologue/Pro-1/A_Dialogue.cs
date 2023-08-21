@@ -74,6 +74,16 @@ public class A_Dialogue : MonoBehaviour
     // Dialogue_Base 에서 선언한 Queue문 선언
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
 
+    private void OnEnable()
+    {
+        dialogueInfo = new Queue<Dialogue_Base.Info>();
+        dialogueUI.gameObject.SetActive(false);
+        StartCoroutine(Loading());
+
+        StroyDataMgn.instance.isSettingOn = false;
+    }
+
+    /*
     private void Start()
     {
         dialogueInfo = new Queue<Dialogue_Base.Info>();
@@ -83,7 +93,7 @@ public class A_Dialogue : MonoBehaviour
         StroyDataMgn.instance.isSettingOn = false;
 
     }
-
+    */
     IEnumerator Loading()
     {
         yield return new WaitForSeconds(1.5f);
