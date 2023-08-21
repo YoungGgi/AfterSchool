@@ -12,7 +12,7 @@ public class RedDotMgn : MonoBehaviour
     public GameObject[] redDot_Btn;
     public TextMeshProUGUI[] clueText;
 
-    public bool[] isCheck;
+    
 
     public int setActiveFalseCount;
 
@@ -32,7 +32,7 @@ public class RedDotMgn : MonoBehaviour
         {
             for(int j = 0; j < redDot_Btn.Length; j++)
             {
-                if(clueText[i].text != "???" && dialogue.isClueUpdate && !isCheck[i])
+                if(clueText[i].text != "???" && dialogue.isClueUpdate && !ClueCheckMgn.instance.isCheck[i])
                 {
                     redDot_Btn[i].gameObject.SetActive(true);
                     break;
@@ -52,7 +52,7 @@ public class RedDotMgn : MonoBehaviour
     public void RedDotRemove(int i)
     {
         redDot_Btn[i].gameObject.SetActive(false);
-        isCheck[i] = true;
+        ClueCheckMgn.instance.isCheck[i] = true;
 
         if(setActiveFalseCount == clue.clueAddCount)
         {

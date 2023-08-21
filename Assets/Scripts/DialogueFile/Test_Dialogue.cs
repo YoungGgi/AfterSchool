@@ -31,6 +31,11 @@ public class Test_Dialogue : MonoBehaviour
         NowScene = SceneManager.GetActiveScene();
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
+
+        if(StroyDataMgn.instance.isAutoLive)
+        {
+            autoText.gameObject.SetActive(true);
+        }
     }
 
     IEnumerator LoadingAnim()
