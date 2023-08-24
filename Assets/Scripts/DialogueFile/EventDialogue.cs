@@ -28,14 +28,14 @@ public class EventDialogue : MonoBehaviour
 
         NowScene = SceneManager.GetActiveScene();
         SceneNum = NowScene.buildIndex;
-        //SaveLoadMgn.instance.SaveData(SceneNum);
+        SaveLoadMgn.instance.SaveData(SceneNum);
 
-        /*
+        
         if (StroyDataMgn.instance.isAutoLive)
         {
             autoText.gameObject.SetActive(true);
         }
-        */
+        
     }
 
     IEnumerator LoadingAnim()
@@ -57,11 +57,16 @@ public class EventDialogue : MonoBehaviour
             return;
         else
         {
-            if (dialogue_Event.isTextComplete == true)
+            if (StroyDataMgn.instance.isAutoLive == true && dialogue_Event.isTextComplete == true)
             {
-                //autoText.gameObject.SetActive(true);
-                //StartCoroutine(NextDelay());
-                //dialogue_Event.DequeueDialogue();
+                autoText.gameObject.SetActive(true);
+                StartCoroutine(NextDelay());
+                dialogue_Event.DequeueDialogue();
+            }
+
+            if (StroyDataMgn.instance.isAutoLive == false)
+            {
+                autoText.gameObject.SetActive(false);
             }
 
             if ((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))

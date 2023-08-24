@@ -54,11 +54,7 @@ public class A_Dialogue : MonoBehaviour
 
     [Header("Direction")]
     public Animator fadeManager;                // 페이드 인 / 아웃 전용 효과
-    public GameObject invenClue1;
-    public GameObject invenClue2;
-    public GameObject invenClue3;
-    public GameObject invenClue4;
-
+    
     public GameObject titleObj;
 
     [Header("Add Clue")]
@@ -66,6 +62,7 @@ public class A_Dialogue : MonoBehaviour
     public ClueObject clueObj0;
     public ClueObject clueObj1;
     public ClueObject clueObj2;
+    public ClueObject clueObj3;
     public bool isClueUpdate;
 
     public Scene NowScene;
@@ -495,47 +492,30 @@ public class A_Dialogue : MonoBehaviour
         #region Inven
         if (info.isFirstClue)
         {
-            invenClue1.gameObject.SetActive(true);
             clue.clues.Add(clueObj0);
             clue.clueAddCount++;
             isClueUpdate = true;
         }
-        else
-        {
-            invenClue1.gameObject.SetActive(false);
-        }
 
         if (info.isSecondClue)
         {
-            invenClue2.gameObject.SetActive(true);
             clue.clues.Add(clueObj1);
             clue.clueAddCount++;
             isClueUpdate = true;
         }
-        else
-        {
-            invenClue2.gameObject.SetActive(false);
-        }
 
         if (info.isThirdClue)
         {
-            invenClue3.gameObject.SetActive(true);
             clue.clues.Add(clueObj2);
             clue.clueAddCount++;
             isClueUpdate = true;
         }
-        else
-        {
-            invenClue3.gameObject.SetActive(false);
-        }
 
         if (info.isForthClue)
         {
-            invenClue4.gameObject.SetActive(true);
-        }
-        else
-        {
-            invenClue4.gameObject.SetActive(false);
+            clue.clues.Add(clueObj3);
+            clue.clueAddCount++;
+            isClueUpdate = true;
         }
 
         #endregion

@@ -31,16 +31,13 @@ public class Dialogue_Event : MonoBehaviour
 
     [Header("Direction")]
     public Animator fadeManager;                // 페이드 인 / 아웃 전용 효과
-    public GameObject invenClue1;
-    public GameObject invenClue2;
-    public GameObject invenClue3;
-    public GameObject invenClue4;
 
     [Header("Add Clue")]
     public ClueManager clue;
     public ClueObject clueObj0;
     public ClueObject clueObj1;
     public ClueObject clueObj2;
+    public ClueObject clueObj3;
     public bool isClueUpdate;
 
     public GameObject miniGameGroup;
@@ -57,7 +54,7 @@ public class Dialogue_Event : MonoBehaviour
         dialogueUI.gameObject.SetActive(false);
         StartCoroutine(Loading());
 
-        //StroyDataMgn.instance.isSettingOn = false;
+        StroyDataMgn.instance.isSettingOn = false;
     }
 
     IEnumerator Loading()
@@ -100,7 +97,7 @@ public class Dialogue_Event : MonoBehaviour
         // 해당 대사 리스트가 전부 끝났다면 대화 종료 함수로 이동
         if (dialogueInfo.Count == 0)
         {
-            NextDialogue();
+            StartCoroutine(GoToMiniGame());
             return;
         }
 
@@ -208,47 +205,30 @@ public class Dialogue_Event : MonoBehaviour
         #region Inven
         if (info.isFirstClue)
         {
-            invenClue1.gameObject.SetActive(true);
-            //clue.clues.Add(clueObj0);
-            //clue.clueAddCount++;
+            clue.clues.Add(clueObj0);
+            clue.clueAddCount++;
             isClueUpdate = true;
-        }
-        else
-        {
-            invenClue1.gameObject.SetActive(false);
         }
 
         if (info.isSecondClue)
         {
-            invenClue2.gameObject.SetActive(true);
-            //clue.clues.Add(clueObj1);
-            //clue.clueAddCount++;
+            clue.clues.Add(clueObj1);
+            clue.clueAddCount++;
             isClueUpdate = true;
-        }
-        else
-        {
-            invenClue2.gameObject.SetActive(false);
         }
 
         if (info.isThirdClue)
         {
-            invenClue3.gameObject.SetActive(true);
-            //clue.clues.Add(clueObj2);
-            //clue.clueAddCount++;
+            clue.clues.Add(clueObj2);
+            clue.clueAddCount++;
             isClueUpdate = true;
-        }
-        else
-        {
-            invenClue3.gameObject.SetActive(false);
         }
 
         if (info.isForthClue)
         {
-            invenClue4.gameObject.SetActive(true);
-        }
-        else
-        {
-            invenClue4.gameObject.SetActive(false);
+            clue.clues.Add(clueObj3);
+            clue.clueAddCount++;
+            isClueUpdate = true;
         }
 
         #endregion
@@ -261,7 +241,7 @@ public class Dialogue_Event : MonoBehaviour
 
         foreach (char c in info.myText.ToCharArray())
         {
-            /*
+            
             if (StroyDataMgn.instance.isTwoSpeed)
             {
                 float twoDelay = (float)(delay * 0.2);
@@ -271,7 +251,7 @@ public class Dialogue_Event : MonoBehaviour
             {
                 yield return new WaitForSeconds(delay);
             }
-            */
+            
             yield return new WaitForSeconds(delay);
             dialogueTxt.text += c;
         }
@@ -290,8 +270,11 @@ public class Dialogue_Event : MonoBehaviour
         next.SetActive(true);
     }
 
-    public void NextDialogue()
+    IEnumerator GoToMiniGame()
     {
+        isDialoge = false;
+        yield return new WaitForSeconds(0.5f);
+
         dialogueGroup.gameObject.SetActive(false);
         StartCoroutine(MiniGameDelay());
     }
