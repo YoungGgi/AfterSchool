@@ -22,6 +22,7 @@ public class E_MiniGame : MonoBehaviour
     public GameObject dialogue_3;
 
     public GameObject gameScene;               // 미니게임 관련 UI들
+    public GameObject dialogueScene;
 
     public bool[] isClear;
     public Button[] clueBtns;
@@ -48,6 +49,7 @@ public class E_MiniGame : MonoBehaviour
         }
 
         gameScene.gameObject.SetActive(false);
+        dialogueScene.gameObject.SetActive(true);
         dialogue_1.gameObject.SetActive(true);
     }
 
@@ -62,6 +64,7 @@ public class E_MiniGame : MonoBehaviour
         }
 
         gameScene.gameObject.SetActive(false);
+        dialogueScene.gameObject.SetActive(true);
         dialogue_2.gameObject.SetActive(true);
     }
 
@@ -76,6 +79,7 @@ public class E_MiniGame : MonoBehaviour
         }
 
         gameScene.gameObject.SetActive(false);
+        dialogueScene.gameObject.SetActive(true);
         dialogue_3.gameObject.SetActive(true);
     }
 

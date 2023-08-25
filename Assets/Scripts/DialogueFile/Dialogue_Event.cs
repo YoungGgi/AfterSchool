@@ -54,7 +54,7 @@ public class Dialogue_Event : MonoBehaviour
         dialogueUI.gameObject.SetActive(false);
         StartCoroutine(Loading());
 
-        StroyDataMgn.instance.isSettingOn = false;
+        //StroyDataMgn.instance.isSettingOn = false;
     }
 
     IEnumerator Loading()
@@ -241,7 +241,7 @@ public class Dialogue_Event : MonoBehaviour
 
         foreach (char c in info.myText.ToCharArray())
         {
-            
+            /*
             if (StroyDataMgn.instance.isTwoSpeed)
             {
                 float twoDelay = (float)(delay * 0.2);
@@ -251,7 +251,7 @@ public class Dialogue_Event : MonoBehaviour
             {
                 yield return new WaitForSeconds(delay);
             }
-            
+            */
             yield return new WaitForSeconds(delay);
             dialogueTxt.text += c;
         }

@@ -2704,7 +2704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &298205212
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4162,8 +4162,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MiniGameMgn, Assembly-CSharp
+      - m_Target: {fileID: 1140925546}
+        m_TargetAssemblyTypeName: E_MiniGame, Assembly-CSharp
         m_MethodName: Conform
         m_Mode: 1
         m_Arguments:
@@ -5563,7 +5563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &578111258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6989,7 +6989,7 @@ MonoBehaviour:
   clueButton: {fileID: 807812363}
   clueText: {fileID: 1614306582}
   tool: {fileID: 102001767}
-  clue: {fileID: 0}
+  clue: {fileID: 11400000, guid: 12e8c1f31deca9a4b80a5d008f32d1cd, type: 2}
   e_MiniGame: {fileID: 1140925546}
   toolTip: {fileID: 102001769}
 --- !u!114 &807812363
@@ -7036,13 +7036,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 807812362}
+        m_TargetAssemblyTypeName: E_ClueSelect, Assembly-CSharp
+        m_MethodName: ClueSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8161,10 +8161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39cff462039e8d439434be36343224a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueButton: {fileID: 0}
-  clueText: {fileID: 0}
+  clueButton: {fileID: 980085239}
+  clueText: {fileID: 1667758630}
   tool: {fileID: 102001767}
-  clue: {fileID: 0}
+  clue: {fileID: 11400000, guid: b9d95df4ad0aa5340a87e6a7a8be4fc7, type: 2}
   e_MiniGame: {fileID: 1140925546}
   toolTip: {fileID: 102001769}
 --- !u!114 &980085239
@@ -8211,13 +8211,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 980085238}
+        m_TargetAssemblyTypeName: E_ClueSelect, Assembly-CSharp
+        m_MethodName: ClueSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8855,7 +8855,7 @@ MonoBehaviour:
   clueButton: {fileID: 1026625853}
   clueText: {fileID: 1177704268}
   tool: {fileID: 102001767}
-  clue: {fileID: 0}
+  clue: {fileID: 11400000, guid: 203021d1d539a4c4cb78c215276edf3c, type: 2}
   e_MiniGame: {fileID: 1140925546}
   toolTip: {fileID: 102001769}
 --- !u!114 &1026625853
@@ -8902,13 +8902,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1026625852}
+        m_TargetAssemblyTypeName: E_ClueSelect, Assembly-CSharp
+        m_MethodName: ClueSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9708,15 +9708,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fcc2a287bbbaa43893b7efa153d96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conformGroup: {fileID: 0}
-  failGroup: {fileID: 0}
-  clearGroup0: {fileID: 0}
-  clearGroup1: {fileID: 0}
-  clearGroup2: {fileID: 0}
-  dialogue_1: {fileID: 0}
-  dialogue_2: {fileID: 0}
+  conformGroup: {fileID: 941603132}
+  failGroup: {fileID: 364565075}
+  clearGroup0: {fileID: 610479253}
+  clearGroup1: {fileID: 1993481676}
+  clearGroup2: {fileID: 1850211771}
+  dialogue_1: {fileID: 1849747254}
+  dialogue_2: {fileID: 1650804615}
   dialogue_3: {fileID: 0}
-  gameScene: {fileID: 0}
+  gameScene: {fileID: 298205211}
+  dialogueScene: {fileID: 578111257}
   isClear: 00
   clueBtns:
   - {fileID: 807812363}
@@ -9738,7 +9739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143425609
 GameObject:
@@ -11311,7 +11312,7 @@ MonoBehaviour:
   clueButton: {fileID: 1301252469}
   clueText: {fileID: 1739010716}
   tool: {fileID: 102001767}
-  clue: {fileID: 0}
+  clue: {fileID: 11400000, guid: e1da5a613a8dbbe4c897051130b422bc, type: 2}
   e_MiniGame: {fileID: 1140925546}
   toolTip: {fileID: 102001769}
 --- !u!114 &1301252469
@@ -11358,13 +11359,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1301252468}
+        m_TargetAssemblyTypeName: E_ClueSelect, Assembly-CSharp
+        m_MethodName: ClueSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13070,7 +13071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519629796
 GameObject:
@@ -14362,7 +14363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622384560
 GameObject:
@@ -14704,6 +14705,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650698450}
   m_CullTransparentMesh: 1
+--- !u!1 &1650804615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1650804618}
+  - component: {fileID: 1650804617}
+  - component: {fileID: 1650804616}
+  m_Layer: 0
+  m_Name: DialogueMgn_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1650804616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650804615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13c0408e20d56642bcf54951f2292c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 1a307d6d550a8864a8909c416d902bc6, type: 2}
+  dialogue_Event: {fileID: 1650804617}
+  isAuto: 0
+  dealyCool: 1.5
+  autoText: {fileID: 1840727514}
+  loadingTextGroup: {fileID: 808335238}
+  NowScene:
+    m_Handle: 0
+  SceneNum: 0
+--- !u!114 &1650804617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650804615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde1271d926c722449be348056da88e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTxt: {fileID: 2001386877}
+  nameTxt: {fileID: 515180304}
+  backGroundImg: {fileID: 1764221058}
+  next: {fileID: 1569747441}
+  textPrefab: {fileID: 4886084381413662940, guid: 465c5d6bcc90c3245aab36cdcd7d0e82, type: 3}
+  parentContents: {fileID: 461731876}
+  delay: 0.07
+  isTextComplete: 0
+  dialogueUI: {fileID: 576274342}
+  dialoguePanelText: {fileID: 44418354}
+  dialogueSetting: {fileID: 788522037}
+  dialogueGroup: {fileID: 578111257}
+  fadeManager: {fileID: 1180097288}
+  clue: {fileID: 1506450747}
+  clueObj0: {fileID: 11400000, guid: 6f6653f446afb754b89b482cffecaf23, type: 2}
+  clueObj1: {fileID: 11400000, guid: 1409a8dcfe194704d8e1f37e1d7dbc0c, type: 2}
+  clueObj2: {fileID: 11400000, guid: 5aac09f1dbc78594198d83e20168afa0, type: 2}
+  clueObj3: {fileID: 0}
+  isClueUpdate: 0
+  miniGameGroup: {fileID: 298205211}
+  NowScene:
+    m_Handle: 0
+  SceneNum: 0
+--- !u!4 &1650804618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650804615}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1665277865
 GameObject:
   m_ObjectHideFlags: 0
@@ -16538,7 +16627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13c0408e20d56642bcf54951f2292c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: ddcae5f9f69e64847abe53eba9f6d749, type: 2}
+  dialogue: {fileID: 11400000, guid: e6a6ddd3e2a0b5d4483f4457aca9f496, type: 2}
   dialogue_Event: {fileID: 1849747256}
   isAuto: 0
   dealyCool: 1.5
@@ -16711,7 +16800,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864987908
 GameObject:
@@ -17245,7 +17334,7 @@ MonoBehaviour:
   clueButton: {fileID: 1930554800}
   clueText: {fileID: 1413388145}
   tool: {fileID: 102001767}
-  clue: {fileID: 0}
+  clue: {fileID: 11400000, guid: f978cc16e666ece41be28b5b5d65db9f, type: 2}
   e_MiniGame: {fileID: 1140925546}
   toolTip: {fileID: 102001769}
 --- !u!114 &1930554800
@@ -17292,13 +17381,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1930554799}
+        m_TargetAssemblyTypeName: E_ClueSelect, Assembly-CSharp
+        m_MethodName: ClueSelect_Clear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18711,7 +18800,7 @@ MonoBehaviour:
   clueButton: {fileID: 2046032483}
   clueText: {fileID: 885341726}
   tool: {fileID: 102001767}
-  clue: {fileID: 0}
+  clue: {fileID: 11400000, guid: b051f68e728ab474fbcaaf867fd6c588, type: 2}
   e_MiniGame: {fileID: 1140925546}
   toolTip: {fileID: 102001769}
 --- !u!114 &2046032483
@@ -18758,13 +18847,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2046032482}
+        m_TargetAssemblyTypeName: E_ClueSelect, Assembly-CSharp
+        m_MethodName: ClueSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
