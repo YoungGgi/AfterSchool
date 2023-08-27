@@ -38,6 +38,9 @@ public class A_Dialogue : MonoBehaviour
     public Transform left;
     public Transform right;
     public Transform out_pos;
+    public RectTransform center1;
+    public RectTransform left1;
+    public RectTransform right1;
 
     [Header("Character_Emotion")]
     public CharacterSprite hujung_Sprite;
@@ -215,7 +218,11 @@ public class A_Dialogue : MonoBehaviour
             }
         }
 
-        
+
+        #endregion
+
+        #region UI_Off_Direction
+        StroyDataMgn.instance.isAutoStory = info.UI_Off;
         #endregion
 
         dialogueTxt.text = "";
@@ -229,22 +236,22 @@ public class A_Dialogue : MonoBehaviour
         // 헤정 애니메이션
         if (info.h_Anim == H_Anim.H_Appear)
         {
-            YoungJin.Play("Y_Appear");
+            Hujung.Play("H_Appear");
         }
 
         if (info.h_Anim == H_Anim.H_DisAppear)
         {
-            YoungJin.Play("Y_DisAppear");
+            Hujung.Play("H_DisAppear");
         }
 
-        if (info.h_Anim == H_Anim.Start)
+        if(info.h_Anim == H_Anim.Start)
         {
-            YoungJin.Play("Y_Start");
+            Hujung.Play("H_Start");
         }
 
         if (info.h_Anim == H_Anim.Bangbang)
         {
-            YoungJin.Play("Y_Bangbang");
+            Hujung.Play("H_BangBang");
         }
 
         #endregion
@@ -377,13 +384,13 @@ public class A_Dialogue : MonoBehaviour
         switch(info.h_Direction)
         {
             case H_Direction.Center:
-                hujungImg.transform.position = center.transform.position;
+                hujungImg.transform.localPosition = center1.transform.localPosition;
                 break;
             case H_Direction.Right:
-                hujungImg.transform.position = right.transform.position;
+                hujungImg.transform.localPosition = right1.transform.localPosition;
                 break;
             case H_Direction.Left:
-                hujungImg.transform.position = left.transform.position;
+                hujungImg.transform.localPosition = left1.transform.localPosition;
                 break;
             case H_Direction.Out:
                 hujungImg.transform.position = out_pos.transform.position;
@@ -417,16 +424,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.j_Direction)
         {
             case J_Direction.Center:
-                jisuImg.transform.position = center.transform.position;
+                jisuImg.transform.localPosition = center1.transform.localPosition;
                 break;
             case J_Direction.Right:
-                jisuImg.transform.position = right.transform.position;
+                jisuImg.transform.localPosition = right1.transform.localPosition;
                 break;
             case J_Direction.Left:
-                jisuImg.transform.position = left.transform.position;
+                jisuImg.transform.localPosition = left1.transform.localPosition;
                 break;
             case J_Direction.Out:
-                jisuImg.transform.position = out_pos.transform.position;
+                jisuImg.transform.localPosition = out_pos.transform.localPosition;
                 break;
         }
         #endregion
@@ -436,16 +443,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.m_Direction)
         {
             case M_Direction.Center:
-                minSeckImg.transform.position = center.transform.position;
+                minSeckImg.transform.localPosition = center1.transform.localPosition;
                 break;
             case M_Direction.Right:
-                minSeckImg.transform.position = right.transform.position;
+                minSeckImg.transform.localPosition = right1.transform.localPosition;
                 break;
             case M_Direction.Left:
-                minSeckImg.transform.position = left.transform.position;
+                minSeckImg.transform.localPosition = left1.transform.localPosition;
                 break;
             case M_Direction.Out:
-                minSeckImg.transform.position = out_pos.transform.position;
+                minSeckImg.transform.localPosition = out_pos.transform.localPosition;
                 break;
         }
         #endregion

@@ -23,6 +23,8 @@ public class StroyDataMgn : MonoBehaviour
 
     public bool isAutoLive;
 
+    public bool isAutoStory;
+
     public bool isTwoSpeed;
 
     public bool isSettingOn;

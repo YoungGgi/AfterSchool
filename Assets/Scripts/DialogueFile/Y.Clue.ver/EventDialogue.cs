@@ -20,9 +20,8 @@ public class EventDialogue : MonoBehaviour
     public Scene NowScene;
     public int SceneNum;
 
-    void Start()
+    void OnEnable()
     {
-        //dialogue_Event.EnqueuDialogue(dialogue);
         isLoading = true;
         StartCoroutine(LoadingAnim());
 
@@ -76,6 +75,7 @@ public class EventDialogue : MonoBehaviour
                 dialogue_Event.DequeueDialogue();
             }
         }
+
     }
 
     IEnumerator NextDelay()

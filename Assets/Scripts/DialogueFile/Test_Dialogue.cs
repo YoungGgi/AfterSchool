@@ -19,6 +19,12 @@ public class Test_Dialogue : MonoBehaviour
 
     bool isLoading;
 
+    public GameObject auto_Btn;
+    public GameObject auto_true_Btn;
+
+    public GameObject speed2_Btn;
+    public GameObject speed2_true_Btn;
+
     public Scene NowScene;
     public int SceneNum;
 
@@ -32,10 +38,20 @@ public class Test_Dialogue : MonoBehaviour
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
 
-        if(StroyDataMgn.instance.isAutoLive)
+        if (StroyDataMgn.instance.isAutoLive)
         {
             autoText.gameObject.SetActive(true);
+
+            auto_Btn.gameObject.SetActive(false);
+            auto_true_Btn.gameObject.SetActive(true);
         }
+
+        if (StroyDataMgn.instance.isTwoSpeed)
+        {
+            speed2_Btn.gameObject.SetActive(false);
+            speed2_true_Btn.gameObject.SetActive(true);
+        }
+
     }
 
     IEnumerator LoadingAnim()
@@ -53,11 +69,11 @@ public class Test_Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (isLoading || StroyDataMgn.instance.isSettingOn == true)
+        if (isLoading || StroyDataMgn.instance.isSettingOn)
             return;
         else
         {
-            if (StroyDataMgn.instance.isAutoLive == true && a_Dialogue.isTextComplete == true)
+            if (StroyDataMgn.instance.isAutoLive && a_Dialogue.isTextComplete == true)
             {
                 autoText.gameObject.SetActive(true);
                 StartCoroutine(NextDelay());
@@ -74,6 +90,13 @@ public class Test_Dialogue : MonoBehaviour
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
+
+            if(StroyDataMgn.instance.isAutoStory && a_Dialogue.isTextComplete == true)
+            {
+                StartCoroutine(NextDelay());
+                a_Dialogue.DequeueDialogue();
+            }
+
         }
     }
 
@@ -83,10 +106,7 @@ public class Test_Dialogue : MonoBehaviour
     }
 
 
-    public void Next()
-    {
-        a_Dialogue.DequeueDialogue();
-    }
-    
+    public void Next() => a_Dialogue.DequeueDialogue();
+
 
 }

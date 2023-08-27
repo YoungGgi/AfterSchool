@@ -273,6 +273,7 @@ public class Dialogue_Event : MonoBehaviour
     IEnumerator GoToMiniGame()
     {
         isDialoge = false;
+        
         yield return new WaitForSeconds(0.5f);
 
         dialogueGroup.gameObject.SetActive(false);
