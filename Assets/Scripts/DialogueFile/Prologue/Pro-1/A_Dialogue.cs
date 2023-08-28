@@ -225,6 +225,15 @@ public class A_Dialogue : MonoBehaviour
         StroyDataMgn.instance.isAutoStory = info.UI_Off;
         #endregion
 
+
+        #region ChapterClose
+        if (info.isPrologueClose)
+        {
+            ChapterCheck.instance.isPrologueComplete = true;
+            SceneManager.LoadScene(0);
+        }
+        #endregion
+
         dialogueTxt.text = "";
         StartCoroutine(TypeText(info));
     }
