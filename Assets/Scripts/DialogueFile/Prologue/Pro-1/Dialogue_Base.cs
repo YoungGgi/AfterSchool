@@ -54,7 +54,13 @@ public class Dialogue_Base : ScriptableObject
         [Header("배경 이미지")]
         public Sprite backGround;
 
-    
+        [Header("챕터 종료 여부")]
+        public bool isPrologueClose;
+        public bool isChapter1Close;
+        public bool isChapter2Close;
+        public bool isChapter3Close;
+
+
     }
 
     public Info[] dialogueInfo;
