@@ -19,6 +19,24 @@ public class RedDotMgn : MonoBehaviour
     public A_Dialogue dialogue;
     public ClueManager clue;
 
+    private void Start()
+    {
+        for (int i = 0; i < clueText.Length; i++)
+        {
+            for (int j = 0; j < redDot_Btn.Length; j++)
+            {
+                if (clueText[i].text != "???" && !ClueCheckMgn.instance.isCheck[i])
+                {
+                    redDot.gameObject.SetActive(true);
+                    redDot_Tablet.gameObject.SetActive(true);
+                    redDot_Btn[i].gameObject.SetActive(true);
+                    break;
+                }
+            }
+        }
+    }
+
+
     private void Update()
     {
         if(dialogue.isClueUpdate)
