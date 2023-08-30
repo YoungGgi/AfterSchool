@@ -52,7 +52,6 @@ public class Dialogue_Base : ScriptableObject
         public bool Title_On;
 
         [Header("배경 이미지")]
-        public Sprite backGround;
         public BackGround backGroundImg;
 
         [Header("챕터 종료 여부")]

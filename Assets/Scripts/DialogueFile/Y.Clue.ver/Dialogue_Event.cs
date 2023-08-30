@@ -11,6 +11,7 @@ public class Dialogue_Event : MonoBehaviour
     public TextMeshProUGUI dialogueTxt;
     public TextMeshProUGUI nameTxt;
     public Image backGroundImg;                // 배경 이미지
+    public BackGroundFold backGroundFold;
     public GameObject next;                    // 화살표 오브젝트
     public GameObject textPrefab;              // 백로그 전용 텍스트 프리팹
     public Transform parentContents;           // 백로그의 Contents에서 출력됨
@@ -120,7 +121,21 @@ public class Dialogue_Event : MonoBehaviour
 
         dialogueTxt.text = info.myText;
 
-        backGroundImg.sprite = info.backGround;
+        #region BackGround
+        switch (info.backGroundImg)
+        {
+            case BackGround.Black:
+                backGroundImg.sprite = backGroundFold.backGround[0];
+                break;
+            case BackGround.Hall:
+                backGroundImg.sprite = backGroundFold.backGround[1];
+                break;
+            case BackGround.ClassRoom_Pro:
+                backGroundImg.sprite = backGroundFold.backGround[2];
+                break;
+        }
+        #endregion
+
         #endregion
 
         #region CharacterName

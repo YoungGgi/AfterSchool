@@ -158,8 +158,6 @@ public class A_Dialogue : MonoBehaviour
 
         dialogueTxt.text = info.myText;
 
-        backGroundImg.sprite = info.backGround;
-
         switch(info.backGroundImg)
         {
             case BackGround.Black:
