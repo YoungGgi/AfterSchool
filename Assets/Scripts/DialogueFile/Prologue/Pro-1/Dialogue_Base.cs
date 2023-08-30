@@ -53,6 +53,7 @@ public class Dialogue_Base : ScriptableObject
 
         [Header("배경 이미지")]
         public Sprite backGround;
+        public BackGround backGroundImg;
 
         [Header("챕터 종료 여부")]
         public bool isPrologueClose;
@@ -153,6 +154,13 @@ public enum M_Sprite
 }
 
 #endregion
+
+public enum BackGround
+{
+    Black,
+    Hall,
+    ClassRoom_Pro
+}
 
 public enum Direction
 {

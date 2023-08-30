@@ -21,6 +21,7 @@ public class RedDotMgn : MonoBehaviour
 
     private void Start()
     {
+        
         for (int i = 0; i < clueText.Length; i++)
         {
             for (int j = 0; j < redDot_Btn.Length; j++)
@@ -34,6 +35,7 @@ public class RedDotMgn : MonoBehaviour
                 }
             }
         }
+        
     }
 
 
