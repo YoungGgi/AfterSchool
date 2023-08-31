@@ -188,20 +188,37 @@ public class A_Dialogue : MonoBehaviour
                 nameTxt.text = "정효정";
                 hujungImg.color = new Color(255, 255, 255);
                 youngjinImg.color = Color.gray;
+                jisuImg.color = Color.gray;
+                minSeckImg.color = Color.gray;
                 break;
             case Name.YoungJin:
                 nameTxt.text = "이용진";
                 youngjinImg.color = new Color(255, 255, 255);
                 hujungImg.color = Color.gray;
+                jisuImg.color = Color.gray;
+                minSeckImg.color = Color.gray;
                 break;
             case Name.Jisu:
                 nameTxt.text = "은지수";
+                jisuImg.color = new Color(255, 255, 255);
+                hujungImg.color = Color.gray;
+                youngjinImg.color = Color.gray;
+                minSeckImg.color = Color.gray;
                 break;
             case Name.MinSeok:
                 nameTxt.text = "염민석";
+                minSeckImg.color = new Color(255, 255, 255);
+                hujungImg.color = Color.gray;
+                youngjinImg.color = Color.gray;
+                jisuImg.color = Color.gray;
                 break;
             case Name.Who:
                 nameTxt.text = "???";
+                break;
+            case Name.HujungYoung:
+                nameTxt.text = "정효정&이용진";
+                hujungImg.color = new Color(255, 255, 255);
+                youngjinImg.color = new Color(255, 255, 255);
                 break;
         }
         #endregion
@@ -360,8 +377,20 @@ public class A_Dialogue : MonoBehaviour
             case Y_Sprite.Idle:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[0];
                 break;
-            case Y_Sprite.Angry:
+            case Y_Sprite.Idle01:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[1];
+                break;
+            case Y_Sprite.Angry:
+                youngjinImg.sprite = youngjing_Sprite.characterSprite[2];
+                break;
+            case Y_Sprite.Smile:
+                youngjinImg.sprite = youngjing_Sprite.characterSprite[3];
+                break;
+            case Y_Sprite.Smile01:
+                youngjinImg.sprite = youngjing_Sprite.characterSprite[4];
+                break;
+            case Y_Sprite.Surprise:
+                youngjinImg.sprite = youngjing_Sprite.characterSprite[5];
                 break;
         }
         #endregion

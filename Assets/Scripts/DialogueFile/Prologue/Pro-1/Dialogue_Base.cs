@@ -68,7 +68,7 @@ public class Dialogue_Base : ScriptableObject
 
 public enum Name
 {
-    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who
+    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung
 }
 
 #region HujungEnum
@@ -112,7 +112,7 @@ public enum Y_Direction
 
 public enum Y_Sprite
 {
-    Idle, Angry, Smile, Surprise
+    Idle, Idle01, Angry, Smile, Smile01, Surprise
 }
 
 #endregion
