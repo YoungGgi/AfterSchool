@@ -216,9 +216,26 @@ public class A_Dialogue : MonoBehaviour
                 nameTxt.text = "???";
                 break;
             case Name.HujungYoung:
-                nameTxt.text = "정효정&이용진";
+                nameTxt.text = "효정&용진";
                 hujungImg.color = new Color(255, 255, 255);
                 youngjinImg.color = new Color(255, 255, 255);
+                break;
+            case Name.Who_Jisu:
+                nameTxt.text = "???";
+                jisuImg.color = new Color(255, 255, 255);
+                hujungImg.color = Color.gray;
+                youngjinImg.color = Color.gray;
+                minSeckImg.color = Color.gray;
+                break;
+            case Name.Who_Min:
+                nameTxt.text = "???";
+                minSeckImg.color = new Color(255, 255, 255);
+                hujungImg.color = Color.gray;
+                youngjinImg.color = Color.gray;
+                jisuImg.color = Color.gray;
+                break;
+            case Name.All:
+                nameTxt.text = "일동";
                 break;
         }
         #endregion

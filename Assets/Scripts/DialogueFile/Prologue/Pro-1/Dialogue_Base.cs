@@ -68,7 +68,7 @@ public class Dialogue_Base : ScriptableObject
 
 public enum Name
 {
-    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung
+    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung, Who_Jisu, Who_Min, All
 }
 
 #region HujungEnum
