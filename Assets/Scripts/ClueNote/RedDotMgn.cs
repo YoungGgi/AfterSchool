@@ -18,6 +18,7 @@ public class RedDotMgn : MonoBehaviour
 
     public A_Dialogue dialogue;
     public ClueManager clue;
+    public ClueCheckMgn clueCheckMgn;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class RedDotMgn : MonoBehaviour
         {
             for (int j = 0; j < redDot_Btn.Length; j++)
             {
-                if (clueText[i].text != "???" && !ClueCheckMgn.instance.isCheck[i])
+                if (clueText[i].text != "???" && !clueCheckMgn.isCheck[i])
                 {
                     redDot.gameObject.SetActive(true);
                     redDot_Tablet.gameObject.SetActive(true);
@@ -52,7 +53,7 @@ public class RedDotMgn : MonoBehaviour
         {
             for(int j = 0; j < redDot_Btn.Length; j++)
             {
-                if(clueText[i].text != "???" && dialogue.isClueUpdate && !ClueCheckMgn.instance.isCheck[i])
+                if(clueText[i].text != "???" && dialogue.isClueUpdate && !clueCheckMgn.isCheck[i])
                 {
                     redDot_Btn[i].gameObject.SetActive(true);
                     break;
@@ -72,7 +73,7 @@ public class RedDotMgn : MonoBehaviour
     public void RedDotRemove(int i)
     {
         redDot_Btn[i].gameObject.SetActive(false);
-        ClueCheckMgn.instance.isCheck[i] = true;
+        clueCheckMgn.isCheck[i] = true;
 
         if(setActiveFalseCount == clue.clueAddCount)
         {

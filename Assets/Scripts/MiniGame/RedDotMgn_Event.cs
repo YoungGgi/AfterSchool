@@ -18,6 +18,7 @@ public class RedDotMgn_Event : MonoBehaviour
 
     public Dialogue_Event dialogue_Event;
     public ClueManager clue;
+    public ClueCheckMgn clueCheckMgn;
 
     private void Update()
     {
@@ -32,7 +33,7 @@ public class RedDotMgn_Event : MonoBehaviour
         {
             for (int j = 0; j < redDot_Btn.Length; j++)
             {
-                if (clueText[i].text != "???" && dialogue_Event.isClueUpdate && !ClueCheckMgn.instance.isCheck[i])
+                if (clueText[i].text != "???" && dialogue_Event.isClueUpdate && !clueCheckMgn.isCheck[i])
                 {
                     redDot_Btn[i].gameObject.SetActive(true);
                     break;
@@ -52,7 +53,7 @@ public class RedDotMgn_Event : MonoBehaviour
     public void RedDotRemove(int i)
     {
         redDot_Btn[i].gameObject.SetActive(false);
-        ClueCheckMgn.instance.isCheck[i] = true;
+        clueCheckMgn.isCheck[i] = true;
 
         if (setActiveFalseCount == clue.clueAddCount)
         {
