@@ -22,32 +22,49 @@ public class ClueSelectBtn : MonoBehaviour
     private void Start()
     {
         clueText.text = clue.clueName;
+        explainText.text = clue.clueExplain;
+    }
+
+    public void OnExplainBox()
+    {
+        
+        explainBox.gameObject.SetActive(true);
+        
     }
 
     public void ClueSelect()
     {
         clueButton.enabled = false;
-        miniManager.checkCount++;
-        explainBox.gameObject.SetActive(true);
-        explainText.text = clue.clueExplain;
+        explainBox.gameObject.SetActive(false);
     }
 
     public void ClueSelect_Clear()
     {
-        clueButton.enabled = false;
-        miniManager.checkCount++;
         miniManager.isClear[0] = true;
-        explainBox.gameObject.SetActive(true);
-        explainText.text = clue.clueExplain;
+        clueButton.enabled = false;
+        explainBox.gameObject.SetActive(false);
+        miniManager.checkCount++;
+    }
+
+    public void ClueCancel_1()
+    {
+        miniManager.isClear[0] = false;
+        explainBox.gameObject.SetActive(false);
     }
 
     public void ClueSelect_Clear2()
     {
-        clueButton.enabled = false;
-        miniManager.checkCount++;
+       
         miniManager.isClear[1] = true;
-        explainBox.gameObject.SetActive(true);
-        explainText.text = clue.clueExplain;
+        clueButton.enabled = false;
+        explainBox.gameObject.SetActive(false);
+        miniManager.checkCount++;
+    }
+
+    public void ClueCancel_2()
+    {
+        miniManager.isClear[1] = false;
+        explainBox.gameObject.SetActive(false);
     }
 
 }

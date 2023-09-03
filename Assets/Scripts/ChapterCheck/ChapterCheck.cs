@@ -22,4 +22,10 @@ public class ChapterCheck : MonoBehaviour
     #endregion
 
     public bool isPrologueComplete;
+
+    public bool is1ChapComplete;
+
+    public bool is2ChapComplete;
+
+    public bool is3ChapComplete;
 }
