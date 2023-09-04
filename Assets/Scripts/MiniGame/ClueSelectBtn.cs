@@ -25,6 +25,7 @@ public class ClueSelectBtn : MonoBehaviour
         explainText.text = clue.clueExplain;
     }
 
+    // 버튼 클릭시 해당 단서 설명창 출력
     public void OnExplainBox()
     {
         
@@ -32,12 +33,21 @@ public class ClueSelectBtn : MonoBehaviour
         
     }
 
+    // 단서 선택(오답 버튼 클릭시)
     public void ClueSelect()
     {
         clueButton.enabled = false;
         explainBox.gameObject.SetActive(false);
+        miniManager.checkCount++;
     }
 
+    // 단서 취소(오답 버튼 클릭시)
+    public void ClueCancel()
+    {
+        explainBox.gameObject.SetActive(false);
+    }
+
+    // 단서 선택(정답1 클릭 시)
     public void ClueSelect_Clear()
     {
         miniManager.isClear[0] = true;
@@ -46,12 +56,14 @@ public class ClueSelectBtn : MonoBehaviour
         miniManager.checkCount++;
     }
 
+    // 단서 취소(정답 1 클릭 시)
     public void ClueCancel_1()
     {
         miniManager.isClear[0] = false;
         explainBox.gameObject.SetActive(false);
     }
 
+    // 단서 선택(정답2 클릭 시)
     public void ClueSelect_Clear2()
     {
        
@@ -61,6 +73,7 @@ public class ClueSelectBtn : MonoBehaviour
         miniManager.checkCount++;
     }
 
+    // 단서 취소(정답2 클릭 시)
     public void ClueCancel_2()
     {
         miniManager.isClear[1] = false;

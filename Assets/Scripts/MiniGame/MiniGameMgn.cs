@@ -18,6 +18,10 @@ public class MiniGameMgn : MonoBehaviour
 
     public int checkCount;
 
+    public GameObject dialogueGroup;
+    public GameObject dialogue;
+    public GameObject miniGameGroup;
+
     private void Update()
     {
         if(checkCount == 2)
@@ -52,7 +56,15 @@ public class MiniGameMgn : MonoBehaviour
         }
 
         conformGroup.gameObject.SetActive(false);
+        failGroup.gameObject.SetActive(false);
 
+    }
+
+    public void GoDialgoue()
+    {
+        miniGameGroup.gameObject.SetActive(false);
+        dialogueGroup.gameObject.SetActive(true);
+        dialogue.gameObject.SetActive(true);
     }
 
 }

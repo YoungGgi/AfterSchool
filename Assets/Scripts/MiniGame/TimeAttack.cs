@@ -32,6 +32,7 @@ public class TimeAttack : MonoBehaviour
     private void Update()
     {
         StartCoroutine(TimeStart());
+
     }
 
     IEnumerator TimeStart()
@@ -46,12 +47,13 @@ public class TimeAttack : MonoBehaviour
             sec = (int)time % 60;
             time_Txt.text = min.ToString("00") + ":" + sec.ToString("00");
         }
-        else if (time < 0)
+        else if(time < 0f)
         {
-            this.gameObject.SetActive(false);
+            Debug.Log("Time");
         }
 
-        if (time < 10f)
+
+        if (time < 11f)
             time_Txt.color = new Color(255, 0, 0);
 
     }

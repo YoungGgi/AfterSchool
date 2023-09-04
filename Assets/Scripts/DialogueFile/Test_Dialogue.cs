@@ -28,7 +28,7 @@ public class Test_Dialogue : MonoBehaviour
     public Scene NowScene;
     public int SceneNum;
 
-    void Start()
+    void OnEnable()
     {
         //a_Dialogue.EnqueuDialogue(dialogue);
         isLoading = true;
