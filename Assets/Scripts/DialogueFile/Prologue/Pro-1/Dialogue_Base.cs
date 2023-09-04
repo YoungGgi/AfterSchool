@@ -120,7 +120,7 @@ public enum Y_Sprite
 #region JisuEnum
 public enum J_Anim
 {
-    Idle, J_Appear, J_DisAppear, Start
+    Idle, J_Appear, J_DisAppear, Start, J_BangBang
 }
 
 public enum J_Direction

@@ -347,9 +347,14 @@ public class A_Dialogue : MonoBehaviour
             Jisu.Play("J_DisAppear");
         }
 
-        if (info.j_Anim == J_Anim.J_DisAppear)
+        if (info.j_Anim == J_Anim.Start)
         {
             Jisu.Play("J_Start");
+        }
+
+        if (info.j_Anim == J_Anim.J_BangBang)
+        {
+            Jisu.Play("J_BangBang");
         }
 
         #endregion
