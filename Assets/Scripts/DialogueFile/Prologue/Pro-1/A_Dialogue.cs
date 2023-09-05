@@ -84,17 +84,6 @@ public class A_Dialogue : MonoBehaviour
         StroyDataMgn.instance.isSettingOn = false;
     }
 
-    /*
-    private void Start()
-    {
-        dialogueInfo = new Queue<Dialogue_Base.Info>();
-        dialogueUI.gameObject.SetActive(false);
-        StartCoroutine(Loading());
-
-        StroyDataMgn.instance.isSettingOn = false;
-
-    }
-    */
     IEnumerator Loading()
     {
         yield return new WaitForSeconds(1.5f);
@@ -168,6 +157,15 @@ public class A_Dialogue : MonoBehaviour
                 break;
             case BackGround.ClassRoom_Pro:
                 backGroundImg.sprite = backGroundFold.backGround[2];
+                break;
+            case BackGround.Hall_Chap1:
+                backGroundImg.sprite = backGroundFold.backGround[3];
+                break;
+            case BackGround.Library:
+                backGroundImg.sprite = backGroundFold.backGround[4];
+                break;
+            case BackGround.TeacherRoom:
+                backGroundImg.sprite = backGroundFold.backGround[5];
                 break;
         }
 
