@@ -12,11 +12,8 @@ public class TimeAttack : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI time_Txt;
-
-    void Start()
-    {
-        //time_Txt.text = time.ToString();
-    }
+    [SerializeField]
+    private GameObject timeOverObj;
 
     private void OnEnable()
     {
@@ -49,7 +46,7 @@ public class TimeAttack : MonoBehaviour
         }
         else if(time < 0f)
         {
-            Debug.Log("Time");
+            timeOverObj.gameObject.SetActive(true);
         }
 
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MiniGameMgn : MonoBehaviour
 {
@@ -22,9 +23,15 @@ public class MiniGameMgn : MonoBehaviour
     public GameObject dialogue;
     public GameObject miniGameGroup;
 
+    public Scene NowScene;
+    public int SceneNum;
+
     private void Update()
     {
-        if(checkCount == 2)
+        NowScene = SceneManager.GetActiveScene(); // 매 프레임마다 현재 씬 확인하기
+        SceneNum = NowScene.buildIndex;
+
+        if (checkCount == 2)
         {
             conformGroup.gameObject.SetActive(true);
         }
@@ -43,12 +50,27 @@ public class MiniGameMgn : MonoBehaviour
         }
     }
 
+    public void Conform_2ver()
+    {
+        if (isClear[0])
+        {
+            clearGroup.gameObject.SetActive(true);
+        }
+        else
+        {
+            failGroup.gameObject.SetActive(true);
+        }
+    }
+
     public void Cancel()
     {
         checkCount = 0;
 
-        isClear[0] = false;
-        isClear[1] = false;
+        for(int i = 0; i < isClear.Length; i++)
+        {
+            isClear[i] = false;
+        }
+
 
         for(int j = 0; j < clueBtns.Length; j++)
         {
@@ -58,6 +80,18 @@ public class MiniGameMgn : MonoBehaviour
         conformGroup.gameObject.SetActive(false);
         failGroup.gameObject.SetActive(false);
 
+    }
+
+    public void TimeOver()
+    {
+        StartCoroutine(GoGameScene());
+    }
+
+    IEnumerator GoGameScene()
+    {
+        yield return new WaitForSeconds(0.7f);
+
+        SceneManager.LoadScene(SceneNum);
     }
 
     public void GoDialgoue()
