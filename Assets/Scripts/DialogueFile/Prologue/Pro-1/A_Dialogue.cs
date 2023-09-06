@@ -9,8 +9,8 @@ public class A_Dialogue : MonoBehaviour
 {
     
     [Header("DialogueGroup")]
-    public TextMeshProUGUI dialogueTxt;       
-    public TextMeshProUGUI nameTxt;
+    public TextMeshProUGUI dialogueTxt;        // 대화 텍스트
+    public TextMeshProUGUI nameTxt;            // 이름 텍스트
     public Image backGroundImg;                // 배경 이미지
     public BackGroundFold backGroundFold;
     public GameObject next;                    // 화살표 오브젝트
@@ -27,23 +27,23 @@ public class A_Dialogue : MonoBehaviour
 
     [Header("DialogueEnd")]
     public GameObject dialogueUI;              // 대화씬 전용 UI
-    public GameObject dialoguePanelText;
-    public GameObject dialogueSetting;
+    public GameObject dialoguePanelText;       // 대화창 UI
+    public GameObject dialogueSetting;         // 대화 기능 UI(오토, 로그, 설정)
 
     [Header("Character")]
     public Image hujungImg;                   // 효정 스프라이트
     public Image youngjinImg;                 // 용진 스프라이트
     public Image jisuImg;                     // 효정 스프라이트
     public Image minSeckImg;                  // 민석 스프라이트
-    public Transform center;
+    public Transform center;                  // 캐릭터 위치(용진)
     public Transform left;
     public Transform right;
     public Transform out_pos;
-    public RectTransform center1;
+    public RectTransform center1;             // 캐릭터 위치(효정, 지수, 민석?)
     public RectTransform left1;
     public RectTransform right1;
 
-    [Header("Character_Emotion")]
+    [Header("Character_Emotion")]             // 각 캐릭터 표정 스프라이트
     public CharacterSprite hujung_Sprite;
     public CharacterSprite youngjing_Sprite;
     public CharacterSprite jisu_Sprite;
@@ -57,11 +57,11 @@ public class A_Dialogue : MonoBehaviour
     
 
     [Header("Direction")]
-    public Animator fadeManager;                // 페이드 인 / 아웃 전용 효과
+    public Animator fadeManager;               // 페이드 인 / 아웃 전용 효과
     
-    public GameObject titleObj;
+    public GameObject titleObj;                // 게임 타이틀 오브젝트
 
-    [Header("Add Clue")]
+    [Header("Add Clue")]                       // 대화 진행 중 추가될 단서목록
     public ClueManager clue;
     public ClueObject clueObj0;
     public ClueObject clueObj1;
@@ -84,6 +84,7 @@ public class A_Dialogue : MonoBehaviour
         StroyDataMgn.instance.isSettingOn = false;
     }
 
+    // 게임 시작 시 로딩 화면(자동저장) 출력, 딜레이 후 대화 화면 등장
     IEnumerator Loading()
     {
         yield return new WaitForSeconds(1.5f);
@@ -147,7 +148,64 @@ public class A_Dialogue : MonoBehaviour
 
         dialogueTxt.text = info.myText;
 
-        switch(info.backGroundImg)
+        BackGroundChange(info);
+        #endregion
+
+        #region CharacterName
+
+        CharacterName(info);
+        #endregion
+
+        CharacterAnim(info);
+
+        CharacterEmotion(info);
+
+        CharacterDirection(info);
+
+        BackGroundDirection(info);
+ 
+
+        #region BackLog
+        // 백로그 텍스트 등록
+        if(dialogueTxt.text != "")
+        {
+            GameObject clone = Instantiate(textPrefab, parentContents);
+
+            if (info.charName == Name.Blank)
+            {
+                clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
+            }
+            else
+            {
+                clone.GetComponent<TextMeshProUGUI>().text = nameTxt.text + " : " + dialogueTxt.text;
+            }
+        }
+
+
+        #endregion
+
+        #region UI_Off_Direction
+        StroyDataMgn.instance.isAutoStory = info.UI_Off;
+        #endregion
+
+
+        #region ChapterClose
+        // 챕터 종료시 메인 로비로 이동
+        if (info.isPrologueClose)
+        {
+            ChapterCheck.instance.isPrologueComplete = true;
+            SceneManager.LoadScene(0);
+        }
+        #endregion
+
+        dialogueTxt.text = "";
+        StartCoroutine(TypeText(info));
+    }
+
+    // 대화 진행 중 배경 설정 함수
+    public void BackGroundChange(Dialogue_Base.Info info)
+    {
+        switch (info.backGroundImg)
         {
             case BackGround.Black:
                 backGroundImg.sprite = backGroundFold.backGround[0];
@@ -168,12 +226,12 @@ public class A_Dialogue : MonoBehaviour
                 backGroundImg.sprite = backGroundFold.backGround[5];
                 break;
         }
+    }
 
-        #endregion
-
-        #region CharacterName
-        
-        switch(info.charName)
+    // 대화 진행 중 캐릭터 이름 함수
+    public void CharacterName(Dialogue_Base.Info info)
+    {
+        switch (info.charName)
         {
             case Name.Blank:
                 nameTxt.text = "";
@@ -232,57 +290,26 @@ public class A_Dialogue : MonoBehaviour
                 youngjinImg.color = Color.gray;
                 jisuImg.color = Color.gray;
                 break;
+            case Name.PlayerHujung:
+                nameTxt.text = PlayerName.instance.player + "&" + "효정";
+                hujungImg.color = new Color(255, 255, 255);
+                youngjinImg.color = Color.gray;
+                jisuImg.color = Color.gray;
+                minSeckImg.color = Color.gray;
+                break;
+            case Name.HujungJisu:
+                nameTxt.text = "효정&지수";
+                hujungImg.color = new Color(255, 255, 255);
+                jisuImg.color = new Color(255, 255, 255);
+                youngjinImg.color = Color.gray;
+                break;
             case Name.All:
                 nameTxt.text = "일동";
                 break;
         }
-        #endregion
-
-        CharacterAnim(info);
-
-        CharacterEmotion(info);
-
-        CharacterDirection(info);
-
-        BackGroundDirection(info);
- 
-
-        #region BackLog
-        // 백로그 텍스트 등록
-        if(dialogueTxt.text != "")
-        {
-            GameObject clone = Instantiate(textPrefab, parentContents);
-
-            if (info.charName == Name.Blank)
-            {
-                clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
-            }
-            else
-            {
-                clone.GetComponent<TextMeshProUGUI>().text = nameTxt.text + " : " + dialogueTxt.text;
-            }
-        }
-
-
-        #endregion
-
-        #region UI_Off_Direction
-        StroyDataMgn.instance.isAutoStory = info.UI_Off;
-        #endregion
-
-
-        #region ChapterClose
-        if (info.isPrologueClose)
-        {
-            ChapterCheck.instance.isPrologueComplete = true;
-            SceneManager.LoadScene(0);
-        }
-        #endregion
-
-        dialogueTxt.text = "";
-        StartCoroutine(TypeText(info));
     }
 
+    // 대화 진행 중 캐릭터 애니메이션 함수
     public void CharacterAnim(Dialogue_Base.Info info)
     {
 
@@ -377,6 +404,7 @@ public class A_Dialogue : MonoBehaviour
 
     }
 
+    // 대화 진행 중 캐릭터 표정 변화 함수
     public void CharacterEmotion(Dialogue_Base.Info info)
     {
         #region HujungEmotion
@@ -446,6 +474,7 @@ public class A_Dialogue : MonoBehaviour
         #endregion
     }
 
+    // 대화 진행 중 캐릭터 위치 설정 함수
     public void CharacterDirection(Dialogue_Base.Info info)
     {
         #region CharacterDirection
@@ -532,6 +561,7 @@ public class A_Dialogue : MonoBehaviour
 
     }
 
+    // 대화 진행 중 기타 연출 함수(화면 암전, 단서 획득, 타이틀 등장 등)
     public void BackGroundDirection(Dialogue_Base.Info info)
     {
         #region Direction
@@ -638,7 +668,6 @@ public class A_Dialogue : MonoBehaviour
     {
         isDialoge = false;
         dialogueUI.SetActive(false);
-        //ChapterCheck.instance.isPrologueComplete = true;
         SceneManager.LoadScene(SceneNum + 1);
     }
 

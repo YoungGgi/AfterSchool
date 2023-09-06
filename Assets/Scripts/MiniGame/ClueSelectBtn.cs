@@ -13,6 +13,8 @@ public class ClueSelectBtn : MonoBehaviour
     [SerializeField]
     private GameObject explainBox;                 // 단서 설명할 대화상자
     [SerializeField]
+    private GameObject questionBox;
+    [SerializeField]
     private TextMeshProUGUI explainText;          // 단서 설명 대화상자 텍스트
 
     public ClueObject clue;                     // 단서
@@ -28,7 +30,7 @@ public class ClueSelectBtn : MonoBehaviour
     // 버튼 클릭시 해당 단서 설명창 출력
     public void OnExplainBox()
     {
-        
+        questionBox.gameObject.SetActive(false);
         explainBox.gameObject.SetActive(true);
         
     }
