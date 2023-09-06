@@ -10,23 +10,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 596d98f5b254220478d6fce5102989e4, type: 3}
-  m_Name: (8)Prologue
+  m_Name: (0_1)Prologue
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - myText: "\uADF8\uB798. \uC544\uAE4C \uC6A9\uC9C4\uC774\uC758 \uC9C4\uC220\uC744
-      \uB4E3\uACE0 \uB9C8\uC74C\uC5D0 \uAC78\uB838\uB358 \uBD80\uBD84\uC774\uC5C8\uB2E4."
-    charName: 0
+  - myText: "\uACA8\uC6B0 \uC218\uC5C5 \uC2DC\uAC04\uC5D0 \uC18C\uB9AC \uD55C \uBC88
+      \uC9C0\uB978 \uAC70 \uAC00\uC9C0\uACE0 \uBC8C \uC138\uC6B0\uAE30\uB77C\uB2C8.
+      \n\uB108\uBB34 \uD558\uC9C0 \uC54A\uC544?"
+    charName: 1
     h_Anim: 3
     h_sprite: 0
-    h_Direction: 0
+    h_Direction: 3
     y_Anim: 3
     y_sprite: 0
-    y_Direction: 0
+    y_Direction: 3
     j_Anim: 3
     j_sprite: 0
     j_Direction: 3
     m_Anim: 3
     m_sprite: 0
+    m_Direction: 3
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 0
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "...\uADF8 \uBE44\uBA85\uC774 \uAD50\uBB34\uC2E4\uAE4C\uC9C0 \uB4E4\uB9B4
+      \uC815\uB3C4\uC600\uB2E4\uB294 \uAC74 \uAE30\uC5B5 \uB098\uC9C0 \uC54A\uB098\uBD10?"
+    charName: 3
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
     m_Direction: 0
     direction: 0
     isFirstClue: 0
@@ -40,8 +68,618 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uB098\uB294 \uBD84\uBA85 6\uAD50\uC2DC \uCD08\uBC18\uC5D0 \uCC3D\uACE0
-      \uC55E\uC5D0\uC11C \uC815\uD6A8\uC815\uC744 \uB9CC\uB0AC\uB2E4."
+  - myText: "\uADF8\uCE58\uB9CC \uB0B4 \uBAA9\uAC78\uC774\uAC00 \uC0AC\uB77C\uC84C\uB2E4\uACE0!
+      \uC911\uB300 \uC0AC\uD56D\uC774\uC796\uC544!!!"
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 2
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC6A9\uC9C4\uC774\uAC00 \uB3C4\uC800\uD788 \uB098\uB97C \uBBFF\uC9C0
+      \uBABB\uD558\uACA0\uB2E4\uB294 \uD45C\uC815\uC73C\uB85C \uBC14\uB77C\uBD24\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uADF8\uB7EC\uACE0 \uBCF4\uB2C8, \uBB54\uAC00 \uD56D\uC0C1 \uCC28\uACE0
+      \uB2E4\uB154\uB358 \uAC70 \uAC19\uAE30\uB3C4 \uD558\uB124."
+    charName: 3
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 1
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uAE30\uC5B5\uC740 \uC798 \uC548\uB098\uC9C0\uB9CC."
+    charName: 3
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uB9E4\uC77C \uCC28\uACE0 \uB2E4\uB154\uB294\uB370."
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC774\uC820 \uC880 \uAE30\uC5B5\uB0A0 \uB54C\uB3C4 \uB418\uC9C0 \uC54A\uC558\uC5B4?"
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uCC38\uACE0\uB85C \uC6A9\uC9C4\uC774\uC640 \uB098\uB294 \uC911\uD559\uAD50
+      \uB54C\uBD80\uD130 \uC54C\uACE0 \uC9C0\uB0C8\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 2
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uADF8\uC57C... \uC9C4\uC9DC \uC54C \uBC14 \uC544\uB2C8\uB2C8\uAE4C...."
+    charName: 3
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 1
+    y_sprite: 1
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uB9D0\uD22C\uAC00 \uC2E0\uB784\uD558\uB2E4. \uC870\uAE08\uC740 \uAC71\uC815\uD574\uC8FC\uBA74
+      \uC5B4\uB514 \uB367\uB098\uB098."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 2
+    y_sprite: 1
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uB098\uD55C\uD150 \uC9C4\uC9DC \uC911\uC694\uD55C \uAC70\uB780 \uB9D0\uC774\uC57C..."
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uADF8\uAC8C \uADF8 \uC815\uB3C4\uC57C? \uBB50\uAE38\uB798 \uADF8\uB798?"
+    charName: 3
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 1
+    y_sprite: 5
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC6A9\uC9C4\uC774\uAC00 \uC57D\uAC04 \uB2F9\uD669\uD55C \uB4EF \uB9D0\uD588\uB2E4.
+      \uC560\uB294 \uB9E4\uBC88 \uC774\uB7F0\uB2E4\uB2C8\uAE4C."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 2
+    y_sprite: 5
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 1
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uBB34\uC2EC\uD55C \uB4EF \uC774\uC57C\uAE30\uD574\uB3C4 \uACB0\uAD6D
+      \uB0A8\uC744 \uBC30\uB824\uD560 \uC904 \uC544\uB294 \uB140\uC11D\uC774\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uB0B4\uAC00 \uC911\uC694\uD55C \uAC70\uB77C\uACE0 \uD558\uB2C8 \uB2F9\uD669\uD55C
+      \uAC70\uACA0\uC9C0."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uD558\uC9C0\uB9CC \uC5ED\uC2DC 4\uB144 \uC9EC\uC73C\uB85C\uB294 \uB098\uB97C
+      \uC644\uC804\uD788 \uD30C\uC545\uD558\uC9C0 \uBABB\uD588\uAD70."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC560\uB2C8\uBA54\uC774\uC158 \uAD7F\uC988."
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 2
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: .......
+    charName: 3
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 1
+    y_sprite: 1
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: .......
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 1
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC2F8\uB298\uD55C \uCE68\uBB35\uC774 \uAC10\uB3C8\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 2
+    y_sprite: 1
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uCE5C\uAD6C\uC758 \uB0A0\uCE74\uB85C\uC6B4 \uB208\uCD1D\uC774 \uB530\uAC11\uC9C0\uB9CC,
+      \uC774\uC815\uB3C4\uB294 \uAC10\uC218\uD560 \uC218 \uC788\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC774\uC790\uC2DD... \uB2F5\uC774 \uC5C6\uC5B4... \uC5B4\uB5BB\uAC8C\uB4E0
+      \uD558\uC9C0 \uC54A\uC73C\uBA74...."
+    charName: 3
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 1
+    y_sprite: 2
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: 
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 2
+    y_sprite: 2
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 1
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC5B4, \uC57C! \uC5B4\uB514\uAC00! \uB3C4\uC640\uC8FC\uB294\uAC70 \uC544\uB2C8\uC5C8\uC5B4?!"
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 2
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uB9E4\uC815\uD55C \uB140\uC11D, \uBC1C\uC740 \uB610 \uBE68\uB77C\uC11C
+      \uADF8 \uC7A0\uAE50 \uC0AC\uC774\uC5D0 \uBB54\uAC00 \uC911\uC5BC\uAC70\uB9AC\uBA70
+      \uC0AC\uB77C\uC84C\uB2E4."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -62,13 +700,204 @@ MonoBehaviour:
     isForthClue: 0
     UI_Off: 0
     Title_On: 0
-    backGroundImg: 0
+    backGroundImg: 1
     isPrologueClose: 0
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uADF8\uB9AC\uACE0, \uC815\uD6A8\uC815\uC740 \uADF8 \uC774\uD6C4 \uACC4\uC18D
-      \uAD50\uBB34\uC2E4\uC5D0 \uC788\uC5C8\uB2E4\uACE0 \uD588\uC9C0."
+  - myText: "...\uB9D0\uC740 \uADF8\uB807\uAC8C \uD574\uB3C4 \uB3C4\uC640\uC904 \uC904
+      \uC54C\uC558\uB294\uB370."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uD558\uC544~ \uB3C4\uB300\uCCB4 \uC5B4\uB514\uC11C \uD758\uB9B0\uAC70\uC9C0?
+      \uD56D\uC0C1 \uCC28\uACE0 \uB2E4\uB154\uC744\uD150\uB370."
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uD55C\uC228\uC774 \uC808\uB85C \uB098\uC628\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uADF8\uAC70 \uC774\uC81C \uB2E4\uC2DC \uC0B4 \uC218\uB3C4 \uC5C6\uB294
+      \uBAA9\uAC78\uC778\uB370."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: 
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 1
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC624\uB798 \uCC28\uACE0 \uB2E4\uB2C8\uAE34 \uD588\uC5C8\uB2E4. \uBD84\uBA85
+      10\uB144 \uC774\uC0C1\uC740 \uB4E4\uACE0 \uB2E4\uB154\uB358 \uAC83 \uAC19\uC740\uB370,\n\uC0AC\uC2E4
+      \uB098\uB3C4 \uBA85\uD655\uD558\uAC8C \uCC98\uC74C \uC0C0\uC744 \uB54C\uAC00
+      \uAE30\uC5B5\uC774 \uB098\uC9C4 \uC54A\uB294\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC608\uC804\uC5D0 \uB3D9\uB124\uC5D0 \uAC19\uC774 \uC0B4\uB358 \uCE5C\uAD6C\uB791
+      \uAC19\uC774 \uC0AC\uC11C \uCC28\uACE0 \uB2E4\uB2CC \uD6C4\uB85C \n\uC2B5\uAD00\uC774
+      \uB418\uC5B4\uC11C \uADF8\uB7F0\uC9C0 \uAD00\uC131\uC801\uC73C\uB85C \uCC29\uC6A9\uD558\uACE0
+      \uC788\uC5C8\uB2E4\uACE0 \uD560\uAE4C."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC0AC\uC2E4 \uC815\uB9D0 \uB108\uBB34\uB098\uACE0 \uC911\uC694\uD55C
+      \uAC70\uB0D0\uACE0 \uBB3B\uB294\uB2E4\uBA74...."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -94,8 +923,35 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uD558\uC9C0\uB9CC \uC6A9\uC9C4\uC774\uB294 6\uAD50\uC2DC\uAC00 \uB05D\uB0A0
-      \uB54C \uCBE4 \uB9E4\uC810\uC5D0 \uAC00\uBA74\uC11C \uBCF4\uC558\uB2E4."
+  - myText: "\uBB50... \uADF8\uC815\uB3C4\uB294 \uC544\uB2C8\uAE34 \uD558\uC9C0."
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 0
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uADF8\uB798\uB3C4 10\uB144 \uC774\uC0C1 \uCC28\uACE0 \uB2E4\uB2CC\uAC70\uBA74
+      \uD55C\uC21C\uAC04\uC5D0 \uC5C6\uC5B4\uC9C0\uAE30\uC5D4\n\uC880 \uC624\uB798
+      \uD568\uAED8\uD55C \uAC70\uC796\uC544?"
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -121,7 +977,9 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uCC3D\uACE0 \uC55E\uC5D0 \uC788\uB294 \uC815\uD6A8\uC815\uC744."
+  - myText: "\uADF8\uB7EC\uB2C8\uAE4C \uADF8\uB807\uAC8C \uC18C\uB9AC \uC9C8\uB800\uB358
+      \uAC83\uB3C4 \uC5B4\uCA54 \uC218 \uC5C6\uC5C8\uB358 \uAC70\uB2E4.\n\uC808\uB300
+      \uD638\uB4E4\uAC11\uC774 \uC544\uB2C8\uC5C8\uB2E4\uACE0."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -147,8 +1005,8 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uADF8\uB807\uB2E4\uBA74 \uB098\uC640 \uB9CC\uB09C \uC774\uD6C4 \uACC4\uC18D
-      \uAD50\uBB34\uC2E4\uC5D0 \uC788\uC5C8\uB2E4\uB294 \uB9D0\uC740..."
+  - myText: "\uADF8\uB798, \uADF8\uB7EC\uB2C8\uAE4C \uC5ED\uC2DC \uCC3E\uB294 \uAC8C
+      \uB9DE\uB294 \uAC70 \uAC19\uB2E4."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -195,602 +1053,16 @@ MonoBehaviour:
     isForthClue: 0
     UI_Off: 1
     Title_On: 0
-    backGroundImg: 0
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC54C\uC558\uB2E4."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
     backGroundImg: 1
     isPrologueClose: 0
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uC624!"
-    charName: 2
-    h_Anim: 1
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: ...
-    charName: 3
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 1
-    y_sprite: 1
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uBABB\uB9C8\uB545\uD55C \uD45C\uC815\uC73C\uB85C \uBCF4\uC9C0 \uB9D0\uB77C\uACE0."
-    charName: 0
-    h_Anim: 2
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 2
-    y_sprite: 1
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB09C \uB9D0\uC774\uC9C0. \uD06C\uB098\uD070 \uCC29\uAC01\uC744 \uD558\uACE0
-      \uC788\uC5C8\uB358 \uAC70\uC57C."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB625\uD3FC \uC7A1\uAE30\uB294."
-    charName: 3
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 1
-    y_sprite: 1
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: ...
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 1
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC774 \uC790\uC2DD\uC774."
+  - myText: "...\uADF8\uB7EC\uACE0\uBCF4\uB2C8 \uADF8 \uB54C\uC758 \uCE5C\uAD6C\uB294
+      \uCD5C\uADFC \uC5F0\uB77D\uD55C \uAE30\uC5B5\uC774 \uC5C6\uB2E4."
     charName: 0
     h_Anim: 0
     h_sprite: 0
-    h_Direction: 2
-    y_Anim: 2
-    y_sprite: 1
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uD06C\uD760. \uC5EC\uD558\uD2BC."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uCC98\uC74C\uC5D4 \uB0B4\uAC00 \uBAA9\uAC78\uC774\uB97C \uB2E8\uC21C\uD788
-      \uC5B4\uB518\uAC00\uC5D0\uC11C \uB5A8\uC5B4\uB728\uB9B0 \uAC70\uB77C\uACE0
-      \uC0DD\uAC01\uD588\uC9C0."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB531\uD788 \uC758\uC2EC\uD560 \uB9CC\uD55C \uC0AC\uB78C\uB3C4 \uC5C6\uACE0,
-      \uC560\uB2C8\uBA54\uC774\uC158 \uAD7F\uC988 \uBAA9\uAC78\uC774\uB97C\n\uD6D4\uCCD0\uAC08
-      \uC774\uC720\uAC00 \uC5C6\uC73C\uB2C8\uAE4C \uB9D0\uC774\uC57C."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uD558\uC9C0\uB9CC \uB0B4 \uC774\uB3D9 \uB3D9\uC120\uC5D0 \uBAA9\uAC78\uC774\uB294
-      \uC5C6\uC5C8\uC5B4."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB9AC\uACE0 \uB0B4\uAC00 \uBAA9\uAC78\uC774\uB97C \uBD84\uC2E4\uD588\uC744
-      \uAC70\uB77C\uACE0 \uC0DD\uAC01\uB418\uB294 6\uAD50\uC2DC \uB54C."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8 \uC2DC\uAC04\uB300\uC5D0 \uB9CC\uB09C \uC0AC\uB78C\uC740... \uC815\uD6A8\uC815\uC774
-      \uC720\uC77C\uD558\uC9C0."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB098?"
-    charName: 2
-    h_Anim: 1
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB798. \uB108."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC73C\uC74C..."
-    charName: 2
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uBB50, \uADF8\uB798\uB3C4. \uC0AC\uC2E4 \uCC98\uC74C\uC5D4 \uBCC4 \uC0DD\uAC01
-      \uC5C6\uC5C8\uC5B4."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC544\uAE4C\uB3C4 \uB9D0\uD588\uC9C0\uB9CC, \uB204\uAC00 \uC774 \uBAA9\uAC78\uC774\uB97C
-      \uD6D4\uCE60 \uC774\uC720\uAC00 \uC5C6\uC73C\uB2C8\uAE4C.\n\uD558\uBB3C\uBA70
-      \uCC98\uC74C \uBCF8 \uC0AC\uC774\uB77C\uBA74 \uB354\uB354\uC6B1."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uD558\uC9C0\uB9CC, \uBC29\uAE08 \uC6A9\uC9C4\uC774\uC758 \uC9C4\uC220\uB85C
-      \uD655\uC2E4\uD574\uC84C\uC5B4."
-    charName: 1
-    h_Anim: 2
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB0B4\uAC00 \uCC3D\uACE0\uC5D0 \uAC14\uB358 \uAC74 6\uAD50\uC2DC\uAC00
-      \uC2DC\uC791\uD55C \uC9C1\uD6C4\uC57C. \uAE30\uC5B5\uD558\uACE0 \uC788\uC9C0?"
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB807\uC9C0. \uC790\uB2E4\uAC00 \uAE68\uC120 \uD22C\uB35C\uAC70\uB9AC\uBA74\uC11C
-      \uAC14\uB2E4 \uC654\uC796\uC544."
-    charName: 3
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 1
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB7F0 \uC138\uC138\uD55C \uAC83\uAE4C\uC9C0 \uAE30\uC5B5\uD558\uC9C0
-      \uB9D0\uB77C\uACE0. \uC544\uBB34\uD2BC."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
     h_Direction: 0
     y_Anim: 0
     y_sprite: 0
@@ -813,466 +1085,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uB2F9\uC5F0\uD788 \uB09C \uB2E4\uB978 \uACF3\uC5D0 \uAC00\uC9C0 \uC54A\uACE0
-      \uACE7\uC7A5 \uCC3D\uACE0\uB85C \uD5A5\uD588\uC73C\uB2C8, \n\uB098\uC640 \uC815\uD6A8\uC815\uC774
-      \uB9CC\uB09C \uC2DC\uAC04\uB3C4 6\uAD50\uC2DC \uCD08\uBC18\uC774\uC57C."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 2
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB7AC\uC9C0."
-    charName: 2
-    h_Anim: 1
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB9AC\uACE0 \uB10C \uADF8 \uC774\uD6C4 \uB098\uC640 \uB9CC\uB098\uAE30
-      \uC804 \uAE4C\uC9C0 \n\uACC4\uC18D \uAD50\uBB34\uC2E4\uC5D0 \uC788\uC5C8\uB2E4\uACE0
-      \uB9D0\uD588\uC5C8\uACE0."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB7AC...\uC5C8\uB098?"
-    charName: 2
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB7AC\uAC70\uB4E0. \uADF8\uB9AC\uACE0, \uC6A9\uC9C4\uC774\uB294
-      \uADF8 \uC774\uD6C4\uC5D0 6\uAD50\uC2DC\uAC00 \uB05D\uB0A0 \uB54C \uCBE4\n\uCC3D\uACE0\uC5D0\uC11C
-      \uB110 \uBAA9\uACA9\uD588\uC5B4."
-    charName: 1
-    h_Anim: 2
-    h_sprite: 0
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC544."
-    charName: 7
-    h_Anim: 1
-    h_sprite: 3
-    h_Direction: 2
-    y_Anim: 1
-    y_sprite: 5
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC774\uC820 \uC54C\uACA0\uC9C0? \uB0B4\uAC00 \uBB34\uC2A8 \uB9D0\uC744
-      \uD558\uACE0 \uC2F6\uC740\uC9C0."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 5
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB458\uC758 \uC9C4\uC220\uC740..."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 5
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uBAA8\uC21C\uB418\uC5B4 \uC788\uB2E4\uB294 \uAC70\uC57C!"
-    charName: 1
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 5
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: ...
+  - myText: "\uBAA9\uAC78\uC774\uB97C \uC2B5\uAD00\uC801\uC73C\uB85C \uCC59\uAE30\uB2E4
+      \uBCF4\uB2C8 \uC774\uB7F0\uC2DD\uC73C\uB85C \uAE30\uC5B5\uC744 \uB3CC\uC544\uBCF8
+      \uC801\uC774 \n\uAC70\uC758 \uC5C6\uB294\uB370, \uC624\uB79C\uB9CC\uC5D0 \uC0DD\uAC01\uB0AC\uB124."
     charName: 0
     h_Anim: 0
-    h_sprite: 3
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 5
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: ...
-    charName: 1
-    h_Anim: 2
-    h_sprite: 3
-    h_Direction: 2
-    y_Anim: 2
-    y_sprite: 5
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uBC18\uC751 \uC880 \uD574\uC8FC\uC9C0?"
-    charName: 1
-    h_Anim: 0
     h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 1
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC5B4... \uB9C9\uC0C1 \uC774\uB807\uAC8C \uB4E4\uC73C\uB2C8 \uBB34\uC2A8
-      \uBC18\uC751\uC744 \uD574\uC57C \uD560\uC9C0 \uBAA8\uB974\uACA0\uB124."
-    charName: 3
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 1
-    y_sprite: 5
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB798\uB3C4 \uBB50, \uC774\uC820 \uB098\uB3C4 \uB300\uCDA9 \uC54C\uACA0\uC73C\uB2C8
-      \uADF8\uB0E5 \uACB0\uB860\uAE4C\uC9C0 \uB9D0\uD558\uC9C0 \uADF8\uB7EC\uB0D0."
-    charName: 3
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 1
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "...\uACB0\uAD6D. \uC8FC\uBAA9\uD560 \uAC83\uC740 \uB458\uC911 \uD55C
-      \uBA85\uC740 \uAC70\uC9D3\uB9D0\uC744 \uD558\uACE0 \uC788\uB2E4\uB294 \uC810\uC774\uC9C0."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 2
-    y_sprite: 1
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADFC\uB370 \uC544\uBB34\uB798\uB3C4 \uC6A9\uC9C4\uC774\uAC00 \uB098\uC5D0\uAC8C
-      \uAC70\uC9D3\uB9D0\uC744 \uD588\uB2E4\uB294 \uAC74 \uB9D0\uC774 \uC548\uB418\uACA0\uC9C0."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC815\uD6A8\uC815\uC744 \uBD24\uC5C8\uB2E4\uB294 \uAC70\uC9D3\uB9D0\uC744
-      \uD574\uBD10\uC57C \uC5BB\uC744 \uC774\uB4DD\uC774 \uC5C6\uC73C\uB2C8\uAE4C
-      \uB9D0\uC774\uC57C."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 0
-    h_Direction: 2
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8\uB807\uB2E4\uBA74 \uC790\uC5F0\uC2A4\uB7FD\uAC8C \uAC70\uC9D3\uB9D0\uC744
-      \uD55C \uAC74..."
-    charName: 1
-    h_Anim: 1
-    h_sprite: 3
     h_Direction: 0
     y_Anim: 0
     y_sprite: 0
@@ -1295,62 +1113,10 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "...\uC73C\uC74C..."
-    charName: 2
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: 
-    charName: 0
-    h_Anim: 2
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 1
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 1
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB208\uC5D0 \uB744\uAC8C \uB2F9\uD669\uD55C \uD45C\uC815\uC774 \uBCF4\uC778\uB2E4."
+  - myText: "\uC798 \uC9C0\uB0B4\uACE0 \uC788\uC73C\uB824\uB098?"
     charName: 0
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 0
     h_Direction: 0
     y_Anim: 0
     y_sprite: 0
@@ -1373,12 +1139,120 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
-  - myText: "\uADF8\uB7EC\uACE0 \uBCF4\uBA74, \uC544\uAE4C \uC774\uC57C\uAE30\uB97C
-      \uD560 \uB54C\uB3C4 \uBB18\uD558\uAC8C \uD6A1\uC124\uC218\uC124\uD588\uC5C8\uC73C\uB2C8\n\uAC70\uC9D3\uB9D0\uC744
-      \uC798 \uBABB\uD558\uB294 \uBAA8\uC591\uC774\uC9C0."
+  - myText: "...\uC5D0\uD734."
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uC774\uB807\uAC8C \uD55C\uC228\uB9CC \uC26C\uC5B4\uBD24\uC790, \uC5C6\uC5B4\uC9C4
+      \uBAA9\uAC78\uC774\uAC00 \uC81C \uBC1C\uB85C \uAC78\uC5B4 \uB3CC\uC544\uC624\uC9C4
+      \uC54A\uB294\uB2E4."
     charName: 0
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uACB0\uAD6D \uC9C1\uC811 \uCC3E\uC544 \uB098\uC11C\uB294 \uC218 \uBC16\uC5D0
+      \uC5C6\uACA0\uB2E4\uACE0 \uD310\uB2E8\uD55C \uB098\uB294, \n\uBC29\uACFC\uD6C4\uC758
+      \uC2DC\uAC04\uC744 \uC774\uC6A9\uD574 \uBAA9\uAC78\uC774\uB97C \uCC3E\uC544
+      \uB098\uC11C\uAE30\uB85C \uACB0\uC2EC\uD588\uB2E4."
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "...\uC6A9\uC9C4\uC774 \uB140\uC11D, \uC9C4\uC9DC \uC9D1\uC5D0 \uAC14\uB098?"
+    charName: 1
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    direction: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    UI_Off: 0
+    Title_On: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: "\uB098\uC911\uC5D0 \uB2E4\uC2DC \uC640\uC11C \uB3C4\uC640\uC8FC\uACA0\uC9C0?
+      \uB098 \uBBFF\uACE0 \uC788\uB2E4\uACE0!"
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
     h_Direction: 0
     y_Anim: 0
     y_sprite: 0
@@ -1404,165 +1278,7 @@ MonoBehaviour:
   - myText: 
     charName: 0
     h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 2
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 1
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8... \uC74C... \uC5B4..."
-    charName: 2
-    h_Anim: 1
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uADF8, \uADF8\uB798\uB3C4. \uC544\uC9C1 \uBABB \uCC3E\uC544\uBCF8 \uACF3\uC774
-      \uC788\uB2E4\uAC70\uB098..."
-    charName: 2
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uB9C8\uC9C0\uB9C9\uC73C\uB85C."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC73D."
-    charName: 2
-    h_Anim: 4
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC544\uAE4C\uB3C4 \uC57D\uAC04 \uC758\uAD6C\uC2EC\uC774 \uB4E4\uC5C8\uB358
-      \uBD80\uBD84\uC774\uAE34 \uD558\uC9C0\uB9CC."
-    charName: 1
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC8FC\uBA38\uB2C8\uC5D0 \uBD88\uB8E9\uD55C \uADF8\uAC70."
-    charName: 1
-    h_Anim: 2
-    h_sprite: 3
+    h_sprite: 0
     h_Direction: 0
     y_Anim: 0
     y_sprite: 0
@@ -1579,188 +1295,6 @@ MonoBehaviour:
     isThirdClue: 0
     isForthClue: 0
     UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uBB54\uC9C0 \uBCF4\uC5EC\uC904 \uC218 \uC788\uC744\uAE4C?"
-    charName: 1
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: 
-    charName: 0
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 2
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 1
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "\uC774...\uC774\uAC74...\uADF8..."
-    charName: 2
-    h_Anim: 1
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "...\uC73C...."
-    charName: 2
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: 
-    charName: 0
-    h_Anim: 2
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 1
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 1
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: "....\uBBF8\uC548....."
-    charName: 2
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 0
-    Title_On: 0
-    backGroundImg: 1
-    isPrologueClose: 0
-    isChapter1Close: 0
-    isChapter2Close: 0
-    isChapter3Close: 0
-  - myText: 
-    charName: 0
-    h_Anim: 0
-    h_sprite: 3
-    h_Direction: 0
-    y_Anim: 0
-    y_sprite: 0
-    y_Direction: 0
-    j_Anim: 0
-    j_sprite: 0
-    j_Direction: 0
-    m_Anim: 0
-    m_sprite: 0
-    m_Direction: 0
-    direction: 0
-    isFirstClue: 0
-    isSecondClue: 0
-    isThirdClue: 0
-    isForthClue: 0
-    UI_Off: 1
     Title_On: 0
     backGroundImg: 1
     isPrologueClose: 0
