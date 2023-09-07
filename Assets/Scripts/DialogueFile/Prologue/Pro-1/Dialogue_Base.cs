@@ -19,21 +19,25 @@ public class Dialogue_Base : ScriptableObject
         public H_Anim h_Anim;
         public H_Sprite h_sprite;
         public H_Direction h_Direction;
+        public bool isHujung_CloseUp;
 
         [Header("용진 연출")]
         public Y_Anim y_Anim;
         public Y_Sprite y_sprite;
         public Y_Direction y_Direction;
+        public bool isYoungjin_CloseUp;
 
         [Header("지수 연출")]
         public J_Anim j_Anim;
         public J_Sprite j_sprite;
         public J_Direction j_Direction;
+        public bool isJisu_CloseUp;
 
         [Header("민석 연출")]
         public M_Anim m_Anim;
         public M_Sprite m_sprite;
         public M_Direction m_Direction;
+        public bool isMinseok_CloseUp;
 
 
         [Header("연출효과")]

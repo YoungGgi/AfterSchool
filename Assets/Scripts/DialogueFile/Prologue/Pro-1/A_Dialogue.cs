@@ -32,7 +32,9 @@ public class A_Dialogue : MonoBehaviour
 
     [Header("Character")]
     public Image hujungImg;                   // 효정 스프라이트
+    public Image hujungImg_CloseUp;           // 효정 클로즈업 스프라이트
     public Image youngjinImg;                 // 용진 스프라이트
+    public Image youngjunImg_CloseUp;         // 용진 클로즈업 스프라이트
     public Image jisuImg;                     // 효정 스프라이트
     public Image minSeckImg;                  // 민석 스프라이트
     public Transform center;                  // 캐릭터 위치(용진)
@@ -151,10 +153,11 @@ public class A_Dialogue : MonoBehaviour
         BackGroundChange(info);
         #endregion
 
-        #region CharacterName
+        hujungImg_CloseUp.color = info.isHujung_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
+
+        youngjunImg_CloseUp.color = info.isYoungjin_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
 
         CharacterName(info);
-        #endregion
 
         CharacterAnim(info);
 
@@ -334,7 +337,7 @@ public class A_Dialogue : MonoBehaviour
         {
             Hujung.Play("H_BangBang");
         }
-
+        
         #endregion
 
         #region YoungJinAnim
@@ -412,9 +415,11 @@ public class A_Dialogue : MonoBehaviour
         {
             case H_Sprite.Idle:
                 hujungImg.sprite = hujung_Sprite.characterSprite[0];
+                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[0];
                 break;
             case H_Sprite.Angry:
                 hujungImg.sprite = hujung_Sprite.characterSprite[1];
+                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[1];
                 break;
         }
         #endregion
