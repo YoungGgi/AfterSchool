@@ -54,6 +54,7 @@ public class Dialogue_Base : ScriptableObject
 
         [Header("타이틀")]
         public bool Title_On;
+        public bool Title_Two;
 
         [Header("배경 이미지")]
         public BackGround backGroundImg;
@@ -72,7 +73,7 @@ public class Dialogue_Base : ScriptableObject
 
 public enum Name
 {
-    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung, Who_Jisu, Who_Min, PlayerHujung, HujungJisu, All
+    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung, Who_Jisu, Who_Min, PlayerHujung, HujungJisu, PlayerYoungJin, All
 }
 
 #region HujungEnum

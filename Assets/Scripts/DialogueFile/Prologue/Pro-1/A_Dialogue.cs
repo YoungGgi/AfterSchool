@@ -35,8 +35,10 @@ public class A_Dialogue : MonoBehaviour
     public Image hujungImg_CloseUp;           // 효정 클로즈업 스프라이트
     public Image youngjinImg;                 // 용진 스프라이트
     public Image youngjunImg_CloseUp;         // 용진 클로즈업 스프라이트
-    public Image jisuImg;                     // 효정 스프라이트
+    public Image jisuImg;                     // 지수 스프라이트
+    public Image jisuImg_CloseUp;             // 지수 클로즈업 스프라이트
     public Image minSeckImg;                  // 민석 스프라이트
+    public Image minseok_CloseUp;             // 민석 클로즈업 스프라이트
     public Transform center;                  // 캐릭터 위치(용진)
     public Transform left;
     public Transform right;
@@ -62,6 +64,7 @@ public class A_Dialogue : MonoBehaviour
     public Animator fadeManager;               // 페이드 인 / 아웃 전용 효과
     
     public GameObject titleObj;                // 게임 타이틀 오브젝트
+    public GameObject subTitleObj;
 
     [Header("Add Clue")]                       // 대화 진행 중 추가될 단서목록
     public ClueManager clue;
@@ -157,6 +160,8 @@ public class A_Dialogue : MonoBehaviour
 
         youngjunImg_CloseUp.color = info.isYoungjin_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
 
+        jisuImg_CloseUp.color = info.isJisu_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
+
         CharacterName(info);
 
         CharacterAnim(info);
@@ -238,73 +243,65 @@ public class A_Dialogue : MonoBehaviour
         {
             case Name.Blank:
                 nameTxt.text = "";
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Player:
                 nameTxt.text = PlayerName.instance.player;
-                hujungImg.color = youngjinImg.color = Color.gray;
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Hujung:
                 nameTxt.text = "정효정";
                 hujungImg.color = new Color(255, 255, 255);
-                youngjinImg.color = Color.gray;
-                jisuImg.color = Color.gray;
-                minSeckImg.color = Color.gray;
+                youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.YoungJin:
                 nameTxt.text = "이용진";
                 youngjinImg.color = new Color(255, 255, 255);
-                hujungImg.color = Color.gray;
-                jisuImg.color = Color.gray;
-                minSeckImg.color = Color.gray;
+                hujungImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Jisu:
                 nameTxt.text = "은지수";
                 jisuImg.color = new Color(255, 255, 255);
-                hujungImg.color = Color.gray;
-                youngjinImg.color = Color.gray;
-                minSeckImg.color = Color.gray;
+                hujungImg.color = youngjinImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.MinSeok:
                 nameTxt.text = "염민석";
                 minSeckImg.color = new Color(255, 255, 255);
-                hujungImg.color = Color.gray;
-                youngjinImg.color = Color.gray;
-                jisuImg.color = Color.gray;
+                hujungImg.color = youngjinImg.color = jisuImg.color = Color.gray;
                 break;
             case Name.Who:
                 nameTxt.text = "???";
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.HujungYoung:
                 nameTxt.text = "효정&용진";
-                hujungImg.color = new Color(255, 255, 255);
-                youngjinImg.color = new Color(255, 255, 255);
+                hujungImg.color = youngjinImg.color = new Color(255, 255, 255);
                 break;
             case Name.Who_Jisu:
                 nameTxt.text = "???";
                 jisuImg.color = new Color(255, 255, 255);
-                hujungImg.color = Color.gray;
-                youngjinImg.color = Color.gray;
-                minSeckImg.color = Color.gray;
+                hujungImg.color = youngjinImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Who_Min:
                 nameTxt.text = "???";
                 minSeckImg.color = new Color(255, 255, 255);
-                hujungImg.color = Color.gray;
-                youngjinImg.color = Color.gray;
-                jisuImg.color = Color.gray;
+                hujungImg.color = youngjinImg.color = jisuImg.color = Color.gray;
                 break;
             case Name.PlayerHujung:
                 nameTxt.text = PlayerName.instance.player + "&" + "효정";
                 hujungImg.color = new Color(255, 255, 255);
-                youngjinImg.color = Color.gray;
-                jisuImg.color = Color.gray;
-                minSeckImg.color = Color.gray;
+                youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.HujungJisu:
                 nameTxt.text = "효정&지수";
                 hujungImg.color = new Color(255, 255, 255);
                 jisuImg.color = new Color(255, 255, 255);
                 youngjinImg.color = Color.gray;
+                break;
+            case Name.PlayerYoungJin:
+                nameTxt.text = PlayerName.instance.player + "&" + "용진";
+                youngjinImg.color = new Color(255, 255, 255);
+                hujungImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.All:
                 nameTxt.text = "일동";
@@ -598,6 +595,15 @@ public class A_Dialogue : MonoBehaviour
         else
         {
             titleObj.gameObject.SetActive(false);
+        }
+
+        if (info.Title_Two)
+        {
+            subTitleObj.gameObject.SetActive(true);
+        }
+        else
+        {
+            subTitleObj.gameObject.SetActive(false);
         }
 
         #endregion
