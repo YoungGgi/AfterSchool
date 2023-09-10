@@ -306,6 +306,10 @@ public class A_Dialogue : MonoBehaviour
             case Name.All:
                 nameTxt.text = "ÀÏµ¿";
                 break;
+            case Name.Teacher:
+                nameTxt.text = "¼±»ý´Ô";
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                break;
         }
     }
 
