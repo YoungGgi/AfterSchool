@@ -233,6 +233,9 @@ public class A_Dialogue : MonoBehaviour
             case BackGround.TeacherRoom:
                 backGroundImg.sprite = backGroundFold.backGround[5];
                 break;
+            case BackGround.Library_Room:
+                backGroundImg.sprite = backGroundFold.backGround[6];
+                break;
         }
     }
 

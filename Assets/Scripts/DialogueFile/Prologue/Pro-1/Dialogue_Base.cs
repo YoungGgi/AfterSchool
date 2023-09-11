@@ -166,7 +166,8 @@ public enum BackGround
     ClassRoom_Pro,
     Hall_Chap1,
     Library,
-    TeacherRoom
+    TeacherRoom,
+    Library_Room
 }
 
 public enum Direction
