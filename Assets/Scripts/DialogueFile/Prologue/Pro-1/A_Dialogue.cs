@@ -313,6 +313,12 @@ public class A_Dialogue : MonoBehaviour
                 nameTxt.text = "선생님";
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
+            case Name.YoungJinJisu:
+                nameTxt.text = "효정&지수";
+                youngjinImg.color = new Color(255, 255, 255);
+                jisuImg.color = new Color(255, 255, 255);
+                hujungImg.color = minSeckImg.color = Color.gray;
+                break;
         }
     }
 
