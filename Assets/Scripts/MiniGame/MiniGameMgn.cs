@@ -26,18 +26,45 @@ public class MiniGameMgn : MonoBehaviour
     public Scene NowScene;
     public int SceneNum;
 
+    public bool isSingleGame;                 // 답을 하나만 고르는 미니게임일 때의 상태변수
+    public bool isTwosGame;                   // 답을 두 개 고르는 미니게임일 때의 상태변수
+    public bool isThirdGame;                  // 답을 세 개 고르는 미니게임일 때의 상태변수
+
     private void Update()
     {
         NowScene = SceneManager.GetActiveScene(); // 매 프레임마다 현재 씬 확인하기
         SceneNum = NowScene.buildIndex;
 
-        if (checkCount == 2)
+        // 답을 몇 개 고르는 미니게임인가에 따라 달라짐
+        // checkCount가 특정 개수가 되면 정답/오답을 판별
+        if (isTwosGame)
         {
-            conformGroup.gameObject.SetActive(true);
+            if (checkCount == 2)
+            {
+                Conform();
+                //conformGroup.gameObject.SetActive(true);
+            }
+
+        }
+        else if (isSingleGame)
+        {
+            if (checkCount == 1)
+            {
+                Conform_ver2();
+            }
+        }
+        else if (isThirdGame)
+        {
+            if (checkCount == 3)
+            {
+                Conform_ver2();
+            }
         }
 
     }
 
+    // 정답을 클릭 시 isClear 배열 상태변수가 true,
+    // 전부 true 일 시 clearGroup 을 출력
     public void Conform()
     {
         if (isClear[0] && isClear[1])
@@ -50,9 +77,21 @@ public class MiniGameMgn : MonoBehaviour
         }
     }
 
-    public void Conform_2ver()
+    public void Conform_ver2()
     {
         if (isClear[0])
+        {
+            clearGroup.gameObject.SetActive(true);
+        }
+        else
+        {
+            failGroup.gameObject.SetActive(true);
+        }
+    }
+
+    public void Conform_ver3()
+    {
+        if (isClear[0] && isClear[1] && isClear[2])
         {
             clearGroup.gameObject.SetActive(true);
         }

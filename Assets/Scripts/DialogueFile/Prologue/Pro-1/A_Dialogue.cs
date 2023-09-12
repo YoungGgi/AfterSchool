@@ -250,7 +250,8 @@ public class A_Dialogue : MonoBehaviour
                 break;
             case Name.Player:
                 nameTxt.text = PlayerName.instance.player;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color 
+              = hujungImg_CloseUp.color = Color.gray;
                 break;
             case Name.Hujung:
                 nameTxt.text = "정효정";
@@ -314,7 +315,7 @@ public class A_Dialogue : MonoBehaviour
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.YoungJinJisu:
-                nameTxt.text = "효정&지수";
+                nameTxt.text = "용진&지수";
                 youngjinImg.color = new Color(255, 255, 255);
                 jisuImg.color = new Color(255, 255, 255);
                 hujungImg.color = minSeckImg.color = Color.gray;
@@ -466,6 +467,12 @@ public class A_Dialogue : MonoBehaviour
                 break;
             case J_Sprite.Angry:
                 jisuImg.sprite = jisu_Sprite.characterSprite[1];
+                break;
+            case J_Sprite.Smile:
+                jisuImg.sprite = jisu_Sprite.characterSprite[2];
+                break;
+            case J_Sprite.Surprise:
+                jisuImg.sprite = jisu_Sprite.characterSprite[3];
                 break;
         }
         #endregion

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class ClueSelectBtn : MonoBehaviour
+public class ClueSelectBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
     private Button clueButton;                  // 단서 버튼
@@ -27,12 +28,16 @@ public class ClueSelectBtn : MonoBehaviour
         explainText.text = clue.clueExplain;
     }
 
-    // 버튼 클릭시 해당 단서 설명창 출력
-    public void OnExplainBox()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         questionBox.gameObject.SetActive(false);
         explainBox.gameObject.SetActive(true);
-        
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        questionBox.gameObject.SetActive(true);
+        explainBox.gameObject.SetActive(false);
     }
 
     // 단서 선택(오답 버튼 클릭시)
@@ -43,12 +48,6 @@ public class ClueSelectBtn : MonoBehaviour
         miniManager.checkCount++;
     }
 
-    // 단서 취소(오답 버튼 클릭시)
-    public void ClueCancel()
-    {
-        explainBox.gameObject.SetActive(false);
-    }
-
     // 단서 선택(정답1 클릭 시)
     public void ClueSelect_Clear()
     {
@@ -56,13 +55,6 @@ public class ClueSelectBtn : MonoBehaviour
         clueButton.enabled = false;
         explainBox.gameObject.SetActive(false);
         miniManager.checkCount++;
-    }
-
-    // 단서 취소(정답 1 클릭 시)
-    public void ClueCancel_1()
-    {
-        miniManager.isClear[0] = false;
-        explainBox.gameObject.SetActive(false);
     }
 
     // 단서 선택(정답2 클릭 시)
@@ -75,11 +67,5 @@ public class ClueSelectBtn : MonoBehaviour
         miniManager.checkCount++;
     }
 
-    // 단서 취소(정답2 클릭 시)
-    public void ClueCancel_2()
-    {
-        miniManager.isClear[1] = false;
-        explainBox.gameObject.SetActive(false);
-    }
-
+    
 }
