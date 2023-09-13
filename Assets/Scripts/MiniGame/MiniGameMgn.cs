@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 public class MiniGameMgn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject conformGroup;            // 단서 선택 확인 그룹
-    [SerializeField]
     private GameObject failGroup;              // 단서 오답 그룹
     [SerializeField]
     private GameObject clearGroup;             // 단서 정답 그룹
@@ -116,7 +114,6 @@ public class MiniGameMgn : MonoBehaviour
             clueBtns[j].enabled = true;
         }
 
-        conformGroup.gameObject.SetActive(false);
         failGroup.gameObject.SetActive(false);
 
     }

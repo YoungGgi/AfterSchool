@@ -236,6 +236,9 @@ public class A_Dialogue : MonoBehaviour
             case BackGround.Library_Room:
                 backGroundImg.sprite = backGroundFold.backGround[6];
                 break;
+            case BackGround.Street:
+                backGroundImg.sprite = backGroundFold.backGround[7];
+                break;
         }
     }
 
@@ -246,79 +249,132 @@ public class A_Dialogue : MonoBehaviour
         {
             case Name.Blank:
                 nameTxt.text = "";
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Player:
                 nameTxt.text = PlayerName.instance.player;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color 
-              = hujungImg_CloseUp.color = Color.gray;
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Hujung:
                 nameTxt.text = "정효정";
                 hujungImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.YoungJin:
                 nameTxt.text = "이용진";
                 youngjinImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Jisu:
                 nameTxt.text = "은지수";
                 jisuImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.MinSeok:
                 nameTxt.text = "염민석";
                 minSeckImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = jisuImg.color = Color.gray;
                 break;
             case Name.Who:
                 nameTxt.text = "???";
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.HujungYoung:
                 nameTxt.text = "효정&용진";
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = new Color(255, 255, 255);
                 break;
             case Name.Who_Jisu:
                 nameTxt.text = "???";
                 jisuImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.Who_Min:
                 nameTxt.text = "???";
                 minSeckImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = jisuImg.color = Color.gray;
                 break;
             case Name.PlayerHujung:
                 nameTxt.text = PlayerName.instance.player + "&" + "효정";
                 hujungImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.HujungJisu:
                 nameTxt.text = "효정&지수";
-                hujungImg.color = new Color(255, 255, 255);
-                jisuImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
+                hujungImg.color = jisuImg.color = new Color(255, 255, 255);
                 youngjinImg.color = Color.gray;
                 break;
             case Name.PlayerYoungJin:
                 nameTxt.text = PlayerName.instance.player + "&" + "용진";
                 youngjinImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.All:
                 nameTxt.text = "일동";
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 break;
             case Name.Teacher:
                 nameTxt.text = "선생님";
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case Name.YoungJinJisu:
                 nameTxt.text = "용진&지수";
-                youngjinImg.color = new Color(255, 255, 255);
-                jisuImg.color = new Color(255, 255, 255);
+                youngjinImg.color = jisuImg.color = new Color(255, 255, 255);
+                nameTxt.color = Color.white;
+                dialogueTxt.color = Color.white;
                 hujungImg.color = minSeckImg.color = Color.gray;
+                break;
+            case Name.Student01:
+                nameTxt.text = "학생1";
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                break;
+            case Name.Student02:
+                nameTxt.text = "학생2";
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                break;
+            case Name.Student03:
+                nameTxt.text = "학생3";
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                break;
+            case Name.Bear:
+                nameTxt.text = "기지개를 펴는 곰탱이";
+                nameTxt.color = Color.gray;
+                dialogueTxt.color = Color.yellow;
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                break;
+            case Name.Rabbit:
+                nameTxt.text = "노래를 부르는 토끼";
+                nameTxt.color = Color.gray;
+                dialogueTxt.color = Color.yellow;
+                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
         }
     }

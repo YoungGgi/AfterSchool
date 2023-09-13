@@ -73,7 +73,9 @@ public class Dialogue_Base : ScriptableObject
 
 public enum Name
 {
-    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung, Who_Jisu, Who_Min, PlayerHujung, HujungJisu, PlayerYoungJin, All, Teacher, YoungJinJisu
+    Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung, Who_Jisu, Who_Min, 
+    PlayerHujung, HujungJisu, PlayerYoungJin, All, Teacher, YoungJinJisu,
+    Student01, Student02, Student03, Bear, Rabbit
 }
 
 #region HujungEnum
@@ -167,7 +169,8 @@ public enum BackGround
     Hall_Chap1,
     Library,
     TeacherRoom,
-    Library_Room
+    Library_Room,
+    Street
 }
 
 public enum Direction
