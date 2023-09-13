@@ -162,6 +162,8 @@ public class A_Dialogue : MonoBehaviour
 
         jisuImg_CloseUp.color = info.isJisu_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
 
+        minseok_CloseUp.color = info.isMinseok_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
+
         CharacterName(info);
 
         CharacterAnim(info);
@@ -469,6 +471,11 @@ public class A_Dialogue : MonoBehaviour
         if (info.m_Anim == M_Anim.Start)
         {
             MinSeok.Play("M_Start");
+        }
+
+        if(info.m_Anim == M_Anim.M_BangBang)
+        {
+            MinSeok.Play("M_BangBang");
         }
         #endregion
 

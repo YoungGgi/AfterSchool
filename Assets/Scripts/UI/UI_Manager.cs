@@ -68,11 +68,6 @@ public class UI_Manager : MonoBehaviour
 
     }
 
-    public void StartChapter4()
-    {
-
-    }
-
     */
 
     public void GameExit()

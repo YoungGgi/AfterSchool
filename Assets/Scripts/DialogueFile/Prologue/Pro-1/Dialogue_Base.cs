@@ -146,7 +146,7 @@ public enum J_Sprite
 #region MinSeokEnum
 public enum M_Anim
 {
-    Idle, M_Appear, M_DisAppear, Start
+    Idle, M_Appear, M_DisAppear, Start, M_BangBang
 }
 
 public enum M_Direction
