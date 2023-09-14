@@ -21,12 +21,17 @@ public class StroyDataMgn : MonoBehaviour
         #endregion
     }
 
-    public bool isAutoLive;
+    private bool isAutoLive;
 
-    public bool isAutoStory;
+    private bool isAutoStory;
 
-    public bool isTwoSpeed;
+    private bool isTwoSpeed;
 
-    public bool isSettingOn;
+    private bool isSettingOn;
 
+    public bool IsAutoLive { get => isAutoLive; set => isAutoLive = value; }
+    public bool IsTwoSpeed { get => isTwoSpeed; set => isTwoSpeed = value; }
+    
+    public bool IsAutoStory { get => isAutoStory; set => isAutoStory = value; }
+    public bool IsSettingOn { get => isSettingOn; set => isSettingOn = value; }
 }

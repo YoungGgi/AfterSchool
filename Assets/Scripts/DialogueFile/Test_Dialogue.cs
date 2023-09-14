@@ -38,7 +38,7 @@ public class Test_Dialogue : MonoBehaviour
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
 
-        if (StroyDataMgn.instance.isAutoLive)
+        if (StroyDataMgn.instance.IsAutoLive)
         {
             autoText.gameObject.SetActive(true);
 
@@ -46,7 +46,7 @@ public class Test_Dialogue : MonoBehaviour
             auto_true_Btn.gameObject.SetActive(true);
         }
 
-        if (StroyDataMgn.instance.isTwoSpeed)
+        if (StroyDataMgn.instance.IsTwoSpeed)
         {
             speed2_Btn.gameObject.SetActive(false);
             speed2_true_Btn.gameObject.SetActive(true);
@@ -69,18 +69,18 @@ public class Test_Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (isLoading || StroyDataMgn.instance.isSettingOn)
+        if (isLoading || StroyDataMgn.instance.IsSettingOn)
             return;
         else
         {
-            if (StroyDataMgn.instance.isAutoLive && a_Dialogue.isTextComplete == true)
+            if (StroyDataMgn.instance.IsAutoLive && a_Dialogue.isTextComplete == true)
             {
                 autoText.gameObject.SetActive(true);
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
 
-            if(StroyDataMgn.instance.isAutoLive == false)
+            if(StroyDataMgn.instance.IsAutoLive == false)
             {
                 autoText.gameObject.SetActive(false);
             }
@@ -91,7 +91,7 @@ public class Test_Dialogue : MonoBehaviour
                 a_Dialogue.DequeueDialogue();
             }
 
-            if(StroyDataMgn.instance.isAutoStory && a_Dialogue.isTextComplete == true)
+            if(StroyDataMgn.instance.IsAutoStory && a_Dialogue.isTextComplete == true)
             {
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();

@@ -80,32 +80,32 @@ public class UI_Manager : MonoBehaviour
     
     public void AutoOn()
     {
-        StroyDataMgn.instance.isAutoLive = true;
+        StroyDataMgn.instance.IsAutoLive = true;
     }
 
     public void AutoOff()
     {
-        StroyDataMgn.instance.isAutoLive = false;
+        StroyDataMgn.instance.IsAutoLive = false;
     }
 
     public void TwoSpeedOn()
     {
-        StroyDataMgn.instance.isTwoSpeed = true;
+        StroyDataMgn.instance.IsTwoSpeed = true;
     }
 
     public void TwoSpeedOff()
     {
-        StroyDataMgn.instance.isTwoSpeed = false;
+        StroyDataMgn.instance.IsTwoSpeed = false;
     }
 
     public void SettingOn()
     {
-        StroyDataMgn.instance.isSettingOn = true;
+        StroyDataMgn.instance.IsSettingOn = true;
     }
 
     public void SettingOff()
     {
-        StroyDataMgn.instance.isSettingOn = false;
+        StroyDataMgn.instance.IsSettingOn = false;
     }
 
     #endregion

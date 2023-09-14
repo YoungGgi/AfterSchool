@@ -86,7 +86,7 @@ public class A_Dialogue : MonoBehaviour
         dialogueUI.gameObject.SetActive(false);
         StartCoroutine(Loading());
 
-        StroyDataMgn.instance.isSettingOn = false;
+        StroyDataMgn.instance.IsSettingOn = false;
     }
 
     // 게임 시작 시 로딩 화면(자동저장) 출력, 딜레이 후 대화 화면 등장
@@ -195,7 +195,7 @@ public class A_Dialogue : MonoBehaviour
         #endregion
 
         #region UI_Off_Direction
-        StroyDataMgn.instance.isAutoStory = info.UI_Off;
+        StroyDataMgn.instance.IsAutoStory = info.UI_Off;
         #endregion
 
 
@@ -731,7 +731,7 @@ public class A_Dialogue : MonoBehaviour
 
         foreach(char c in info.myText.ToCharArray())
         {
-            if(StroyDataMgn.instance.isTwoSpeed)
+            if(StroyDataMgn.instance.IsTwoSpeed)
             {
                 float twoDelay = (float)(delay * 0.2);
                 yield return new WaitForSeconds(twoDelay);
