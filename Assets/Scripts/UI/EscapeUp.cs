@@ -22,7 +22,6 @@ public class EscapeUp : MonoBehaviour
             }
             else
             {
-                Debug.Log("Main");
                 escapeObject.gameObject.SetActive(false);
                 StroyDataMgn.instance.IsSettingOn = false;
             }
