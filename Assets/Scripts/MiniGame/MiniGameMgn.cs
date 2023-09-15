@@ -21,12 +21,35 @@ public class MiniGameMgn : MonoBehaviour
     public GameObject dialogue;
     public GameObject miniGameGroup;
 
+    public GameObject loadingTextGroup;
+    bool isLoading;
+
     public Scene NowScene;
     public int SceneNum;
 
     public bool isSingleGame;                 // 답을 하나만 고르는 미니게임일 때의 상태변수
     public bool isTwosGame;                   // 답을 두 개 고르는 미니게임일 때의 상태변수
     public bool isThirdGame;                  // 답을 세 개 고르는 미니게임일 때의 상태변수
+
+    public bool IsLoading { get => isLoading; set => isLoading = value; }
+
+    void OnEnable()
+    {
+        miniGameGroup.gameObject.SetActive(false);
+        isLoading = true;
+        StartCoroutine(LoadingAnim());
+    }
+
+    IEnumerator LoadingAnim()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        loadingTextGroup.gameObject.SetActive(false);
+
+        miniGameGroup.gameObject.SetActive(true);
+
+        isLoading = false;
+    }
 
     private void Update()
     {

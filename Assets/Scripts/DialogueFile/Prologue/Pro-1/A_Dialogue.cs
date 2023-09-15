@@ -39,9 +39,6 @@ public class A_Dialogue : MonoBehaviour
     public Image jisuImg_CloseUp;             // 지수 클로즈업 스프라이트
     public Image minSeckImg;                  // 민석 스프라이트
     public Image minseok_CloseUp;             // 민석 클로즈업 스프라이트
-    public Transform center;                  // 캐릭터 위치(용진)
-    public Transform left;
-    public Transform right;
     public Transform out_pos;
     public RectTransform center1;             // 캐릭터 위치(효정, 지수, 민석?)
     public RectTransform left1;
@@ -76,6 +73,10 @@ public class A_Dialogue : MonoBehaviour
 
     public Scene NowScene;
     public int SceneNum;
+
+    public bool isGame;
+    public GameObject dialogueObject;
+    public GameObject miniGameObject;
 
     // Dialogue_Base 에서 선언한 Queue문 선언
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
@@ -589,13 +590,13 @@ public class A_Dialogue : MonoBehaviour
         switch (info.y_Direction)
         {
             case Y_Direction.Center:
-                youngjinImg.transform.position = center.transform.position;
+                youngjinImg.transform.localPosition = center1.transform.localPosition;
                 break;
             case Y_Direction.Right:
-                youngjinImg.transform.position = right.transform.position;
+                youngjinImg.transform.localPosition = right1.transform.localPosition;
                 break;
             case Y_Direction.Left:
-                youngjinImg.transform.position = left.transform.position;
+                youngjinImg.transform.localPosition = left1.transform.localPosition;
                 break;
             case Y_Direction.Out:
                 youngjinImg.transform.position = out_pos.transform.position;
@@ -762,7 +763,17 @@ public class A_Dialogue : MonoBehaviour
     {
         isDialoge = false;
         dialogueUI.SetActive(false);
-        SceneManager.LoadScene(SceneNum + 1);
+
+        if (!isGame)
+        {
+            SceneManager.LoadScene(SceneNum + 1);
+            return;
+        }
+        else
+        {
+            dialogueObject.gameObject.SetActive(false);
+            miniGameObject.gameObject.SetActive(true);
+        }
     }
 
 }

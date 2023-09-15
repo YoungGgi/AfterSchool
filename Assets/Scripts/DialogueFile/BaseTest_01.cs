@@ -15,7 +15,7 @@ public class BaseTest_01 : MonoBehaviour
 
     public GameObject loadingTextGroup;
 
-    bool isLoading;
+    //bool isLoading;
 
     public GameObject auto_Btn;
     public GameObject auto_true_Btn;
@@ -29,7 +29,7 @@ public class BaseTest_01 : MonoBehaviour
     void OnEnable()
     {
         //dialogue_Test01.EnqueuDialogue(dialogue);
-        isLoading = true;
+        //isLoading = true;
         StartCoroutine(LoadingAnim());
 
         NowScene = SceneManager.GetActiveScene();
@@ -60,7 +60,7 @@ public class BaseTest_01 : MonoBehaviour
 
         dialogue_Test01.EnqueuDialogue(dialogue);
 
-        isLoading = false;
+        //isLoading = false;
 
     }
 
