@@ -8,7 +8,7 @@ using TMPro;
 public class A_Dialogue : MonoBehaviour
 {
     
-    [Header("DialogueGroup")]
+    [Header("대화 텍스트 / 배경 이미지 / 백로그")]
     public TextMeshProUGUI dialogueTxt;        // 대화 텍스트
     public TextMeshProUGUI nameTxt;            // 이름 텍스트
     public Image backGroundImg;                // 배경 이미지
@@ -17,20 +17,20 @@ public class A_Dialogue : MonoBehaviour
     public GameObject textPrefab;              // 백로그 전용 텍스트 프리팹
     public Transform parentContents;           // 백로그의 Contents에서 출력됨
 
-    [Header("TextTypingGroup")]
+    [Header("텍스트 타이핑")]
     public float delay;                        //텍스트 출력 딜레이
     private bool isTextTyping;                 // 텍스트 출력 여부 확인
-    public bool isTextComplete = false;               // 텍스트 출력 완성 여부 확인
+    public bool isTextComplete = false;        // 텍스트 출력 완성 여부 확인
     private string completeText;               // 완성된 텍스트
 
     private bool isDialoge;                   // 대화 여부 확인
 
-    [Header("DialogueEnd")]
+    [Header("대화 종료 시 활성/비활성 UI")]
     public GameObject dialogueUI;              // 대화씬 전용 UI
     public GameObject dialoguePanelText;       // 대화창 UI
     public GameObject dialogueSetting;         // 대화 기능 UI(오토, 로그, 설정)
 
-    [Header("Character")]
+    [Header("캐릭터 이미지")]
     public Image hujungImg;                   // 효정 스프라이트
     public Image hujungImg_CloseUp;           // 효정 클로즈업 스프라이트
     public Image youngjinImg;                 // 용진 스프라이트
@@ -40,26 +40,26 @@ public class A_Dialogue : MonoBehaviour
     public Image minSeckImg;                  // 민석 스프라이트
     public Image minseok_CloseUp;             // 민석 클로즈업 스프라이트
 
-    [Header("Character_Emotion")]             // 각 캐릭터 표정 스프라이트
+    [Header("캐릭터 감정표현")]             // 각 캐릭터 표정 스프라이트
     public CharacterSprite hujung_Sprite;
     public CharacterSprite youngjing_Sprite;
     public CharacterSprite jisu_Sprite;
     public CharacterSprite minSeok_Sprite;
 
-    [Header("Animation")]
+    [Header("캐릭터 애니메이션")]
     public Animator Hujung;                    // 효정 전용 애니메이터
     public Animator YoungJin;                  // 용진 전용 애니메이터
     public Animator Jisu;                      // 지수 전용 애니메이터
     public Animator MinSeok;                   // 민석 전용 애니메이터
     
 
-    [Header("Direction")]
+    [Header("연출효과")]
     public Animator fadeManager;               // 페이드 인 / 아웃 전용 효과
     
     public GameObject titleObj;                // 게임 타이틀 오브젝트
     public GameObject subTitleObj;
 
-    [Header("Add Clue")]                       // 대화 진행 중 추가될 단서목록
+    [Header("단서 추가")]                       // 대화 진행 중 추가될 단서목록
     public ClueManager clue;
     public ClueObject clueObj0;
     public ClueObject clueObj1;
@@ -70,6 +70,7 @@ public class A_Dialogue : MonoBehaviour
     public Scene NowScene;
     public int SceneNum;
 
+    [Header("미니게임용 대화 UI")]
     public bool isGame;
     public GameObject dialogueObject;
     public GameObject miniGameObject;
@@ -342,6 +343,7 @@ public class A_Dialogue : MonoBehaviour
                 nameTxt.text = "일동";
                 nameTxt.color = Color.white;
                 dialogueTxt.color = Color.white;
+                hujungImg.color = youngjinImg.color = jisuImg.color = new Color(255, 255, 255);
                 break;
             case Name.Teacher:
                 nameTxt.text = "선생님";
@@ -625,13 +627,13 @@ public class A_Dialogue : MonoBehaviour
         switch (info.j_Direction)
         {
             case J_Direction.Center:
-                jisuImg.transform.localPosition = center;
+                jisuImg.transform.localPosition = center_j;
                 break;
             case J_Direction.Right:
-                jisuImg.transform.localPosition = right;
+                jisuImg.transform.localPosition = right_j;
                 break;
             case J_Direction.Left:
-                jisuImg.transform.localPosition = left;
+                jisuImg.transform.localPosition = left_j;
                 break;
             case J_Direction.Out:
                 jisuImg.transform.localPosition = outpos;
