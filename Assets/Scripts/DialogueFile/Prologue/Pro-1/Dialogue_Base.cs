@@ -43,6 +43,9 @@ public class Dialogue_Base : ScriptableObject
         [Header("연출효과")]
         public Direction direction;
 
+        [Header("폰트 키우기 효과")]
+        public bool isFontSizeUp;
+
         [Header("단서 획득")]
         public bool isFirstClue;
         public bool isSecondClue;

@@ -39,10 +39,6 @@ public class A_Dialogue : MonoBehaviour
     public Image jisuImg_CloseUp;             // 지수 클로즈업 스프라이트
     public Image minSeckImg;                  // 민석 스프라이트
     public Image minseok_CloseUp;             // 민석 클로즈업 스프라이트
-    public Transform out_pos;
-    public RectTransform center1;             // 캐릭터 위치(효정, 지수, 민석?)
-    public RectTransform left1;
-    public RectTransform right1;
 
     [Header("Character_Emotion")]             // 각 캐릭터 표정 스프라이트
     public CharacterSprite hujung_Sprite;
@@ -81,6 +77,9 @@ public class A_Dialogue : MonoBehaviour
     // Dialogue_Base 에서 선언한 Queue문 선언
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
 
+    public delegate void DialogueDirections(Dialogue_Base.Info info);
+    DialogueDirections directions;
+
     private void OnEnable()
     {
         dialogueInfo = new Queue<Dialogue_Base.Info>();
@@ -88,6 +87,15 @@ public class A_Dialogue : MonoBehaviour
         StartCoroutine(Loading());
 
         StroyDataMgn.instance.IsSettingOn = false;
+
+        directions += CharacterName;
+        directions += CharacterAnim;
+        directions += CharacterEmotion;
+        directions += CharacterDirection;
+        directions += CharacterCloseUp;
+        directions += BackGroundChange;
+        directions += BackGroundDirection;
+
     }
 
     // 게임 시작 시 로딩 화면(자동저장) 출력, 딜레이 후 대화 화면 등장
@@ -154,26 +162,19 @@ public class A_Dialogue : MonoBehaviour
 
         dialogueTxt.text = info.myText;
 
-        BackGroundChange(info);
+        directions(info);
         #endregion
 
-        hujungImg_CloseUp.color = info.isHujung_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
-
-        youngjunImg_CloseUp.color = info.isYoungjin_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
-
-        jisuImg_CloseUp.color = info.isJisu_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
-
-        minseok_CloseUp.color = info.isMinseok_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
-
-        CharacterName(info);
-
-        CharacterAnim(info);
-
-        CharacterEmotion(info);
-
-        CharacterDirection(info);
-
-        BackGroundDirection(info);
+        if(info.isFontSizeUp)
+        {
+            dialogueTxt.fontSize = 55;
+            dialogueTxt.fontStyle = FontStyles.Bold;
+        }
+        else
+        {
+            dialogueTxt.fontSize = 48;
+            dialogueTxt.fontStyle = FontStyles.Normal;
+        }
  
 
         #region BackLog
@@ -563,23 +564,37 @@ public class A_Dialogue : MonoBehaviour
     // 대화 진행 중 캐릭터 위치 설정 함수
     public void CharacterDirection(Dialogue_Base.Info info)
     {
+        
+        float y_pos_m = -396;
+        float y_pos_w = -430;
+
+        Vector3 center = new Vector3(0, y_pos_m, 0);
+        Vector3 right = new Vector3(448, y_pos_m, 0);
+        Vector3 left = new Vector3(-448, y_pos_m, 0);
+
+        Vector3 center_j = new Vector3(0, y_pos_w, 0);
+        Vector3 right_j = new Vector3(448, y_pos_w, 0);
+        Vector3 left_j = new Vector3(-448, y_pos_w, 0);
+
+        Vector3 outpos = new Vector3(-1000, 0, 0);
+
         #region CharacterDirection
 
         #region HujungImgDirection
 
-        switch(info.h_Direction)
+        switch (info.h_Direction)
         {
             case H_Direction.Center:
-                hujungImg.transform.localPosition = center1.transform.localPosition;
+                hujungImg.transform.localPosition = center;
                 break;
             case H_Direction.Right:
-                hujungImg.transform.localPosition = right1.transform.localPosition;
+                hujungImg.transform.localPosition = right;
                 break;
             case H_Direction.Left:
-                hujungImg.transform.localPosition = left1.transform.localPosition;
+                hujungImg.transform.localPosition = left;
                 break;
             case H_Direction.Out:
-                hujungImg.transform.position = out_pos.transform.position;
+                hujungImg.transform.position = outpos;
                 break;
         }
 
@@ -590,16 +605,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.y_Direction)
         {
             case Y_Direction.Center:
-                youngjinImg.transform.localPosition = center1.transform.localPosition;
+                youngjinImg.transform.localPosition = center;
                 break;
             case Y_Direction.Right:
-                youngjinImg.transform.localPosition = right1.transform.localPosition;
+                youngjinImg.transform.localPosition = right;
                 break;
             case Y_Direction.Left:
-                youngjinImg.transform.localPosition = left1.transform.localPosition;
+                youngjinImg.transform.localPosition = left;
                 break;
             case Y_Direction.Out:
-                youngjinImg.transform.position = out_pos.transform.position;
+                youngjinImg.transform.position = outpos;
                 break;
 
         }
@@ -610,16 +625,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.j_Direction)
         {
             case J_Direction.Center:
-                jisuImg.transform.localPosition = center1.transform.localPosition;
+                jisuImg.transform.localPosition = center;
                 break;
             case J_Direction.Right:
-                jisuImg.transform.localPosition = right1.transform.localPosition;
+                jisuImg.transform.localPosition = right;
                 break;
             case J_Direction.Left:
-                jisuImg.transform.localPosition = left1.transform.localPosition;
+                jisuImg.transform.localPosition = left;
                 break;
             case J_Direction.Out:
-                jisuImg.transform.localPosition = out_pos.transform.localPosition;
+                jisuImg.transform.localPosition = outpos;
                 break;
         }
         #endregion
@@ -629,22 +644,34 @@ public class A_Dialogue : MonoBehaviour
         switch (info.m_Direction)
         {
             case M_Direction.Center:
-                minSeckImg.transform.localPosition = center1.transform.localPosition;
+                minSeckImg.transform.localPosition = center;
                 break;
             case M_Direction.Right:
-                minSeckImg.transform.localPosition = right1.transform.localPosition;
+                minSeckImg.transform.localPosition = right;
                 break;
             case M_Direction.Left:
-                minSeckImg.transform.localPosition = left1.transform.localPosition;
+                minSeckImg.transform.localPosition = left;
                 break;
             case M_Direction.Out:
-                minSeckImg.transform.localPosition = out_pos.transform.localPosition;
+                minSeckImg.transform.localPosition = outpos;
                 break;
         }
         #endregion
 
         #endregion
 
+    }
+
+    // 대화 진행 중 캐릭터 클로즈업
+    public void CharacterCloseUp(Dialogue_Base.Info info)
+    {
+        hujungImg_CloseUp.color = info.isHujung_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
+
+        youngjunImg_CloseUp.color = info.isYoungjin_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
+
+        jisuImg_CloseUp.color = info.isJisu_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
+
+        minseok_CloseUp.color = info.isMinseok_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
     }
 
     // 대화 진행 중 기타 연출 함수(화면 암전, 단서 획득, 타이틀 등장 등)
