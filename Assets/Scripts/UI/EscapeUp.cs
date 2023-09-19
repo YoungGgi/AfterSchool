@@ -12,6 +12,7 @@ public class EscapeUp : MonoBehaviour
     [SerializeField]
     private bool isMainSetting;
 
+
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
