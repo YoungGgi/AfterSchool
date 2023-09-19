@@ -16,6 +16,7 @@ public class A_Dialogue : MonoBehaviour
     public GameObject next;                    // 화살표 오브젝트
     public GameObject textPrefab;              // 백로그 전용 텍스트 프리팹
     public Transform parentContents;           // 백로그의 Contents에서 출력됨
+    public float characterMoveSpeed;
 
     [Header("텍스트 타이핑")]
     public float delay;                        //텍스트 출력 딜레이
@@ -55,6 +56,7 @@ public class A_Dialogue : MonoBehaviour
 
     [Header("연출효과")]
     public Animator fadeManager;               // 페이드 인 / 아웃 전용 효과
+    public Animator backGroundEffect;          // 배경 연출 효과
     
     public GameObject titleObj;                // 게임 타이틀 오브젝트
     public GameObject subTitleObj;
@@ -65,6 +67,8 @@ public class A_Dialogue : MonoBehaviour
     public ClueObject clueObj1;
     public ClueObject clueObj2;
     public ClueObject clueObj3;
+    public ClueObject clueObj4;
+    public ClueObject clueObj5;
     public bool isClueUpdate;
 
     public Scene NowScene;
@@ -579,6 +583,9 @@ public class A_Dialogue : MonoBehaviour
         Vector3 left_j = new Vector3(-448, y_pos_w, 0);
 
         Vector3 outpos = new Vector3(-1000, 0, 0);
+        Vector3 outpos2 = new Vector3(1000, 0, 0);
+
+        float moveSpeed = characterMoveSpeed * Time.deltaTime;
 
         #region CharacterDirection
 
@@ -690,6 +697,11 @@ public class A_Dialogue : MonoBehaviour
             fadeManager.Play("FadeOut");
         }
 
+        if(info.back == BackGroundDirections.Shake)
+        {
+            backGroundEffect.Play("Back_Shake");
+        }
+
         if (info.UI_Off)
         {
             dialoguePanelText.gameObject.SetActive(false);
@@ -746,6 +758,20 @@ public class A_Dialogue : MonoBehaviour
         if (info.isForthClue)
         {
             clue.clues.Add(clueObj3);
+            clue.clueAddCount++;
+            isClueUpdate = true;
+        }
+
+        if (info.isFiveClue)
+        {
+            clue.clues.Add(clueObj4);
+            clue.clueAddCount++;
+            isClueUpdate = true;
+        }
+
+        if (info.isSixClue)
+        {
+            clue.clues.Add(clueObj5);
             clue.clueAddCount++;
             isClueUpdate = true;
         }

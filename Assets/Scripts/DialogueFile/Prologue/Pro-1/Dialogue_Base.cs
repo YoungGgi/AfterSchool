@@ -19,12 +19,14 @@ public class Dialogue_Base : ScriptableObject
         public H_Anim h_Anim;
         public H_Sprite h_sprite;
         public H_Direction h_Direction;
+        public H_Position h_Position;
         public bool isHujung_CloseUp;
 
         [Header("용진 연출")]
         public Y_Anim y_Anim;
         public Y_Sprite y_sprite;
         public Y_Direction y_Direction;
+        public Y_Position y_Position;
         public bool isYoungjin_CloseUp;
 
         [Header("지수 연출")]
@@ -51,9 +53,14 @@ public class Dialogue_Base : ScriptableObject
         public bool isSecondClue;
         public bool isThirdClue;
         public bool isForthClue;
+        public bool isFiveClue;
+        public bool isSixClue;
 
         [Header("대화창끄기")]
         public bool UI_Off;
+
+        [Header("배경 흔들기 등 기타 연출")]
+        public BackGroundDirections back;
 
         [Header("타이틀")]
         public bool Title_On;
@@ -107,6 +114,16 @@ public enum H_Sprite
     Surprise
 }
 
+public enum H_Position
+{
+    Idle,
+    Center,
+    Right,
+    Left,
+    Out_Left,
+    Out_Right
+}
+
 #endregion
 
 #region YoungjingEnum
@@ -123,6 +140,16 @@ public enum Y_Direction
 public enum Y_Sprite
 {
     Idle, Idle01, Angry, Smile, Smile01, Surprise
+}
+
+public enum Y_Position
+{
+    Idle,
+    Center,
+    Right,
+    Left,
+    Out_Left,
+    Out_Right
 }
 
 #endregion
@@ -179,5 +206,11 @@ public enum BackGround
 public enum Direction
 {
     Blank, FadeIn, FadeOut
+}
+
+public enum BackGroundDirections
+{
+    Idle,
+    Shake
 }
 
