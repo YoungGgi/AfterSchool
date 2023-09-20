@@ -16,7 +16,6 @@ public class A_Dialogue : MonoBehaviour
     public GameObject next;                    // 화살표 오브젝트
     public GameObject textPrefab;              // 백로그 전용 텍스트 프리팹
     public Transform parentContents;           // 백로그의 Contents에서 출력됨
-    public float characterMoveSpeed;
 
     [Header("텍스트 타이핑")]
     public float delay;                        //텍스트 출력 딜레이
@@ -79,6 +78,7 @@ public class A_Dialogue : MonoBehaviour
     public GameObject dialogueObject;
     public GameObject miniGameObject;
 
+
     // Dialogue_Base 에서 선언한 Queue문 선언
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
 
@@ -114,6 +114,7 @@ public class A_Dialogue : MonoBehaviour
     {
         NowScene = SceneManager.GetActiveScene(); // 매 프레임마다 현재 씬 확인하기
         SceneNum = NowScene.buildIndex;
+
     }
 
     // 대화 리스트 시작(EnQueue)
@@ -585,8 +586,6 @@ public class A_Dialogue : MonoBehaviour
         Vector3 outpos = new Vector3(-1000, 0, 0);
         Vector3 outpos2 = new Vector3(1000, 0, 0);
 
-        float moveSpeed = characterMoveSpeed * Time.deltaTime;
-
         #region CharacterDirection
 
         #region HujungImgDirection
@@ -627,6 +626,7 @@ public class A_Dialogue : MonoBehaviour
                 break;
 
         }
+
         #endregion
 
         #region JisuImgDirection
