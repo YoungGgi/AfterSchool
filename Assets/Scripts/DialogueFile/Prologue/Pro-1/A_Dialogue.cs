@@ -17,6 +17,8 @@ public class A_Dialogue : MonoBehaviour
     public GameObject textPrefab;              // 백로그 전용 텍스트 프리팹
     public Transform parentContents;           // 백로그의 Contents에서 출력됨
 
+    public CharacterNameMgn nameChanges;
+
     [Header("텍스트 타이핑")]
     public float delay;                        //텍스트 출력 딜레이
     private bool isTextTyping;                 // 텍스트 출력 여부 확인
@@ -31,13 +33,9 @@ public class A_Dialogue : MonoBehaviour
     public GameObject dialogueSetting;         // 대화 기능 UI(오토, 로그, 설정)
 
     [Header("캐릭터 이미지")]
-    public Image hujungImg;                   // 효정 스프라이트
     public Image hujungImg_CloseUp;           // 효정 클로즈업 스프라이트
-    public Image youngjinImg;                 // 용진 스프라이트
     public Image youngjunImg_CloseUp;         // 용진 클로즈업 스프라이트
-    public Image jisuImg;                     // 지수 스프라이트
     public Image jisuImg_CloseUp;             // 지수 클로즈업 스프라이트
-    public Image minSeckImg;                  // 민석 스프라이트
     public Image minseok_CloseUp;             // 민석 클로즈업 스프라이트
 
     [Header("캐릭터 감정표현")]             // 각 캐릭터 표정 스프라이트
@@ -258,134 +256,70 @@ public class A_Dialogue : MonoBehaviour
         switch (info.charName)
         {
             case Name.Blank:
-                nameTxt.text = "";
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(0);
                 break;
             case Name.Player:
                 nameTxt.text = PlayerName.instance.player;
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(1);
                 break;
             case Name.Hujung:
-                nameTxt.text = "정효정";
-                hujungImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(2);
                 break;
             case Name.YoungJin:
-                nameTxt.text = "이용진";
-                youngjinImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(3);
                 break;
             case Name.Jisu:
-                nameTxt.text = "은지수";
-                jisuImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(4);
                 break;
             case Name.MinSeok:
-                nameTxt.text = "염민석";
-                minSeckImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = jisuImg.color = Color.gray;
+                nameChanges.NameChangeDirection(5);
                 break;
             case Name.Who:
-                nameTxt.text = "???";
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(6);
                 break;
             case Name.HujungYoung:
-                nameTxt.text = "효정&용진";
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = new Color(255, 255, 255);
+                nameChanges.NameChangeDirection(7);
                 break;
             case Name.Who_Jisu:
-                nameTxt.text = "???";
-                jisuImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(8);
                 break;
             case Name.Who_Min:
-                nameTxt.text = "???";
-                minSeckImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = jisuImg.color = Color.gray;
+                nameChanges.NameChangeDirection(9);
                 break;
             case Name.PlayerHujung:
                 nameTxt.text = PlayerName.instance.player + "&" + "효정";
-                hujungImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(10);
                 break;
             case Name.HujungJisu:
-                nameTxt.text = "효정&지수";
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = jisuImg.color = new Color(255, 255, 255);
-                youngjinImg.color = Color.gray;
+                nameChanges.NameChangeDirection(11);
                 break;
             case Name.PlayerYoungJin:
                 nameTxt.text = PlayerName.instance.player + "&" + "용진";
-                youngjinImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(12);
                 break;
             case Name.All:
-                nameTxt.text = "일동";
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = jisuImg.color = new Color(255, 255, 255);
+                nameChanges.NameChangeDirection(13);
                 break;
             case Name.Teacher:
-                nameTxt.text = "선생님";
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(14);
                 break;
             case Name.YoungJinJisu:
-                nameTxt.text = "용진&지수";
-                youngjinImg.color = jisuImg.color = new Color(255, 255, 255);
-                nameTxt.color = Color.white;
-                dialogueTxt.color = Color.white;
-                hujungImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(15);
                 break;
             case Name.Student01:
-                nameTxt.text = "학생1";
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(16);
                 break;
             case Name.Student02:
-                nameTxt.text = "학생2";
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(17);
                 break;
             case Name.Student03:
-                nameTxt.text = "학생3";
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(18);
                 break;
             case Name.Bear:
-                nameTxt.text = "기지개를 펴는 곰탱이";
-                nameTxt.color = Color.gray;
-                dialogueTxt.color = Color.yellow;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(19);
                 break;
             case Name.Rabbit:
-                nameTxt.text = "노래를 부르는 토끼";
-                nameTxt.color = Color.gray;
-                dialogueTxt.color = Color.yellow;
-                hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
+                nameChanges.NameChangeDirection(20);
                 break;
         }
     }
@@ -497,20 +431,16 @@ public class A_Dialogue : MonoBehaviour
         switch(info.h_sprite)
         {
             case H_Sprite.Idle:
-                hujungImg.sprite = hujung_Sprite.characterSprite[0];
-                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[0];
+                nameChanges.HujungSpriteDirection(0);
                 break;
             case H_Sprite.Angry:
-                hujungImg.sprite = hujung_Sprite.characterSprite[1];
-                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[1];
+                nameChanges.HujungSpriteDirection(1);
                 break;
             case H_Sprite.Smile:
-                hujungImg.sprite = hujung_Sprite.characterSprite[2];
-                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[2];
+                nameChanges.HujungSpriteDirection(2);
                 break;
             case H_Sprite.Surprise:
-                hujungImg.sprite = hujung_Sprite.characterSprite[3];
-                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[3];
+                nameChanges.HujungSpriteDirection(3);
                 break;
         }
         #endregion
@@ -519,28 +449,22 @@ public class A_Dialogue : MonoBehaviour
         switch(info.y_sprite)
         {
             case Y_Sprite.Idle:
-                youngjinImg.sprite = youngjing_Sprite.characterSprite[0];
-                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[0];
+                nameChanges.YoungJinSpriteDirection(0);
                 break;
             case Y_Sprite.Idle01:
-                youngjinImg.sprite = youngjing_Sprite.characterSprite[1];
-                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[1];
+                nameChanges.YoungJinSpriteDirection(1);
                 break;
             case Y_Sprite.Angry:
-                youngjinImg.sprite = youngjing_Sprite.characterSprite[2];
-                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[2];
+                nameChanges.YoungJinSpriteDirection(2);
                 break;
             case Y_Sprite.Smile:
-                youngjinImg.sprite = youngjing_Sprite.characterSprite[3];
-                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[3];
+                nameChanges.YoungJinSpriteDirection(3);
                 break;
             case Y_Sprite.Smile01:
-                youngjinImg.sprite = youngjing_Sprite.characterSprite[4];
-                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[4];
+                nameChanges.YoungJinSpriteDirection(4);
                 break;
             case Y_Sprite.Surprise:
-                youngjinImg.sprite = youngjing_Sprite.characterSprite[5];
-                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[5];
+                nameChanges.YoungJinSpriteDirection(5);
                 break;
         }
         #endregion
@@ -549,20 +473,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.j_sprite)
         {
             case J_Sprite.Idle:
-                jisuImg.sprite = jisu_Sprite.characterSprite[0];
-                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[0];
+                nameChanges.JisuSpriteDirection(0);
                 break;
             case J_Sprite.Angry:
-                jisuImg.sprite = jisu_Sprite.characterSprite[1];
-                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[1];
+                nameChanges.JisuSpriteDirection(1);
                 break;
             case J_Sprite.Smile:
-                jisuImg.sprite = jisu_Sprite.characterSprite[2];
-                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[2];
+                nameChanges.JisuSpriteDirection(2);
                 break;
             case J_Sprite.Surprise:
-                jisuImg.sprite = jisu_Sprite.characterSprite[3];
-                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[3];
+                nameChanges.JisuSpriteDirection(3);
                 break;
         }
         #endregion
@@ -571,20 +491,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.m_sprite)
         {
             case M_Sprite.Idle:
-                minSeckImg.sprite = minSeok_Sprite.characterSprite[0];
-                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[0];
+                nameChanges.MinSeokSpriteDirection(0);
                 break;
             case M_Sprite.Angry:
-                minSeckImg.sprite = minSeok_Sprite.characterSprite[1];
-                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[1];
+                nameChanges.MinSeokSpriteDirection(1);
                 break;
             case M_Sprite.Smile:
-                minSeckImg.sprite = minSeok_Sprite.characterSprite[2];
-                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[2];
+                nameChanges.MinSeokSpriteDirection(2);
                 break;
             case M_Sprite.Surprise:
-                minSeckImg.sprite = minSeok_Sprite.characterSprite[3];
-                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[3];
+                nameChanges.MinSeokSpriteDirection(3);
                 break;
         }
         #endregion
@@ -594,20 +510,6 @@ public class A_Dialogue : MonoBehaviour
     public void CharacterDirection(Dialogue_Base.Info info)
     {
         
-        float y_pos_m = -396;
-        float y_pos_w = -430;
-
-        Vector3 center = new Vector3(0, y_pos_m, 0);
-        Vector3 right = new Vector3(448, y_pos_m, 0);
-        Vector3 left = new Vector3(-448, y_pos_m, 0);
-
-        Vector3 center_j = new Vector3(0, y_pos_w, 0);
-        Vector3 right_j = new Vector3(448, y_pos_w, 0);
-        Vector3 left_j = new Vector3(-448, y_pos_w, 0);
-
-        Vector3 outpos = new Vector3(-1000, 0, 0);
-        Vector3 outpos2 = new Vector3(1000, 0, 0);
-
         #region CharacterDirection
 
         #region HujungImgDirection
@@ -615,16 +517,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.h_Direction)
         {
             case H_Direction.Center:
-                hujungImg.transform.localPosition = center;
+                nameChanges.HujungPosition(0);
                 break;
             case H_Direction.Right:
-                hujungImg.transform.localPosition = right;
+                nameChanges.HujungPosition(1);
                 break;
             case H_Direction.Left:
-                hujungImg.transform.localPosition = left;
+                nameChanges.HujungPosition(2);
                 break;
             case H_Direction.Out:
-                hujungImg.transform.position = outpos;
+                nameChanges.HujungPosition(3);
                 break;
         }
 
@@ -635,16 +537,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.y_Direction)
         {
             case Y_Direction.Center:
-                youngjinImg.transform.localPosition = center;
+                nameChanges.YoungJinPosition(0);
                 break;
             case Y_Direction.Right:
-                youngjinImg.transform.localPosition = right;
+                nameChanges.YoungJinPosition(1);
                 break;
             case Y_Direction.Left:
-                youngjinImg.transform.localPosition = left;
+                nameChanges.YoungJinPosition(2);
                 break;
             case Y_Direction.Out:
-                youngjinImg.transform.position = outpos;
+                nameChanges.YoungJinPosition(3);
                 break;
 
         }
@@ -656,16 +558,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.j_Direction)
         {
             case J_Direction.Center:
-                jisuImg.transform.localPosition = center_j;
+                nameChanges.JisuPosition(0);
                 break;
             case J_Direction.Right:
-                jisuImg.transform.localPosition = right_j;
+                nameChanges.JisuPosition(1);
                 break;
             case J_Direction.Left:
-                jisuImg.transform.localPosition = left_j;
+                nameChanges.JisuPosition(2);
                 break;
             case J_Direction.Out:
-                jisuImg.transform.localPosition = outpos;
+                nameChanges.JisuPosition(3);
                 break;
         }
         #endregion
@@ -675,16 +577,16 @@ public class A_Dialogue : MonoBehaviour
         switch (info.m_Direction)
         {
             case M_Direction.Center:
-                minSeckImg.transform.localPosition = center;
+                nameChanges.MinSeokPosition(0);
                 break;
             case M_Direction.Right:
-                minSeckImg.transform.localPosition = right;
+                nameChanges.MinSeokPosition(1);
                 break;
             case M_Direction.Left:
-                minSeckImg.transform.localPosition = left;
+                nameChanges.MinSeokPosition(2);
                 break;
             case M_Direction.Out:
-                minSeckImg.transform.localPosition = outpos;
+                nameChanges.MinSeokPosition(3);
                 break;
         }
         #endregion

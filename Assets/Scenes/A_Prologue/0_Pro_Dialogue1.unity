@@ -10455,10 +10455,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuAnim, Assembly-CSharp
-        m_MethodName: ExitMainMenu
-        m_Mode: 1
+      - m_Target: {fileID: 679839573}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14160,6 +14160,7 @@ GameObject:
   - component: {fileID: 1849747255}
   - component: {fileID: 1849747257}
   - component: {fileID: 1849747256}
+  - component: {fileID: 1849747258}
   m_Layer: 0
   m_Name: DialogueMgn
   m_TagString: Untagged
@@ -14200,18 +14201,15 @@ MonoBehaviour:
   next: {fileID: 1569747441}
   textPrefab: {fileID: 4886084381413662940, guid: 465c5d6bcc90c3245aab36cdcd7d0e82, type: 3}
   parentContents: {fileID: 1936625771}
+  nameChanges: {fileID: 1849747258}
   delay: 0.07
   isTextComplete: 1
   dialogueUI: {fileID: 576274342}
   dialoguePanelText: {fileID: 44418354}
   dialogueSetting: {fileID: 452421040}
-  hujungImg: {fileID: 542433368}
   hujungImg_CloseUp: {fileID: 73141497}
-  youngjinImg: {fileID: 1805072095}
   youngjunImg_CloseUp: {fileID: 1034638695}
-  jisuImg: {fileID: 2060034389}
   jisuImg_CloseUp: {fileID: 268906381}
-  minSeckImg: {fileID: 515261715}
   minseok_CloseUp: {fileID: 1859740330}
   hujung_Sprite: {fileID: 11400000, guid: 9fafcf8abfc80654c9cd746f0a838e7d, type: 2}
   youngjing_Sprite: {fileID: 11400000, guid: f950d560db948d64e9028b96762d3ed3, type: 2}
@@ -14264,6 +14262,27 @@ MonoBehaviour:
   NowScene:
     m_Handle: 0
   SceneNum: 0
+--- !u!114 &1849747258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849747254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e945597495c26f84da93dccab89f5b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1849747256}
+  hujungImg: {fileID: 542433368}
+  youngjinImg: {fileID: 1805072095}
+  jisuImg: {fileID: 2060034389}
+  minSeckImg: {fileID: 515261715}
+  hujung_Sprite: {fileID: 11400000, guid: 9fafcf8abfc80654c9cd746f0a838e7d, type: 2}
+  youngjing_Sprite: {fileID: 11400000, guid: f950d560db948d64e9028b96762d3ed3, type: 2}
+  jisu_Sprite: {fileID: 11400000, guid: c51270c15c3aa1543b2f06979dd0d860, type: 2}
+  minSeok_Sprite: {fileID: 11400000, guid: f1be61e7ea0c85e439a55da6c816ba1c, type: 2}
 --- !u!1 &1850113864
 GameObject:
   m_ObjectHideFlags: 0
