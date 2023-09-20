@@ -621,7 +621,12 @@ public class A_Dialogue : MonoBehaviour
             fadeManager.Play("FadeOut");
         }
 
-        if(info.back == BackGroundDirections.Shake)
+        if (info.back == BackGroundDirections.Idle)
+        {
+            backGroundEffect.Play("Back_Idle");
+        }
+
+        if (info.back == BackGroundDirections.Shake)
         {
             backGroundEffect.Play("Back_Shake");
         }

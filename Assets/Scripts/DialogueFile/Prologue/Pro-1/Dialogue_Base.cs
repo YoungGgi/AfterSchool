@@ -209,6 +209,7 @@ public enum Direction
 public enum BackGroundDirections
 {
     Idle,
-    Shake
+    Shake,
+    Start
 }
 
