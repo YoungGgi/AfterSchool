@@ -504,6 +504,14 @@ public class A_Dialogue : MonoBehaviour
                 hujungImg.sprite = hujung_Sprite.characterSprite[1];
                 hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[1];
                 break;
+            case H_Sprite.Smile:
+                hujungImg.sprite = hujung_Sprite.characterSprite[2];
+                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[2];
+                break;
+            case H_Sprite.Surprise:
+                hujungImg.sprite = hujung_Sprite.characterSprite[3];
+                hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[3];
+                break;
         }
         #endregion
 
@@ -512,21 +520,27 @@ public class A_Dialogue : MonoBehaviour
         {
             case Y_Sprite.Idle:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[0];
+                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[0];
                 break;
             case Y_Sprite.Idle01:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[1];
+                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[1];
                 break;
             case Y_Sprite.Angry:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[2];
+                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[2];
                 break;
             case Y_Sprite.Smile:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[3];
+                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[3];
                 break;
             case Y_Sprite.Smile01:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[4];
+                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[4];
                 break;
             case Y_Sprite.Surprise:
                 youngjinImg.sprite = youngjing_Sprite.characterSprite[5];
+                youngjunImg_CloseUp.sprite = youngjing_Sprite.characterSprite[5];
                 break;
         }
         #endregion
@@ -536,15 +550,19 @@ public class A_Dialogue : MonoBehaviour
         {
             case J_Sprite.Idle:
                 jisuImg.sprite = jisu_Sprite.characterSprite[0];
+                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[0];
                 break;
             case J_Sprite.Angry:
                 jisuImg.sprite = jisu_Sprite.characterSprite[1];
+                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[1];
                 break;
             case J_Sprite.Smile:
                 jisuImg.sprite = jisu_Sprite.characterSprite[2];
+                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[2];
                 break;
             case J_Sprite.Surprise:
                 jisuImg.sprite = jisu_Sprite.characterSprite[3];
+                jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[3];
                 break;
         }
         #endregion
@@ -554,15 +572,19 @@ public class A_Dialogue : MonoBehaviour
         {
             case M_Sprite.Idle:
                 minSeckImg.sprite = minSeok_Sprite.characterSprite[0];
+                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[0];
                 break;
             case M_Sprite.Angry:
-                youngjinImg.sprite = minSeok_Sprite.characterSprite[1];
+                minSeckImg.sprite = minSeok_Sprite.characterSprite[1];
+                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[1];
                 break;
             case M_Sprite.Smile:
-                youngjinImg.sprite = minSeok_Sprite.characterSprite[2];
+                minSeckImg.sprite = minSeok_Sprite.characterSprite[2];
+                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[2];
                 break;
             case M_Sprite.Surprise:
-                youngjinImg.sprite = minSeok_Sprite.characterSprite[3];
+                minSeckImg.sprite = minSeok_Sprite.characterSprite[3];
+                minseok_CloseUp.sprite = minSeok_Sprite.characterSprite[3];
                 break;
         }
         #endregion
