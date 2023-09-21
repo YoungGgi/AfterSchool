@@ -1075,7 +1075,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679839573}
+      - m_Target: {fileID: 407727703}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escapeObject: {fileID: 230215642}
-  unEscapeObject: {fileID: 679839573}
+  unEscapeObject: {fileID: 407727703}
   isMainSetting: 0
 --- !u!1 &267410082
 GameObject:
@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escapeObject: {fileID: 286196168}
-  unEscapeObject: {fileID: 679839573}
+  unEscapeObject: {fileID: 407727703}
   isMainSetting: 0
 --- !u!1 &306049338
 GameObject:
@@ -2174,7 +2174,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 407727703}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2897,6 +2897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 407727704}
+  - component: {fileID: 407727705}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2927,6 +2928,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &407727705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407727703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86343aa97d9c7d846865dc0d2fa00dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escapeObject: {fileID: 679839573}
+  unEscapeObject: {fileID: 0}
+  isMainSetting: 1
 --- !u!1 &418167712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,7 +3037,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679839573}
+      - m_Target: {fileID: 407727703}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5129,7 +5145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escapeObject: {fileID: 633763349}
-  unEscapeObject: {fileID: 679839573}
+  unEscapeObject: {fileID: 407727703}
   isMainSetting: 0
 --- !u!1 &636034500
 GameObject:
@@ -5534,7 +5550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 679839575}
-  - component: {fileID: 679839574}
+  - component: {fileID: 679839576}
   m_Layer: 5
   m_Name: MainGroup
   m_TagString: Untagged
@@ -5542,21 +5558,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &679839574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679839573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86343aa97d9c7d846865dc0d2fa00dd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  escapeObject: {fileID: 679839573}
-  unEscapeObject: {fileID: 0}
-  isMainSetting: 1
 --- !u!224 &679839575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5578,6 +5579,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &679839576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679839573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38467d9d14b77e488e21a030f32b91e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 407727704}
+  backGround: {fileID: 2108095512}
 --- !u!1 &680329843
 GameObject:
   m_ObjectHideFlags: 0
@@ -7930,7 +7945,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 407727703}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -8639,7 +8654,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 407727703}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -10822,10 +10837,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679839573}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 679839576}
+        m_TargetAssemblyTypeName: MainMenuAnim, Assembly-CSharp
+        m_MethodName: CloseMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14704,7 +14719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f02d5b8acd834d9678dca35c43534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 0ca1588c53014524087ae44c4d31ac67, type: 2}
+  dialogue: {fileID: 11400000, guid: 11dab282eaba3bc4fbff828b49d7f9aa, type: 2}
   a_Dialogue: {fileID: 1849747256}
   isAuto: 0
   dealyCool: 1.5
@@ -15498,7 +15513,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679839573}
+      - m_Target: {fileID: 407727703}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -17539,6 +17554,7 @@ GameObject:
   - component: {fileID: 2108095509}
   - component: {fileID: 2108095511}
   - component: {fileID: 2108095510}
+  - component: {fileID: 2108095512}
   m_Layer: 5
   m_Name: Main_BackGround
   m_TagString: Untagged
@@ -17578,14 +17594,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17603,6 +17619,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108095508}
   m_CullTransparentMesh: 1
+--- !u!225 &2108095512
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108095508}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2117129982
 GameObject:
   m_ObjectHideFlags: 0

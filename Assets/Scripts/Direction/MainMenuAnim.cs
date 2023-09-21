@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class MainMenuAnim : MonoBehaviour
 {
-    public GameObject mainMenu;
+    public Transform mainMenu;
+    public CanvasGroup backGround;
 
-    private void Start()
+    public void OnEnable()
     {
-        transform.localScale = Vector2.zero;
+        backGround.alpha = 0;
+        backGround.LeanAlpha(1, 0.5f);
+
+        mainMenu.localPosition = new Vector2(0, -Screen.height);
+        mainMenu.LeanMoveLocalY(0, 0.3f).setEaseOutExpo().delay = 0.1f;
+
     }
 
-    private void OnEnable()
+    public void CloseMenu()
     {
-        transform.LeanScale(Vector2.one, 0.3f);
+        backGround.LeanAlpha(0, 0.5f);
+        mainMenu.LeanMoveLocalY(-Screen.height, 0.3f).setEaseInExpo().setOnComplete(MenuOff);
     }
 
-    public void ExitMainMenu()
+    private void MenuOff()
     {
-        transform.LeanScale(Vector2.zero, 0.3f);
-        StartCoroutine(ExitDelay());
-    }
-
-    IEnumerator ExitDelay()
-    {
-        yield return new WaitForSeconds(0.6f);
-        mainMenu.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
 }

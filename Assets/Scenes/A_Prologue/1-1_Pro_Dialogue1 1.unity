@@ -1721,7 +1721,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1682636841}
+      - m_Target: {fileID: 1954438208}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4509,7 +4509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escapeObject: {fileID: 501820496}
-  unEscapeObject: {fileID: 1682636841}
+  unEscapeObject: {fileID: 1954438208}
   isMainSetting: 0
 --- !u!1 &515261713
 GameObject:
@@ -4718,7 +4718,7 @@ RectTransform:
   m_GameObject: {fileID: 542433366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.8274, y: 17.43224, z: 2.4312644}
+  m_LocalScale: {x: 13.03971, y: 17.43224, z: 2.4312644}
   m_Children:
   - {fileID: 1806810878}
   m_Father: {fileID: 1986852056}
@@ -6906,7 +6906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escapeObject: {fileID: 750114477}
-  unEscapeObject: {fileID: 1682636841}
+  unEscapeObject: {fileID: 1954438208}
   isMainSetting: 0
 --- !u!1 &760652056
 GameObject:
@@ -7416,7 +7416,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1682636841}
+      - m_Target: {fileID: 1954438208}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -9898,7 +9898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escapeObject: {fileID: 1097829802}
-  unEscapeObject: {fileID: 1682636841}
+  unEscapeObject: {fileID: 1954438208}
   isMainSetting: 0
 --- !u!1 &1112027865
 GameObject:
@@ -11745,7 +11745,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1682636841}
+      - m_Target: {fileID: 1954438208}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -12624,6 +12624,7 @@ GameObject:
   - component: {fileID: 1389718420}
   - component: {fileID: 1389718422}
   - component: {fileID: 1389718421}
+  - component: {fileID: 1389718423}
   m_Layer: 5
   m_Name: Main_BackGround
   m_TagString: Untagged
@@ -12670,7 +12671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12688,6 +12689,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389718419}
   m_CullTransparentMesh: 1
+--- !u!225 &1389718423
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389718419}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1420645362
 GameObject:
   m_ObjectHideFlags: 0
@@ -14686,12 +14699,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1682636841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86343aa97d9c7d846865dc0d2fa00dd6, type: 3}
+  m_Script: {fileID: 11500000, guid: c38467d9d14b77e488e21a030f32b91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escapeObject: {fileID: 1682636841}
-  unEscapeObject: {fileID: 0}
-  isMainSetting: 1
+  mainMenu: {fileID: 1954438209}
+  backGround: {fileID: 1389718423}
 --- !u!1 &1699104179
 GameObject:
   m_ObjectHideFlags: 0
@@ -17476,6 +17488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954438209}
+  - component: {fileID: 1954438210}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -17506,6 +17519,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1954438210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954438208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86343aa97d9c7d846865dc0d2fa00dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escapeObject: {fileID: 1682636841}
+  unEscapeObject: {fileID: 0}
+  isMainSetting: 1
 --- !u!1 &1956556871
 GameObject:
   m_ObjectHideFlags: 0
