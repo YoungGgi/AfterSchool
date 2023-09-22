@@ -34,6 +34,9 @@ public class MainScene : MonoBehaviour
             loadBtn.enabled = true;
         }
         */
+
+        BGM_Mgn.instance.BGM_Change(0);
+
     }
 
     private void Update()

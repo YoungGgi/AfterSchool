@@ -35,5 +35,4 @@ public class EscapeUp : MonoBehaviour
         unEscapeObject.gameObject.SetActive(true);
     }
 
-
 }
