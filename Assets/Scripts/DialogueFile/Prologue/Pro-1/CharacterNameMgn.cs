@@ -20,14 +20,16 @@ public class CharacterNameMgn : MonoBehaviour
     public CharacterSprite minSeok_Sprite;
 
     Vector3 center = new Vector3(0, -396, 0);
-    Vector3 right = new Vector3(448, -396, 0);
-    Vector3 left = new Vector3(-448, -396, 0);
+    Vector3 right = new Vector3(500, -396, 0);
+    Vector3 left = new Vector3(-500, -396, 0);
 
     Vector3 center_w = new Vector3(0, -430, 0);
-    Vector3 right_w = new Vector3(448, -430, 0);
-    Vector3 left_w = new Vector3(-448, -430, 0);
+    Vector3 right_w = new Vector3(500, -430, 0);
+    Vector3 left_w = new Vector3(-500, -430, 0);
 
     Vector3 outpos = new Vector3(-1000, 0, 0);
+
+    bool isLeftMove;
 
     public void NameChangeDirection(int id)
     {

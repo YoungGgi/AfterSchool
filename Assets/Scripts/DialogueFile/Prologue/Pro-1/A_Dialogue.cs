@@ -98,7 +98,7 @@ public class A_Dialogue : MonoBehaviour
         directions += CharacterCloseUp;
         directions += BackGroundChange;
         directions += BackGroundDirection;
-
+        directions += BGM_Play;
     }
 
     // 게임 시작 시 로딩 화면(자동저장) 출력, 딜레이 후 대화 화면 등장
@@ -706,6 +706,23 @@ public class A_Dialogue : MonoBehaviour
         }
 
         #endregion
+    }
+
+    public void BGM_Play(Dialogue_Base.Info info)
+    {
+        if (info.isBGM_Stop)
+        {
+            BGM_Mgn.instance.BGM_Stop();
+        }
+
+        if (!info.isBGM_Change)
+        {
+            return;
+        }
+        else
+        {
+            BGM_Mgn.instance.BGM_Change(info.BGM_Index);
+        }
     }
 
     // 텍스트 입력 코루틴
