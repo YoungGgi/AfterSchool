@@ -39,7 +39,6 @@ public class MiniGameMgn : MonoBehaviour
         isLoading = true;
         StartCoroutine(LoadingAnim());
 
-        BGM_Mgn.instance.BGM_Change(5);
     }
 
     IEnumerator LoadingAnim()

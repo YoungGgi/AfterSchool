@@ -22,6 +22,11 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private GameObject thinkGoNext;
 
+    [Header("버튼 효과음")]
+    [SerializeField]
+    private AudioClip btnClickSFX;
+    [SerializeField]
+    private AudioClip btnSelectSFX;
     
     public Scene NowScene;
     public int SceneNum;
@@ -134,6 +139,14 @@ public class UI_Manager : MonoBehaviour
     }
     #endregion
 
-   
+   public void SFX_On()
+   {
+        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
+   }
+
+    public void SelectSFX()
+    {
+        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnSelectSFX);
+    }
 
 }

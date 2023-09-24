@@ -19,6 +19,8 @@ public class MainScene : MonoBehaviour
     [SerializeField]
     private string chapter3Title;
 
+    public int mainBGM_Index;
+
     private void Start()
     {
         loadBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
@@ -35,7 +37,7 @@ public class MainScene : MonoBehaviour
         }
         */
 
-        BGM_Mgn.instance.BGM_Change(0);
+        BGM_Mgn.instance.BGM_Change(mainBGM_Index);
 
     }
 

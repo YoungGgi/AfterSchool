@@ -1828,6 +1828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider_BGM: {fileID: 1572636217}
+  slider_SFX: {fileID: 2006259592}
 --- !u!4 &231544232
 Transform:
   m_ObjectHideFlags: 0
@@ -14775,7 +14776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f02d5b8acd834d9678dca35c43534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 71314fb593b8b424e901ac6993c5852c, type: 2}
+  dialogue: {fileID: 11400000, guid: 0ca1588c53014524087ae44c4d31ac67, type: 2}
   a_Dialogue: {fileID: 1849747256}
   isAuto: 0
   dealyCool: 1.5
@@ -15173,6 +15174,8 @@ MonoBehaviour:
   gameOptionObj: {fileID: 0}
   chapterSelectObj: {fileID: 0}
   thinkGoNext: {fileID: 0}
+  btnClickSFX: {fileID: 0}
+  btnSelectSFX: {fileID: 0}
   NowScene:
     m_Handle: 0
   SceneNum: 0
@@ -16865,7 +16868,19 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 231544231}
+        m_TargetAssemblyTypeName: BGM_Slider, Assembly-CSharp
+        m_MethodName: SetSFX_Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2025340473
 GameObject:
   m_ObjectHideFlags: 0
