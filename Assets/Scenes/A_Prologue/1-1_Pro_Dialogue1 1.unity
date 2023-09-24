@@ -13805,6 +13805,7 @@ GameObject:
   - component: {fileID: 1569747444}
   - component: {fileID: 1569747443}
   - component: {fileID: 1569747442}
+  - component: {fileID: 1569747445}
   m_Layer: 5
   m_Name: Next_Icon
   m_TagString: Untagged
@@ -13869,6 +13870,25 @@ RectTransform:
   m_AnchoredPosition: {x: 805, y: -409}
   m_SizeDelta: {x: 59, y: 51}
   m_Pivot: {x: 1, y: 0}
+--- !u!95 &1569747445
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569747441}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4ee8394135cb7b468d89ce08165b4e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1622384560
 GameObject:
   m_ObjectHideFlags: 0
@@ -16759,7 +16779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f02d5b8acd834d9678dca35c43534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 5f6038d77b2ea4d4ab2ee6b044240769, type: 2}
+  dialogue: {fileID: 11400000, guid: 6ffdecbd9efcd3e4c87312cc4064c43b, type: 2}
   a_Dialogue: {fileID: 1849747256}
   isAuto: 0
   dealyCool: 1.5
