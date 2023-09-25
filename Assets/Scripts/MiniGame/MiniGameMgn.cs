@@ -39,6 +39,9 @@ public class MiniGameMgn : MonoBehaviour
         isLoading = true;
         StartCoroutine(LoadingAnim());
 
+        NowScene = SceneManager.GetActiveScene();
+        SceneNum = NowScene.buildIndex;
+        SaveLoadMgn.instance.SaveData(SceneNum);
     }
 
     IEnumerator LoadingAnim()
@@ -54,9 +57,7 @@ public class MiniGameMgn : MonoBehaviour
 
     private void Update()
     {
-        NowScene = SceneManager.GetActiveScene(); // 매 프레임마다 현재 씬 확인하기
-        SceneNum = NowScene.buildIndex;
-
+        
         // 답을 몇 개 고르는 미니게임인가에 따라 달라짐
         // checkCount가 특정 개수가 되면 정답/오답을 판별
         if (isTwosGame)
@@ -91,10 +92,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0] && isClear[1])
         {
+            Time.timeScale = 0;
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
+            Time.timeScale = 0;
             failGroup.gameObject.SetActive(true);
         }
     }
@@ -103,10 +106,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0])
         {
+            Time.timeScale = 0;
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
+            Time.timeScale = 0;
             failGroup.gameObject.SetActive(true);
         }
     }
@@ -115,16 +120,19 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0] && isClear[1] && isClear[2])
         {
+            Time.timeScale = 0;
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
+            Time.timeScale = 0;
             failGroup.gameObject.SetActive(true);
         }
     }
 
     public void Cancel()
     {
+        Time.timeScale = 1;
         checkCount = 0;
 
         for(int i = 0; i < isClear.Length; i++)

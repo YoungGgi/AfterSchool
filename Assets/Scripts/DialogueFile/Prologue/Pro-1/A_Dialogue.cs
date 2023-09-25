@@ -85,6 +85,7 @@ public class A_Dialogue : MonoBehaviour
 
     private void OnEnable()
     {
+        Time.timeScale = 1;
         dialogueInfo = new Queue<Dialogue_Base.Info>();
         dialogueUI.gameObject.SetActive(false);
         StartCoroutine(Loading());
@@ -772,8 +773,8 @@ public class A_Dialogue : MonoBehaviour
         }
         else
         {
-            dialogueObject.gameObject.SetActive(false);
-            miniGameObject.gameObject.SetActive(true);
+            dialogueObject.SetActive(false);
+            miniGameObject.SetActive(true);
         }
     }
 

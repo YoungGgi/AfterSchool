@@ -3889,6 +3889,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3904,6 +3905,38 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -7049,7 +7082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.1, y: -13.295622}
+  m_AnchoredPosition: {x: -2.0999985, y: -13.295622}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &940853139
@@ -8809,7 +8842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 26.5, y: -1.4}
+  m_AnchoredPosition: {x: 26.5, y: -1.3999996}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1150069250
@@ -9018,7 +9051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -218, y: 105.000145}
+  m_AnchoredPosition: {x: -218, y: 105.00015}
   m_SizeDelta: {x: 0, y: 3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1165742833
@@ -9987,7 +10020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62c7d4dd0b54044f8c3f03a289326c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCheck: 000000000000000000000000
+  isCheck: 010101010101010000000000
 --- !u!4 &1242961195
 Transform:
   m_ObjectHideFlags: 0
@@ -12050,7 +12083,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe56b673de6ac3a4c81c10d9c61ee277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clues: []
+  clues:
+  - {fileID: 11400000, guid: 6f6653f446afb754b89b482cffecaf23, type: 2}
+  - {fileID: 11400000, guid: 1409a8dcfe194704d8e1f37e1d7dbc0c, type: 2}
+  - {fileID: 11400000, guid: 5aac09f1dbc78594198d83e20168afa0, type: 2}
+  - {fileID: 11400000, guid: d846ba41868e5c94a9d1eb1d27e02d9f, type: 2}
+  - {fileID: 11400000, guid: 12e8c1f31deca9a4b80a5d008f32d1cd, type: 2}
+  - {fileID: 11400000, guid: b9d95df4ad0aa5340a87e6a7a8be4fc7, type: 2}
+  - {fileID: 11400000, guid: b051f68e728ab474fbcaaf867fd6c588, type: 2}
   clueBtnName:
   - {fileID: 802865731}
   - {fileID: 75499663}
@@ -12634,8 +12674,8 @@ Canvas:
   m_GameObject: {fileID: 1622384560}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -13892,7 +13932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -2.1, y: -13.295622}
+  m_AnchoredPosition: {x: -2.0999985, y: -13.295622}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1797248958
@@ -14790,9 +14830,9 @@ MonoBehaviour:
   titleObj: {fileID: 673194125}
   subTitleObj: {fileID: 582285701}
   clue: {fileID: 1506450747}
-  clueObj0: {fileID: 11400000, guid: 6f6653f446afb754b89b482cffecaf23, type: 2}
-  clueObj1: {fileID: 11400000, guid: 1409a8dcfe194704d8e1f37e1d7dbc0c, type: 2}
-  clueObj2: {fileID: 11400000, guid: 5aac09f1dbc78594198d83e20168afa0, type: 2}
+  clueObj0: {fileID: 11400000, guid: 203021d1d539a4c4cb78c215276edf3c, type: 2}
+  clueObj1: {fileID: 11400000, guid: a8e930740a2362a49bc8606b7bf2e2b0, type: 2}
+  clueObj2: {fileID: 11400000, guid: 09c09f15d2231c943b0e4066cc632683, type: 2}
   clueObj3: {fileID: 0}
   clueObj4: {fileID: 0}
   clueObj5: {fileID: 0}
@@ -14815,7 +14855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f02d5b8acd834d9678dca35c43534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 0ca1588c53014524087ae44c4d31ac67, type: 2}
+  dialogue: {fileID: 11400000, guid: 80d1c36969762c546b937fbc1f3269d1, type: 2}
   a_Dialogue: {fileID: 1849747256}
   isAuto: 0
   dealyCool: 1.5

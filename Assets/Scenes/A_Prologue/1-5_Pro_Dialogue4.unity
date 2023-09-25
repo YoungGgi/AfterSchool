@@ -9987,7 +9987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62c7d4dd0b54044f8c3f03a289326c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCheck: 000000000000000000000000
+  isCheck: 010101010000000000000000
 --- !u!4 &1242961195
 Transform:
   m_ObjectHideFlags: 0
@@ -12050,7 +12050,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe56b673de6ac3a4c81c10d9c61ee277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clues: []
+  clues:
+  - {fileID: 11400000, guid: 6f6653f446afb754b89b482cffecaf23, type: 2}
+  - {fileID: 11400000, guid: 1409a8dcfe194704d8e1f37e1d7dbc0c, type: 2}
+  - {fileID: 11400000, guid: 5aac09f1dbc78594198d83e20168afa0, type: 2}
+  - {fileID: 11400000, guid: d846ba41868e5c94a9d1eb1d27e02d9f, type: 2}
   clueBtnName:
   - {fileID: 802865731}
   - {fileID: 75499663}
@@ -14790,9 +14794,9 @@ MonoBehaviour:
   titleObj: {fileID: 673194125}
   subTitleObj: {fileID: 582285701}
   clue: {fileID: 1506450747}
-  clueObj0: {fileID: 11400000, guid: 6f6653f446afb754b89b482cffecaf23, type: 2}
-  clueObj1: {fileID: 11400000, guid: 1409a8dcfe194704d8e1f37e1d7dbc0c, type: 2}
-  clueObj2: {fileID: 11400000, guid: 5aac09f1dbc78594198d83e20168afa0, type: 2}
+  clueObj0: {fileID: 11400000, guid: 12e8c1f31deca9a4b80a5d008f32d1cd, type: 2}
+  clueObj1: {fileID: 11400000, guid: b9d95df4ad0aa5340a87e6a7a8be4fc7, type: 2}
+  clueObj2: {fileID: 11400000, guid: b051f68e728ab474fbcaaf867fd6c588, type: 2}
   clueObj3: {fileID: 0}
   clueObj4: {fileID: 0}
   clueObj5: {fileID: 0}
@@ -14815,7 +14819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f02d5b8acd834d9678dca35c43534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 0ca1588c53014524087ae44c4d31ac67, type: 2}
+  dialogue: {fileID: 11400000, guid: 1a65a0f08b04a5443863bdf65e73dd66, type: 2}
   a_Dialogue: {fileID: 1849747256}
   isAuto: 0
   dealyCool: 1.5

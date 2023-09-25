@@ -1678,6 +1678,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 506625230}
   - {fileID: 735857127}
   m_Father: {fileID: 576274343}
   m_RootOrder: 0
@@ -4646,6 +4647,81 @@ MonoBehaviour:
   escapeObject: {fileID: 501820496}
   unEscapeObject: {fileID: 1954438208}
   isMainSetting: 0
+--- !u!1 &506625229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506625230}
+  - component: {fileID: 506625232}
+  - component: {fileID: 506625231}
+  m_Layer: 5
+  m_Name: PopUpImg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &506625230
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506625229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 9.16945, y: 4.613597, z: 3.9015617}
+  m_Children: []
+  m_Father: {fileID: 189735984}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &506625231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506625229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f538041ee863b4049a626a455c361578, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &506625232
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506625229}
+  m_CullTransparentMesh: 1
 --- !u!1 &515261713
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,6 +5319,7 @@ GameObject:
   - component: {fileID: 629081710}
   - component: {fileID: 629081712}
   - component: {fileID: 629081711}
+  - component: {fileID: 629081713}
   m_Layer: 5
   m_Name: NoteBackGround
   m_TagString: Untagged
@@ -5289,7 +5366,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 341008f0265da4345971b5546d221302, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5307,6 +5384,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629081709}
   m_CullTransparentMesh: 1
+--- !u!225 &629081713
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629081709}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &630238938
 GameObject:
   m_ObjectHideFlags: 0
@@ -6727,7 +6816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &735857127
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6740,7 +6829,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 189735984}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -7836,7 +7925,7 @@ GameObject:
   - component: {fileID: 848035920}
   - component: {fileID: 848035919}
   m_Layer: 5
-  m_Name: PopUpImg
+  m_Name: PopUpImg_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9162,6 +9251,7 @@ GameObject:
   - component: {fileID: 993646958}
   - component: {fileID: 993646960}
   - component: {fileID: 993646959}
+  - component: {fileID: 993646961}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -9208,7 +9298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9226,6 +9316,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993646957}
   m_CullTransparentMesh: 1
+--- !u!225 &993646961
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993646957}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1004927377
 GameObject:
   m_ObjectHideFlags: 0
@@ -9532,7 +9634,7 @@ RectTransform:
   m_GameObject: {fileID: 1022924273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18.4023, y: 23.73225, z: 3.3099198}
+  m_LocalScale: {x: 17.712214, y: 23.73225, z: 3.3099198}
   m_Children: []
   m_Father: {fileID: 1986852056}
   m_RootOrder: 1
@@ -16990,7 +17092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f02d5b8acd834d9678dca35c43534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 6ffdecbd9efcd3e4c87312cc4064c43b, type: 2}
+  dialogue: {fileID: 11400000, guid: 5f6038d77b2ea4d4ab2ee6b044240769, type: 2}
   a_Dialogue: {fileID: 1849747256}
   isAuto: 0
   dealyCool: 1.5
@@ -18068,6 +18170,7 @@ GameObject:
   - component: {fileID: 1987675024}
   - component: {fileID: 1987675026}
   - component: {fileID: 1987675025}
+  - component: {fileID: 1987675027}
   m_Layer: 5
   m_Name: SoundBackGround
   m_TagString: Untagged
@@ -18114,7 +18217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 341008f0265da4345971b5546d221302, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18132,6 +18235,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987675023}
   m_CullTransparentMesh: 1
+--- !u!225 &1987675027
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987675023}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2001386875
 GameObject:
   m_ObjectHideFlags: 0
