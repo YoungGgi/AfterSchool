@@ -8494,6 +8494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595893529}
+  - component: {fileID: 595893530}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -8524,6 +8525,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &595893530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595893528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86343aa97d9c7d846865dc0d2fa00dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escapeObject: {fileID: 1656467404}
+  unEscapeObject: {fileID: 0}
+  isMainSetting: 1
 --- !u!1 &614272419
 GameObject:
   m_ObjectHideFlags: 0
@@ -8753,7 +8769,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1656467404}
+      - m_Target: {fileID: 595893528}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -13357,7 +13373,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1656467404}
+      - m_Target: {fileID: 595893528}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -25887,7 +25903,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656467407}
-  - component: {fileID: 1656467406}
   - component: {fileID: 1656467405}
   m_Layer: 5
   m_Name: MainGroup
@@ -25910,21 +25925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 595893529}
   backGround: {fileID: 1859751002}
---- !u!114 &1656467406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656467404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86343aa97d9c7d846865dc0d2fa00dd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  escapeObject: {fileID: 1656467404}
-  unEscapeObject: {fileID: 0}
-  isMainSetting: 1
 --- !u!224 &1656467407
 RectTransform:
   m_ObjectHideFlags: 0
