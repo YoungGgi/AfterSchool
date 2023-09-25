@@ -148,6 +148,11 @@ public class CharacterNameMgn : MonoBehaviour
                 NameColor_Color();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
+            case 21:
+                dialogue.nameTxt.text = "???";
+                NameColor_Normal();
+                hujungImg.color = new Color(255, 255, 255);
+                break;
         }
     }
 

@@ -91,7 +91,7 @@ public enum Name
 {
     Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung, Who_Jisu, Who_Min, 
     PlayerHujung, HujungJisu, PlayerYoungJin, All, Teacher, YoungJinJisu,
-    Student01, Student02, Student03, Bear, Rabbit
+    Student01, Student02, Student03, Bear, Rabbit, Who_Hujung
 }
 
 // 효정 연출 목록

@@ -1726,7 +1726,19 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660911333}
+        m_TargetAssemblyTypeName: BGM_Slider, Assembly-CSharp
+        m_MethodName: SetSFX_Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &179526235
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,6 +4535,11 @@ MonoBehaviour:
   isSingleGame: 0
   isTwosGame: 1
   isThirdGame: 0
+  clearSFX: {fileID: 8300000, guid: 4972ad8453ae73345991f7ec13caf37e, type: 3}
+  failSFX: {fileID: 8300000, guid: 3ee4fda7a816e4f43b9093337311b521, type: 3}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
+  postProcessing: {fileID: 1370996042}
+  startBGM_Obj: {fileID: 32132827}
 --- !u!4 &567306911
 Transform:
   m_ObjectHideFlags: 0
@@ -8665,6 +8682,7 @@ MonoBehaviour:
   explainBox: {fileID: 1542730962}
   questionBox: {fileID: 1759530914}
   explainText: {fileID: 710642353}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
   clue: {fileID: 11400000, guid: 6f6653f446afb754b89b482cffecaf23, type: 2}
   miniManager: {fileID: 567306910}
 --- !u!114 &980529424
@@ -10052,6 +10070,7 @@ MonoBehaviour:
   explainBox: {fileID: 1610922856}
   questionBox: {fileID: 1759530914}
   explainText: {fileID: 876754723}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
   clue: {fileID: 11400000, guid: 1409a8dcfe194704d8e1f37e1d7dbc0c, type: 2}
   miniManager: {fileID: 567306910}
 --- !u!114 &1194289802
@@ -10786,6 +10805,7 @@ MonoBehaviour:
   explainBox: {fileID: 180055551}
   questionBox: {fileID: 1759530914}
   explainText: {fileID: 41833215}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
   clue: {fileID: 11400000, guid: 5aac09f1dbc78594198d83e20168afa0, type: 2}
   miniManager: {fileID: 567306910}
 --- !u!114 &1293365676
@@ -12618,7 +12638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBAA9\uAC78\uC774\uAC00 \uC788\uC744\uB9CC\uD55C \uACF3\uC740?"
+  m_text: "\uBAA9\uAC78\uC774\uAC00 \uC788\uC744\uB9CC\uD55C \uACF3\uC740? (2\uAC1C)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93606878eccb8714db59d1af974bad8e, type: 2}
   m_sharedMaterial: {fileID: 5466665771363013133, guid: 93606878eccb8714db59d1af974bad8e, type: 2}
@@ -13116,6 +13136,51 @@ RectTransform:
   m_AnchoredPosition: {x: 764, y: 237}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
+--- !u!1 &1660911332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1660911334}
+  - component: {fileID: 1660911333}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1660911333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660911332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280cc01846f63e44ba312d212ec2df34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider_BGM: {fileID: 1803963035}
+  slider_SFX: {fileID: 175354654}
+--- !u!4 &1660911334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660911332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664617190
 GameObject:
   m_ObjectHideFlags: 0
@@ -14265,7 +14330,19 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660911333}
+        m_TargetAssemblyTypeName: BGM_Slider, Assembly-CSharp
+        m_MethodName: SetBGM_Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1849866507
 GameObject:
   m_ObjectHideFlags: 0

@@ -3628,7 +3628,19 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 231544231}
+        m_TargetAssemblyTypeName: BGM_Slider, Assembly-CSharp
+        m_MethodName: SetBGM_Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &279909796
 GameObject:
   m_ObjectHideFlags: 0
@@ -6268,6 +6280,54 @@ RectTransform:
   m_AnchoredPosition: {x: 763, y: 106}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &446118077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446118079}
+  - component: {fileID: 446118078}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &446118078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446118077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 86d24cc8e5a07f443b48b996276c54f6, type: 2}
+--- !u!4 &446118079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446118077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2951207, y: -0.9887884, z: 76.137665}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &452421040
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,7 +7146,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -10530,7 +10590,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1856843834}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
         m_MethodName: GoToDialogueScene
         m_Mode: 1
@@ -10806,7 +10866,8 @@ MonoBehaviour:
   clueText: {fileID: 1465258404}
   explainBox: {fileID: 1250115399}
   questionBox: {fileID: 2056250064}
-  explainText: {fileID: 1068479265}
+  explainText: {fileID: 841384212}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
   clue: {fileID: 11400000, guid: a8e930740a2362a49bc8606b7bf2e2b0, type: 2}
   miniManager: {fileID: 862098476}
 --- !u!224 &719150499
@@ -12329,6 +12390,7 @@ MonoBehaviour:
   explainBox: {fileID: 1486774488}
   questionBox: {fileID: 2056250064}
   explainText: {fileID: 2072354436}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
   clue: {fileID: 11400000, guid: e1da5a613a8dbbe4c897051130b422bc, type: 2}
   miniManager: {fileID: 862098476}
 --- !u!114 &818209266
@@ -12377,7 +12439,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 818209265}
         m_TargetAssemblyTypeName: ClueSelectBtn, Assembly-CSharp
-        m_MethodName: ClueSelect_Clear
+        m_MethodName: ClueSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12604,7 +12666,7 @@ GameObject:
   - component: {fileID: 841384213}
   - component: {fileID: 841384212}
   m_Layer: 5
-  m_Name: DialgoueTxt_2
+  m_Name: DialgoueTxt_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12955,6 +13017,11 @@ MonoBehaviour:
   isSingleGame: 1
   isTwosGame: 0
   isThirdGame: 0
+  clearSFX: {fileID: 8300000, guid: 4972ad8453ae73345991f7ec13caf37e, type: 3}
+  failSFX: {fileID: 8300000, guid: 3ee4fda7a816e4f43b9093337311b521, type: 3}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
+  postProcessing: {fileID: 446118077}
+  startBGM_Obj: {fileID: 1464054429}
 --- !u!4 &862098477
 Transform:
   m_ObjectHideFlags: 0
@@ -17857,6 +17924,7 @@ MonoBehaviour:
   explainBox: {fileID: 1458814920}
   questionBox: {fileID: 2056250064}
   explainText: {fileID: 1677943131}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
   clue: {fileID: 11400000, guid: f978cc16e666ece41be28b5b5d65db9f, type: 2}
   miniManager: {fileID: 862098476}
 --- !u!114 &1165250634
@@ -17905,7 +17973,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1165250633}
         m_TargetAssemblyTypeName: ClueSelectBtn, Assembly-CSharp
-        m_MethodName: ClueSelect_Clear2
+        m_MethodName: ClueSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18110,9 +18178,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 862098476}
         m_TargetAssemblyTypeName: MiniGameMgn, Assembly-CSharp
-        m_MethodName: TimeOver
+        m_MethodName: Cancel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20957,7 +21025,19 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 231544231}
+        m_TargetAssemblyTypeName: BGM_Slider, Assembly-CSharp
+        m_MethodName: SetSFX_Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1341848110
 GameObject:
   m_ObjectHideFlags: 0
@@ -25440,7 +25520,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 862098476}
         m_TargetAssemblyTypeName: MiniGameMgn, Assembly-CSharp
         m_MethodName: Cancel
         m_Mode: 1
@@ -29012,6 +29092,7 @@ MonoBehaviour:
   explainBox: {fileID: 1428511425}
   questionBox: {fileID: 2056250064}
   explainText: {fileID: 1068479265}
+  btnClickSFX: {fileID: 8300000, guid: b61feb8e5a86d9a4593b2d3592799567, type: 3}
   clue: {fileID: 11400000, guid: b051f68e728ab474fbcaaf867fd6c588, type: 2}
   miniManager: {fileID: 862098476}
 --- !u!114 &1847235599
@@ -29060,7 +29141,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1847235598}
         m_TargetAssemblyTypeName: ClueSelectBtn, Assembly-CSharp
-        m_MethodName: ClueSelect
+        m_MethodName: ClueSelect_Clear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -322,6 +322,9 @@ public class A_Dialogue : MonoBehaviour
             case Name.Rabbit:
                 nameChanges.NameChangeDirection(20);
                 break;
+            case Name.Who_Hujung:
+                nameChanges.NameChangeDirection(21);
+                break;
         }
     }
 

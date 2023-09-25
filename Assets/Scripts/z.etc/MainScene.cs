@@ -9,6 +9,8 @@ public class MainScene : MonoBehaviour
     [SerializeField]
     private Button loadBtn;
     [SerializeField]
+    private Button chapBtn;
+    [SerializeField]
     private TextMeshProUGUI chapterTitle;
     [SerializeField]
     private string prologueTitle;
@@ -24,6 +26,8 @@ public class MainScene : MonoBehaviour
     private void Start()
     {
         loadBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
+
+        chapBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
 
         /*
          아래의 식과 같음
@@ -54,7 +58,14 @@ public class MainScene : MonoBehaviour
             case 7:
             case 8:
             case 9:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
                 chapterTitle.text = prologueTitle;
+                break;
+            case 14:
+                chapterTitle.text = chapter1Title;
                 break;
         }
     }

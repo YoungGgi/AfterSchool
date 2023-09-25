@@ -66,7 +66,7 @@ public class UI_Manager : MonoBehaviour
     /*
     public void StartChapter1()
     {
-
+        SceneManager.LoadScene(14);
     }
 
 

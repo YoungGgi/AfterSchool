@@ -31,10 +31,19 @@ public class MiniGameMgn : MonoBehaviour
     public bool isTwosGame;                   // 답을 두 개 고르는 미니게임일 때의 상태변수
     public bool isThirdGame;                  // 답을 세 개 고르는 미니게임일 때의 상태변수
 
+    public AudioClip clearSFX;                // 성공 효과음
+    public AudioClip failSFX;                 // 실패 효과음
+    public AudioClip btnClickSFX;             // 버튼 클릭 효과음
+
+    public GameObject postProcessing;
+    public GameObject startBGM_Obj;
+
     public bool IsLoading { get => isLoading; set => isLoading = value; }
 
     void OnEnable()
     {
+        startBGM_Obj.SetActive(false);
+        postProcessing.SetActive(false);
         miniGameGroup.gameObject.SetActive(false);
         isLoading = true;
         StartCoroutine(LoadingAnim());
@@ -50,6 +59,8 @@ public class MiniGameMgn : MonoBehaviour
 
         loadingTextGroup.gameObject.SetActive(false);
 
+        startBGM_Obj.SetActive(true);
+        postProcessing.SetActive(true);
         miniGameGroup.gameObject.SetActive(true);
 
         isLoading = false;
@@ -65,7 +76,6 @@ public class MiniGameMgn : MonoBehaviour
             if (checkCount == 2)
             {
                 Conform();
-                //conformGroup.gameObject.SetActive(true);
             }
 
         }
@@ -80,7 +90,7 @@ public class MiniGameMgn : MonoBehaviour
         {
             if (checkCount == 3)
             {
-                Conform_ver2();
+                Conform_ver3();
             }
         }
 
@@ -132,6 +142,7 @@ public class MiniGameMgn : MonoBehaviour
 
     public void Cancel()
     {
+        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
         Time.timeScale = 1;
         checkCount = 0;
 
