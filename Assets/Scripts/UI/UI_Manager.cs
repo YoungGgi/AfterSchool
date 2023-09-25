@@ -48,6 +48,7 @@ public class UI_Manager : MonoBehaviour
     
     public void GameStart()
     {
+        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnSelectSFX);
         SceneManager.LoadScene(1);
     }
 
@@ -128,6 +129,7 @@ public class UI_Manager : MonoBehaviour
     #region SceneLoading
     public void LoadScene()
     {
+        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnSelectSFX);
         StartCoroutine(SceneLoading());
     }
 
@@ -143,10 +145,5 @@ public class UI_Manager : MonoBehaviour
    {
         SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
    }
-
-    public void SelectSFX()
-    {
-        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnSelectSFX);
-    }
 
 }
