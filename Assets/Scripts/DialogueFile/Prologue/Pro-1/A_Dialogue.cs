@@ -180,7 +180,8 @@ public class A_Dialogue : MonoBehaviour
             dialogueTxt.fontSize = 48;
             dialogueTxt.fontStyle = FontStyles.Normal;
         }
- 
+
+        
 
         #region BackLog
         // 백로그 텍스트 등록
@@ -726,6 +727,17 @@ public class A_Dialogue : MonoBehaviour
         else
         {
             BGM_Mgn.instance.BGM_Change(info.BGM_Index);
+        }
+    }
+
+    public void SFX_Play(Dialogue_Base.Info info)
+    {
+        if (!info.isDirectionSFX)
+            return;
+
+        if (info.isDirectionSFX)
+        {
+            
         }
     }
 

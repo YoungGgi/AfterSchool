@@ -44,11 +44,15 @@ public class Dialogue_Base : ScriptableObject
         public int BGM_Index;                        // 변경할 BGM 인덱스
         public bool isBGM_Stop;                      // BGM 정지 여부 상태
 
+        [Header("효과음 플레이")]
+        public bool isDirectionSFX;                  // 연출용 효과음 목록 논리변수
+        public int SFX_Index;                        // SFX 인덱스
+
         [Header("연출효과")]
         public Direction direction;                  // 화면 연출 (암전 유무)
 
         [Header("폰트 키우기 효과")]
-        public bool isFontSizeUp;                    // 폰트 크기 키우기 여부 상태
+        public bool isFontSizeUp;                    // 폰트 크기 키우기 여부 논리변수
 
         [Header("단서 획득")]
         // 단서 획득 시 상태 여부 (차례대로)

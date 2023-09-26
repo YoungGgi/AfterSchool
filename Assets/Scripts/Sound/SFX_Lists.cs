@@ -5,6 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SFX", menuName = "SFX Object/SFX_Data")]
 public class SFX_Lists : ScriptableObject
 {
-    
-    public List<AudioClip> sfx_Clips;
+    // 연출 효과음 목록
+
+    // 0 = 단서 획득
+    public List<AudioClip> direction_sfx_Clips;
+
+
 }
