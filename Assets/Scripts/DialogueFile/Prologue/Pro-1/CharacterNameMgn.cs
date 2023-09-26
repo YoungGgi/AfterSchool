@@ -23,14 +23,17 @@ public class CharacterNameMgn : MonoBehaviour
     Vector3 right = new Vector3(500, -396, 0);
     Vector3 left = new Vector3(-500, -396, 0);
 
-    Vector3 center_w = new Vector3(0, -430, 0);
-    Vector3 right_w = new Vector3(500, -430, 0);
-    Vector3 left_w = new Vector3(-500, -430, 0);
+    Vector3 center_h = new Vector3(0, -474, 0);
+    Vector3 right_h = new Vector3(500, -474, 0);
+    Vector3 left_h = new Vector3(-500, -474, 0);
+
+    Vector3 center_j = new Vector3(0, -481, 0);
+    Vector3 right_j = new Vector3(500, -481, 0);
+    Vector3 left_j = new Vector3(-500, -481, 0);
 
     Vector3 outpos = new Vector3(-1000, 0, 0);
 
-    bool isLeftMove;
-
+    
     public void NameChangeDirection(int id)
     {
         switch(id)
@@ -197,13 +200,13 @@ public class CharacterNameMgn : MonoBehaviour
         switch(id)
         {
             case 0:
-                hujungImg.transform.localPosition = center_w;
+                hujungImg.transform.localPosition = center_h;
                 break;
             case 1:
-                hujungImg.transform.localPosition = right_w;
+                hujungImg.transform.localPosition = right_h;
                 break;
             case 2:
-                hujungImg.transform.localPosition = left_w;
+                hujungImg.transform.localPosition = left_h;
                 break;
             case 3:
                 hujungImg.transform.localPosition = outpos;
@@ -289,13 +292,13 @@ public class CharacterNameMgn : MonoBehaviour
         switch (id)
         {
             case 0:
-                jisuImg.transform.localPosition = center_w;
+                jisuImg.transform.localPosition = center_j;
                 break;
             case 1:
-                jisuImg.transform.localPosition = right_w;
+                jisuImg.transform.localPosition = right_j;
                 break;
             case 2:
-                jisuImg.transform.localPosition = left_w;
+                jisuImg.transform.localPosition = left_j;
                 break;
             case 3:
                 jisuImg.transform.localPosition = outpos;

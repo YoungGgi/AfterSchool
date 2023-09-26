@@ -12,8 +12,6 @@ public class RedDotMgn : MonoBehaviour
     public GameObject[] redDot_Btn;
     public TextMeshProUGUI[] clueText;
 
-    
-
     public int setActiveFalseCount;
 
     public A_Dialogue dialogue;
@@ -23,9 +21,19 @@ public class RedDotMgn : MonoBehaviour
 
     private void Update()
     {
+       
+        
         if(dialogue.isClueUpdate)
         {
-            redDot.gameObject.SetActive(true);
+            if (dialogue.isMainMenu_RedDot)
+            {
+                redDot.gameObject.SetActive(false);
+            }
+            else
+            {
+                redDot.gameObject.SetActive(true);
+            }
+
             redDot_Tablet.gameObject.SetActive(true);
 
         }

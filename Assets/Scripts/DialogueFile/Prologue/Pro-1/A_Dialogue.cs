@@ -67,6 +67,7 @@ public class A_Dialogue : MonoBehaviour
     public ClueObject clueObj4;
     public ClueObject clueObj5;
     public bool isClueUpdate;
+    public bool isMainMenu_RedDot;
 
     public Scene NowScene;
     public int SceneNum;
@@ -651,11 +652,13 @@ public class A_Dialogue : MonoBehaviour
         {
             dialoguePanelText.gameObject.SetActive(false);
             dialogueSetting.gameObject.SetActive(false);
+            isMainMenu_RedDot = true;
         }
         else
         {
             dialoguePanelText.gameObject.SetActive(true);
             dialogueSetting.gameObject.SetActive(true);
+            isMainMenu_RedDot = false;
         }
 
         if (info.Title_On)
@@ -743,9 +746,7 @@ public class A_Dialogue : MonoBehaviour
 
     public void SFX_Play(Dialogue_Base.Info info)
     {
-        if (!info.isDirectionSFX)
-            return;
-
+        
         if (info.isDirectionSFX)
         {
             SFX_Mgn.instance.SFX_Direction_Play(info.SFX_Index);

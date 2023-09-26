@@ -148,7 +148,7 @@ public class UI_Manager : MonoBehaviour
                 BGM_Mgn.instance.BGM_Change(5);
                 break;
             case 9:
-                BGM_Mgn.instance.BGM_Change(9);
+                BGM_Mgn.instance.BGM_Change(8);
                 break;
             case 11:
                 BGM_Mgn.instance.BGM_Change(6);
