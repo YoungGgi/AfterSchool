@@ -7,24 +7,25 @@ using TMPro;
 public class MainScene : MonoBehaviour
 {
     [SerializeField]
-    private Button loadBtn;
+    private Button loadBtn;                              // 이어하기 버튼
     [SerializeField]
-    private Button chapBtn;
+    private Button chapBtn;                              // 챕터 선택 버튼
     [SerializeField]
-    private TextMeshProUGUI chapterTitle;
+    private TextMeshProUGUI chapterTitle;                // 챕터 타이틀 (타이틀 완성 시 이미지로 변경)
     [SerializeField]
-    private string prologueTitle;
+    private string prologueTitle;                        // 프롤로그 타이틀 문자형 변수
     [SerializeField]
-    private string chapter1Title;
+    private string chapter1Title;                        // 1챕터 타이틀 문자형 변수
     [SerializeField]
-    private string chapter2Title;
+    private string chapter2Title;                        // 2챕터 타이틀 문자형 변수
     [SerializeField]
-    private string chapter3Title;
+    private string chapter3Title;                        // 3챕터 타이틀 문자형 변수
 
-    public int mainBGM_Index;
+    public int mainBGM_Index;                            // 메인화면에서 재생시킬 BGM 인덱스
 
     private void Start()
     {
+        // SaveLoadMgn 에 저장된 인덱스가 0인 경우(게임 최초 실행 시) 로딩 버튼, 챕터 선택 버튼 입력 X
         loadBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
 
         chapBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
@@ -41,12 +42,14 @@ public class MainScene : MonoBehaviour
         }
         */
 
+        // 게임 시작 시 BGM 재생
         BGM_Mgn.instance.BGM_Change(mainBGM_Index);
 
     }
 
     private void Update()
     {
+        // SaveLoadMgn 에 저장된 씬 인덱스에 따라 챕터 타이틀 텍스트 출력
         switch(SaveLoadMgn.instance.loadNum)
         {
             case 1:

@@ -46,6 +46,7 @@ public class Dialogue_Base : ScriptableObject
 
         [Header("효과음 플레이")]
         public bool isDirectionSFX;                  // 연출용 효과음 목록 논리변수
+        public bool isClueOnSfx;                     // 단서 획득 효과음 목록 논리변수
         public int SFX_Index;                        // SFX 인덱스
 
         [Header("연출효과")]

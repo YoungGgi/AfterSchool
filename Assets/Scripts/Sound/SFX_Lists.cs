@@ -10,5 +10,6 @@ public class SFX_Lists : ScriptableObject
     // 0 = ´Ü¼­ È¹µæ
     public List<AudioClip> direction_sfx_Clips;
 
+    public List<AudioClip> clue_sfx_Clips;
 
 }

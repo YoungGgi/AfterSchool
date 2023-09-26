@@ -135,13 +135,25 @@ public class UI_Manager : MonoBehaviour
     #region SceneLoading
     public void LoadScene()
     {
-        //SFX_Mgn.instance.SFX_Source.PlayOneShot(btnSelectSFX);
         StartCoroutine(SceneLoading());
     }
 
     IEnumerator SceneLoading()
     {
         yield return null;
+
+        switch(SaveLoadMgn.instance.loadNum)
+        {
+            case 8:
+                BGM_Mgn.instance.BGM_Change(5);
+                break;
+            case 9:
+                BGM_Mgn.instance.BGM_Change(9);
+                break;
+            case 11:
+                BGM_Mgn.instance.BGM_Change(6);
+                break;
+        }
 
         SceneManager.LoadScene(SaveLoadMgn.instance.loadNum);
     }

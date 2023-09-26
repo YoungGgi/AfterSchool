@@ -32,4 +32,10 @@ public class SFX_Mgn : MonoBehaviour
         SFX_Source.Play();
     }
 
+    public void SFX_Clue_Play(int index)
+    {
+        SFX_Source.clip = SFXs.direction_sfx_Clips[index];
+        SFX_Source.Play();
+    }
+
 }

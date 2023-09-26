@@ -100,6 +100,7 @@ public class A_Dialogue : MonoBehaviour
         directions += BackGroundChange;
         directions += BackGroundDirection;
         directions += BGM_Play;
+        directions += SFX_Play;
     }
 
     // 게임 시작 시 로딩 화면(자동저장) 출력, 딜레이 후 대화 화면 등장
@@ -196,6 +197,16 @@ public class A_Dialogue : MonoBehaviour
             else
             {
                 clone.GetComponent<TextMeshProUGUI>().text = nameTxt.text + " : " + dialogueTxt.text;
+
+            }
+
+            if (info.isFirstClue || info.isSecondClue || info.isThirdClue || info.isForthClue || info.isFiveClue || info.isSixClue)
+            {
+                clone.GetComponent<TextMeshProUGUI>().color = Color.yellow;
+            }
+            else
+            {
+                clone.GetComponent<TextMeshProUGUI>().color = Color.black;
             }
         }
 
@@ -737,7 +748,12 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.isDirectionSFX)
         {
-            
+            SFX_Mgn.instance.SFX_Direction_Play(info.SFX_Index);
+        }
+
+        if (info.isClueOnSfx)
+        {
+            SFX_Mgn.instance.SFX_Clue_Play(info.SFX_Index);
         }
     }
 
