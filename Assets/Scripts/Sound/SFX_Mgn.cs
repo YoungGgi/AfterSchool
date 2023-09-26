@@ -26,11 +26,19 @@ public class SFX_Mgn : MonoBehaviour
     public AudioSource SFX_Source;        // 오디오 소스
     public AudioClip sfx_Clip;
 
+    public AudioClip btnClick_Clip;       // 버튼 클릭 효과음
+
+    // 공용 버튼 클릭 효과음 재생 함수
+    public void ButtonClick_Play()
+    {
+        SFX_Source.PlayOneShot(btnClick_Clip);
+    }
+
     // 외부에서 연출용 효과음 index 호출 시 SFXs 리스트의 index 값의 AudioClip 으로 교체 후 재생
     public void SFX_Direction_Play(int index)
     {
         sfx_Clip = SFXs.direction_sfx_Clips[index];
-        SFX_Source.Play();
+        SFX_Source.PlayOneShot(sfx_Clip);
     }
 
     public void SFX_Clue_Play(int index)

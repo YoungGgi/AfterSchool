@@ -63,13 +63,13 @@ public class UI_Manager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    /*
+    
     public void StartChapter1()
     {
         SceneManager.LoadScene(14);
     }
 
-
+    /*
     public void StartChapter2()
     {
 
@@ -92,31 +92,37 @@ public class UI_Manager : MonoBehaviour
     
     public void AutoOn()
     {
+        SFX_Mgn.instance.ButtonClick_Play();
         StroyDataMgn.instance.IsAutoLive = true;
     }
 
     public void AutoOff()
     {
+        SFX_Mgn.instance.ButtonClick_Play();
         StroyDataMgn.instance.IsAutoLive = false;
     }
 
     public void TwoSpeedOn()
     {
+        SFX_Mgn.instance.ButtonClick_Play();
         StroyDataMgn.instance.IsTwoSpeed = true;
     }
 
     public void TwoSpeedOff()
     {
+        SFX_Mgn.instance.ButtonClick_Play();
         StroyDataMgn.instance.IsTwoSpeed = false;
     }
 
     public void SettingOn()
     {
+        SFX_Mgn.instance.ButtonClick_Play();
         StroyDataMgn.instance.IsSettingOn = true;
     }
 
     public void SettingOff()
     {
+        SFX_Mgn.instance.ButtonClick_Play();
         StroyDataMgn.instance.IsSettingOn = false;
     }
 

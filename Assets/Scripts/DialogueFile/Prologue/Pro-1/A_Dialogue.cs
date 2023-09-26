@@ -766,6 +766,8 @@ public class A_Dialogue : MonoBehaviour
 
         foreach(char c in info.myText.ToCharArray())
         {
+            TextTyping_Player.instance.Typing_Play();
+            
             if(StroyDataMgn.instance.IsTwoSpeed)
             {
                 float twoDelay = (float)(delay * 0.2);
