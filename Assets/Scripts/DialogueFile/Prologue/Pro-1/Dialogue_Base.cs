@@ -107,7 +107,15 @@ public enum H_Anim                // 효정 애니메이션 목록
     H_Appear,
     H_DisAppear,
     Start,
-    Bangbang
+    Bangbang,
+    Center_Left,
+    Center_Right,
+    Left_Center,
+    Right_Center,
+    Left_Out,
+    Right_Out,
+    Out_Left,
+    Out_Right
 }
 
 public enum H_Direction           // 효정 등장 위치 목록
