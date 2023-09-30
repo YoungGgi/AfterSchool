@@ -367,46 +367,6 @@ public class A_Dialogue : MonoBehaviour
             Hujung.Play("H_BangBang");
         }
 
-        if (info.h_Anim == H_Anim.Center_Left)
-        {
-            Hujung.Play("H_Center_Left");
-        }
-
-        if (info.h_Anim == H_Anim.Center_Right)
-        {
-            Hujung.Play("H_Center_Right");
-        }
-
-        if (info.h_Anim == H_Anim.Right_Center)
-        {
-            Hujung.Play("H_Right_Center");
-        }
-
-        if (info.h_Anim == H_Anim.Left_Center)
-        {
-            Hujung.Play("H_Left_Center");
-        }
-
-        if (info.h_Anim == H_Anim.Right_Out)
-        {
-            Hujung.Play("H_Right_Out");
-        }
-
-        if (info.h_Anim == H_Anim.Left_Out)
-        {
-            Hujung.Play("H_Left_Out");
-        }
-
-        if (info.h_Anim == H_Anim.Out_Right)
-        {
-            Hujung.Play("H_Out_Right");
-        }
-
-        if (info.h_Anim == H_Anim.Out_Left)
-        {
-            Hujung.Play("H_Out_Left");
-        }
-
         #endregion
 
         #region YoungJinAnim

@@ -13,7 +13,8 @@ public class MiniGameMgn : MonoBehaviour
 
 
     public bool[] isClear;                      // 클리어 논리변수 목록
-    public Button[] clueBtns;                   // 버튼 목록
+    public GameObject[] clueBtns;                   // 버튼 목록
+    public GameObject[] clueBtns_Press;         // 선택된 버튼 목록
 
     public int checkCount;                      // 버튼 누를 때마다 카운트되는 변수
 
@@ -167,10 +168,16 @@ public class MiniGameMgn : MonoBehaviour
             isClear[i] = false;
         }
 
-        // 버튼 목록 현재 버튼 목록 수만큼 활성화
+        // 버튼 목록의 오브젝트들을 현재 버튼 목록 수만큼 활성화
         for(int j = 0; j < clueBtns.Length; j++)
         {
-            clueBtns[j].enabled = true;
+            clueBtns[j].SetActive(true);
+        }
+
+        // 선택된 버튼 목록 수 만큼 선택된 버튼 비활성화
+        for(int f = 0; f < clueBtns_Press.Length; f++)
+        {
+            clueBtns_Press[f].SetActive(false);
         }
 
         // 추리 실패 화면 비활성화
