@@ -7,9 +7,10 @@ public class SFX_Lists : ScriptableObject
 {
     // 연출 효과음 목록
 
-    // 0 = 단서 획득
+    
     public List<AudioClip> direction_sfx_Clips;
 
+    // 단서 획득용 효과음
     public List<AudioClip> clue_sfx_Clips;
 
 }

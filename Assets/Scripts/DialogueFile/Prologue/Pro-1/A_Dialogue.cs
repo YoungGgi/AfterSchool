@@ -38,7 +38,8 @@ public class A_Dialogue : MonoBehaviour
     public Image jisuImg_CloseUp;             // 지수 클로즈업 스프라이트
     public Image minseok_CloseUp;             // 민석 클로즈업 스프라이트
 
-    [Header("캐릭터 감정표현")]             // 각 캐릭터 표정 스프라이트
+    // 각 캐릭터 표정 스프라이트
+    [Header("캐릭터 감정표현")]
     public CharacterSprite hujung_Sprite;
     public CharacterSprite youngjing_Sprite;
     public CharacterSprite jisu_Sprite;
@@ -54,13 +55,15 @@ public class A_Dialogue : MonoBehaviour
     [Header("연출효과")]
     public Animator fadeManager;               // 페이드 인 / 아웃 전용 효과
     public Animator backGroundEffect;          // 배경 연출 효과
-    
-    public GameObject titleObj;                // 게임 타이틀 오브젝트
+
+    // 게임 타이틀 오브젝트들
+    public GameObject titleObj;
     public GameObject subTitleObj;
     public GameObject subTitleObj_2;
     public GameObject subTitleObj_3;
 
-    [Header("단서 추가")]                       // 대화 진행 중 추가될 단서목록
+    // 대화 진행 중 추가될 단서목록
+    [Header("단서 추가")]
     public ClueManager clue;
     public ClueObject clueObj0;
     public ClueObject clueObj1;
@@ -75,19 +78,21 @@ public class A_Dialogue : MonoBehaviour
     public int SceneNum;
 
     [Header("미니게임용 대화 UI")]
-    public bool isGame;
-    public GameObject dialogueObject;
-    public GameObject miniGameObject;
+    public bool isGame;                            // 미니 게임 존재 여부 확인 논리변수
+    public GameObject dialogueObject;              // 대화 UI 오브젝트 그룹
+    public GameObject miniGameObject;              // 미니 게임 UI 오브젝트 그룹
 
 
     // Dialogue_Base 에서 선언한 Queue문 선언
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
 
+    // 연출용 함수들을 호출시킬 델리게이트 변수
     public delegate void DialogueDirections(Dialogue_Base.Info info);
     DialogueDirections directions;
 
     private void OnEnable()
     {
+        // 해당 오브젝트 활성화 시 대화 관련 UI 모두 비활성화
         Time.timeScale = 1;
         dialogueInfo = new Queue<Dialogue_Base.Info>();
         dialogueUI.gameObject.SetActive(false);
@@ -106,7 +111,7 @@ public class A_Dialogue : MonoBehaviour
         directions += SFX_Play;
     }
 
-    // 게임 시작 시 로딩 화면(자동저장) 출력, 딜레이 후 대화 화면 등장
+    // 게임 시작 시 로딩 화면(자동저장) 종료 시 딜레이 후 대화 화면 등장
     IEnumerator Loading()
     {
         yield return new WaitForSeconds(1.5f);
@@ -136,16 +141,16 @@ public class A_Dialogue : MonoBehaviour
 
         DequeueDialogue();
 
-
     }
 
     //대화 출력 시작(DeQueue)
     public void DequeueDialogue()
     {
         #region TextTyping
+
         isTextComplete = false;
 
-        // 해당 대사 리스트가 전부 끝났다면 대화 종료 함수로 이동
+        // 해당 대사 리스트가 전부 출력되었다면 대화 종료 함수(EndDialogue)로 이동
         if(dialogueInfo.Count == 0)
         {
             EndDialogue();
@@ -167,13 +172,13 @@ public class A_Dialogue : MonoBehaviour
         // Dequeue, info(Dialogue_Base)에 있는 정보 담기
         Dialogue_Base.Info info = dialogueInfo.Dequeue();
 
+        // 대화 텍스트와 이름 텍스트, 연출용 함수에 info 정보 할당
         completeText = info.myText;
-
         dialogueTxt.text = info.myText;
-
         directions(info);
         #endregion
 
+        // 폰트 사이즈 크기 연출용
         if(info.isFontSizeUp)
         {
             dialogueTxt.fontSize = 55;
@@ -185,14 +190,15 @@ public class A_Dialogue : MonoBehaviour
             dialogueTxt.fontStyle = FontStyles.Normal;
         }
 
-        
 
         #region BackLog
-        // 백로그 텍스트 등록
+        // 백로그 텍스트 등록 함수
         if(dialogueTxt.text != "")
         {
+            // 텍스트 프리팹 소환
             GameObject clone = Instantiate(textPrefab, parentContents);
 
+            // 이름 텍스트가 '공백'일 경우(독백) 이름 텍스트 출력 X
             if (info.charName == Name.Blank)
             {
                 clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
@@ -203,6 +209,7 @@ public class A_Dialogue : MonoBehaviour
 
             }
 
+            // 단서 획득 시 텍스트 프리팹 컬러 변경
             if (info.isFirstClue || info.isSecondClue || info.isThirdClue || info.isForthClue || info.isFiveClue || info.isSixClue)
             {
                 clone.GetComponent<TextMeshProUGUI>().color = Color.yellow;
@@ -213,21 +220,40 @@ public class A_Dialogue : MonoBehaviour
             }
         }
 
-
         #endregion
 
         #region UI_Off_Direction
+        // 대화창 UI가 비활성화되는 연출일 경우 StroyDataMgn의 isAutoStroy 활성화
         StroyDataMgn.instance.IsAutoStory = info.UI_Off;
         #endregion
 
-
         #region ChapterClose
-        // 챕터 종료시 메인 로비로 이동
+        // 각 챕터 종료시 메인 로비로 이동
         if (info.isPrologueClose)
         {
             ChapterCheck.instance.isPrologueComplete = true;
             SceneManager.LoadScene(0);
         }
+
+        if(info.isChapter1Close)
+        {
+            ChapterCheck.instance.is1ChapComplete = true;
+            SceneManager.LoadScene(0);
+        }
+
+        if (info.isChapter2Close)
+        {
+            ChapterCheck.instance.is2ChapComplete = true;
+            SceneManager.LoadScene(0);
+        }
+
+        if (info.isChapter3Close)
+        {
+            ChapterCheck.instance.is3ChapComplete = true;
+            SceneManager.LoadScene(0);
+
+        }
+
         #endregion
 
         dialogueTxt.text = "";
@@ -747,6 +773,7 @@ public class A_Dialogue : MonoBehaviour
         #endregion
     }
 
+    // 대화 진행 중 BGM 연출 함수
     public void BGM_Play(Dialogue_Base.Info info)
     {
         if (info.isBGM_Stop)
@@ -764,6 +791,7 @@ public class A_Dialogue : MonoBehaviour
         }
     }
 
+    // 대화 진행 중 효과음 연출 함수
     public void SFX_Play(Dialogue_Base.Info info)
     {
         
@@ -784,10 +812,13 @@ public class A_Dialogue : MonoBehaviour
         isTextTyping = true;
         next.SetActive(false);
 
+        // 현재 인덱스의 텍스트를 모두 출력시킴
         foreach(char c in info.myText.ToCharArray())
         {
+            // 텍스트 입력 효과음 재생
             TextTyping_Player.instance.Typing_Play();
             
+            // 2배속 설정일 경우에 따라 딜레이 속도 변경
             if(StroyDataMgn.instance.IsTwoSpeed)
             {
                 float twoDelay = (float)(delay * 0.2);
@@ -799,6 +830,7 @@ public class A_Dialogue : MonoBehaviour
             }
             dialogueTxt.text += c;
         }
+        // 텍스트 모두 출력 시 화살표(next) 활성화, 텍스트 입력 완료
         next.SetActive(true);
         isTextTyping = false;
         yield return new WaitForSeconds(2f);
@@ -820,6 +852,7 @@ public class A_Dialogue : MonoBehaviour
         isDialoge = false;
         dialogueUI.SetActive(false);
 
+        // 대화 종료 시 다음 대화씬으로 이동
         if (!isGame)
         {
             SceneManager.LoadScene(SceneNum + 1);
@@ -827,6 +860,7 @@ public class A_Dialogue : MonoBehaviour
         }
         else
         {
+            // 대화 종료 후 미니게임 진행 시 미니 게임 UI 오브젝트 활성화
             dialogueObject.SetActive(false);
             miniGameObject.SetActive(true);
         }
