@@ -57,6 +57,8 @@ public class A_Dialogue : MonoBehaviour
     
     public GameObject titleObj;                // 게임 타이틀 오브젝트
     public GameObject subTitleObj;
+    public GameObject subTitleObj_2;
+    public GameObject subTitleObj_3;
 
     [Header("단서 추가")]                       // 대화 진행 중 추가될 단서목록
     public ClueManager clue;
@@ -677,6 +679,24 @@ public class A_Dialogue : MonoBehaviour
         else
         {
             subTitleObj.gameObject.SetActive(false);
+        }
+
+        if (info.Title_Three)
+        {
+            subTitleObj_2.gameObject.SetActive(true);
+        }
+        else
+        {
+            subTitleObj_2.gameObject.SetActive(false);
+        }
+
+        if (info.Title_Four)
+        {
+            subTitleObj_3.gameObject.SetActive(true);
+        }
+        else
+        {
+            subTitleObj_3.gameObject.SetActive(false);
         }
 
         #endregion

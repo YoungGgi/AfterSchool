@@ -73,6 +73,8 @@ public class Dialogue_Base : ScriptableObject
         [Header("타이틀")]
         public bool Title_On;                         // 타이틀 오브젝트1 출력 여부 상태
         public bool Title_Two;                        // 타이틀 오브젝트2 출력 여부 상태
+        public bool Title_Three;                      // 타이틀 오브젝트3 출력 여부 상태
+        public bool Title_Four;                       // 타이틀 오브젝트4 출력 여부 상태
 
         [Header("배경 이미지")]
         public BackGround backGroundImg;              // 출력할 배경 이미지
