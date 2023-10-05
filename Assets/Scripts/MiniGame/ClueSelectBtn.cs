@@ -94,5 +94,18 @@ public class ClueSelectBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         clueButton.SetActive(false);
     }
 
-    
+    public void ClueSelect_Clear3()
+    {
+        // 효과음 재생, miniManager의 isClear 리스트 활성화
+        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
+        miniManager.isClear[2] = true;
+
+        // 선택된 상태의 오브젝트를 활성화한 후 miniManager의 checkCount를 1 증가
+        clueButton_Pressed.SetActive(true);
+        explainBox.gameObject.SetActive(false);
+        miniManager.checkCount++;
+
+        // 연속 클릭을 막기 위해 해당 오브젝트 비활성화
+        clueButton.SetActive(false);
+    }
 }
