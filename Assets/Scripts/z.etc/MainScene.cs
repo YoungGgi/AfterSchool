@@ -49,10 +49,24 @@ public class MainScene : MonoBehaviour
 
     private void Update()
     {
+        int indexnum = SaveLoadMgn.instance.loadNum;
+
+        if (indexnum >= 1 || indexnum <= 13)
+        {
+            chapterTitle.text = prologueTitle;
+        }
+        else if(indexnum >= 14 || indexnum <= 39)
+        {
+            chapterTitle.text = chapter1Title;
+        }
+
+        /*
         // SaveLoadMgn 에 저장된 씬 인덱스에 따라 챕터 타이틀 텍스트 출력
         switch(SaveLoadMgn.instance.loadNum)
         {
-            case 1:
+            indexnum >= 1 || indexnum <= 13
+
+        case 1:
             case 2:
             case 3:
             case 4:
@@ -96,6 +110,7 @@ public class MainScene : MonoBehaviour
                 chapterTitle.text = chapter1Title;
                 break;
         }
+        */
     }
 
 }

@@ -6,6 +6,8 @@ public class ChaterBtnMgn : MonoBehaviour
 {
     [SerializeField]
     private GameObject chapter1Obj;
+    [SerializeField]
+    private GameObject chapter2Obj;
 
     private void Update()
     {
@@ -13,6 +15,12 @@ public class ChaterBtnMgn : MonoBehaviour
         {
             chapter1Obj.gameObject.SetActive(true);
         }
+
+        if (ChapterCheck.instance.is1ChapComplete == true)
+        {
+            chapter2Obj.gameObject.SetActive(true);
+        }
+
     }
 
 }
