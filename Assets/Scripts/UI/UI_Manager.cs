@@ -69,12 +69,13 @@ public class UI_Manager : MonoBehaviour
         SceneManager.LoadScene(14);
     }
 
-    /*
+    
     public void StartChapter2()
     {
-
+        SceneManager.LoadScene(40);
     }
 
+    /*
     public void StartChapter3()
     {
 
@@ -157,6 +158,12 @@ public class UI_Manager : MonoBehaviour
                 BGM_Mgn.instance.BGM_Change(8);
                 break;
             case 11:
+                BGM_Mgn.instance.BGM_Change(6);
+                break;
+            case 35:
+            case 36:
+            case 37:
+            case 38:
                 BGM_Mgn.instance.BGM_Change(6);
                 break;
         }

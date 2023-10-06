@@ -47,7 +47,7 @@ public class MiniGameMgn : MonoBehaviour
     void OnEnable()
     {
         // 해당 오브젝트 활성화 시 오브젝트들 비활성화, 로딩 화면 출력
-        startBGM_Obj.SetActive(false);
+        //startBGM_Obj.SetActive(false);
         postProcessing.SetActive(false);
         miniGameGroup.gameObject.SetActive(false);
         isLoading = true;
@@ -66,7 +66,7 @@ public class MiniGameMgn : MonoBehaviour
 
         loadingTextGroup.gameObject.SetActive(false);
 
-        startBGM_Obj.SetActive(true);
+        //startBGM_Obj.SetActive(true);
         postProcessing.SetActive(true);
         miniGameGroup.gameObject.SetActive(true);
 
