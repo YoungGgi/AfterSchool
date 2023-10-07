@@ -14,4 +14,9 @@ public class ClueObject : ScriptableObject
     [Header("Item Explain")]
     [TextArea(3, 10)]
     public string clueExplain;
+
+    [Header("Replace Explain")]
+    [TextArea(3, 10)]
+    public string replaceExplain;
+
 }

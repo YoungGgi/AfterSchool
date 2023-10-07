@@ -64,6 +64,8 @@ public class Dialogue_Base : ScriptableObject
         public bool isFiveClue;
         public bool isSixClue;
 
+        public bool isClueReplace;
+
         [Header("대화창끄기")]
         public bool UI_Off;                           // 대화 UI 비활성화 여부 상태
 

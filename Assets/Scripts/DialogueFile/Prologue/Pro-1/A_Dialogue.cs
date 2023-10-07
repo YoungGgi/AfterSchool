@@ -74,6 +74,8 @@ public class A_Dialogue : MonoBehaviour
     public bool isClueUpdate;
     public bool isMainMenu_RedDot;
 
+    public ClueObject replaceClue;
+
     public Scene NowScene;
     public int SceneNum;
 
@@ -768,6 +770,11 @@ public class A_Dialogue : MonoBehaviour
             clue.clues.Add(clueObj5);
             clue.clueAddCount++;
             isClueUpdate = true;
+        }
+
+        if(info.isClueReplace)
+        {
+            replaceClue.clueExplain = replaceClue.replaceExplain;
         }
 
         #endregion
