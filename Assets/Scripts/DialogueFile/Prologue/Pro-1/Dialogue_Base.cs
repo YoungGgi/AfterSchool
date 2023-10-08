@@ -233,7 +233,10 @@ public enum BackGround
     Library,
     TeacherRoom,
     Library_Room,
-    Street
+    Street,
+    Pro_CutScene,
+    Ch1_CutScene,
+    Ch2_CutScene
 }
 
 // 화면 연출 목록

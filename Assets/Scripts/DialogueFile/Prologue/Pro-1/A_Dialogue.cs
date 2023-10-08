@@ -291,6 +291,15 @@ public class A_Dialogue : MonoBehaviour
             case BackGround.Street:
                 backGroundImg.sprite = backGroundFold.backGround[7];
                 break;
+            case BackGround.Pro_CutScene:
+                backGroundImg.sprite = backGroundFold.backGround[8];
+                break;
+            case BackGround.Ch1_CutScene:
+                backGroundImg.sprite = backGroundFold.backGround[9];
+                break;
+            case BackGround.Ch2_CutScene:
+                backGroundImg.sprite = backGroundFold.backGround[10];
+                break;
         }
     }
 

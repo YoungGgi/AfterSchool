@@ -51,11 +51,11 @@ public class MainScene : MonoBehaviour
     {
         int indexnum = SaveLoadMgn.instance.loadNum;
 
-        if (indexnum >= 1 || indexnum <= 13)
+        if (indexnum >= 1 && indexnum <= 13)
         {
             chapterTitle.text = prologueTitle;
         }
-        else if(indexnum >= 14 || indexnum <= 39)
+        else if(indexnum >= 14 && indexnum <= 39)
         {
             chapterTitle.text = chapter1Title;
         }
