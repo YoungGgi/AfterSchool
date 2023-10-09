@@ -11,11 +11,16 @@ public class ChaterBtnMgn : MonoBehaviour
     [SerializeField]
     private GameObject chapter3Obj;
 
+    [SerializeField]
+    private GameObject cutScene1_Btn;
+
+
     private void Update()
     {
         if(ChapterCheck.instance.isPrologueComplete == true)
         {
             chapter1Obj.gameObject.SetActive(true);
+            cutScene1_Btn.SetActive(true);
         }
 
         if (ChapterCheck.instance.is1ChapComplete == true)
