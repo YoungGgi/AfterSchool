@@ -15,12 +15,12 @@ public class CutSceneBtn : MonoBehaviour
     public void SceneUp()
     {
         cutScene.SetActive(true);
-        cutScene.LeanAlpha(1, 0.1f);
+        //cutScene.LeanAlpha(1, 0.1f);
     }
 
     public void SceneOut()
     {
-        cutScene.LeanAlpha(0, 0.1f);
+        //cutScene.LeanAlpha(0, 0.1f);
         cutScene.SetActive(false);
     }
 
