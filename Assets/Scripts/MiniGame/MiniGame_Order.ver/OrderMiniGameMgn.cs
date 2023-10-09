@@ -13,7 +13,8 @@ public class OrderMiniGameMgn : MonoBehaviour
 
 
     public List<int> isClear;
-    public Button[] clueBtns;
+    public GameObject[] clueBtns;
+    public GameObject[] clueBtns_Press;         // 선택된 버튼 목록
 
     public int checkCount;
 
@@ -21,13 +22,45 @@ public class OrderMiniGameMgn : MonoBehaviour
     public GameObject dialogue;
     public GameObject miniGameGroup;
 
+    public AudioClip btnClickSFX;                 // 버튼 클릭 효과음
+
+    public GameObject loadingTextGroup;                // 게임 시작 전 로딩 화면(자동 저장)
+    bool isOrderLoading;                               // 로딩 여부 확인 논리변수(아래의 캡슐화 참조)
+    public GameObject postProcessing;                  // 후처리 효과 오브젝트
+
     public Scene NowScene;
     public int SceneNum;
 
-    private void Update()
+    public bool IsOrderLoading { get => isOrderLoading; set => isOrderLoading = value; }
+
+    private void OnEnable()
     {
+        postProcessing.SetActive(false);
+        miniGameGroup.gameObject.SetActive(false);
+        isOrderLoading = true;
+        StartCoroutine(LoadingAnim());
+
         NowScene = SceneManager.GetActiveScene(); // 매 프레임마다 현재 씬 확인하기
         SceneNum = NowScene.buildIndex;
+        SaveLoadMgn.instance.SaveData(SceneNum);
+    }
+
+    IEnumerator LoadingAnim()
+    {
+        // 약 1.5초 후 로딩 화면 비활성화, 오브젝트들 모두 활성화
+        yield return new WaitForSeconds(1.5f);
+
+        loadingTextGroup.gameObject.SetActive(false);
+
+        postProcessing.SetActive(true);
+        miniGameGroup.gameObject.SetActive(true);
+
+        isOrderLoading = false;
+    }
+
+    private void Update()
+    {
+        
 
         if(checkCount == 4)
         {
@@ -41,23 +74,33 @@ public class OrderMiniGameMgn : MonoBehaviour
     {
         if (isClear[0] == 1 && isClear[1] == 2 && isClear[2] == 3 && isClear[3] == 4)
         {
+            Time.timeScale = 0;
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
+            Time.timeScale = 0;
             failGroup.gameObject.SetActive(true);
         }
     }
 
     public void Cancel()
     {
+        SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
+        Time.timeScale = 1;
         checkCount = 0;
 
         isClear.Clear();
 
         for (int j = 0; j < clueBtns.Length; j++)
         {
-            clueBtns[j].enabled = true;
+            clueBtns[j].SetActive(true);
+        }
+
+        // 선택된 버튼 목록 수 만큼 선택된 버튼 비활성화
+        for (int f = 0; f < clueBtns_Press.Length; f++)
+        {
+            clueBtns_Press[f].SetActive(false);
         }
 
         failGroup.gameObject.SetActive(false);
