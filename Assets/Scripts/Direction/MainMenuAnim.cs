@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class MainMenuAnim : MonoBehaviour
 {
-    public Transform mainMenu;                // ¸ŞÀÎ ¸Ş´º / ÆË¾÷
-    public CanvasGroup backGround;            // µŞ¹è°æ CanvasGroup
+    public Transform mainMenu;                // ë©”ì¸ë©”ë‰´
+    public CanvasGroup backGround;            // ë©”ì¸ CanvasGroup
+
+    
 
     public void OnEnable()
     {
-        // ÇØ´ç ¿ÀºêÁ§Æ®°¡ È°¼ºÈ­µÉ ½Ã µŞ¹è°æÀÇ ¾ËÆÄ°ªÀ» 1·Î º¯°æ ÈÄ
+        // ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ ï¿½Ş¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä°ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         backGround.alpha = 0;
         backGround.LeanAlpha(1, 0.5f);
 
-        // LeanMoveLocalY() ·Î ¸ŞÀÎ ¸Ş´ºÀÇ yÃàÀ» º¯°æ½ÃÅ´, ±× ÀÌÈÄ 0.1ÃÊ µô·¹ÀÌ
+        // LeanMoveLocalY() ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ş´ï¿½ï¿½ï¿½ yï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å´, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 0.1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         mainMenu.localPosition = new Vector2(0, -Screen.height);
         mainMenu.LeanMoveLocalY(0, 0.1f).setEaseOutExpo().delay = 0.1f;
 
@@ -21,13 +23,13 @@ public class MainMenuAnim : MonoBehaviour
 
     public void CloseMenu()
     {
-        // ¸ŞÀÎ ¸Ş´º¸¦ ´İÀ» ½Ã µŞ¹è°æÀÇ ¾ËÆÄ°ªÀ» 0À¸·Î º¯°æ,
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ş´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ş¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä°ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½,
         backGround.LeanAlpha(0, 0.5f);
-        // LeanMoveLocalY() ·Î ¸ŞÀÎ ¸Ş´ºÀÇ yÃàÀ» º¯°æ½ÃÅ´, ±× ÀÌÈÄ MenuOff ÇÔ¼ö È£Ãâ
+        // LeanMoveLocalY() ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ş´ï¿½ï¿½ï¿½ yï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å´, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ MenuOff ï¿½Ô¼ï¿½ È£ï¿½ï¿½
         mainMenu.LeanMoveLocalY(-Screen.height, 0.1f).setEaseInExpo().setOnComplete(MenuOff);
     }
 
-    // ¸ŞÀÎ ¸Ş´º¸¦ ºñÈ°¼ºÈ­
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ş´ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
     private void MenuOff()
     {
         gameObject.SetActive(false);

@@ -7,9 +7,8 @@ using UnityEngine.UI;
 public class CharacterSprite : ScriptableObject
 {
     [Header("Character_Emotion_Group")]
-    // 0 = ±âº»  1 = È­³²  2 = ±â»İ  3 = ³î¶÷
+    // 0 = ê¸°ë³¸  1 = í™”ë‚¨  2 = ì›ƒìŒ  3 = ë†€ëŒ
     public Sprite[] characterSprite;
 
-    // Ä³¸¯ÅÍ °¨Á¤Ç¥Çö ÀÌ¹ÌÁö ³ÖÀ» ¿¹Á¤
 
 }
