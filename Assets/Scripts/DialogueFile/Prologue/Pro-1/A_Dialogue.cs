@@ -753,6 +753,10 @@ public class A_Dialogue : MonoBehaviour
             clue.clueAddCount++;
             isClueUpdate = true;
         }
+        else
+        {
+            cluePopUp_0.SetActive(false);
+        }
 
         if (info.isSecondClue)
         {
@@ -760,6 +764,10 @@ public class A_Dialogue : MonoBehaviour
             clue.clues.Add(clueObj1);
             clue.clueAddCount++;
             isClueUpdate = true;
+        }
+        else
+        {
+            cluePopUp_1.SetActive(false);
         }
 
         if (info.isThirdClue)
@@ -769,6 +777,10 @@ public class A_Dialogue : MonoBehaviour
             clue.clueAddCount++;
             isClueUpdate = true;
         }
+        else
+        {
+            cluePopUp_2.SetActive(false);
+        }
 
         if (info.isForthClue)
         {
@@ -776,6 +788,10 @@ public class A_Dialogue : MonoBehaviour
             clue.clues.Add(clueObj3);
             clue.clueAddCount++;
             isClueUpdate = true;
+        }
+        else
+        {
+            cluePopUp_3.SetActive(false);
         }
 
         if (info.isFiveClue)
@@ -785,6 +801,10 @@ public class A_Dialogue : MonoBehaviour
             clue.clueAddCount++;
             isClueUpdate = true;
         }
+        else
+        {
+            cluePopUp_4.SetActive(false);
+        }
 
         if (info.isSixClue)
         {
@@ -793,8 +813,12 @@ public class A_Dialogue : MonoBehaviour
             clue.clueAddCount++;
             isClueUpdate = true;
         }
+        else
+        {
+            cluePopUp_5.SetActive(false);
+        }
 
-        if(info.isClueReplace)
+        if (info.isClueReplace)
         {
             replaceClue.clueExplain = replaceClue.replaceExplain;
         }
