@@ -6933,7 +6933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &923191123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6980,7 +6980,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1856843834}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: AutoOn
+        m_MethodName: AutoOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9233,7 +9233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1177173834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9300,7 +9300,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1856843834}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: TwoSpeedOff
+        m_MethodName: TwoSpeedOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11840,7 +11840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1475967423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11887,7 +11887,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1856843834}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: TwoSpeedOn
+        m_MethodName: TwoSpeedOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13858,7 +13858,7 @@ MonoBehaviour:
   m_text: "2\uBC30\uC18D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb2ec0e054e329a4981cac7095eb6c5e, type: 2}
-  m_sharedMaterial: {fileID: 5466665771363013133, guid: 93606878eccb8714db59d1af974bad8e, type: 2}
+  m_sharedMaterial: {fileID: -7344786668198561323, guid: bb2ec0e054e329a4981cac7095eb6c5e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15008,6 +15008,7 @@ MonoBehaviour:
   clueObj5: {fileID: 0}
   isClueUpdate: 0
   isMainMenu_RedDot: 0
+  replaceClue: {fileID: 0}
   NowScene:
     m_Handle: 0
   SceneNum: 0
@@ -15078,7 +15079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1850113865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15145,7 +15146,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1856843834}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: AutoOff
+        m_MethodName: AutoOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

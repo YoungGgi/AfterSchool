@@ -45,15 +45,15 @@ public class Test_Dialogue : MonoBehaviour
         {
             autoText.gameObject.SetActive(true);
 
-            auto_Btn.gameObject.SetActive(false);
-            auto_true_Btn.gameObject.SetActive(true);
+            auto_true_Btn.gameObject.SetActive(false);
+            auto_Btn.gameObject.SetActive(true);
         }
 
         // 씬 시작 시 2배속 기능이 활성화되어 있다면 2배속 오브젝트, 버튼 활성화
         if (StroyDataMgn.instance.IsTwoSpeed)
         {
-            speed2_Btn.gameObject.SetActive(false);
-            speed2_true_Btn.gameObject.SetActive(true);
+            speed2_true_Btn.gameObject.SetActive(false);
+            speed2_Btn.gameObject.SetActive(true);
         }
 
     }
