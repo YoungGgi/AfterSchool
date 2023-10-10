@@ -71,6 +71,13 @@ public class A_Dialogue : MonoBehaviour
     public ClueObject clueObj3;
     public ClueObject clueObj4;
     public ClueObject clueObj5;
+
+    public GameObject cluePopUp_0;
+    public GameObject cluePopUp_1;
+    public GameObject cluePopUp_2;
+    public GameObject cluePopUp_3;
+    public GameObject cluePopUp_4;
+    public GameObject cluePopUp_5;
     public bool isClueUpdate;
     public bool isMainMenu_RedDot;
 
@@ -741,6 +748,7 @@ public class A_Dialogue : MonoBehaviour
         #region Inven
         if (info.isFirstClue)
         {
+            cluePopUp_0.SetActive(true);
             clue.clues.Add(clueObj0);
             clue.clueAddCount++;
             isClueUpdate = true;
@@ -748,6 +756,7 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.isSecondClue)
         {
+            cluePopUp_1.SetActive(true);
             clue.clues.Add(clueObj1);
             clue.clueAddCount++;
             isClueUpdate = true;
@@ -755,6 +764,7 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.isThirdClue)
         {
+            cluePopUp_2.SetActive(true);
             clue.clues.Add(clueObj2);
             clue.clueAddCount++;
             isClueUpdate = true;
@@ -762,6 +772,7 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.isForthClue)
         {
+            cluePopUp_3.SetActive(true);
             clue.clues.Add(clueObj3);
             clue.clueAddCount++;
             isClueUpdate = true;
@@ -769,6 +780,7 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.isFiveClue)
         {
+            cluePopUp_4.SetActive(true);
             clue.clues.Add(clueObj4);
             clue.clueAddCount++;
             isClueUpdate = true;
@@ -776,6 +788,7 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.isSixClue)
         {
+            cluePopUp_5.SetActive(true);
             clue.clues.Add(clueObj5);
             clue.clueAddCount++;
             isClueUpdate = true;
