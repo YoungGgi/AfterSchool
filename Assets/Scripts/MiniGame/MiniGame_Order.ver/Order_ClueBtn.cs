@@ -7,37 +7,28 @@ using TMPro;
 public class Order_ClueBtn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject clueButton;                  // ´Ü¼­ ¹öÆ°
+    private GameObject clueButton;                  // ï¿½Ü¼ï¿½ ï¿½ï¿½Æ°
     [SerializeField]
-    private TextMeshProUGUI clueText;           // ¹öÆ°¿¡ ÀÖ´Â ´Ü¼­ Á¦¸ñ
+    private TextMeshProUGUI clueText;           // ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ü¼ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    private GameObject clueButton_Pressed;      // ¼±ÅÃµÈ ´Ü¼­ ¹öÆ°
-    /*
-    [SerializeField]
-    private GameObject explainBox;                 // ´Ü¼­ ¼³¸íÇÒ ´ëÈ­»óÀÚ
-    [SerializeField]
-    private GameObject questionBox;
-    [SerializeField]
-    private TextMeshProUGUI explainText;          // ´Ü¼­ ¼³¸í ´ëÈ­»óÀÚ ÅØ½ºÆ®
-    */
+    private GameObject clueButton_Pressed;      // ï¿½ï¿½ï¿½Ãµï¿½ ï¿½Ü¼ï¿½ ï¿½ï¿½Æ°
+    
     public int ID;
 
-    public ClueObject clue;                     // ´Ü¼­
+    public ClueObject clue;                     // ï¿½Ü¼ï¿½
 
     public OrderMiniGameMgn orderMiniGameMgn;
 
     private void Start()
     {
         clueText.text = clue.clueName;
-        //explainText.text = clue.clueExplain;
     }
 
-    // ´Ü¼­ ¼±ÅÃ
+    // ï¿½Ü¼ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void ClueSelect()
     {
         orderMiniGameMgn.isClear.Add(ID);
         clueButton_Pressed.SetActive(true);
-       //explainBox.gameObject.SetActive(false);
 
         orderMiniGameMgn.checkCount++;
         clueButton.gameObject.SetActive(false);

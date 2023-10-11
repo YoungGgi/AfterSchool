@@ -7,40 +7,40 @@ using UnityEngine.SceneManagement;
 public class Test_Dialogue : MonoBehaviour
 {
 
-    public Dialogue_Base dialogue;                    // ÁøÇàÇÒ ´ëÈ­ µ¥ÀÌÅÍ(ScriptableObject)
-    public A_Dialogue a_Dialogue;                     // ´ëÈ­ ÁøÇà Å¬·¡½º
+    public Dialogue_Base dialogue;                    // ëŒ€í™” ë°ì´í„°(ScriptableObject)
+    public A_Dialogue a_Dialogue;                     // ëŒ€í™” ìŠ¤í¬ë¦½íŠ¸
 
-    public bool isAuto;                               // ¿ÀÅä ±â´É »óÅÂ º¯¼ö
-    public float dealyCool;                           // ´ÙÀ½ ´ëÈ­ ÅØ½ºÆ®·Î ³Ñ¾î°¥ ½Ã µô·¹ÀÌ
+    public bool isAuto;                               // ì˜¤í†  ìƒíƒœ ë…¼ë¦¬ í•¨ìˆ˜
+    public float dealyCool;                           // ëŒ€í™” ì§„í–‰ ë”œë ˆì´
 
-    public GameObject autoText;                       // ¿ÀÅä ±â´É È°¼ºÈ­ ½Ã Ãâ·ÂµÉ ¿ÀÅä ¿ÀºêÁ§Æ®
+    public GameObject autoText;                       // ì˜¤í†  ì˜¤ë¸Œì íŠ¸
 
-    public GameObject loadingTextGroup;               // ¾À ½ÃÀÛ ½Ã Ãâ·ÂµÉ ÀÚµ¿ ÀúÀå ·Îµù ¿ÀºêÁ§Æ®
+    public GameObject loadingTextGroup;               // ë¡œë”© í™”ë©´(ìžë™ ì €ìž¥)
 
-    bool isLoading;                                   // ·Îµù »óÅÂ º¯¼ö
+    bool isLoading;                                   // ë¡œë”© ë…¼ë¦¬ í•¨ìˆ˜(ì•„ëž˜ì˜ ìº¡ìŠí™” ì°¸ì¡°)
 
-    public GameObject auto_Btn;                       // ¿ÀÅä ¹öÆ°
-    public GameObject auto_true_Btn;                  // ¿ÀÅä ºñÈ°¼ºÈ­ ¹öÆ°
+    public GameObject auto_Btn;                       // ì˜¤í†  ë²„íŠ¼
+    public GameObject auto_true_Btn;                  // ì˜¤í†  í™œì„±í™” ë²„íŠ¼
 
-    public GameObject speed2_Btn;                     // 2¹è¼Ó ¹öÆ°
-    public GameObject speed2_true_Btn;                // 2¹è¼Ó ºñÈ°¼ºÈ­ ¹öÆ°
+    public GameObject speed2_Btn;                     // 2ë°°ì† ë²„íŠ¼
+    public GameObject speed2_true_Btn;                // 2ë°°ì† í™œì„±í™” ë²„íŠ¼
 
-    public Scene NowScene;                            // ÇöÀç ¾À
-    public int SceneNum;                              // ÀúÀåÇÒ ÇöÀç ¾À ³Ñ¹ö
+    public Scene NowScene;                            // í˜„ìž¬ ì”¬ ë„˜ë²„
+    public int SceneNum;                              
 
-    // ÇØ´ç ¿ÀºêÁ§Æ® È°¼ºÈ­ ½Ã È£ÃâµÇ´Â ÇÔ¼ö
+    // ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½Ô¼ï¿½
     void OnEnable()
     {
-        // ·Îµù »óÅÂ¸¦ true·Î ¹ÝÈ¯ ÈÄ LoadingAnim ÄÚ·çÆ¾ ½ÇÇà
+        // ï¿½Îµï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ trueï¿½ï¿½ ï¿½ï¿½È¯ ï¿½ï¿½ LoadingAnim ï¿½Ú·ï¿½Æ¾ ï¿½ï¿½ï¿½ï¿½
         isLoading = true;
         StartCoroutine(LoadingAnim());
 
-        // ÇöÀç ¾ÀÀÇ ÀÎµ¦½º ³Ñ¹ö¸¦ SaveLoadMgn(ÀÚµ¿ÀúÀå) µ¥ÀÌÅÍ¿¡ ÀúÀå
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ SaveLoadMgn(ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½ï¿½ï¿½
         NowScene = SceneManager.GetActiveScene();
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
 
-        // ¾À ½ÃÀÛ ½Ã ¿ÀÅä ±â´ÉÀÌ È°¼ºÈ­µÇ¾î ÀÖ´Ù¸é ¿ÀÅä ¿ÀºêÁ§Æ®, ¹öÆ° È°¼ºÈ­
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Ç¾ï¿½ ï¿½Ö´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Æ° È°ï¿½ï¿½È­
         if (StroyDataMgn.instance.IsAutoLive)
         {
             autoText.gameObject.SetActive(true);
@@ -49,7 +49,7 @@ public class Test_Dialogue : MonoBehaviour
             auto_Btn.gameObject.SetActive(true);
         }
 
-        // ¾À ½ÃÀÛ ½Ã 2¹è¼Ó ±â´ÉÀÌ È°¼ºÈ­µÇ¾î ÀÖ´Ù¸é 2¹è¼Ó ¿ÀºêÁ§Æ®, ¹öÆ° È°¼ºÈ­
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 2ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Ç¾ï¿½ ï¿½Ö´Ù¸ï¿½ 2ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Æ° È°ï¿½ï¿½È­
         if (StroyDataMgn.instance.IsTwoSpeed)
         {
             speed2_true_Btn.gameObject.SetActive(false);
@@ -58,10 +58,10 @@ public class Test_Dialogue : MonoBehaviour
 
     }
 
-    // ·Îµù È­¸éÀÌ Ãâ·ÂµÇ´Â ÄÚ·çÆ¾
+    // ï¿½Îµï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÂµÇ´ï¿½ ï¿½Ú·ï¿½Æ¾
     IEnumerator LoadingAnim()
     {
-        // ¾à 1.5ÃÊ µô·¹ÀÌ ÈÄ ÀÚµ¿ ÀúÀå ·Îµù È­¸é ºñÈ°¼ºÈ­, ´ëÈ­ ½ÃÀÛ(EnQueue), ·Îµù »óÅÂ º¯¼ö false ¹ÝÈ¯
+        // ï¿½ï¿½ 1.5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ È­ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­, ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½(EnQueue), ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ false ï¿½ï¿½È¯
         yield return new WaitForSeconds(1.5f);
 
         loadingTextGroup.gameObject.SetActive(false);
@@ -75,39 +75,39 @@ public class Test_Dialogue : MonoBehaviour
 
     void Update()
     {
-        // ·Îµù ÁßÀÏ ½Ã return
+        // ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ return
         if (isLoading || StroyDataMgn.instance.IsSettingOn)
             return;
         else
         {
-            // StroyDataMgn ÀÇ ¿ÀÅä ±â´ÉÀÌ true µÇ¾î ÀÖ°í, ÇöÀç ´ëÈ­ ÅØ½ºÆ® ÀüºÎ Ãâ·Â ½Ã
+            // StroyDataMgn ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ true ï¿½Ç¾ï¿½ ï¿½Ö°ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½
             if (StroyDataMgn.instance.IsAutoLive && a_Dialogue.isTextComplete == true)
             {
-                // ¿ÀÅä ¿ÀºêÁ§Æ® È°¼ºÈ­
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­
                 autoText.gameObject.SetActive(true);
-                // ¾à°£ÀÇ µô·¹ÀÌ ÈÄ ´ÙÀ½ ÅØ½ºÆ® Ãâ·Â.
+                // ï¿½à°£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½.
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
 
-            // StroyDataMgnÀÇ ¿ÀÅä ±â´ÉÀÌ false ÀÏ ½Ã ¿ÀÅä ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
+            // StroyDataMgnï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ false ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
             if(StroyDataMgn.instance.IsAutoLive == false)
             {
                 autoText.gameObject.SetActive(false);
             }
 
-            // ½ºÆäÀÌ½º Å° È¤Àº Enter ÀÔ·Â ½Ã
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ Å° È¤ï¿½ï¿½ Enter ï¿½Ô·ï¿½ ï¿½ï¿½
             if ((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))
             {
-                // ¾à°£ÀÇ µô·¹ÀÌ ÈÄ ´ÙÀ½ ÅØ½ºÆ® Ãâ·Â
+                // ï¿½à°£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
 
-            // StroyDataMgnÀÇ ¿¬Ãâ¿ë ¿ÀÅä ±â´ÉÀÌ true ÀÌ°í, ÇöÀç ´ëÈ­ ÅØ½ºÆ®°¡ ¸ðµÎ Ãâ·Â ½Ã
+            // StroyDataMgnï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ true ï¿½Ì°ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½
             if(StroyDataMgn.instance.IsAutoStory && a_Dialogue.isTextComplete == true)
             {
-                // ¾à°£ÀÇ µô·¹ÀÌ ÈÄ ´ÙÀ½ ÅØ½ºÆ® Ãâ·Â
+                // ï¿½à°£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
@@ -115,13 +115,13 @@ public class Test_Dialogue : MonoBehaviour
         }
     }
 
-    // ´ÙÀ½ ´ëÈ­ ÅØ½ºÆ® ÁøÇà ½Ã µô·¹ÀÌ
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     IEnumerator NextDelay()
     {
         yield return new WaitForSeconds(dealyCool);
     }
 
-    // ´ëÈ­ È­¸éÀÇ ¹öÆ° Å¬¸¯ ½Ã ´ÙÀ½ ´ëÈ­ ÅØ½ºÆ® ÁøÇà(DeQueue)
+    // ï¿½ï¿½È­ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½(DeQueue)
     public void Next() => a_Dialogue.DequeueDialogue();
 
 
