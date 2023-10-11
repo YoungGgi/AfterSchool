@@ -6,26 +6,26 @@ using UnityEngine.UI;
 public class BGM_Slider : MonoBehaviour
 {
     [SerializeField]
-    private Slider slider_BGM;              // BGM Á¶Àı ½½¶óÀÌ´õ
+    private Slider slider_BGM;              // BGM ì¡°ì ˆ ìŠ¬ë¼ì´ë”
     [SerializeField]
-    private Slider slider_SFX;              // SFX Á¶Àı ½½¶óÀÌ´õ
+    private Slider slider_SFX;              // SFX ì¡°ì ˆ ìŠ¬ë¼ì´ë”
 
     void Start()
     {
-        // BGM ½½¶óÀÌ´õ¿Í SFX ½½¶óÀÌ´õÀÇ °ªÀ» °¢°¢ BGM_Source, SFX_Source ÀÇ volume °ª°ú µ¿ÀÏÇÏ°Ô 
+        // BGM ìŠ¬ë¼ì´ë”ì™€ SFX ìŠ¬ë¼ì´ë”ì˜ í˜„ì¬ ê°’ì„ BGM_Source, SFX_Source ì˜ volume ê°’ìœ¼ë¡œ ì €ì¥
         slider_BGM.value = BGM_Mgn.instance.BGM_Source.volume;
         slider_SFX.value = SFX_Mgn.instance.SFX_Source.volume;
     }
 
     public void SetBGM_Volume(float volume)
     {
-        // BGM ½½¶óÀÌ´õ value °ª¿¡ µû¶ó BGM_Source ÀÇ volume º¯°æ
+        // BGM ìŠ¬ë¼ì´ë” ê°’ì•„ ë”°ë¼ BGM Source volume ê°’ì´ ë³€í™”
         BGM_Mgn.instance.BGM_Source.volume = volume;
     }
 
     public void SetSFX_Volume(float volume)
     {
-        // SFX ½½¶óÀÌ´õ value °ª¿¡ µû¶ó SFX_Source ÀÇ volume º¯°æ
+        // SFX ìŠ¬ë¼ì´ë” ê°’ì•„ ë”°ë¼ SFX Source volume ê°’ì´ ë³€í™”
         SFX_Mgn.instance.SFX_Source.volume = volume;
     }
 
