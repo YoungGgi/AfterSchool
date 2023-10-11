@@ -23,6 +23,12 @@ public class ChapterData : MonoBehaviour
 
     }
 
-
+    public void PrologeClear()
+    {
+        
+    } 
     
+
+
+
 }
