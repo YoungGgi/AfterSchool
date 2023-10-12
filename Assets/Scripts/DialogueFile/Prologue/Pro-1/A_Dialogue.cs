@@ -243,25 +243,25 @@ public class A_Dialogue : MonoBehaviour
         // �� é�� ����� ���� �κ�� �̵�
         if (info.isPrologueClose)
         {
-            ChapterCheck.instance.isPrologueComplete = true;
+            ChapterCheck.instance.PrologeClear(1);
             SceneManager.LoadScene(0);
         }
 
         if(info.isChapter1Close)
         {
-            ChapterCheck.instance.is1ChapComplete = true;
+            
             SceneManager.LoadScene(0);
         }
 
         if (info.isChapter2Close)
         {
-            ChapterCheck.instance.is2ChapComplete = true;
+            
             SceneManager.LoadScene(0);
         }
 
         if (info.isChapter3Close)
         {
-            ChapterCheck.instance.is3ChapComplete = true;
+            
             SceneManager.LoadScene(0);
 
         }
@@ -350,14 +350,14 @@ public class A_Dialogue : MonoBehaviour
                 nameChanges.NameChangeDirection(9);
                 break;
             case Name.PlayerHujung:
-                nameTxt.text = PlayerName.instance.player + "&" + "ȿ��";
+                nameTxt.text = PlayerName.instance.player + "&" + "효정";
                 nameChanges.NameChangeDirection(10);
                 break;
             case Name.HujungJisu:
                 nameChanges.NameChangeDirection(11);
                 break;
             case Name.PlayerYoungJin:
-                nameTxt.text = PlayerName.instance.player + "&" + "����";
+                nameTxt.text = PlayerName.instance.player + "&" + "용진";
                 nameChanges.NameChangeDirection(12);
                 break;
             case Name.All:

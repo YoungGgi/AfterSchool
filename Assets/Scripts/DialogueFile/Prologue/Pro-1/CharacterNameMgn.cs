@@ -7,13 +7,13 @@ public class CharacterNameMgn : MonoBehaviour
 {
     public A_Dialogue dialogue;
 
-    [Header("Ä³¸¯ÅÍ ÀÌ¹ÌÁö")]
-    public Image hujungImg;                   // È¿Á¤ ½ºÇÁ¶óÀÌÆ®
-    public Image youngjinImg;                 // ¿ëÁø ½ºÇÁ¶óÀÌÆ®
-    public Image jisuImg;                     // Áö¼ö ½ºÇÁ¶óÀÌÆ®
-    public Image minSeckImg;                  // ¹Î¼® ½ºÇÁ¶óÀÌÆ®
+    [Header("Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½")]
+    public Image hujungImg;                   // È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Image youngjinImg;                 // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Image jisuImg;                     // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Image minSeckImg;                  // ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
-    [Header("Ä³¸¯ÅÍ °¨Á¤Ç¥Çö")]             // °¢ Ä³¸¯ÅÍ Ç¥Á¤ ½ºÇÁ¶óÀÌÆ®
+    [Header("Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¥ï¿½ï¿½")]             // ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     public CharacterSprite hujung_Sprite;
     public CharacterSprite youngjing_Sprite;
     public CharacterSprite jisu_Sprite;
@@ -48,25 +48,25 @@ public class CharacterNameMgn : MonoBehaviour
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 2:
-                dialogue.nameTxt.text = "Á¤È¿Á¤";
+                dialogue.nameTxt.text = "ì •íš¨ì •";
                 NameColor_Normal();
                 hujungImg.color = new Color(255, 255, 255);
                 youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 3:
-                dialogue.nameTxt.text = "ÀÌ¿ëÁø";
+                dialogue.nameTxt.text = "ì´ìš©ì§„";
                 NameColor_Normal();
                 youngjinImg.color = new Color(255, 255, 255);
                 hujungImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 4:
-                dialogue.nameTxt.text = "ÀºÁö¼ö";
+                dialogue.nameTxt.text = "ì€ì§€ìˆ˜";
                 NameColor_Normal();
                 jisuImg.color = new Color(255, 255, 255);
                 youngjinImg.color = hujungImg.color = minSeckImg.color = Color.gray;
                 break;
             case 5:
-                dialogue.nameTxt.text = "¿°¹Î¼®";
+                dialogue.nameTxt.text = "ì—¼ë¯¼ì„";
                 NameColor_Normal();
                 minSeckImg.color = new Color(255, 255, 255);
                 youngjinImg.color = jisuImg.color = hujungImg.color = Color.gray;
@@ -77,7 +77,7 @@ public class CharacterNameMgn : MonoBehaviour
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 7:
-                dialogue.nameTxt.text = "È¿Á¤&¿ëÁø";
+                dialogue.nameTxt.text = "íš¨ì •&ìš©ì§„";
                 NameColor_Normal();
                 hujungImg.color = new Color(255, 255, 255);
                 hujungImg.color = youngjinImg.color = new Color(255, 255, 255);
@@ -100,7 +100,7 @@ public class CharacterNameMgn : MonoBehaviour
                 jisuImg.color = youngjinImg.color = minSeckImg.color = Color.gray;
                 break;
             case 11:
-                dialogue.nameTxt.text = "È¿Á¤&Áö¼ö";
+                dialogue.nameTxt.text = "íš¨ì •&ì§€ìˆ˜";
                 hujungImg.color = new Color(255, 255, 255);
                 jisuImg.color = new Color(255, 255, 255);
                 NameColor_Normal();
@@ -112,42 +112,42 @@ public class CharacterNameMgn : MonoBehaviour
                 jisuImg.color = hujungImg.color = minSeckImg.color = Color.gray;
                 break;
             case 13:
-                dialogue.nameTxt.text = "ÀÏµ¿";
+                dialogue.nameTxt.text = "ì¼ë™";
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = new Color(255, 255, 255);
                 break;
             case 14:
-                dialogue.nameTxt.text = "¼±»ı´Ô";
+                dialogue.nameTxt.text = "ì„ ìƒë‹˜";
                 NameColor_Normal();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 15:
-                dialogue.nameTxt.text = "¿ëÁø&Áö¼ö";
+                dialogue.nameTxt.text = "ìš©ì§„&ì§€ìˆ˜";
                 youngjinImg.color = jisuImg.color = new Color(255, 255, 255);
                 NameColor_Normal();
                 hujungImg.color = minSeckImg.color = Color.gray;
                 break;
             case 16:
-                dialogue.nameTxt.text = "ÇĞ»ı1";
+                dialogue.nameTxt.text = "í•™ìƒ1";
                 NameColor_Normal();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 17:
-                dialogue.nameTxt.text = "ÇĞ»ı2";
+                dialogue.nameTxt.text = "í•™ìƒ2";
                 NameColor_Normal();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 18:
-                dialogue.nameTxt.text = "ÇĞ»ı3";
+                dialogue.nameTxt.text = "í•™ìƒ3";
                 NameColor_Normal();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 19:
-                dialogue.nameTxt.text = "±âÁö°³¸¦ Æì´Â °õÅÊÀÌ";
+                dialogue.nameTxt.text = "ê¸°ì§€ê°œë¥¼ í´ëŠ” ê³°íƒ±ì´";
                 NameColor_Color();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 20:
-                dialogue.nameTxt.text = "³ë·¡¸¦ ºÎ¸£´Â Åä³¢";
+                dialogue.nameTxt.text = "ë…¸ë˜ë¥¼ ë¶€ë¥´ëŠ” í† ë¼";
                 NameColor_Color();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;

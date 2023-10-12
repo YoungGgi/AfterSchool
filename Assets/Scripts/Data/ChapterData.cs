@@ -23,9 +23,18 @@ public class ChapterData : MonoBehaviour
 
     }
 
-    public void PrologeClear()
+    public int isPrologue;
+    public int isChapter1;
+    public int isChapter2;
+    public int isChapter3;
+
+    public void PrologeClear(int num)
     {
-        
+        PlayerPrefs.SetInt("PrologueClear", num);
+        PlayerPrefs.Save();
+
+        int pro = PlayerPrefs.GetInt("PrologueClear", num);
+        pro = isPrologue;
     } 
     
 

@@ -21,11 +21,33 @@ public class ChapterCheck : MonoBehaviour
     }
     #endregion
 
-    public bool isPrologueComplete;
+    void Start()
+    {
+        LoadPrologueClear();
+    }
 
-    public bool is1ChapComplete;
+    public int isPrologue;
+    public int isChapter1;
+    public int isChapter2;
+    public int isChapter3;
 
-    public bool is2ChapComplete;
+    public void PrologeClear(int num)
+    {
+        PlayerPrefs.SetInt("PrologueClear", num);
+        PlayerPrefs.Save();
 
-    public bool is3ChapComplete;
+        int pro = PlayerPrefs.GetInt("PrologueClear");
+        isPrologue = pro;
+    }
+
+    public void LoadPrologueClear()
+    {
+        if (!PlayerPrefs.HasKey("PrologueClear"))
+            return;
+        
+        int pro = PlayerPrefs.GetInt("PrologueClear");
+        isPrologue = pro;
+
+    }
+
 }

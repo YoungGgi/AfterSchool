@@ -8,64 +8,64 @@ using TMPro;
 public class Dialogue_Test01 : MonoBehaviour
 {
     [Header("DialogueGroup")]
-    public TextMeshProUGUI dialogueTxt;        // ´ëÈ­ ÅØ½ºÆ®
-    public TextMeshProUGUI nameTxt;            // ÀÌ¸§ ÅØ½ºÆ®
-    protected Image backGroundImg;                // ¹è°æ ÀÌ¹ÌÁö
+    public TextMeshProUGUI dialogueTxt;        // ï¿½ï¿½È­ ï¿½Ø½ï¿½Æ®
+    public TextMeshProUGUI nameTxt;            // ï¿½Ì¸ï¿½ ï¿½Ø½ï¿½Æ®
+    protected Image backGroundImg;                // ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½
     protected BackGroundFold backGroundFold;
-    public GameObject next;                    // È­»ìÇ¥ ¿ÀºêÁ§Æ®
-    public GameObject textPrefab;              // ¹é·Î±× Àü¿ë ÅØ½ºÆ® ÇÁ¸®ÆÕ
-    public Transform parentContents;           // ¹é·Î±×ÀÇ Contents¿¡¼­ Ãâ·ÂµÊ
+    public GameObject next;                    // È­ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public GameObject textPrefab;              // ï¿½ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Transform parentContents;           // ï¿½ï¿½Î±ï¿½ï¿½ï¿½ Contentsï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Âµï¿½
 
     [Header("TextTypingGroup")]
-    public float delay;                        //ÅØ½ºÆ® Ãâ·Â µô·¹ÀÌ
-    private bool isTextTyping;                 // ÅØ½ºÆ® Ãâ·Â ¿©ºÎ È®ÀÎ
-    public bool isTextComplete = false;               // ÅØ½ºÆ® Ãâ·Â ¿Ï¼º ¿©ºÎ È®ÀÎ
-    private string completeText;               // ¿Ï¼ºµÈ ÅØ½ºÆ®
+    public float delay;                        //ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private bool isTextTyping;                 // ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+    public bool isTextComplete = false;               // ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ ï¿½Ï¼ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+    private string completeText;               // ï¿½Ï¼ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
 
-    private bool isDialoge;                   // ´ëÈ­ ¿©ºÎ È®ÀÎ
+    private bool isDialoge;                   // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
 
     [Header("DialogueEnd")]
-    public GameObject dialogueUI;              // ´ëÈ­¾À Àü¿ë UI
-    public GameObject dialoguePanelText;       // ´ëÈ­Ã¢ UI
-    public GameObject dialogueSetting;         // ´ëÈ­ ±â´É UI(¿ÀÅä, ·Î±×, ¼³Á¤)
+    public GameObject dialogueUI;              // ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ UI
+    public GameObject dialoguePanelText;       // ï¿½ï¿½È­Ã¢ UI
+    public GameObject dialogueSetting;         // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ UI(ï¿½ï¿½ï¿½ï¿½, ï¿½Î±ï¿½, ï¿½ï¿½ï¿½ï¿½)
 
     [Header("Character")]
-    protected Image hujungImg;                   // È¿Á¤ ½ºÇÁ¶óÀÌÆ®
-    public Image hujungImg_CloseUp;           // È¿Á¤ Å¬·ÎÁî¾÷ ½ºÇÁ¶óÀÌÆ®
-    protected Image youngjinImg;                 // ¿ëÁø ½ºÇÁ¶óÀÌÆ®
-    public Image youngjunImg_CloseUp;         // ¿ëÁø Å¬·ÎÁî¾÷ ½ºÇÁ¶óÀÌÆ®
-    protected Image jisuImg;                     // Áö¼ö ½ºÇÁ¶óÀÌÆ®
-    public Image jisuImg_CloseUp;             // Áö¼ö Å¬·ÎÁî¾÷ ½ºÇÁ¶óÀÌÆ®
-    protected Image minSeckImg;                  // ¹Î¼® ½ºÇÁ¶óÀÌÆ®
-    public Image minseok_CloseUp;             // ¹Î¼® Å¬·ÎÁî¾÷ ½ºÇÁ¶óÀÌÆ®
-    protected Transform center;                  // Ä³¸¯ÅÍ À§Ä¡(¿ëÁø)
+    protected Image hujungImg;                   // È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Image hujungImg_CloseUp;           // È¿ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    protected Image youngjinImg;                 // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Image youngjunImg_CloseUp;         // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    protected Image jisuImg;                     // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Image jisuImg_CloseUp;             // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    protected Image minSeckImg;                  // ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Image minseok_CloseUp;             // ï¿½Î¼ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    protected Transform center;                  // Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(ï¿½ï¿½ï¿½ï¿½)
     protected Transform left;
     protected Transform right;
     protected Transform out_pos;
-    protected RectTransform center1;             // Ä³¸¯ÅÍ À§Ä¡(È¿Á¤, Áö¼ö, ¹Î¼®?)
+    protected RectTransform center1;             // Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(È¿ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½Î¼ï¿½?)
     protected RectTransform left1;
     protected RectTransform right1;
 
-    [Header("Character_Emotion")]             // °¢ Ä³¸¯ÅÍ Ç¥Á¤ ½ºÇÁ¶óÀÌÆ®
+    [Header("Character_Emotion")]             // ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     protected CharacterSprite hujung_Sprite;
     protected CharacterSprite youngjing_Sprite;
     protected CharacterSprite jisu_Sprite;
     protected CharacterSprite minSeok_Sprite;
 
     [Header("Animation")]
-    protected Animator Hujung;                    // È¿Á¤ Àü¿ë ¾Ö´Ï¸ÞÀÌÅÍ
-    protected Animator YoungJin;                  // ¿ëÁø Àü¿ë ¾Ö´Ï¸ÞÀÌÅÍ
-    protected Animator Jisu;                      // Áö¼ö Àü¿ë ¾Ö´Ï¸ÞÀÌÅÍ
-    protected Animator MinSeok;                   // ¹Î¼® Àü¿ë ¾Ö´Ï¸ÞÀÌÅÍ
+    protected Animator Hujung;                    // È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½
+    protected Animator YoungJin;                  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½
+    protected Animator Jisu;                      // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½
+    protected Animator MinSeok;                   // ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
     [Header("Direction")]
-    protected Animator fadeManager;               // ÆäÀÌµå ÀÎ / ¾Æ¿ô Àü¿ë È¿°ú
+    protected Animator fadeManager;               // ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ / ï¿½Æ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½
 
-    protected GameObject titleObj;                // °ÔÀÓ Å¸ÀÌÆ² ¿ÀºêÁ§Æ®
+    protected GameObject titleObj;                // ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     protected GameObject subTitleObj;
 
-    [Header("Add Clue")]                       // ´ëÈ­ ÁøÇà Áß Ãß°¡µÉ ´Ü¼­¸ñ·Ï
+    [Header("Add Clue")]                       // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Ü¼ï¿½ï¿½ï¿½ï¿½
     protected ClueManager clue;
     protected ClueObject clueObj0;
     protected ClueObject clueObj1;
@@ -76,7 +76,7 @@ public class Dialogue_Test01 : MonoBehaviour
     public Scene NowScene;
     public int SceneNum;
 
-    // Dialogue_Base ¿¡¼­ ¼±¾ðÇÑ Queue¹® ¼±¾ð
+    // Dialogue_Base ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Queueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
 
     protected Dialogue_Base.Info Info;
@@ -90,7 +90,7 @@ public class Dialogue_Test01 : MonoBehaviour
         //StroyDataMgn.instance.IsSettingOn = false;
     }
 
-    // °ÔÀÓ ½ÃÀÛ ½Ã ·Îµù È­¸é(ÀÚµ¿ÀúÀå) Ãâ·Â, µô·¹ÀÌ ÈÄ ´ëÈ­ È­¸é µîÀå
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ È­ï¿½ï¿½(ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½È­ È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     IEnumerator Loading()
     {
         yield return new WaitForSeconds(1.5f);
@@ -99,11 +99,11 @@ public class Dialogue_Test01 : MonoBehaviour
 
     private void Update()
     {
-        NowScene = SceneManager.GetActiveScene(); // ¸Å ÇÁ·¹ÀÓ¸¶´Ù ÇöÀç ¾À È®ÀÎÇÏ±â
+        NowScene = SceneManager.GetActiveScene(); // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½
         SceneNum = NowScene.buildIndex;
     }
 
-    // ´ëÈ­ ¸®½ºÆ® ½ÃÀÛ(EnQueue)
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½(EnQueue)
     public void EnqueuDialogue(Dialogue_Base db)
     {
         if (isDialoge) return;
@@ -122,20 +122,20 @@ public class Dialogue_Test01 : MonoBehaviour
 
     }
 
-    //´ëÈ­ Ãâ·Â ½ÃÀÛ(DeQueue)
+    //ï¿½ï¿½È­ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(DeQueue)
     public void DequeueDialogue()
     {
         #region TextTyping
         isTextComplete = false;
 
-        // ÇØ´ç ´ë»ç ¸®½ºÆ®°¡ ÀüºÎ ³¡³µ´Ù¸é ´ëÈ­ Á¾·á ÇÔ¼ö·Î ÀÌµ¿
+        // ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
         if (dialogueInfo.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        // ÅØ½ºÆ®°¡ Ãâ·Â ÁßÀÏ °æ¿ì 
+        // ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 
         if (isTextTyping == true)
         {
             CompleteText();
@@ -178,7 +178,7 @@ public class Dialogue_Test01 : MonoBehaviour
 
 
         #region BackLog
-        // ¹é·Î±× ÅØ½ºÆ® µî·Ï
+        // ï¿½ï¿½Î±ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½
         if (dialogueTxt.text != "")
         {
             GameObject clone = Instantiate(textPrefab, parentContents);
@@ -201,57 +201,48 @@ public class Dialogue_Test01 : MonoBehaviour
         #endregion
 
 
-        #region ChapterClose
-        // Ã©ÅÍ Á¾·á½Ã ¸ÞÀÎ ·Îºñ·Î ÀÌµ¿
-        if (Info.isPrologueClose)
-        {
-            ChapterCheck.instance.isPrologueComplete = true;
-            SceneManager.LoadScene(0);
-        }
-        #endregion
-
         dialogueTxt.text = "";
         StartCoroutine(TypeText(Info));
     }
 
-    // ´ëÈ­ ÁøÇà Áß ¹è°æ ¼³Á¤ ÇÔ¼ö
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     protected virtual void BackGroundChange(Dialogue_Base.Info info)
     {
         
     }
 
-    // ´ëÈ­ ÁøÇà Áß Ä³¸¯ÅÍ ÀÌ¸§ ÇÔ¼ö
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Ô¼ï¿½
     protected virtual void CharacterName(Dialogue_Base.Info info)
     {
         
     }
 
-    // ´ëÈ­ ÁøÇà Áß Ä³¸¯ÅÍ ¾Ö´Ï¸ÞÀÌ¼Ç ÇÔ¼ö
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½Ô¼ï¿½
     protected virtual void CharacterAnim(Dialogue_Base.Info info)
     {
 
     }
 
-    // ´ëÈ­ ÁøÇà Áß Ä³¸¯ÅÍ Ç¥Á¤ º¯È­ ÇÔ¼ö
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½È­ ï¿½Ô¼ï¿½
     protected virtual void CharacterEmotion(Dialogue_Base.Info info)
     {
         
     }
 
-    // ´ëÈ­ ÁøÇà Áß Ä³¸¯ÅÍ À§Ä¡ ¼³Á¤ ÇÔ¼ö
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     protected virtual void CharacterDirection(Dialogue_Base.Info info)
     {
         
 
     }
 
-    // ´ëÈ­ ÁøÇà Áß ±âÅ¸ ¿¬Ãâ ÇÔ¼ö(È­¸é ¾ÏÀü, ´Ü¼­ È¹µæ, Å¸ÀÌÆ² µîÀå µî)
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Å¸ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½(È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ü¼ï¿½ È¹ï¿½ï¿½, Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½)
     protected virtual void BackGroundDirection(Dialogue_Base.Info info)
     {
         
     }
 
-    // ÅØ½ºÆ® ÀÔ·Â ÄÚ·çÆ¾
+    // ï¿½Ø½ï¿½Æ® ï¿½Ô·ï¿½ ï¿½Ú·ï¿½Æ¾
     IEnumerator TypeText(Dialogue_Base.Info info)
     {
         isTextTyping = true;
@@ -277,7 +268,7 @@ public class Dialogue_Test01 : MonoBehaviour
 
     }
 
-    // ÅØ½ºÆ® ÀÚµ¿¿Ï¼º ¸Þ¼Òµå(Å¬¸¯ ½Ã ÀÚµ¿À¸·Î ÅØ½ºÆ®°¡ ¿Ï¼ºµÇµµ·Ï)
+    // ï¿½Ø½ï¿½Æ® ï¿½Úµï¿½ï¿½Ï¼ï¿½ ï¿½Þ¼Òµï¿½(Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½Ï¼ï¿½ï¿½Çµï¿½ï¿½ï¿½)
     private void CompleteText()
     {
         isTextComplete = true;
@@ -285,7 +276,7 @@ public class Dialogue_Test01 : MonoBehaviour
         next.SetActive(true);
     }
 
-    // ´ëÈ­ Á¾·á ¸Þ¼Òµå
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½
     public void EndDialogue()
     {
         isDialoge = false;
