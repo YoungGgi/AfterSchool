@@ -5,20 +5,24 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SFX", menuName = "SFX Object/SFX_Data")]
 public class SFX_Lists : ScriptableObject
 {
-    // ¿¬Ãâ È¿°úÀ½ ¸ñ·Ï
-    // 0 - ¹ø¶àÀÓ
-    // 1 - ±³½Ç °É¾î°¨
-    // 2 - ±³½Ç ¶Ù¾î°¨
-    
+    // ì—°ì¶œìš© íš¨ê³¼ìŒ ëª©ë¡
+    // 0 - ìƒí™©ê°•ì¡°
+    // 1 - ê±¸ìŒì†Œë¦¬
+    // 2 - ëœ€ê±¸ìŒ ì†Œë¦¬
+    // 3 - ë¬¸ ì—¬ëŠ” ì†Œë¦¬
+    // 4 - ë¬¸ ë‹«ëŠ” ì†Œë¦¬
+    // 5 - ë‘ë‘¥
     public List<AudioClip> direction_sfx_Clips;
 
-    // ´Ü¼­ È¹µæ¿ë È¿°úÀ½
+    // ë‹¨ì„œ íšë“ìš© íš¨ê³¼ìŒ
     public List<AudioClip> clue_sfx_Clips;
 
-    // °¨Á¤ Ç¥Çö¿ë È¿°úÀ½
-    // 0 - ºüÁ÷(È­³²)
-    // 1 - ¿ôÀ½
-    // 2 - ´çÈ²(»ßÁú)
+    // ê°ì • í‘œí˜„ìš© íš¨ê³¼ìŒ
+    // 0 - í™”ë‚¨(ë¹ ì§)
+    // 1 - ì›ƒìŒ
+    // 2 - ë‹¹í™©(ë•€ ì‚ì§ˆ)
+    // 3 - ë‹¹í™©(ë•¡)
+    // 4 - ì¶©ê²©
     public List<AudioClip> emotion_sfx_Clips;
 
 }

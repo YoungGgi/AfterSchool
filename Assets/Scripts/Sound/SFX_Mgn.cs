@@ -6,7 +6,7 @@ public class SFX_Mgn : MonoBehaviour
 {
     public static SFX_Mgn instance;
 
-    // ½Ì±ÛÅæ ÆÐÅÏ
+    // ï¿½Ì±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private void Awake()
     {
         #region Singletone
@@ -22,19 +22,19 @@ public class SFX_Mgn : MonoBehaviour
         #endregion
     }
 
-    public SFX_Lists SFXs;                // ºê±Ý ¸®½ºÆ®
-    public AudioSource SFX_Source;        // ¿Àµð¿À ¼Ò½º
+    public SFX_Lists SFXs;                // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
+    public AudioSource SFX_Source;        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò½ï¿½
     public AudioClip sfx_Clip;
 
-    public AudioClip btnClick_Clip;       // ¹öÆ° Å¬¸¯ È¿°úÀ½
+    public AudioClip btnClick_Clip;       // ï¿½ï¿½Æ° Å¬ï¿½ï¿½ È¿ï¿½ï¿½ï¿½ï¿½
 
-    // °ø¿ë ¹öÆ° Å¬¸¯ È¿°úÀ½ Àç»ý ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° Å¬ï¿½ï¿½ È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     public void ButtonClick_Play()
     {
         SFX_Source.PlayOneShot(btnClick_Clip);
     }
 
-    // ¿ÜºÎ¿¡¼­ ¿¬Ãâ¿ë È¿°úÀ½ index È£Ãâ ½Ã SFXs ¸®½ºÆ®ÀÇ index °ªÀÇ AudioClip À¸·Î ±³Ã¼ ÈÄ Àç»ý
+    // ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½ï¿½ï¿½ index È£ï¿½ï¿½ ï¿½ï¿½ SFXs ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ index ï¿½ï¿½ï¿½ï¿½ AudioClip ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ ï¿½ï¿½ï¿½
     public void SFX_Direction_Play(int index)
     {
         sfx_Clip = SFXs.direction_sfx_Clips[index];
@@ -44,6 +44,12 @@ public class SFX_Mgn : MonoBehaviour
     public void SFX_Clue_Play(int index)
     {
         sfx_Clip = SFXs.clue_sfx_Clips[index];
+        SFX_Source.PlayOneShot(sfx_Clip);
+    }
+
+    public void SFX_Emotion_Play(int index)
+    {
+        sfx_Clip = SFXs.emotion_sfx_Clips[index];
         SFX_Source.PlayOneShot(sfx_Clip);
     }
 

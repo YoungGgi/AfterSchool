@@ -249,13 +249,13 @@ public class A_Dialogue : MonoBehaviour
 
         if(info.isChapter1Close)
         {
-            
+            ChapterCheck.instance.Chapter1Clear(1);
             SceneManager.LoadScene(0);
         }
 
         if (info.isChapter2Close)
         {
-            
+            ChapterCheck.instance.Chapter2Clear(1);
             SceneManager.LoadScene(0);
         }
 
@@ -864,6 +864,11 @@ public class A_Dialogue : MonoBehaviour
         if (info.isClueOnSfx)
         {
             SFX_Mgn.instance.SFX_Clue_Play(info.SFX_Index);
+        }
+
+        if(info.isEmotionSFx)
+        {
+            SFX_Mgn.instance.SFX_Emotion_Play(info.SFX_Index);
         }
     }
 

@@ -14,6 +14,8 @@ public class BGM_Lists : ScriptableObject
     // 6 = Game                        
     // 7 = JoEnNim                     
     // 8 = Waltz for child             
-    // 9 = HOW ARE YOU                 
+    // 9 = HOW ARE YOU
+    // 10 = Did you know
+    // 11 = weekend                 
     public List<AudioClip> bgm_Clips;
 }

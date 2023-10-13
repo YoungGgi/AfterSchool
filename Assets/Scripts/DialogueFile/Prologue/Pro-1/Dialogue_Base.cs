@@ -10,53 +10,54 @@ public class Dialogue_Base : ScriptableObject
     public class Info
     {
         [TextArea(3, 12)]
-        public string myText;                        // ´ëÈ­ ³»¿ë
+        public string myText;                        // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
         
-        [Header("Ä³¸¯ÅÍ ÀÌ¸§")]
-        public Name charName;                        // È­ÀÚ(Enum)
+        [Header("ìºë¦­í„° ì´ë¦„")]
+        public Name charName;                        // È­ï¿½ï¿½(Enum)
 
-        [Header("È¿Á¤ ¿¬Ãâ")]
-        public H_Anim h_Anim;                        // È¿Á¤ ¾Ö´Ï¸ŞÀÌ¼Ç
-        public H_Sprite h_sprite;                    // È¿Á¤ ½ºÇÁ¶óÀÌÆ®(Ç¥Á¤)
-        public H_Direction h_Direction;              // È¿Á¤ µîÀå À§Ä¡
-        public bool isHujung_CloseUp;                // È¿Á¤ Å¬·ÎÁî¾÷ ¿©ºÎ »óÅÂ
+        [Header("ì •íš¨ì • ì• ë‹ˆ / í‘œì •")]
+        public H_Anim h_Anim;                        // È¿ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
+        public H_Sprite h_sprite;                    // È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®(Ç¥ï¿½ï¿½)
+        public H_Direction h_Direction;              // È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+        public bool isHujung_CloseUp;                // È¿ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("¿ëÁø ¿¬Ãâ")]
-        public Y_Anim y_Anim;                        // ¿ëÁø ¾Ö´Ï¸ŞÀÌ¼Ç
-        public Y_Sprite y_sprite;                    // ¿ëÁø ½ºÇÁ¶óÀÌÆ®(Ç¥Á¤)
-        public Y_Direction y_Direction;              // ¿ëÁø µîÀå À§Ä¡
-        public bool isYoungjin_CloseUp;              // ¿ëÁø Å¬·ÎÁî¾÷ ¿©ºÎ »óÅÂ
+        [Header("ì´ìš©ì§„ ì• ë‹ˆ / í‘œì •")]
+        public Y_Anim y_Anim;                        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
+        public Y_Sprite y_sprite;                    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®(Ç¥ï¿½ï¿½)
+        public Y_Direction y_Direction;              // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+        public bool isYoungjin_CloseUp;              // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("Áö¼ö ¿¬Ãâ")]
-        public J_Anim j_Anim;                        // Áö¼ö ¾Ö´Ï¸ŞÀÌ¼Ç
-        public J_Sprite j_sprite;                    // Áö¼ö ½ºÇÁ¶óÀÌÆ®(Ç¥Á¤)
-        public J_Direction j_Direction;              // Áö¼ö µîÀå À§Ä¡
-        public bool isJisu_CloseUp;                  // Áö¼ö Å¬·ÎÁî¾÷ ¿©ºÎ »óÅÂ
+        [Header("ì€ì§€ìˆ˜ ì• ë‹ˆ / í‘œì •")]
+        public J_Anim j_Anim;                        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
+        public J_Sprite j_sprite;                    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®(Ç¥ï¿½ï¿½)
+        public J_Direction j_Direction;              // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+        public bool isJisu_CloseUp;                  // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("¹Î¼® ¿¬Ãâ")]
-        public M_Anim m_Anim;                        // ¹Î¼® ¾Ö´Ï¸ŞÀÌ¼Ç
-        public M_Sprite m_sprite;                    // ¹Î¼® ½ºÇÁ¶óÀÌÆ®(Ç¥Á¤)
-        public M_Direction m_Direction;              // ¹Î¼® µîÀå À§Ä¡
-        public bool isMinseok_CloseUp;               // ¹Î¼® Å¬·ÎÁî¾÷ ¿©ºÎ »óÅÂ
+        [Header("ì—¼ë¯¼ì„ ì• ë‹ˆ / í‘œì •")]
+        public M_Anim m_Anim;                        // ï¿½Î¼ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
+        public M_Sprite m_sprite;                    // ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®(Ç¥ï¿½ï¿½)
+        public M_Direction m_Direction;              // ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+        public bool isMinseok_CloseUp;               // ï¿½Î¼ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("BGM ÇÃ·¹ÀÌ")]
-        public bool isBGM_Change;                    // BGM º¯°æ ¿©ºÎ »óÅÂ
-        public int BGM_Index;                        // º¯°æÇÒ BGM ÀÎµ¦½º
-        public bool isBGM_Stop;                      // BGM Á¤Áö ¿©ºÎ »óÅÂ
+        [Header("BGM ì¬ìƒê¸°")]
+        public bool isBGM_Change;                    // BGM ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        public int BGM_Index;                        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ BGM ï¿½Îµï¿½ï¿½ï¿½
+        public bool isBGM_Stop;                      // BGM ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("È¿°úÀ½ ÇÃ·¹ÀÌ")]
-        public bool isDirectionSFX;                  // ¿¬Ãâ¿ë È¿°úÀ½ ¸ñ·Ï ³í¸®º¯¼ö
-        public bool isClueOnSfx;                     // ´Ü¼­ È¹µæ È¿°úÀ½ ¸ñ·Ï ³í¸®º¯¼ö
-        public int SFX_Index;                        // SFX ÀÎµ¦½º
+        [Header("íš¨ê³¼ìŒ ì¬ìƒê¸°")]
+        public bool isDirectionSFX;                  // ï¿½ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        public bool isClueOnSfx;                     // ï¿½Ü¼ï¿½ È¹ï¿½ï¿½ È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        public bool isEmotionSFx;                    // ê°ì •í‘œí˜„ìš© íš¨ê³¼ìŒ
+        public int SFX_Index;                        // SFX ì¸ë±ìŠ¤
 
-        [Header("¿¬ÃâÈ¿°ú")]
-        public Direction direction;                  // È­¸é ¿¬Ãâ (¾ÏÀü À¯¹«)
+        [Header("ì•”ì „ ì—°ì¶œ")]
+        public Direction direction;                  // È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 
-        [Header("ÆùÆ® Å°¿ì±â È¿°ú")]
-        public bool isFontSizeUp;                    // ÆùÆ® Å©±â Å°¿ì±â ¿©ºÎ ³í¸®º¯¼ö
+        [Header("í°íŠ¸ ì‚¬ì´ì¦ˆ í‚¤ìš°ê¸°")]
+        public bool isFontSizeUp;                    // ï¿½ï¿½Æ® Å©ï¿½ï¿½ Å°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-        [Header("´Ü¼­ È¹µæ")]
-        // ´Ü¼­ È¹µæ ½Ã »óÅÂ ¿©ºÎ (Â÷·Ê´ë·Î)
+        [Header("ë‹¨ì„œ íšë“")]
+        // ï¿½Ü¼ï¿½ È¹ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½Ê´ï¿½ï¿½)
         public bool isFirstClue;
         public bool isSecondClue;
         public bool isThirdClue;
@@ -66,23 +67,23 @@ public class Dialogue_Base : ScriptableObject
 
         public bool isClueReplace;
 
-        [Header("´ëÈ­Ã¢²ô±â")]
-        public bool UI_Off;                           // ´ëÈ­ UI ºñÈ°¼ºÈ­ ¿©ºÎ »óÅÂ
+        [Header("UI ì°½ ë„ê¸°")]
+        public bool UI_Off;                           // ï¿½ï¿½È­ UI ï¿½ï¿½È°ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("¹è°æ Èçµé±â µî ±âÅ¸ ¿¬Ãâ")]
-        public BackGroundDirections back;             // ¹è°æ Èçµé±â ¿¬Ãâ
+        [Header("ë°°ê²½ í”ë“¤ê¸° ì—°ì¶œ")]
+        public BackGroundDirections back;             // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("Å¸ÀÌÆ²")]
-        public bool Title_On;                         // Å¸ÀÌÆ² ¿ÀºêÁ§Æ®1 Ãâ·Â ¿©ºÎ »óÅÂ
-        public bool Title_Two;                        // Å¸ÀÌÆ² ¿ÀºêÁ§Æ®2 Ãâ·Â ¿©ºÎ »óÅÂ
-        public bool Title_Three;                      // Å¸ÀÌÆ² ¿ÀºêÁ§Æ®3 Ãâ·Â ¿©ºÎ »óÅÂ
-        public bool Title_Four;                       // Å¸ÀÌÆ² ¿ÀºêÁ§Æ®4 Ãâ·Â ¿©ºÎ »óÅÂ
+        [Header("íƒ€ì´í‹€ / ì˜¤ë¸Œì íŠ¸")]
+        public bool Title_On;                         // Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®1 ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        public bool Title_Two;                        // Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®2 ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        public bool Title_Three;                      // Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®3 ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        public bool Title_Four;                       // Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®4 ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        [Header("¹è°æ ÀÌ¹ÌÁö")]
-        public BackGround backGroundImg;              // Ãâ·ÂÇÒ ¹è°æ ÀÌ¹ÌÁö
+        [Header("ë°°ê²½")]
+        public BackGround backGroundImg;              // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½
 
-        [Header("Ã©ÅÍ Á¾·á ¿©ºÎ")]
-        // °¢ Ã©ÅÍ Á¾·á ¿©ºÎ »óÅÂ
+        [Header("ì±•í„° ì™„ë£Œ ìƒíƒœ")]
+        // ï¿½ï¿½ Ã©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         public bool isPrologueClose;
         public bool isChapter1Close;
         public bool isChapter2Close;
@@ -91,11 +92,11 @@ public class Dialogue_Base : ScriptableObject
 
     }
 
-    // ÇØ´ç Å¬·¡½º¸¦ ¸®½ºÆ®È­
+    // ï¿½Ø´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®È­
     public Info[] dialogueInfo;
 }
 
-// Ä³¸¯ÅÍ ÀÌ¸§ ¸ñ·Ï
+// Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½
 public enum Name
 {
     Blank, Player, Hujung, YoungJin, Jisu, MinSeok, Who, HujungYoung, Who_Jisu, Who_Min, 
@@ -103,9 +104,9 @@ public enum Name
     Student01, Student02, Student03, Bear, Rabbit, Who_Hujung
 }
 
-// È¿Á¤ ¿¬Ãâ ¸ñ·Ï
+// È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 #region HujungEnum
-public enum H_Anim                // È¿Á¤ ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
+public enum H_Anim                // È¿ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
 { 
     Idle,
     H_Appear,
@@ -122,7 +123,7 @@ public enum H_Anim                // È¿Á¤ ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
     Out_Right
 }
 
-public enum H_Direction           // È¿Á¤ µîÀå À§Ä¡ ¸ñ·Ï
+public enum H_Direction           // È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½
 {
     Center,
     Right,
@@ -130,7 +131,7 @@ public enum H_Direction           // È¿Á¤ µîÀå À§Ä¡ ¸ñ·Ï
     Out
 }
 
-public enum H_Sprite              // È¿Á¤ Ç¥Á¤ ¸ñ·Ï
+public enum H_Sprite              // È¿ï¿½ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½
 {
     Idle,
     Angry,
@@ -140,9 +141,9 @@ public enum H_Sprite              // È¿Á¤ Ç¥Á¤ ¸ñ·Ï
 
 #endregion
 
-// ¿ëÁø ¿¬Ãâ ¸ñ·Ï
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 #region YoungjingEnum
-public enum Y_Anim                // ¿ëÁø ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
+public enum Y_Anim                // ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
 {
     Idle, 
     Y_Appear, 
@@ -151,7 +152,7 @@ public enum Y_Anim                // ¿ëÁø ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
     Y_Bangbang
 }
 
-public enum Y_Direction           // ¿ëÁø µîÀå À§Ä¡ ¸ñ·Ï
+public enum Y_Direction           // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½
 {
     Center, 
     Right, 
@@ -159,7 +160,7 @@ public enum Y_Direction           // ¿ëÁø µîÀå À§Ä¡ ¸ñ·Ï
     Out
 }
 
-public enum Y_Sprite               // ¿ëÁø Ç¥Á¤ ¸ñ·Ï
+public enum Y_Sprite               // ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½
 {
     Idle, 
     Idle01, 
@@ -171,9 +172,9 @@ public enum Y_Sprite               // ¿ëÁø Ç¥Á¤ ¸ñ·Ï
 
 #endregion
 
-// Áö¼ö ¿¬Ãâ ¸ñ·Ï
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 #region JisuEnum
-public enum J_Anim             // Áö¼ö ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
+public enum J_Anim             // ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
 {
     Idle, 
     J_Appear, 
@@ -182,21 +183,21 @@ public enum J_Anim             // Áö¼ö ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
     J_BangBang
 }
 
-public enum J_Direction         // Áö¼ö µîÀå À§Ä¡ ¸ñ·Ï
+public enum J_Direction         // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½
 {
     Center, Right, Left, Out
 }
 
-public enum J_Sprite            // Áö¼ö Ç¥Á¤ ¸ñ·Ï
+public enum J_Sprite            // ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½
 {
     Idle, Angry, Smile, Surprise
 }
 
 #endregion
 
-// ¹Î¼® ¿¬Ãâ ¸ñ·Ï
+// ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 #region MinSeokEnum
-public enum M_Anim              // ¹Î¼® ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
+public enum M_Anim              // ï¿½Î¼ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
 {
     Idle, 
     M_Appear, 
@@ -205,7 +206,7 @@ public enum M_Anim              // ¹Î¼® ¾Ö´Ï¸ŞÀÌ¼Ç ¸ñ·Ï
     M_BangBang
 }
 
-public enum M_Direction           // ¹Î¼® µîÀå À§Ä¡ ¸ñ·Ï
+public enum M_Direction           // ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½
 {
     Center, 
     Right, 
@@ -213,7 +214,7 @@ public enum M_Direction           // ¹Î¼® µîÀå À§Ä¡ ¸ñ·Ï
     Out
 }
 
-public enum M_Sprite             // ¹Î¼® Ç¥Á¤ ¸ñ·Ï
+public enum M_Sprite             // ï¿½Î¼ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½
 {
     Idle, 
     Angry, 
@@ -223,7 +224,7 @@ public enum M_Sprite             // ¹Î¼® Ç¥Á¤ ¸ñ·Ï
 
 #endregion
 
-// ¹è°æ ¸ñ·Ï
+// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 public enum BackGround
 {
     Black,
@@ -239,13 +240,13 @@ public enum BackGround
     Ch2_CutScene
 }
 
-// È­¸é ¿¬Ãâ ¸ñ·Ï
+// È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 public enum Direction
 {
     Blank, FadeIn, FadeOut
 }
 
-// È­¸é Èçµé±â ¿¬Ãâ »óÅÂ ¸ñ·Ï
+// È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 public enum BackGroundDirections
 {
     Idle,
