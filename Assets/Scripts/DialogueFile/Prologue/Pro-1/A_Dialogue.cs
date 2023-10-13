@@ -882,8 +882,7 @@ public class A_Dialogue : MonoBehaviour
         foreach(char c in info.myText.ToCharArray())
         {
             // 단서 획득 시를 제외한 모든 구간에서 타이핑 효과음 출력
-            if (!info.isFirstClue || !info.isSecondClue || !info.isThirdClue 
-                || !info.isForthClue || !info.isFiveClue || !info.isSixClue)
+            if (!info.UI_Off)
             {
                TextTyping_Player.instance.Typing_Play();    
             }

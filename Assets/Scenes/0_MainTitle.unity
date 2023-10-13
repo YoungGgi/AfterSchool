@@ -4542,7 +4542,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5699,8 +5699,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chapter1OpenPopup: {fileID: 762062902}
   chapter2OpenPopup: {fileID: 1035558681}
-  prologueCheck: 0
-  chapter1Check: 0
 --- !u!1 &996020154
 GameObject:
   m_ObjectHideFlags: 0
@@ -10320,10 +10318,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b6e13a522780149a2f4baf5e156ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPrologue: 0
-  isChapter1: 0
-  isChapter2: 0
-  isChapter3: 0
+  Prologue: 0
+  Chapter1: 0
+  Chapter2: 0
+  Chapter3: 0
+  isPrologueConfirm: 0
+  isChapter1Confirm: 0
+  isChapter2Confirm: 0
+  isChapter3Confirm: 0
 --- !u!4 &1928880383
 Transform:
   m_ObjectHideFlags: 0
