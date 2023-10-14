@@ -9,60 +9,61 @@ public class A_Dialogue : MonoBehaviour
 {
     
     [Header("대화 텍스트 / 배경 이미지 / 백로그")]
-    public TextMeshProUGUI dialogueTxt;        // ��ȭ �ؽ�Ʈ
-    public TextMeshProUGUI nameTxt;            // �̸� �ؽ�Ʈ
-    public Image backGroundImg;                // ��� �̹���
-    public BackGroundFold backGroundFold;
-    public GameObject next;                    // ȭ��ǥ ������Ʈ
-    public GameObject textPrefab;              // ��α� ���� �ؽ�Ʈ ������
-    public Transform parentContents;           // ��α��� Contents���� ��µ�
+    public TextMeshProUGUI dialogueTxt;        // 대화 텍스트
+    public TextMeshProUGUI nameTxt;            // 이름 텍스트
+    public Image backGroundImg;                // 배경 이미지
+    public BackGroundFold backGroundFold;      // 배경 이미지가 담긴 폴더
+    public GameObject next;                    // 진행 화살표
+    public GameObject textPrefab;              // 백로그용 텍스트 프리팹
+    public Transform parentContents;           // 텍스트 프리팹 출력할 위치
 
-    public CharacterNameMgn nameChanges;
+    public CharacterNameMgn nameChanges;       // 캐릭터 관련 연출용 클래스
 
     [Header("텍스트 타이핑")]
-    public float delay;                        //�ؽ�Ʈ ��� ������
-    private bool isTextTyping;                 // �ؽ�Ʈ ��� ���� Ȯ��
-    public bool isTextComplete = false;        // �ؽ�Ʈ ��� �ϼ� ���� Ȯ��
-    private string completeText;               // �ϼ��� �ؽ�Ʈ
+    public float delay;                        // 텍스트 출력 딜레이
+    private bool isTextTyping;                 // 텍스트 출력 논리 변수
+    public bool isTextComplete = false;        // 대화 완료 논리 변수
+    private string completeText;               // 출력할 대화
 
-    private bool isDialoge;                   // ��ȭ ���� Ȯ��
+    private bool isDialoge;                   // 대화 진행 논리 변수
 
     [Header("대화 종료 시 활성/비활성 UI")]
-    public GameObject dialogueUI;              // ��ȭ�� ���� UI
-    public GameObject dialoguePanelText;       // ��ȭâ UI
-    public GameObject dialogueSetting;         // ��ȭ ��� UI(����, �α�, ����)
+    public GameObject dialogueUI;              // 대화 관련 전체 UI
+    public GameObject dialoguePanelText;       // 대화창 UI
+    public GameObject dialogueSetting;         // 대화 메뉴 관련 UI(오토, 2배속, 메뉴)
 
     [Header("캐릭터 이미지")]
-    public Image hujungImg_CloseUp;           // ȿ�� Ŭ����� ��������Ʈ
-    public Image youngjunImg_CloseUp;         // ���� Ŭ����� ��������Ʈ
-    public Image jisuImg_CloseUp;             // ���� Ŭ����� ��������Ʈ
-    public Image minseok_CloseUp;             // �μ� Ŭ����� ��������Ʈ
+    public Image hujungImg_CloseUp;           // 효정 클로즈업 이미지
+    public Image youngjunImg_CloseUp;         // 용진 클로즈업 이미지
+    public Image jisuImg_CloseUp;             // 지수 클로즈업 이미지
+    public Image minseok_CloseUp;             // 민석 클로즈업 이미지
 
-    // �� ĳ���� ǥ�� ��������Ʈ
+    // 캐릭터 표정 스프라이트 Scriptable
     [Header("캐릭터 감정표현")]
     public CharacterSprite hujung_Sprite;
     public CharacterSprite youngjing_Sprite;
     public CharacterSprite jisu_Sprite;
     public CharacterSprite minSeok_Sprite;
 
+    // 캐릭터 별 애니메이션
     [Header("캐릭터 애니메이션")]
-    public Animator Hujung;                    // ȿ�� ���� �ִϸ�����
-    public Animator YoungJin;                  // ���� ���� �ִϸ�����
-    public Animator Jisu;                      // ���� ���� �ִϸ�����
-    public Animator MinSeok;                   // �μ� ���� �ִϸ�����
+    public Animator Hujung;                    
+    public Animator YoungJin;                  
+    public Animator Jisu;                      
+    public Animator MinSeok;                   
     
 
     [Header("연출 효과")]
-    public Animator fadeManager;               // ���̵� �� / �ƿ� ���� ȿ��
-    public Animator backGroundEffect;          // ��� ���� ȿ��
+    public Animator fadeManager;               // 화면 암전 연출
+    public Animator backGroundEffect;          // 배경 흔들기 연출
 
-    // ���� Ÿ��Ʋ ������Ʈ��
+    // 타이틀 or 오브젝트 출력
     public GameObject titleObj;
     public GameObject subTitleObj;
     public GameObject subTitleObj_2;
     public GameObject subTitleObj_3;
 
-    // ��ȭ ���� �� �߰��� �ܼ����
+    // 대화중 단서 획득 오브젝트 및 단서 Scriptable
     [Header("단서 추가")]
     public ClueManager clue;
     public ClueObject clueObj0;
@@ -88,21 +89,20 @@ public class A_Dialogue : MonoBehaviour
     public int SceneNum;
 
     [Header("미니게임용 UI")]
-    public bool isGame;                            // �̴� ���� ���� ���� Ȯ�� ��������
-    public GameObject dialogueObject;              // ��ȭ UI ������Ʈ �׷�
-    public GameObject miniGameObject;              // �̴� ���� UI ������Ʈ �׷�
+    public bool isGame;                            // 게임 진행 논리 변수
+    public GameObject dialogueObject;              // 대화 관련 전체 UI
+    public GameObject miniGameObject;              // 미니게임 관련 전체 UI
 
-
-    // Dialogue_Base ���� ������ Queue�� ����
+    // Dialogue_Base 정보를 dialogueInfo 리스트 할당
     public Queue<Dialogue_Base.Info> dialogueInfo = new Queue<Dialogue_Base.Info>();
 
-    // ����� �Լ����� ȣ���ų ��������Ʈ ����
+    // 대화 관련 함수들을 호출할 델리게이트
     public delegate void DialogueDirections(Dialogue_Base.Info info);
     DialogueDirections directions;
 
     private void OnEnable()
     {
-        // �ش� ������Ʈ Ȱ��ȭ �� ��ȭ ���� UI ��� ��Ȱ��ȭ
+        // 대화 리스트 할당, 로딩(자동저장) 
         Time.timeScale = 1;
         dialogueInfo = new Queue<Dialogue_Base.Info>();
         dialogueUI.gameObject.SetActive(false);
@@ -121,7 +121,6 @@ public class A_Dialogue : MonoBehaviour
         directions += SFX_Play;
     }
 
-    // ���� ���� �� �ε� ȭ��(�ڵ�����) ���� �� ������ �� ��ȭ ȭ�� ����
     IEnumerator Loading()
     {
         yield return new WaitForSeconds(1.5f);
@@ -130,12 +129,12 @@ public class A_Dialogue : MonoBehaviour
 
     private void Update()
     {
-        NowScene = SceneManager.GetActiveScene(); // �� �����Ӹ��� ���� �� Ȯ���ϱ�
+        NowScene = SceneManager.GetActiveScene();
         SceneNum = NowScene.buildIndex;
 
     }
 
-    // ��ȭ ����Ʈ ����(EnQueue)
+    // 대화 리스트 시작(EnQueue)
     public void EnqueuDialogue(Dialogue_Base db)
     {
         if (isDialoge) return;
@@ -153,21 +152,21 @@ public class A_Dialogue : MonoBehaviour
 
     }
 
-    //��ȭ ��� ����(DeQueue)
+    //대화 리스트 출력(DeQueue)
     public void DequeueDialogue()
     {
         #region TextTyping
 
         isTextComplete = false;
 
-        // �ش� ��� ����Ʈ�� ���� ��µǾ��ٸ� ��ȭ ���� �Լ�(EndDialogue)�� �̵�
+        // 대화가 모두 진행시 대화 종료 함수 실행(EndDialogue)
         if(dialogueInfo.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        // �ؽ�Ʈ�� ��� ���� ��� 
+        // 텍스트 타이핑 중일 경우 CompleteText 실행
         if(isTextTyping == true)
         {
             CompleteText();
@@ -179,16 +178,15 @@ public class A_Dialogue : MonoBehaviour
         #endregion
 
         #region DequeueCon
-        // Dequeue, info(Dialogue_Base)�� �ִ� ���� ���
+        // Dequeue, info(Dialogue_Base) 정보 할당
         Dialogue_Base.Info info = dialogueInfo.Dequeue();
 
-        // ��ȭ �ؽ�Ʈ�� �̸� �ؽ�Ʈ, ����� �Լ��� info ���� �Ҵ�
         completeText = info.myText;
         dialogueTxt.text = info.myText;
         directions(info);
         #endregion
 
-        // ��Ʈ ������ ũ�� �����
+        // 폰트 사이즈 키우기 연출
         if(info.isFontSizeUp)
         {
             dialogueTxt.fontSize = 55;
@@ -202,13 +200,13 @@ public class A_Dialogue : MonoBehaviour
 
 
         #region BackLog
-        // ��α� �ؽ�Ʈ ��� �Լ�
+        // 백로그 호출
         if(dialogueTxt.text != "")
         {
-            // �ؽ�Ʈ ������ ��ȯ
+            // 대화 텍스트 프리팹 생성
             GameObject clone = Instantiate(textPrefab, parentContents);
 
-            // �̸� �ؽ�Ʈ�� '����'�� ���(����) �̸� �ؽ�Ʈ ��� X
+            // 현재 대화 텍스트를 할당해 백로그 호출 위치에 생성, 독백 중(Blank)일 경우 이름 텍스트 X
             if (info.charName == Name.Blank)
             {
                 clone.GetComponent<TextMeshProUGUI>().text = dialogueTxt.text;
@@ -219,28 +217,17 @@ public class A_Dialogue : MonoBehaviour
 
             }
 
-            // �ܼ� ȹ�� �� �ؽ�Ʈ ������ �÷� ����
-            /*
-            if (info.isFirstClue || info.isSecondClue || info.isThirdClue || info.isForthClue || info.isFiveClue || info.isSixClue)
-            {
-                clone.GetComponent<TextMeshProUGUI>().color = Color.yellow;
-            }
-            else
-            {
-                clone.GetComponent<TextMeshProUGUI>().color = Color.black;
-            }
-            */
         }
 
         #endregion
 
         #region UI_Off_Direction
-        // ��ȭâ UI�� ��Ȱ��ȭ�Ǵ� ������ ��� StroyDataMgn�� isAutoStroy Ȱ��ȭ
+        // StroyDataMgn의 isAutoStroy 상태일경우 대화 UI 비활성화
         StroyDataMgn.instance.IsAutoStory = info.UI_Off;
         #endregion
 
         #region ChapterClose
-        // �� é�� ����� ���� �κ�� �̵�
+        // 각 챕터 종료시 종료상황 저장후(ChapterCheck) 메인화면 이동
         if (info.isPrologueClose)
         {
             ChapterCheck.instance.PrologeClear(1);
@@ -261,7 +248,7 @@ public class A_Dialogue : MonoBehaviour
 
         if (info.isChapter3Close)
         {
-            
+            ChapterCheck.instance.Chapter3Clear(1);
             SceneManager.LoadScene(0);
 
         }
@@ -272,7 +259,7 @@ public class A_Dialogue : MonoBehaviour
         StartCoroutine(TypeText(info));
     }
 
-    // ��ȭ ���� �� ��� ���� �Լ�
+    // 배경 이미지 연출 함수
     public void BackGroundChange(Dialogue_Base.Info info)
     {
         switch (info.backGroundImg)
@@ -313,7 +300,7 @@ public class A_Dialogue : MonoBehaviour
         }
     }
 
-    // ��ȭ ���� �� ĳ���� �̸� �Լ�
+    // 캐릭터 이름 연출 함수
     public void CharacterName(Dialogue_Base.Info info)
     {
         switch (info.charName)
@@ -390,7 +377,7 @@ public class A_Dialogue : MonoBehaviour
         }
     }
 
-    // ��ȭ ���� �� ĳ���� �ִϸ��̼� �Լ�
+    // 캐릭터 애니메이션 연출 함수
     public void CharacterAnim(Dialogue_Base.Info info)
     {
 
@@ -490,7 +477,7 @@ public class A_Dialogue : MonoBehaviour
 
     }
 
-    // ��ȭ ���� �� ĳ���� ǥ�� ��ȭ �Լ�
+    // 캐릭터 표정 연출 함수
     public void CharacterEmotion(Dialogue_Base.Info info)
     {
         #region HujungEmotion
@@ -572,7 +559,7 @@ public class A_Dialogue : MonoBehaviour
         #endregion
     }
 
-    // ��ȭ ���� �� ĳ���� ��ġ ���� �Լ�
+    // 캐릭터 위치 연출 함수
     public void CharacterDirection(Dialogue_Base.Info info)
     {
         
@@ -661,7 +648,7 @@ public class A_Dialogue : MonoBehaviour
 
     }
 
-    // ��ȭ ���� �� ĳ���� Ŭ�����
+    // 캐릭터 클로즈업 연출 함수
     public void CharacterCloseUp(Dialogue_Base.Info info)
     {
         hujungImg_CloseUp.color = info.isHujung_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
@@ -673,7 +660,7 @@ public class A_Dialogue : MonoBehaviour
         minseok_CloseUp.color = info.isMinseok_CloseUp ? new Color(225, 225, 225, 1) : new Color(225, 225, 225, 0);
     }
 
-    // ��ȭ ���� �� ��Ÿ ���� �Լ�(ȭ�� ����, �ܼ� ȹ��, Ÿ��Ʋ ���� ��)
+    // 화면 암전, 단서 획득, 오브젝트 출력 연출 함수
     public void BackGroundDirection(Dialogue_Base.Info info)
     {
         #region Direction
@@ -834,7 +821,7 @@ public class A_Dialogue : MonoBehaviour
         #endregion
     }
 
-    // ��ȭ ���� �� BGM ���� �Լ�
+    // BGM 플레이 함수
     public void BGM_Play(Dialogue_Base.Info info)
     {
         if (info.isBGM_Stop)
@@ -852,7 +839,7 @@ public class A_Dialogue : MonoBehaviour
         }
     }
 
-    // ��ȭ ���� �� ȿ���� ���� �Լ�
+    // 효과음 플레이 함수
     public void SFX_Play(Dialogue_Base.Info info)
     {
         
@@ -872,7 +859,7 @@ public class A_Dialogue : MonoBehaviour
         }
     }
 
-    // �ؽ�Ʈ �Է� �ڷ�ƾ
+    // 텍스트 타이핑 코루틴
     IEnumerator TypeText(Dialogue_Base.Info info)
     {
         isTextTyping = true;

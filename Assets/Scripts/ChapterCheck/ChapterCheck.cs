@@ -98,4 +98,24 @@ public class ChapterCheck : MonoBehaviour
     }
     #endregion
 
+    #region  Chapter3
+    public void Chapter3Clear(int num)
+    {
+        PlayerPrefs.SetInt("Chapter3Clear", num);
+        PlayerPrefs.Save();
+
+        int cha3 = PlayerPrefs.GetInt("Chapter3Clear");
+        Chapter3 = cha3;
+    }
+
+    public void LoadChapter3Clear()
+    {
+        if (!PlayerPrefs.HasKey("Chapter3Clear"))
+            return;
+
+        int cha3 = PlayerPrefs.GetInt("Chapter3Clear");
+        Chapter3 = cha3;
+    }
+    #endregion
+
 }

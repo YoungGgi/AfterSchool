@@ -28,19 +28,18 @@ public class Test_Dialogue : MonoBehaviour
     public Scene NowScene;                            // 현재 씬 넘버
     public int SceneNum;                              
 
-    // �ش� ������Ʈ Ȱ��ȭ �� ȣ��Ǵ� �Լ�
     void OnEnable()
     {
-        // �ε� ���¸� true�� ��ȯ �� LoadingAnim �ڷ�ƾ ����
+        // 로딩 출력
         isLoading = true;
         StartCoroutine(LoadingAnim());
 
-        // ���� ���� �ε��� �ѹ��� SaveLoadMgn(�ڵ�����) �����Ϳ� ����
+        // 현재 씬 인덱스 넘버를 자동저장(SaveLoadMgn)
         NowScene = SceneManager.GetActiveScene();
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
 
-        // �� ���� �� ���� ����� Ȱ��ȭ�Ǿ� �ִٸ� ���� ������Ʈ, ��ư Ȱ��ȭ
+        // 현재 오토 상태일 경우 오토 오브젝트, 버튼 활성화
         if (StroyDataMgn.instance.IsAutoLive)
         {
             autoText.gameObject.SetActive(true);
@@ -49,7 +48,7 @@ public class Test_Dialogue : MonoBehaviour
             auto_Btn.gameObject.SetActive(true);
         }
 
-        // �� ���� �� 2��� ����� Ȱ��ȭ�Ǿ� �ִٸ� 2��� ������Ʈ, ��ư Ȱ��ȭ
+        // 현재 2배속 상태일 경우 2배속 버튼 활성화
         if (StroyDataMgn.instance.IsTwoSpeed)
         {
             speed2_true_Btn.gameObject.SetActive(false);
@@ -58,10 +57,9 @@ public class Test_Dialogue : MonoBehaviour
 
     }
 
-    // �ε� ȭ���� ��µǴ� �ڷ�ƾ
+    // 로딩 화면(자동 저장) 출력 함수
     IEnumerator LoadingAnim()
     {
-        // �� 1.5�� ������ �� �ڵ� ���� �ε� ȭ�� ��Ȱ��ȭ, ��ȭ ����(EnQueue), �ε� ���� ���� false ��ȯ
         yield return new WaitForSeconds(1.5f);
 
         loadingTextGroup.gameObject.SetActive(false);
@@ -75,39 +73,36 @@ public class Test_Dialogue : MonoBehaviour
 
     void Update()
     {
-        // �ε� ���� �� return
+        // 로딩중 or 대화중 메인메뉴 클릭시 return
         if (isLoading || StroyDataMgn.instance.IsSettingOn)
             return;
         else
         {
-            // StroyDataMgn �� ���� ����� true �Ǿ� �ְ�, ���� ��ȭ �ؽ�Ʈ ���� ��� ��
+            // 오토 상태이고 현재 대화 인덱스 모두 출력시 오토 오브젝트 활성화,
             if (StroyDataMgn.instance.IsAutoLive && a_Dialogue.isTextComplete == true)
             {
-                // ���� ������Ʈ Ȱ��ȭ
                 autoText.gameObject.SetActive(true);
-                // �ణ�� ������ �� ���� �ؽ�Ʈ ���.
+                // 딜레이 후 다음 인덱스 출력
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
 
-            // StroyDataMgn�� ���� ����� false �� �� ���� ������Ʈ ��Ȱ��ȭ
+            // 오토 상태가 아닐경우 오토 오브젝트 비활성화
             if(StroyDataMgn.instance.IsAutoLive == false)
             {
                 autoText.gameObject.SetActive(false);
             }
 
-            // �����̽� Ű Ȥ�� Enter �Է� ��
+            // Space or Enter 키 입력시 대화 진행
             if ((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))
             {
-                // �ణ�� ������ �� ���� �ؽ�Ʈ ���
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
 
-            // StroyDataMgn�� ����� ���� ����� true �̰�, ���� ��ȭ �ؽ�Ʈ�� ��� ��� ��
+            // 대화 전용 오토 상태이고 대화 인덱스 모두 출력시 다음 인덱스 출력
             if(StroyDataMgn.instance.IsAutoStory && a_Dialogue.isTextComplete == true)
             {
-                // �ణ�� ������ �� ���� �ؽ�Ʈ ���
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
@@ -115,13 +110,12 @@ public class Test_Dialogue : MonoBehaviour
         }
     }
 
-    // ���� ��ȭ �ؽ�Ʈ ���� �� ������
     IEnumerator NextDelay()
     {
         yield return new WaitForSeconds(dealyCool);
     }
 
-    // ��ȭ ȭ���� ��ư Ŭ�� �� ���� ��ȭ �ؽ�Ʈ ����(DeQueue)
+    // 화면 클릭시 다음 대화 인덱스 출력(DeQueue)
     public void Next() => a_Dialogue.DequeueDialogue();
 
 
