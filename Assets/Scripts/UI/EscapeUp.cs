@@ -10,6 +10,8 @@ public class EscapeUp : MonoBehaviour
     [SerializeField]
     private GameObject unEscapeObject;
     [SerializeField]
+    private Button nextBtn;
+    [SerializeField]
     private bool isMainSetting;
 
     void Update()
@@ -24,6 +26,7 @@ public class EscapeUp : MonoBehaviour
             {
                 escapeObject.gameObject.SetActive(false);
                 StroyDataMgn.instance.IsSettingOn = false;
+                nextBtn.enabled = true;
             }
 
         }

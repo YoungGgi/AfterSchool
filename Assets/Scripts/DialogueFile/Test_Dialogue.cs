@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,7 @@ public class Test_Dialogue : MonoBehaviour
     public float dealyCool;                           // 대화 진행 딜레이
 
     public GameObject autoText;                       // 오토 오브젝트
+    public GameObject mainGroup;                      // 대화 메인 메뉴
 
     public GameObject loadingTextGroup;               // 로딩 화면(자동 저장)
 
@@ -24,6 +26,8 @@ public class Test_Dialogue : MonoBehaviour
 
     public GameObject speed2_Btn;                     // 2배속 버튼
     public GameObject speed2_true_Btn;                // 2배속 활성화 버튼
+
+    public Button nextBtn;
 
     public Scene NowScene;                            // 현재 씬 넘버
     public int SceneNum;                              
@@ -76,7 +80,9 @@ public class Test_Dialogue : MonoBehaviour
         // 로딩중 or 대화중 메인메뉴 클릭시 return
         if (isLoading || StroyDataMgn.instance.IsSettingOn)
             return;
-        else
+        
+
+        if(!StroyDataMgn.instance.IsSettingOn)
         {
             // 오토 상태이고 현재 대화 인덱스 모두 출력시 오토 오브젝트 활성화,
             if (StroyDataMgn.instance.IsAutoLive && a_Dialogue.isTextComplete == true)
@@ -88,25 +94,31 @@ public class Test_Dialogue : MonoBehaviour
             }
 
             // 오토 상태가 아닐경우 오토 오브젝트 비활성화
-            if(StroyDataMgn.instance.IsAutoLive == false)
+            if (StroyDataMgn.instance.IsAutoLive == false)
             {
                 autoText.gameObject.SetActive(false);
             }
 
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                nextBtn.enabled = false;
+                mainGroup.SetActive(true);
+                StroyDataMgn.instance.IsSettingOn = true;
+            }
+
             // Space or Enter 키 입력시 대화 진행
-            if ((Input.GetKeyUp(KeyCode.Space)) || (Input.GetKeyUp(KeyCode.Return)))
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Return))
             {
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
 
             // 대화 전용 오토 상태이고 대화 인덱스 모두 출력시 다음 인덱스 출력
-            if(StroyDataMgn.instance.IsAutoStory && a_Dialogue.isTextComplete == true)
+            if (StroyDataMgn.instance.IsAutoStory && a_Dialogue.isTextComplete == true)
             {
                 StartCoroutine(NextDelay());
                 a_Dialogue.DequeueDialogue();
             }
-
         }
     }
 

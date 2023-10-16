@@ -6,23 +6,23 @@ using UnityEngine.SceneManagement;
 public class UI_Manager : MonoBehaviour
 {
     
-    [Header("¸ŞÀÎ ·Îºñ")]
+    [Header("ë©”ì¸ë©”ë‰´")]
     [SerializeField]
-    private GameObject popUpObj;                       // ÆË¾÷Ã¢
+    private GameObject popUpObj;                       // ï¿½Ë¾ï¿½Ã¢
     [SerializeField]
-    private GameObject nameQuestionPop;                // ÀÌ¸§ ¼³Á¤ ÆË¾÷ ¿©ºÎ(ÀÓ½Ã)
+    private GameObject nameQuestionPop;                // ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¾ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½Ó½ï¿½)
     [SerializeField]
-    private GameObject nameSelectObj;                  // ÀÌ¸§ ¼³Á¤ ÆË¾÷
+    private GameObject nameSelectObj;                  // ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¾ï¿½
     [SerializeField]
-    private GameObject gameOptionObj;                  // ¸ŞÀÎ ·Îºñ ±â´É ¸ñ·Ï(ÀÓ½Ã)
+    private GameObject gameOptionObj;                  // ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½(ï¿½Ó½ï¿½)
     [SerializeField]
-    private GameObject chapterSelectObj;               // Ã©ÅÍ ¼±ÅÃ ¸ñ·Ï
+    private GameObject chapterSelectObj;               // Ã©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 
-    [Header("¹Ì´Ï °ÔÀÓ")]
+    [Header("ì¶”ë¦¬ ê²Œì„")]
     [SerializeField]
     private GameObject thinkGoNext;
 
-    [Header("¹öÆ° È¿°úÀ½")]
+    [Header("ë²„íŠ¼ í´ë¦­ íš¨ê³¼ìŒ")]
     [SerializeField]
     private AudioClip btnClickSFX;
     [SerializeField]
@@ -35,7 +35,7 @@ public class UI_Manager : MonoBehaviour
 
     private void Update()
     {
-        NowScene = SceneManager.GetActiveScene(); // ¸Å ÇÁ·¹ÀÓ¸¶´Ù ÇöÀç ¾À È®ÀÎÇÏ±â
+        NowScene = SceneManager.GetActiveScene(); // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½
         SceneNum = NowScene.buildIndex;
     }
 
