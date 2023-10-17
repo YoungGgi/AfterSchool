@@ -7,13 +7,13 @@ public class CharacterNameMgn : MonoBehaviour
 {
     public A_Dialogue dialogue;
 
-    [Header("ĳ���� �̹���")]
-    public Image hujungImg;                   // ȿ�� ��������Ʈ
-    public Image youngjinImg;                 // ���� ��������Ʈ
-    public Image jisuImg;                     // ���� ��������Ʈ
-    public Image minSeckImg;                  // �μ� ��������Ʈ
+    [Header("캐릭터 이미지")]
+    public Image hujungImg;                   
+    public Image youngjinImg;                
+    public Image jisuImg;                     
+    public Image minSeckImg;                  
 
-    [Header("ĳ���� ����ǥ��")]             // �� ĳ���� ǥ�� ��������Ʈ
+    [Header("캐릭터 표정 오브젝트")]             
     public CharacterSprite hujung_Sprite;
     public CharacterSprite youngjing_Sprite;
     public CharacterSprite jisu_Sprite;

@@ -75,14 +75,13 @@ public class UI_Manager : MonoBehaviour
         SceneManager.LoadScene(40);
     }
 
-    /*
+    
     public void StartChapter3()
     {
-
+        SceneManager.LoadScene(53);
     }
 
-    */
-
+    
     public void GameExit()
     {
         Application.Quit();

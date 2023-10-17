@@ -19,7 +19,7 @@ public class CutSceneBtn : MonoBehaviour
 
     public void SceneOut()
     {
-        //cutScene.LeanAlpha(0, 0.1f);
+        cutScene.SetActive(false);
     }
 
 }
