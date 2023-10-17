@@ -41,8 +41,6 @@ public class SaveLoadMgn : MonoBehaviour
         int num = PlayerPrefs.GetInt("nowScene");
         loadNum = num;
 
-        //Debug.Log("nowScene");
-
     }
 
     public void LoadData()
