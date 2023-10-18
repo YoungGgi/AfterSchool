@@ -13,6 +13,8 @@ public class ChaterBtnMgn : MonoBehaviour
 
     [SerializeField]
     private GameObject cutScene1_Btn;
+    [SerializeField]
+    private GameObject cutScene2_Btn;
 
 
     private void Update()
@@ -26,6 +28,7 @@ public class ChaterBtnMgn : MonoBehaviour
         if (ChapterCheck.instance.Chapter1 == 1)
         {
             chapter2Obj.gameObject.SetActive(true);
+            cutScene2_Btn.SetActive(true);
         }
 
         if (ChapterCheck.instance.Chapter2 == 1)

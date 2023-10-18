@@ -24,6 +24,9 @@ public class ChapterCheck : MonoBehaviour
     void Start()
     {
         LoadPrologueClear();
+        LoadChapter1Clear();
+        LoadChapter2Clear();
+        LoadChapter3Clear();
     }
 
     public int Prologue;
@@ -55,6 +58,12 @@ public class ChapterCheck : MonoBehaviour
         Prologue = pro;
 
     }
+
+    public void PrologueCheck()
+    {
+        PlayerPrefs.SetInt("PrologueCheck", 1);
+    }
+
     #endregion
 
     #region  Chapter1
@@ -76,6 +85,12 @@ public class ChapterCheck : MonoBehaviour
         int cha1 = PlayerPrefs.GetInt("Chapter1Clear");
         Chapter1 = cha1;
     }
+
+    public void Chapter1Check()
+    {
+        PlayerPrefs.SetInt("Chapter1Check", 1);
+    }
+
     #endregion
 
     #region Chapter2
@@ -96,6 +111,12 @@ public class ChapterCheck : MonoBehaviour
         int cha2 = PlayerPrefs.GetInt("Chapter2Clear");
         Chapter2 = cha2;
     }
+
+    public void Chapter2Check()
+    {
+        PlayerPrefs.SetInt("Chapter2Check", 1);
+    }
+
     #endregion
 
     #region  Chapter3
@@ -115,6 +136,11 @@ public class ChapterCheck : MonoBehaviour
 
         int cha3 = PlayerPrefs.GetInt("Chapter3Clear");
         Chapter3 = cha3;
+    }
+
+    public void Chapter3Check()
+    {
+        PlayerPrefs.SetInt("Chapter3Check", 1);
     }
     #endregion
 
