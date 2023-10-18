@@ -7,53 +7,52 @@ using UnityEngine.SceneManagement;
 public class MiniGameMgn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject failGroup;              // ´Ü¼­ ¿À´ä ±×·ì
+    private GameObject failGroup;              // ì‹¤íŒ¨ ì˜¤ë¸Œì íŠ¸ ê·¸ë£¹
     [SerializeField]
-    private GameObject clearGroup;             // ´Ü¼­ Á¤´ä ±×·ì
+    private GameObject clearGroup;             // ì„±ê³µ ì˜¤ë¸Œì íŠ¸ ê·¸ë£¹
 
 
-    public bool[] isClear;                      // Å¬¸®¾î ³í¸®º¯¼ö ¸ñ·Ï
-    public GameObject[] clueBtns;                   // ¹öÆ° ¸ñ·Ï
-    public GameObject[] clueBtns_Press;         // ¼±ÅÃµÈ ¹öÆ° ¸ñ·Ï
+    public bool[] isClear;                      // ì •ë‹µ íŒë³„ ë…¼ë¦¬ ë³€ìˆ˜ ëª©ë¡
+    public GameObject[] clueBtns;               // ì„ íƒì§€ ëª©ë¡
+    public GameObject[] clueBtns_Press;         // ì„ íƒì§€ ì…ë ¥ ëª©ë¡
 
-    public int checkCount;                      // ¹öÆ° ´©¸¦ ¶§¸¶´Ù Ä«¿îÆ®µÇ´Â º¯¼ö
+    public int checkCount;                      // ì„ íƒì§€ ì„ íƒ ì¹´ìš´íŠ¸
 
-    // ´ëÈ­ ÈÄ °ÔÀÓ ÁøÇà or °ÔÀÓ ÁøÇà ÈÄ ´ëÈ­ ½Ã Àû¿ëµÇ´Â º¯¼ö
-    public GameObject dialogueGroup;                             // ´ëÈ­ °ü·Ã UI ¿ÀºêÁ§Æ®µé
-    public GameObject dialogue;                                  // ´ëÈ­ ¸Å´ÏÀú
-    public GameObject miniGameGroup;                             // ¹Ì´Ï°ÔÀÓ °ü·Ã UI ¿ÀºêÁ§Æ®µé
+    // ê²Œì„ ì¢…ë£Œí›„ ëŒ€í™” ì§„í–‰ì„ ìœ„í•œ ëŒ€í™” / ì¶”ë¦¬ê²Œì„ ì „ì²´ UI ì˜¤ë¸Œì íŠ¸
+    public GameObject dialogueGroup;                  
+    public GameObject dialogue;                    
+    public GameObject miniGameGroup;            
 
-    public GameObject loadingTextGroup;               // °ÔÀÓ ½ÃÀÛ Àü ·Îµù È­¸é(ÀÚµ¿ ÀúÀå)
-    bool isLoading;                                   // ·Îµù ¿©ºÎ È®ÀÎ ³í¸®º¯¼ö(¾Æ·¡ÀÇ Ä¸½¶È­ ÂüÁ¶)
+    public GameObject loadingTextGroup;          // ìë™ì €ì¥ í™”ë©´(ë¡œë”©)
+    bool isLoading;                              // ë¡œë”© ì—¬ë¶€ í™•ì¸ ë…¼ë¦¬ ë³€ìˆ˜
 
-    // ÇöÀç ¾À ÀÎµ¦½º È®ÀÎÇÏ´Â º¯¼öµé
+    // í˜„ì¬ ì”¬ ì¹´ìš´íŠ¸ í™•ì¸
     public Scene NowScene;
     public int SceneNum;
 
-    public bool isSingleGame;                 // ´äÀ» ÇÏ³ª¸¸ °í¸£´Â ¹Ì´Ï°ÔÀÓÀÏ ¶§ÀÇ »óÅÂº¯¼ö
-    public bool isTwosGame;                   // ´äÀ» µÎ °³ °í¸£´Â ¹Ì´Ï°ÔÀÓÀÏ ¶§ÀÇ »óÅÂº¯¼ö
-    public bool isThirdGame;                  // ´äÀ» ¼¼ °³ °í¸£´Â ¹Ì´Ï°ÔÀÓÀÏ ¶§ÀÇ »óÅÂº¯¼ö
+    public bool isSingleGame;                 // ì •ë‹µì´ 1ê°œì¼ ê²½ìš° ë…¼ë¦¬ ë³€ìˆ˜
+    public bool isTwosGame;                   // ì •ë‹µì´ 2ê°œì¼ ê²½ìš° ë…¼ë¦¬ ë³€ìˆ˜
+    public bool isThirdGame;                  // ì •ë‹µì´ 3ê°œì¼ ê²½ìš° ë…¼ë¦¬ ë³€ìˆ˜
 
-    public AudioClip clearSFX;                // ¼º°ø È¿°úÀ½
-    public AudioClip failSFX;                 // ½ÇÆĞ È¿°úÀ½
-    public AudioClip btnClickSFX;             // ¹öÆ° Å¬¸¯ È¿°úÀ½
+    public AudioClip clearSFX;                // ì„±ê³µ íš¨ê³¼ìŒ
+    public AudioClip failSFX;                 // ì‹¤íŒ¨ íš¨ê³¼ìŒ
+    public AudioClip btnClickSFX;             // ë²„íŠ¼ í´ë¦­ íš¨ê³¼ìŒ
 
-    public GameObject postProcessing;         // ÈÄÃ³¸® È¿°ú ¿ÀºêÁ§Æ®
-    public GameObject startBGM_Obj;           // BGM ½ÃÀÛ ¿ÀºêÁ§Æ®
+    public GameObject postProcessing;         // í›„ì²˜ë¦¬ íš¨ê³¼ ì˜¤ë¸Œì íŠ¸
+    public GameObject startBGM_Obj;           // BGM ì‹œì‘ ì˜¤ë¸Œì íŠ¸
+    public GameObject mainMenuGroup;          // ì¶”ë¦¬ ê²Œì„ ë©”ì¸ ë©”ë‰´
 
-    // ·Îµù ³í¸®ÇÔ¼ö ÇÁ·ÎÆÛÆ¼
+    // ë¡œë”© ë…¼ë¦¬ ë³€ìˆ˜ ìº¡ìŠí™”
     public bool IsLoading { get => isLoading; set => isLoading = value; }
 
     void OnEnable()
     {
-        // ÇØ´ç ¿ÀºêÁ§Æ® È°¼ºÈ­ ½Ã ¿ÀºêÁ§Æ®µé ºñÈ°¼ºÈ­, ·Îµù È­¸é Ãâ·Â
-        //startBGM_Obj.SetActive(false);
         postProcessing.SetActive(false);
         miniGameGroup.gameObject.SetActive(false);
         isLoading = true;
         StartCoroutine(LoadingAnim());
 
-        // ÇöÀç ¾À ÀÎµ¦½º¸¦ SvaeLoadMgn ¿¡ ÀúÀå
+        // í˜„ì¬ ì”¬ ë„˜ë²„ë¥¼ ìë™ì €ì¥(SaveLoadMgn)ì— ì €ì¥
         NowScene = SceneManager.GetActiveScene();
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
@@ -61,12 +60,9 @@ public class MiniGameMgn : MonoBehaviour
 
     IEnumerator LoadingAnim()
     {
-        // ¾à 1.5ÃÊ ÈÄ ·Îµù È­¸é ºñÈ°¼ºÈ­, ¿ÀºêÁ§Æ®µé ¸ğµÎ È°¼ºÈ­
         yield return new WaitForSeconds(1.5f);
 
         loadingTextGroup.gameObject.SetActive(false);
-
-        //startBGM_Obj.SetActive(true);
         postProcessing.SetActive(true);
         miniGameGroup.gameObject.SetActive(true);
 
@@ -75,10 +71,10 @@ public class MiniGameMgn : MonoBehaviour
 
     private void Update()
     {
-        // ´äÀ» ¸î °³ °í¸£´Â ¹Ì´Ï°ÔÀÓÀÎ°¡¿¡ µû¶ó ´Ş¶óÁü
-        // checkCount°¡ Æ¯Á¤ °³¼ö°¡ µÇ¸é Á¤´ä/¿À´äÀ» ÆÇº°
+        // ì„ íƒì§€ë¥¼ í´ë¦­í•˜ë©´ checkCount ì¦ê°€
+        // checkCountê°€ ì¼ì • ê°œìˆ˜ ë„ë‹¬ ì‹œ ì •ë‹µ íŒë³„
 
-        // ÇöÀç ¹Ì´Ï°ÔÀÓÀÇ Á¤´äÀÌ 2°³ÀÏ ¶§
+        // ì •ë‹µì´ 2ê°œì¼ ê²½ìš°(isTwoGame)
         if (isTwosGame)
         {
             if (checkCount == 2)
@@ -87,7 +83,7 @@ public class MiniGameMgn : MonoBehaviour
             }
 
         }
-        // ÇöÀç ¹Ì´Ï°ÔÀÓÀÇ Á¤´äÀÌ 1°³ÀÏ ¶§
+        // ì •ë‹µì´ 1ê°œì¼ ê²½ìš°(isSingleGame)
         else if (isSingleGame)
         {
             if (checkCount == 1)
@@ -95,7 +91,7 @@ public class MiniGameMgn : MonoBehaviour
                 Conform_ver2();
             }
         }
-        // ÇöÀç ¹Ì´Ï°ÔÀÓÀÇ Á¤´äÀÌ 3°³ÀÏ ¶§
+        // ì •ë‹µì´ 3ê°œì¼ ê²½ìš°(isThirdGame)
         else if (isThirdGame)
         {
             if (checkCount == 3)
@@ -104,12 +100,16 @@ public class MiniGameMgn : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            mainMenuGroup.SetActive(true);
+        }
+
     }
 
-    // Á¤´äÀ» Å¬¸¯ ½Ã isClear ¹è¿­ »óÅÂº¯¼ö°¡ true,
-    // ÀüºÎ true ÀÏ ½Ã clearGroup À» Ãâ·Â
+    // ì •ë‹µ ì„ íƒì§€ë¥¼ ê³ ë¥¼ ì‹œ isClear ë¦¬ìŠ¤íŠ¸ì˜ ì¸ë±ìŠ¤ true íŒì •
+    // ëª¨ë‘ true íŒì •ì¼ ì‹œ clearGroup í™œì„±í™”
 
-    // Á¤´äÀÌ 2°³ÀÎ ¹Ì´Ï°ÔÀÓÀÏ ½Ã Á¤´ä ÆÇº° ÇÔ¼ö
     public void Conform()
     {
         if (isClear[0] && isClear[1])
@@ -124,7 +124,6 @@ public class MiniGameMgn : MonoBehaviour
         }
     }
 
-    // Á¤´äÀÌ 1°³ÀÎ ¹Ì´Ï°ÔÀÓÀÏ ½Ã Á¤´ä ÆÇº° ÇÔ¼ö
     public void Conform_ver2()
     {
         if (isClear[0])
@@ -139,7 +138,6 @@ public class MiniGameMgn : MonoBehaviour
         }
     }
 
-    // Á¤´äÀÌ 3°³ÀÎ ¹Ì´Ï°ÔÀÓÀÏ ½Ã Á¤´ä ÆÇº° ÇÔ¼ö
     public void Conform_ver3()
     {
         if (isClear[0] && isClear[1] && isClear[2])
@@ -154,52 +152,36 @@ public class MiniGameMgn : MonoBehaviour
         }
     }
 
-    // ¿À´ä ½Ã ½ÇÇàµÇ´Â Ãë¼Ò ÇÔ¼ö
     public void Cancel()
     {
-        // ¹öÆ° Å¬¸¯ È¿°úÀ½ Àç»ı ÈÄ timeScaleÀ» 1·Î, cheackCoung 0À¸·Î ÃÊ±âÈ­
         SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
         Time.timeScale = 1;
         checkCount = 0;
 
-        // Å¬¸®¾î ³í¸® º¯¼ö ¸ñ·ÏÀ» ÇöÀç ¸ñ·Ï ¼ö ¸¸Å­ false ·Î ÃÊ±âÈ­
+         
         for(int i = 0; i < isClear.Length; i++)
         {
             isClear[i] = false;
         }
 
-        // ¹öÆ° ¸ñ·ÏÀÇ ¿ÀºêÁ§Æ®µéÀ» ÇöÀç ¹öÆ° ¸ñ·Ï ¼ö¸¸Å­ È°¼ºÈ­
+        
         for(int j = 0; j < clueBtns.Length; j++)
         {
             clueBtns[j].SetActive(true);
         }
 
-        // ¼±ÅÃµÈ ¹öÆ° ¸ñ·Ï ¼ö ¸¸Å­ ¼±ÅÃµÈ ¹öÆ° ºñÈ°¼ºÈ­
+        
         for(int f = 0; f < clueBtns_Press.Length; f++)
         {
             clueBtns_Press[f].SetActive(false);
         }
 
-        // Ãß¸® ½ÇÆĞ È­¸é ºñÈ°¼ºÈ­
+        
         failGroup.gameObject.SetActive(false);
 
     }
 
-    // ½Ã°£ ÃÊ°ú ½Ã ÇöÀç °ÔÀÓÈ­¸éÀ¸·Î ´Ù½Ã ·Îµå
-    public void TimeOver()
-    {
-        StartCoroutine(GoGameScene());
-    }
-
-    // ½Ã°£ ÃÊ°ú ½Ã ÇöÀç °ÔÀÓÈ­¸éÀ¸·Î ´Ù½Ã ·ÎµåÇÒ ¶§ µô·¹ÀÌ ÈÄ ·Îµå
-    IEnumerator GoGameScene()
-    {
-        yield return new WaitForSeconds(0.7f);
-
-        SceneManager.LoadScene(SceneNum);
-    }
-
-    // ¹Ì´Ï°ÔÀÓ ¿Ï·á ÈÄ ´ëÈ­ ÁøÇà
+    // ï¿½Ì´Ï°ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
     public void GoDialgoue()
     {
         miniGameGroup.gameObject.SetActive(false);

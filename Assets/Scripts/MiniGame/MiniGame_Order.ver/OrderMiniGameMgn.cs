@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 public class OrderMiniGameMgn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject failGroup;              // ´Ü¼­ ¿À´ä ±×·ì
+    private GameObject failGroup;              // ï¿½Ü¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½
     [SerializeField]
-    private GameObject clearGroup;             // ´Ü¼­ Á¤´ä ±×·ì
+    private GameObject clearGroup;             // ï¿½Ü¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½
 
 
     public List<int> isClear;
     public GameObject[] clueBtns;
-    public GameObject[] clueBtns_Press;         // ¼±ÅÃµÈ ¹öÆ° ¸ñ·Ï
+    public GameObject[] clueBtns_Press;         // ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ï¿½
 
     public int checkCount;
 
@@ -22,11 +22,12 @@ public class OrderMiniGameMgn : MonoBehaviour
     public GameObject dialogue;
     public GameObject miniGameGroup;
 
-    public AudioClip btnClickSFX;                 // ¹öÆ° Å¬¸¯ È¿°úÀ½
+    public AudioClip btnClickSFX;                 // ï¿½ï¿½Æ° Å¬ï¿½ï¿½ È¿ï¿½ï¿½ï¿½ï¿½
 
-    public GameObject loadingTextGroup;                // °ÔÀÓ ½ÃÀÛ Àü ·Îµù È­¸é(ÀÚµ¿ ÀúÀå)
-    bool isOrderLoading;                               // ·Îµù ¿©ºÎ È®ÀÎ ³í¸®º¯¼ö(¾Æ·¡ÀÇ Ä¸½¶È­ ÂüÁ¶)
-    public GameObject postProcessing;                  // ÈÄÃ³¸® È¿°ú ¿ÀºêÁ§Æ®
+    public GameObject loadingTextGroup;                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ È­ï¿½ï¿½(ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½)
+    bool isOrderLoading;                               // ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½Æ·ï¿½ï¿½ï¿½ Ä¸ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½)
+    public GameObject postProcessing;                  // ï¿½ï¿½Ã³ï¿½ï¿½ È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public GameObject mainMenuGroup;
 
     public Scene NowScene;
     public int SceneNum;
@@ -40,14 +41,14 @@ public class OrderMiniGameMgn : MonoBehaviour
         isOrderLoading = true;
         StartCoroutine(LoadingAnim());
 
-        NowScene = SceneManager.GetActiveScene(); // ¸Å ÇÁ·¹ÀÓ¸¶´Ù ÇöÀç ¾À È®ÀÎÇÏ±â
+        NowScene = SceneManager.GetActiveScene(); // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
     }
 
     IEnumerator LoadingAnim()
     {
-        // ¾à 1.5ÃÊ ÈÄ ·Îµù È­¸é ºñÈ°¼ºÈ­, ¿ÀºêÁ§Æ®µé ¸ðµÎ È°¼ºÈ­
+        // ï¿½ï¿½ 1.5ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ È­ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­
         yield return new WaitForSeconds(1.5f);
 
         loadingTextGroup.gameObject.SetActive(false);
@@ -61,15 +62,19 @@ public class OrderMiniGameMgn : MonoBehaviour
     private void Update()
     {
         
-
         if(checkCount == 4)
         {
             Conform();
         }
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            mainMenuGroup.SetActive(true);
+        }
     }
 
-    // Á¤´äÀ» Å¬¸¯ ½Ã isClear ¹è¿­ »óÅÂº¯¼ö°¡ true,
-    // ÀüºÎ true ÀÏ ½Ã clearGroup À» Ãâ·Â
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ isClear ï¿½è¿­ ï¿½ï¿½ï¿½Âºï¿½ï¿½ï¿½ï¿½ï¿½ true,
+    // ï¿½ï¿½ï¿½ï¿½ true ï¿½ï¿½ ï¿½ï¿½ clearGroup ï¿½ï¿½ ï¿½ï¿½ï¿½
     public void Conform()
     {
         if (isClear[0] == 1 && isClear[1] == 2 && isClear[2] == 3 && isClear[3] == 4)
@@ -97,7 +102,7 @@ public class OrderMiniGameMgn : MonoBehaviour
             clueBtns[j].SetActive(true);
         }
 
-        // ¼±ÅÃµÈ ¹öÆ° ¸ñ·Ï ¼ö ¸¸Å­ ¼±ÅÃµÈ ¹öÆ° ºñÈ°¼ºÈ­
+        // ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Å­ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½Æ° ï¿½ï¿½È°ï¿½ï¿½È­
         for (int f = 0; f < clueBtns_Press.Length; f++)
         {
             clueBtns_Press[f].SetActive(false);

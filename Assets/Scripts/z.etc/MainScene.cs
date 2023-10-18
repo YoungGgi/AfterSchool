@@ -7,31 +7,31 @@ using TMPro;
 public class MainScene : MonoBehaviour
 {
     [SerializeField]
-    private Button loadBtn;                              // ÀÌ¾îÇÏ±â ¹öÆ°
+    private Button loadBtn;                              // ï¿½Ì¾ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½Æ°
     [SerializeField]
-    private Button chapBtn;                              // Ã©ÅÍ ¼±ÅÃ ¹öÆ°
+    private Button chapBtn;                              // Ã©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°
     [SerializeField]
-    private TextMeshProUGUI chapterTitle;                // Ã©ÅÍ Å¸ÀÌÆ² (Å¸ÀÌÆ² ¿Ï¼º ½Ã ÀÌ¹ÌÁö·Î º¯°æ)
+    private TextMeshProUGUI chapterTitle;                // Ã©ï¿½ï¿½ Å¸ï¿½ï¿½Æ² (Å¸ï¿½ï¿½Æ² ï¿½Ï¼ï¿½ ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
     [SerializeField]
-    private string prologueTitle;                        // ÇÁ·Ñ·Î±× Å¸ÀÌÆ² ¹®ÀÚÇü º¯¼ö
+    private string prologueTitle;                        // ï¿½ï¿½ï¿½Ñ·Î±ï¿½ Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    private string chapter1Title;                        // 1Ã©ÅÍ Å¸ÀÌÆ² ¹®ÀÚÇü º¯¼ö
+    private string chapter1Title;                        // 1Ã©ï¿½ï¿½ Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    private string chapter2Title;                        // 2Ã©ÅÍ Å¸ÀÌÆ² ¹®ÀÚÇü º¯¼ö
+    private string chapter2Title;                        // 2Ã©ï¿½ï¿½ Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    private string chapter3Title;                        // 3Ã©ÅÍ Å¸ÀÌÆ² ¹®ÀÚÇü º¯¼ö
+    private string chapter3Title;                        // 3Ã©ï¿½ï¿½ Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    public int mainBGM_Index;                            // ¸ŞÀÎÈ­¸é¿¡¼­ Àç»ı½ÃÅ³ BGM ÀÎµ¦½º
+    public int mainBGM_Index;                            // ï¿½ï¿½ï¿½ï¿½È­ï¿½é¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å³ BGM ï¿½Îµï¿½ï¿½ï¿½
 
     private void Start()
     {
-        // SaveLoadMgn ¿¡ ÀúÀåµÈ ÀÎµ¦½º°¡ 0ÀÎ °æ¿ì(°ÔÀÓ ÃÖÃÊ ½ÇÇà ½Ã) ·Îµù ¹öÆ°, Ã©ÅÍ ¼±ÅÃ ¹öÆ° ÀÔ·Â X
+        // SaveLoadMgn ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½) ï¿½Îµï¿½ ï¿½ï¿½Æ°, Ã©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½Ô·ï¿½ X
         loadBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
 
         chapBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
 
         /*
-         ¾Æ·¡ÀÇ ½Ä°ú °°À½
+         ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½Ä°ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (SaveLoadMgn.instance.loadNum == 0)
         {
             loadBtn.enabled = false;
@@ -42,7 +42,7 @@ public class MainScene : MonoBehaviour
         }
         */
 
-        // °ÔÀÓ ½ÃÀÛ ½Ã BGM Àç»ı
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ BGM ï¿½ï¿½ï¿½
         BGM_Mgn.instance.BGM_Change(mainBGM_Index);
 
     }
@@ -62,6 +62,10 @@ public class MainScene : MonoBehaviour
         else if(indexnum >= 40 && indexnum <= 52)
         {
             chapterTitle.text = chapter2Title;
+        }
+        else if(indexnum >= 53 && indexnum <= 76)
+        {
+            chapterTitle.text = chapter3Title;
         }
 
         
