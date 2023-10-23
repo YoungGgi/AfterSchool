@@ -537,6 +537,9 @@ public class A_Dialogue : MonoBehaviour
             case J_Sprite.Surprise:
                 nameChanges.JisuSpriteDirection(3);
                 break;
+            case J_Sprite.Shame :
+                nameChanges.JisuSpriteDirection(4);
+                break;
         }
         #endregion
 

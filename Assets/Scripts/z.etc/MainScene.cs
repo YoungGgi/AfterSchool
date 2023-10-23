@@ -45,6 +45,22 @@ public class MainScene : MonoBehaviour
         // ���� ���� �� BGM ���
         BGM_Mgn.instance.BGM_Change(mainBGM_Index);
 
+        if(SaveLoadMgn.instance.loadNum == 13)
+        {
+            SaveLoadMgn.instance.SaveData(14);
+        }
+
+        if (SaveLoadMgn.instance.loadNum == 39)
+        {
+            SaveLoadMgn.instance.SaveData(40);
+        }
+
+        if (SaveLoadMgn.instance.loadNum == 52)
+        {
+            SaveLoadMgn.instance.SaveData(53);
+        }
+
+
     }
 
     private void Update()

@@ -61,7 +61,7 @@ MonoBehaviour:
     isChapter3Close: 0
   - myText: "\uBAA9\uAC78\uC774\uAC00 \uC5C6\uC5B4\uC9C4 \uAC78 \uAE68\uB2EB\uACE0
       \uBE44\uBA85\uC744 \uC9C8\uB800\uB358 \uAC83\uC774 \uC624\uB298 \uC624\uD6C4
-      \uB9C8\uC9C0\uB9C9 \uC218\uC5C5\uC778 7\uAD50\uC2DC \uB3C4\uC911."
+      \uB9C8\uC9C0\uB9C9 \uC218\uC5C5\uC778\n7\uAD50\uC2DC \uB3C4\uC911."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -384,8 +384,8 @@ MonoBehaviour:
     isChapter2Close: 0
     isChapter3Close: 0
   - myText: "\uD559\uC0DD\uC774 \uD559\uAD50\uC5D0\uC11C \uC7A0\uC744 \uC790\uB294
-      \uAC8C \uC88B\uC740 \uD589\uB3D9\uC774\uB77C\uACE4 \uD560 \uC218 \uC5C6\uC9C0\uB9CC,
-      \uD604\uB300\uC758 \uACE0\uB4F1\uD559\uC0DD\uC740 \uC7A0\uC774 \uBD80\uC871\uD558\uB2E4\uACE0."
+      \uAC8C \uC88B\uC740 \uD589\uB3D9\uC774\uB77C\uACE4 \uD560 \uC218 \uC5C6\uC9C0\uB9CC,\n\uD604\uB300\uC758
+      \uACE0\uB4F1\uD559\uC0DD\uC740 \uC7A0\uC774 \uBD80\uC871\uD558\uB2E4\uACE0."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -408,8 +408,8 @@ MonoBehaviour:
     isBGM_Stop: 0
     isDirectionSFX: 0
     isClueOnSfx: 0
-    isEmotionSFx: 0
-    SFX_Index: 0
+    isEmotionSFx: 1
+    SFX_Index: 2
     direction: 0
     isFontSizeUp: 0
     isFirstClue: 0
@@ -548,8 +548,8 @@ MonoBehaviour:
     isBGM_Stop: 0
     isDirectionSFX: 0
     isClueOnSfx: 0
-    isEmotionSFx: 0
-    SFX_Index: 0
+    isEmotionSFx: 1
+    SFX_Index: 1
     direction: 0
     isFontSizeUp: 0
     isFirstClue: 0
@@ -636,10 +636,10 @@ MonoBehaviour:
     isBGM_Change: 0
     BGM_Index: 0
     isBGM_Stop: 0
-    isDirectionSFX: 0
+    isDirectionSFX: 1
     isClueOnSfx: 0
     isEmotionSFx: 0
-    SFX_Index: 0
+    SFX_Index: 1
     direction: 0
     isFontSizeUp: 0
     isFirstClue: 0
@@ -754,7 +754,7 @@ MonoBehaviour:
     isChapter2Close: 0
     isChapter3Close: 0
   - myText: "\uC77C\uBC18\uC801\uC778 \uC218\uC5C5 \uC2DC\uAC04\uC5D0\uB294 \uBCF4\uD1B5
-      \uAD50\uC2E4\uC5D0\uB9CC \uC788\uACA0\uC9C0\uB9CC, \uC624\uB298\uC758 6\uAD50\uC2DC\uB294
+      \uAD50\uC2E4\uC5D0\uB9CC \uC788\uACA0\uC9C0\uB9CC,\n\uC624\uB298\uC758 6\uAD50\uC2DC\uB294
       \uD3C9\uC18C\uC640 \uC870\uAE08 \uB2EC\uB790\uB2E4."
     charName: 0
     h_Anim: 0
@@ -1147,8 +1147,8 @@ MonoBehaviour:
     isBGM_Stop: 0
     isDirectionSFX: 0
     isClueOnSfx: 0
-    isEmotionSFx: 0
-    SFX_Index: 0
+    isEmotionSFx: 1
+    SFX_Index: 2
     direction: 0
     isFontSizeUp: 0
     isFirstClue: 0
@@ -1170,7 +1170,7 @@ MonoBehaviour:
     isChapter2Close: 0
     isChapter3Close: 0
   - myText: "\uC5EC\uD558\uD2BC, \uC7A0\uC5D0\uC11C \uAE68\uC11C \uBE44\uBABD\uC0AC\uBABD\uD55C
-      \uD0D3\uC774\uC5C8\uB294\uC9C0 \uB098\uB294 \uBAA9\uAC78\uC774 \uC720\uBB34\uB97C
+      \uD0D3\uC774\uC5C8\uB294\uC9C0\n\uB098\uB294 \uBAA9\uAC78\uC774\uAC00 \uC788\uB294\uC9C0
       \uD655\uC778\uD558\uC9C0 \uC54A\uC558\uC5C8\uB2E4."
     charName: 0
     h_Anim: 0
@@ -1237,11 +1237,56 @@ MonoBehaviour:
     isBGM_Change: 0
     BGM_Index: 0
     isBGM_Stop: 0
+    isDirectionSFX: 1
+    isClueOnSfx: 0
+    isEmotionSFx: 0
+    SFX_Index: 1
+    direction: 2
+    isFontSizeUp: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    isFiveClue: 0
+    isSixClue: 0
+    isClueReplace: 0
+    UI_Off: 1
+    back: 0
+    Title_On: 0
+    Title_Two: 0
+    Title_Three: 0
+    Title_Four: 0
+    backGroundImg: 1
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: 
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    isHujung_CloseUp: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    isYoungjin_CloseUp: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    isJisu_CloseUp: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    isMinseok_CloseUp: 0
+    isBGM_Change: 0
+    BGM_Index: 0
+    isBGM_Stop: 0
     isDirectionSFX: 0
     isClueOnSfx: 0
     isEmotionSFx: 0
     SFX_Index: 0
-    direction: 2
+    direction: 0
     isFontSizeUp: 0
     isFirstClue: 0
     isSecondClue: 0
@@ -1401,7 +1446,7 @@ MonoBehaviour:
     isChapter3Close: 0
   - myText: "\uCC45\uC0C1\uACFC \uC758\uC790\uB294 \uBB34\uAC81\uAE30\uB3C4 \uD558\uACE0,
       \uD63C\uC790\uC11C \uC62E\uAE30\uB294 \uC0C1\uD669\uC774\uC5C8\uC73C\uB2C8
-      \uB3C4\uC911\uC5D0 \uB2E4\uB978 \uACF3\uC5D0 \uB4E4\uB9AC\uC9C0\uB294 \uC54A\uC558\uB2E4."
+      \uB3C4\uC911\uC5D0\n\uB2E4\uB978 \uACF3\uC5D0 \uB4E4\uB9AC\uC9C0\uB294 \uC54A\uC558\uB2E4."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -1538,8 +1583,8 @@ MonoBehaviour:
     isChapter2Close: 0
     isChapter3Close: 0
   - myText: "\uCC3D\uACE0\uC640 \uAD50\uC2E4\uC744 \uC655\uBCF5\uD558\uB358 \uB3C4\uC911
-      \uB5A8\uC5B4\uB728\uB838\uB2E4\uBA74, \uBD84\uBA85 \uC624\uB358 \uAE38\uC5D0\uC11C
-      \uCC3E\uC744 \uC218 \uC788\uC5C8\uC744 \uAC83\uC774\uB2E4."
+      \uB5A8\uC5B4\uB728\uB838\uB2E4\uBA74, \uBD84\uBA85 \uC624\uB358 \uAE38\uC5D0\uC11C\n\uCC3E\uC744
+      \uC218 \uC788\uC5C8\uC744 \uAC83\uC774\uB2E4."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -1678,7 +1723,7 @@ MonoBehaviour:
     isChapter3Close: 0
   - myText: "\uAC00\uC7A5 \uBA3C\uC800 \uCC3E\uC544\uBCF4\uC558\uB358 \uACF3\uC774\uAE30\uB3C4
       \uD558\uACE0, \uC815\uB9D0 \uAE4A\uC219\uD55C \uACF3\uC5D0 \uAD74\uB7EC\uAC00\uC9C0
-      \uC54A\uC740 \uC774\uC0C1 \uC5C6\uB2E4\uACE0 \uBCF4\uB294 \uD3B8\uC774 \uB9DE\uACA0\uC9C0."
+      \uC54A\uC740 \uC774\uC0C1\n\uC5C6\uB2E4\uACE0 \uBCF4\uB294 \uD3B8\uC774 \uB9DE\uACA0\uC9C0."
     charName: 0
     h_Anim: 0
     h_sprite: 0
@@ -1850,6 +1895,51 @@ MonoBehaviour:
     isSixClue: 0
     isClueReplace: 0
     UI_Off: 0
+    back: 0
+    Title_On: 0
+    Title_Two: 0
+    Title_Three: 0
+    Title_Four: 0
+    backGroundImg: 0
+    isPrologueClose: 0
+    isChapter1Close: 0
+    isChapter2Close: 0
+    isChapter3Close: 0
+  - myText: 
+    charName: 0
+    h_Anim: 0
+    h_sprite: 0
+    h_Direction: 0
+    isHujung_CloseUp: 0
+    y_Anim: 0
+    y_sprite: 0
+    y_Direction: 0
+    isYoungjin_CloseUp: 0
+    j_Anim: 0
+    j_sprite: 0
+    j_Direction: 0
+    isJisu_CloseUp: 0
+    m_Anim: 0
+    m_sprite: 0
+    m_Direction: 0
+    isMinseok_CloseUp: 0
+    isBGM_Change: 0
+    BGM_Index: 0
+    isBGM_Stop: 0
+    isDirectionSFX: 0
+    isClueOnSfx: 0
+    isEmotionSFx: 0
+    SFX_Index: 0
+    direction: 0
+    isFontSizeUp: 0
+    isFirstClue: 0
+    isSecondClue: 0
+    isThirdClue: 0
+    isForthClue: 0
+    isFiveClue: 0
+    isSixClue: 0
+    isClueReplace: 0
+    UI_Off: 1
     back: 0
     Title_On: 0
     Title_Two: 0

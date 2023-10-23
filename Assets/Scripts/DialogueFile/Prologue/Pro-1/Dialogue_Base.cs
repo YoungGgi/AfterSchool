@@ -190,7 +190,7 @@ public enum J_Direction         // ���� ���� ��ġ ���
 
 public enum J_Sprite            // ���� ǥ�� ���
 {
-    Idle, Angry, Smile, Surprise
+    Idle, Angry, Smile, Surprise, Shame
 }
 
 #endregion

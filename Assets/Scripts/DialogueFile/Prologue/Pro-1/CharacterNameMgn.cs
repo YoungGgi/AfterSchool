@@ -284,6 +284,10 @@ public class CharacterNameMgn : MonoBehaviour
                 jisuImg.sprite = jisu_Sprite.characterSprite[3];
                 dialogue.jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[3];
                 break;
+            case 4:
+                jisuImg.sprite = jisu_Sprite.characterSprite[4];
+                dialogue.jisuImg_CloseUp.sprite = jisu_Sprite.characterSprite[4];
+                break;
         }
     }
 

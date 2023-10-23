@@ -18,19 +18,16 @@ public class ChapterPopUp : MonoBehaviour
     {
         if(ChapterCheck.instance.Prologue == 1 && !PlayerPrefs.HasKey("PrologueCheck"))
         {
-            SaveLoadMgn.instance.SaveData(14);
             chapter1OpenPopup.gameObject.SetActive(true);
         }
 
         if(ChapterCheck.instance.Chapter1 == 1 && !PlayerPrefs.HasKey("Chapter1Check"))
         {
-            SaveLoadMgn.instance.SaveData(40);
             chapter2OpenPopup.gameObject.SetActive(true);
         }
 
         if(ChapterCheck.instance.Chapter2 == 1 && !PlayerPrefs.HasKey("Chapter2Check"))
         {
-            SaveLoadMgn.instance.SaveData(53);
             chapter3OpenPopup.gameObject.SetActive(true);
         }
 

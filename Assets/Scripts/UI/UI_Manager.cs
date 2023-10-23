@@ -150,9 +150,6 @@ public class UI_Manager : MonoBehaviour
 
         switch(SaveLoadMgn.instance.loadNum)
         {
-            case 8:
-                BGM_Mgn.instance.BGM_Change(5);
-                break;
             case 9:
                 BGM_Mgn.instance.BGM_Change(8);
                 break;
@@ -163,6 +160,13 @@ public class UI_Manager : MonoBehaviour
             case 36:
             case 37:
             case 38:
+            case 62:
+            case 63:
+            case 64:
+            case 65:
+            case 66:
+            case 71:
+            case 72:
                 BGM_Mgn.instance.BGM_Change(6);
                 break;
         }
