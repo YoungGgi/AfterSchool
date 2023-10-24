@@ -81,6 +81,11 @@ public class UI_Manager : MonoBehaviour
         SceneManager.LoadScene(53);
     }
 
+    public void StartEpilogue()
+    {
+        SceneManager.LoadScene(77);
+    }
+
     
     public void GameExit()
     {

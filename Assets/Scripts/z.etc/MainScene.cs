@@ -7,25 +7,27 @@ using TMPro;
 public class MainScene : MonoBehaviour
 {
     [SerializeField]
-    private Button loadBtn;                              // �̾��ϱ� ��ư
+    private Button loadBtn;                              // 이어하기 버튼
     [SerializeField]
-    private Button chapBtn;                              // é�� ���� ��ư
+    private Button chapBtn;                              // 챕터선택 버튼
     [SerializeField]
-    private TextMeshProUGUI chapterTitle;                // é�� Ÿ��Ʋ (Ÿ��Ʋ �ϼ� �� �̹����� ����)
+    private TextMeshProUGUI chapterTitle;                // 챕터 타이틀 텍스트
     [SerializeField]
-    private string prologueTitle;                        // ���ѷα� Ÿ��Ʋ ������ ����
+    private string prologueTitle;                        // 프롤로그 타이틀
     [SerializeField]
-    private string chapter1Title;                        // 1é�� Ÿ��Ʋ ������ ����
+    private string chapter1Title;                        // 1챕터 타이틀
     [SerializeField]
-    private string chapter2Title;                        // 2é�� Ÿ��Ʋ ������ ����
+    private string chapter2Title;                        // 2챕터 타이틀
     [SerializeField]
-    private string chapter3Title;                        // 3é�� Ÿ��Ʋ ������ ����
+    private string chapter3Title;                        // 3챕터 타이틀
+    [SerializeField]
+    private string epilogueTitle;                        // 에필로그 타이틀
 
-    public int mainBGM_Index;                            // ����ȭ�鿡�� �����ų BGM �ε���
+    public int mainBGM_Index;                            // BGM 인덱스
 
     private void Start()
     {
-        // SaveLoadMgn �� ����� �ε����� 0�� ���(���� ���� ���� ��) �ε� ��ư, é�� ���� ��ư �Է� X
+        
         loadBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
 
         chapBtn.enabled = SaveLoadMgn.instance.loadNum != 0;
@@ -42,7 +44,7 @@ public class MainScene : MonoBehaviour
         }
         */
 
-        // ���� ���� �� BGM ���
+        
         BGM_Mgn.instance.BGM_Change(mainBGM_Index);
 
         if(SaveLoadMgn.instance.loadNum == 13)
