@@ -10,54 +10,53 @@ public class Dialogue_Base : ScriptableObject
     public class Info
     {
         [TextArea(3, 12)]
-        public string myText;                        // ��ȭ ����
+        public string myText;                        // 대화 텍스트
         
         [Header("캐릭터 이름")]
-        public Name charName;                        // ȭ��(Enum)
+        public Name charName;                        
 
         [Header("정효정 애니 / 표정")]
-        public H_Anim h_Anim;                        // ȿ�� �ִϸ��̼�
-        public H_Sprite h_sprite;                    // ȿ�� ��������Ʈ(ǥ��)
-        public H_Direction h_Direction;              // ȿ�� ���� ��ġ
-        public bool isHujung_CloseUp;                // ȿ�� Ŭ����� ���� ����
+        public H_Anim h_Anim;                        
+        public H_Sprite h_sprite;                    
+        public H_Direction h_Direction;             
+        public bool isHujung_CloseUp;               
 
         [Header("이용진 애니 / 표정")]
-        public Y_Anim y_Anim;                        // ���� �ִϸ��̼�
-        public Y_Sprite y_sprite;                    // ���� ��������Ʈ(ǥ��)
-        public Y_Direction y_Direction;              // ���� ���� ��ġ
-        public bool isYoungjin_CloseUp;              // ���� Ŭ����� ���� ����
+        public Y_Anim y_Anim;                        
+        public Y_Sprite y_sprite;                   
+        public Y_Direction y_Direction;              
+        public bool isYoungjin_CloseUp;              
 
         [Header("은지수 애니 / 표정")]
-        public J_Anim j_Anim;                        // ���� �ִϸ��̼�
-        public J_Sprite j_sprite;                    // ���� ��������Ʈ(ǥ��)
-        public J_Direction j_Direction;              // ���� ���� ��ġ
-        public bool isJisu_CloseUp;                  // ���� Ŭ����� ���� ����
+        public J_Anim j_Anim;                        
+        public J_Sprite j_sprite;                    
+        public J_Direction j_Direction;              
+        public bool isJisu_CloseUp;                  
 
         [Header("염민석 애니 / 표정")]
-        public M_Anim m_Anim;                        // �μ� �ִϸ��̼�
-        public M_Sprite m_sprite;                    // �μ� ��������Ʈ(ǥ��)
-        public M_Direction m_Direction;              // �μ� ���� ��ġ
-        public bool isMinseok_CloseUp;               // �μ� Ŭ����� ���� ����
+        public M_Anim m_Anim;                        
+        public M_Sprite m_sprite;                    
+        public M_Direction m_Direction;              
+        public bool isMinseok_CloseUp;               
 
         [Header("BGM 재생기")]
-        public bool isBGM_Change;                    // BGM ���� ���� ����
-        public int BGM_Index;                        // ������ BGM �ε���
-        public bool isBGM_Stop;                      // BGM ���� ���� ����
+        public bool isBGM_Change;                    
+        public int BGM_Index;                        
+        public bool isBGM_Stop;                      
 
         [Header("효과음 재생기")]
-        public bool isDirectionSFX;                  // ����� ȿ���� ��� ��������
-        public bool isClueOnSfx;                     // �ܼ� ȹ�� ȿ���� ��� ��������
-        public bool isEmotionSFx;                    // 감정표현용 효과음
-        public int SFX_Index;                        // SFX 인덱스
+        public bool isDirectionSFX;                  
+        public bool isClueOnSfx;                     
+        public bool isEmotionSFx;                    
+        public int SFX_Index;                        
 
         [Header("암전 연출")]
-        public Direction direction;                  // ȭ�� ���� (���� ����)
+        public Direction direction;                  
 
         [Header("폰트 사이즈 키우기")]
-        public bool isFontSizeUp;                    // ��Ʈ ũ�� Ű��� ���� ��������
+        public bool isFontSizeUp;                    
 
         [Header("단서 획득")]
-        // �ܼ� ȹ�� �� ���� ���� (���ʴ��)
         public bool isFirstClue;
         public bool isSecondClue;
         public bool isThirdClue;
@@ -68,31 +67,29 @@ public class Dialogue_Base : ScriptableObject
         public bool isClueReplace;
 
         [Header("UI 창 끄기")]
-        public bool UI_Off;                           // ��ȭ UI ��Ȱ��ȭ ���� ����
+        public bool UI_Off;                           
 
         [Header("배경 흔들기 연출")]
-        public BackGroundDirections back;             // ��� ���� ����
+        public BackGroundDirections back;             
 
         [Header("타이틀 / 오브젝트")]
-        public bool Title_On;                         // Ÿ��Ʋ ������Ʈ1 ��� ���� ����
-        public bool Title_Two;                        // Ÿ��Ʋ ������Ʈ2 ��� ���� ����
-        public bool Title_Three;                      // Ÿ��Ʋ ������Ʈ3 ��� ���� ����
-        public bool Title_Four;                       // Ÿ��Ʋ ������Ʈ4 ��� ���� ����
+        public bool Title_On;                         
+        public bool Title_Two;                        
+        public bool Title_Three;                      
+        public bool Title_Four;                       
 
         [Header("배경")]
-        public BackGround backGroundImg;              // ����� ��� �̹���
+        public BackGround backGroundImg;              
 
         [Header("챕터 완료 상태")]
-        // �� é�� ���� ���� ����
         public bool isPrologueClose;
         public bool isChapter1Close;
         public bool isChapter2Close;
         public bool isChapter3Close;
-
+        public bool isEpilogueClose;
 
     }
 
-    // �ش� Ŭ������ ����Ʈȭ
     public Info[] dialogueInfo;
 }
 

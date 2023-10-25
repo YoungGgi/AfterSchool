@@ -250,7 +250,12 @@ public class A_Dialogue : MonoBehaviour
         {
             ChapterCheck.instance.Chapter3Clear(1);
             SceneManager.LoadScene(0);
+        }
 
+        if (info.isEpilogueClose)
+        {
+            ChapterCheck.instance.EpilogueClear(1);
+            SceneManager.LoadScene(0);
         }
 
         #endregion

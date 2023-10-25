@@ -19,19 +19,19 @@ public class ChaterBtnMgn : MonoBehaviour
 
     private void Update()
     {
-        if(ChapterCheck.instance.Prologue == 1)
+        if(ChapterCheck.instance.prologue == 1)
         {
             chapter1Obj.gameObject.SetActive(true);
             cutScene1_Btn.SetActive(true);
         }
 
-        if (ChapterCheck.instance.Chapter1 == 1)
+        if (ChapterCheck.instance.chapter1 == 1)
         {
             chapter2Obj.gameObject.SetActive(true);
             cutScene2_Btn.SetActive(true);
         }
 
-        if (ChapterCheck.instance.Chapter2 == 1)
+        if (ChapterCheck.instance.chapter2 == 1)
         {
             chapter3Obj.gameObject.SetActive(true);
         }

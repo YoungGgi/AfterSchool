@@ -29,15 +29,17 @@ public class ChapterCheck : MonoBehaviour
         LoadChapter3Clear();
     }
 
-    public int Prologue;
-    public int Chapter1;
-    public int Chapter2;
-    public int Chapter3;
+    public int prologue;
+    public int chapter1;
+    public int chapter2;
+    public int chapter3;
+    public int epilogue;
 
     public bool isPrologueConfirm;
     public bool isChapter1Confirm;
     public bool isChapter2Confirm;
     public bool isChapter3Confirm;
+    public bool isEpilogueConfirm;
 
     #region Prologue
     public void PrologeClear(int num)
@@ -46,7 +48,7 @@ public class ChapterCheck : MonoBehaviour
         PlayerPrefs.Save();
 
         int pro = PlayerPrefs.GetInt("PrologueClear");
-        Prologue = pro;
+        prologue = pro;
     }
 
     public void LoadPrologueClear()
@@ -55,7 +57,7 @@ public class ChapterCheck : MonoBehaviour
             return;
         
         int pro = PlayerPrefs.GetInt("PrologueClear");
-        Prologue = pro;
+        prologue = pro;
 
     }
 
@@ -73,7 +75,7 @@ public class ChapterCheck : MonoBehaviour
         PlayerPrefs.Save();
 
         int cha1 = PlayerPrefs.GetInt("Chapter1Clear");
-        Chapter1 = cha1;
+        chapter1 = cha1;
         
     }
 
@@ -83,7 +85,7 @@ public class ChapterCheck : MonoBehaviour
            return;
 
         int cha1 = PlayerPrefs.GetInt("Chapter1Clear");
-        Chapter1 = cha1;
+        chapter1 = cha1;
     }
 
     public void Chapter1Check()
@@ -100,7 +102,7 @@ public class ChapterCheck : MonoBehaviour
         PlayerPrefs.Save();
 
         int cha2 = PlayerPrefs.GetInt("Chapter2Clear");
-        Chapter2 = cha2;
+        chapter2 = cha2;
     }
 
     public void LoadChapter2Clear()
@@ -109,7 +111,7 @@ public class ChapterCheck : MonoBehaviour
            return;
 
         int cha2 = PlayerPrefs.GetInt("Chapter2Clear");
-        Chapter2 = cha2;
+        chapter2 = cha2;
     }
 
     public void Chapter2Check()
@@ -126,7 +128,7 @@ public class ChapterCheck : MonoBehaviour
         PlayerPrefs.Save();
 
         int cha3 = PlayerPrefs.GetInt("Chapter3Clear");
-        Chapter3 = cha3;
+        chapter3 = cha3;
     }
 
     public void LoadChapter3Clear()
@@ -135,7 +137,7 @@ public class ChapterCheck : MonoBehaviour
             return;
 
         int cha3 = PlayerPrefs.GetInt("Chapter3Clear");
-        Chapter3 = cha3;
+        chapter3 = cha3;
     }
 
     public void Chapter3Check()
@@ -144,4 +146,29 @@ public class ChapterCheck : MonoBehaviour
     }
     #endregion
 
+    #region Epilogue
+    public void EpilogueClear(int num)
+    {
+        PlayerPrefs.SetInt("EpilogueClear", num);
+        PlayerPrefs.Save();
+
+        int epil = PlayerPrefs.GetInt("EpilogueClear");
+        epilogue = epil;
+    }
+
+    public void LoadEpilogueClear()
+    {
+        if (!PlayerPrefs.HasKey("EpilogueClear"))
+            return;
+
+        int epil = PlayerPrefs.GetInt("EpilogueClear");
+        epilogue = epil;
+    }
+
+    public void EpilogueCheck()
+    {
+        PlayerPrefs.SetInt("EpilogueCheck", 1);
+    }
+
+#endregion
 }
