@@ -48,7 +48,6 @@ public class UI_Manager : MonoBehaviour
     
     public void GameStart()
     {
-        //SFX_Mgn.instance.SFX_Source.PlayOneShot(btnSelectSFX);
         StartCoroutine(Scene1Loading());
     }
 

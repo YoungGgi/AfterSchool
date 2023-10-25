@@ -8,104 +8,92 @@ using UnityEngine.EventSystems;
 public class ClueSelectBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
-    private GameObject clueButton;                  // ´Ü¼­ ¹öÆ°
+    private GameObject clueButton;                  // ë‹¨ì„œ ë²„íŠ¼
     [SerializeField]
-    private GameObject clueButton_Pressed;      // ¼±ÅÃµÈ ´Ü¼­ ¹öÆ°
+    private GameObject clueButton_Pressed;          // ë‹¨ì„œ ë¹„í™œì„±í™” ë²„íŠ¼
     [SerializeField]
-    private TextMeshProUGUI clueText;           // ¹öÆ°¿¡ ÀÖ´Â ´Ü¼­ Á¦¸ñ
+    private TextMeshProUGUI clueText;               // ë‹¨ì„œ í…ìŠ¤íŠ¸
     [SerializeField]
-    private GameObject explainBox;                 // ´Ü¼­ ¼³¸íÇÒ ´ëÈ­»óÀÚ
+    private GameObject explainBox;                  // ë‹¨ì„œ ì„¤ëª… í…ìŠ¤íŠ¸ ì˜¤ë¸Œì íŠ¸
     [SerializeField]
-    private GameObject questionBox;
+    private GameObject questionBox;                 // ì¶”ë¦¬ê²Œì„ ë¬¸ì œ ì˜¤ë¸Œì íŠ¸
     [SerializeField]
-    private TextMeshProUGUI explainText;          // ´Ü¼­ ¼³¸í ´ëÈ­»óÀÚ ÅØ½ºÆ®
+    private TextMeshProUGUI explainText;            // ë‹¨ì„œ ì„¤ëª… í…ìŠ¤íŠ¸
 
-    public AudioClip btnClickSFX;             // ¹öÆ° Å¬¸¯ È¿°úÀ½
+    public AudioClip btnClickSFX;                   // ë²„íŠ¼ í´ë¦­ íš¨ê³¼ìŒ
 
-    public ClueObject clue;                     // ´Ü¼­
+    public ClueObject clue;                         // ë‹¨ì„œ
 
     public MiniGameMgn miniManager;
 
     private void Start()
     {
-        // ´Ü¼­ ÀÌ¸§°ú ¼³¸íÀ» ÇØ´ç º¯¼ö·Î ÇÒ´ç
         clueText.text = clue.clueName;
         explainText.text = clue.clueExplain;
     }
 
-    // ¸¶¿ì½º Æ÷ÀÎÅÍ°¡ ÇØ´ç ¿ÀºêÁ§Æ® À§¿¡ ÀÖÀ» ½Ã
+    // ë§ˆìš°ìŠ¤ ì»¤ì„œê°€ ë²„íŠ¼ ìœ„ì— ìˆì„ì‹œ
     public void OnPointerEnter(PointerEventData eventData)
     {
         questionBox.gameObject.SetActive(false);
         explainBox.gameObject.SetActive(true);
     }
 
-    // ¸¶¿ì½º Æ÷ÀÎÅÍ°¡ ÇØ´ç ¿ÀºêÁ§Æ® À§¿¡ ¾øÀ» ½Ã
+    // ë§ˆìš°ìŠ¤ ì»¤ì„œê°€ ë²„íŠ¼ ìœ„ì— ìˆì§€ ì•Šì„ ì‹œ
     public void OnPointerExit(PointerEventData eventData)
     {
         questionBox.gameObject.SetActive(true);
         explainBox.gameObject.SetActive(false);
     }
 
-    // ´Ü¼­ ¼±ÅÃ(¿À´ä ¹öÆ° Å¬¸¯½Ã)
+    // ë‹¨ì„œ ì„ íƒ (ì˜¤ë‹µì¼ ë•Œ)
     public void ClueSelect()
     {
-        // È¿°úÀ½ Àç»ı
         SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
 
-        // ¼±ÅÃµÈ »óÅÂÀÇ ¿ÀºêÁ§Æ®¸¦ È°¼ºÈ­ÇÑ ÈÄ miniManagerÀÇ checkCount¸¦ 1 Áõ°¡
         clueButton_Pressed.SetActive(true);
         explainBox.gameObject.SetActive(false);
         miniManager.checkCount++;
 
-        // ¿¬¼Ó Å¬¸¯À» ¸·±â À§ÇØ ÇØ´ç ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
         clueButton.SetActive(false);
     }
 
-    // ´Ü¼­ ¼±ÅÃ(Á¤´ä1 Å¬¸¯ ½Ã)
+    // ë‹¨ì„œ ì„ íƒ (ì •ë‹µì¼ ë•Œ)
     public void ClueSelect_Clear()
     {
-        // È¿°úÀ½ Àç»ı, miniManagerÀÇ isClear ¸®½ºÆ® È°¼ºÈ­
         SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
         miniManager.isClear[0] = true;
 
-        // ¼±ÅÃµÈ »óÅÂÀÇ ¿ÀºêÁ§Æ®¸¦ È°¼ºÈ­ÇÑ ÈÄ miniManagerÀÇ checkCount¸¦ 1 Áõ°¡
         clueButton_Pressed.SetActive(true);
         explainBox.gameObject.SetActive(false);
         miniManager.checkCount++;
 
-        // ¿¬¼Ó Å¬¸¯À» ¸·±â À§ÇØ ÇØ´ç ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
         clueButton.SetActive(false);
     }
 
-    // ´Ü¼­ ¼±ÅÃ(Á¤´ä2 Å¬¸¯ ½Ã)
+    // ë‹¨ì„œ ì„ íƒ (ì •ë‹µì¼ ë•Œ - ë³µìˆ˜ ì •ë‹µ1)
     public void ClueSelect_Clear2()
     {
-        // È¿°úÀ½ Àç»ı, miniManagerÀÇ isClear ¸®½ºÆ® È°¼ºÈ­
         SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
         miniManager.isClear[1] = true;
 
-        // ¼±ÅÃµÈ »óÅÂÀÇ ¿ÀºêÁ§Æ®¸¦ È°¼ºÈ­ÇÑ ÈÄ miniManagerÀÇ checkCount¸¦ 1 Áõ°¡
         clueButton_Pressed.SetActive(true);
         explainBox.gameObject.SetActive(false);
         miniManager.checkCount++;
 
-        // ¿¬¼Ó Å¬¸¯À» ¸·±â À§ÇØ ÇØ´ç ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
         clueButton.SetActive(false);
     }
 
+    // ë‹¨ì„œ ì„ íƒ (ì •ë‹µì¼ ë•Œ - ë³µìˆ˜ ì •ë‹µ2)
     public void ClueSelect_Clear3()
     {
-        // È¿°úÀ½ Àç»ı, miniManagerÀÇ isClear ¸®½ºÆ® È°¼ºÈ­
         SFX_Mgn.instance.SFX_Source.PlayOneShot(btnClickSFX);
         miniManager.isClear[2] = true;
 
-        // ¼±ÅÃµÈ »óÅÂÀÇ ¿ÀºêÁ§Æ®¸¦ È°¼ºÈ­ÇÑ ÈÄ miniManagerÀÇ checkCount¸¦ 1 Áõ°¡
         clueButton_Pressed.SetActive(true);
         explainBox.gameObject.SetActive(false);
         miniManager.checkCount++;
 
-        // ¿¬¼Ó Å¬¸¯À» ¸·±â À§ÇØ ÇØ´ç ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
         clueButton.SetActive(false);
     }
 }

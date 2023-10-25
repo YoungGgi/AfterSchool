@@ -5,21 +5,19 @@ using UnityEngine.UI;
 
 public class RandomBtnBatch : MonoBehaviour
 {
-    // ¹öÆ° À§Ä¡ ¸®½ºÆ®
+    // ë²„íŠ¼ ìœ„ì¹˜ ì •ë³´ë¥¼ ë‹´ì€ ë¦¬ìŠ¤íŠ¸
     public List<RectTransform> btnRectTrans;
 
-    // ¹öÆ° ¿ÀºêÁ§Æ® ¸®½ºÆ®
+    // ë‹¨ì„œ ë²„íŠ¼ë“¤ì„ ë‹´ì€ ë¦¬ìŠ¤íŠ¸
     public List<GameObject> buttons;
 
     private void Start()
     {
-        // ¹öÆ° ¸®½ºÆ® ¹İº¹¹®
         for(int i = 0; i < buttons.Count; i++)
         {
-            // ¹öÆ° À§Ä¡ ¼ö·®±îÁöÀÇ ·£´ı °ªÀ¸·Î
+            // ë²„íŠ¼ ìœ„ì¹˜ë§Œí¼ ëœë¤ ê°’ ë¶€ì—¬
             int random = Random.Range(0, btnRectTrans.Count);
 
-            // °¢ ¹öÆ°µéÀÇ À§Ä¡¸¦ ·£´ıÇÑ À§Ä¡·Î º¯°æ, ÀÌÈÄ ¹èÄ¡µÈ ·£´ı°ª Á¦°Å
             buttons[i].transform.localPosition = btnRectTrans[random].transform.localPosition;
             btnRectTrans.RemoveAt(random);
         }

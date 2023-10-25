@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 public class OrderMiniGameMgn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject failGroup;              // �ܼ� ���� �׷�
+    private GameObject failGroup;              // 추리실패 오브젝트
     [SerializeField]
-    private GameObject clearGroup;             // �ܼ� ���� �׷�
+    private GameObject clearGroup;             // 추리성공 오브젝트
 
 
     public List<int> isClear;
     public GameObject[] clueBtns;
-    public GameObject[] clueBtns_Press;         // ���õ� ��ư ���
+    public GameObject[] clueBtns_Press;         
 
     public int checkCount;
 
@@ -22,16 +22,18 @@ public class OrderMiniGameMgn : MonoBehaviour
     public GameObject dialogue;
     public GameObject miniGameGroup;
 
-    public AudioClip btnClickSFX;                 // ��ư Ŭ�� ȿ����
+    public AudioClip btnClickSFX;                 
 
-    public GameObject loadingTextGroup;                // ���� ���� �� �ε� ȭ��(�ڵ� ����)
-    bool isOrderLoading;                               // �ε� ���� Ȯ�� ��������(�Ʒ��� ĸ��ȭ ����)
-    public GameObject postProcessing;                  // ��ó�� ȿ�� ������Ʈ
+    public GameObject loadingTextGroup;           // 로딩 화면 오브젝트 (자동 저장)
+    bool isOrderLoading;                          
+    public GameObject postProcessing;             // 후러치 효과 오브젝트
     public GameObject mainMenuGroup;
 
+    // 현재 씬 인덱스
     public Scene NowScene;
     public int SceneNum;
 
+    // isOrderLoading 캡슐화
     public bool IsOrderLoading { get => isOrderLoading; set => isOrderLoading = value; }
 
     private void OnEnable()
@@ -41,14 +43,13 @@ public class OrderMiniGameMgn : MonoBehaviour
         isOrderLoading = true;
         StartCoroutine(LoadingAnim());
 
-        NowScene = SceneManager.GetActiveScene(); // �� �����Ӹ��� ���� �� Ȯ���ϱ�
+        NowScene = SceneManager.GetActiveScene(); // 현재 씬 인덱스 정보를 자동 저장
         SceneNum = NowScene.buildIndex;
         SaveLoadMgn.instance.SaveData(SceneNum);
     }
 
     IEnumerator LoadingAnim()
     {
-        // �� 1.5�� �� �ε� ȭ�� ��Ȱ��ȭ, ������Ʈ�� ��� Ȱ��ȭ
         yield return new WaitForSeconds(1.5f);
 
         loadingTextGroup.gameObject.SetActive(false);
@@ -73,8 +74,8 @@ public class OrderMiniGameMgn : MonoBehaviour
         }
     }
 
-    // ������ Ŭ�� �� isClear �迭 ���º����� true,
-    // ���� true �� �� clearGroup �� ���
+    // 단서 선택을 할 때마다 isClear 배열의 인덱스 값 true 반환
+    // 모든 isClear 인덱스가 true 반환 시 정답
     public void Conform()
     {
         if (isClear[0] == 1 && isClear[1] == 2 && isClear[2] == 3 && isClear[3] == 4)
@@ -102,7 +103,6 @@ public class OrderMiniGameMgn : MonoBehaviour
             clueBtns[j].SetActive(true);
         }
 
-        // ���õ� ��ư ��� �� ��ŭ ���õ� ��ư ��Ȱ��ȭ
         for (int f = 0; f < clueBtns_Press.Length; f++)
         {
             clueBtns_Press[f].SetActive(false);
