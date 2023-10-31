@@ -33,11 +33,11 @@ MonoBehaviour:
     isMinseok_CloseUp: 0
     isBGM_Change: 0
     BGM_Index: 0
-    isBGM_Stop: 0
+    isBGM_Stop: 1
     isDirectionSFX: 0
     isClueOnSfx: 0
-    isEmotionSFx: 0
-    SFX_Index: 0
+    isEmotionSFx: 1
+    SFX_Index: 1
     direction: 0
     isFontSizeUp: 0
     isFirstClue: 0
@@ -58,6 +58,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 0
@@ -103,6 +104,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC751?"
     charName: 2
     h_Anim: 1
@@ -122,7 +124,7 @@ MonoBehaviour:
     m_Direction: 0
     isMinseok_CloseUp: 0
     isBGM_Change: 1
-    BGM_Index: 3
+    BGM_Index: 4
     isBGM_Stop: 0
     isDirectionSFX: 0
     isClueOnSfx: 0
@@ -148,6 +150,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uB2C8... \uBB50. \uC0C1\uD558\uC88C\uC6B0 \uB77C\uB294 \uB531
       \uB9DE\uB294 \uB2F5\uC744 \uCC3E\uC740 \uAC74 \uC88B\uC558\uB294\uB370, \n\uACB0\uAD6D
       \uC774\uAC78 \uC5B4\uB5BB\uAC8C \uD65C\uC6A9\uD574\uC57C \uD558\uB294 \uAC74\uAC00
@@ -196,6 +199,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "...\uADF8\uB7EC\uAC8C."
     charName: 2
     h_Anim: 0
@@ -241,6 +245,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB4E4\uC5B4\uB9DE\uB294 \uCD94\uB9AC\uB97C \uCC3E\uC544\uB0B8 \uAC74
       \uC88B\uC558\uC9C0\uB9CC, \uB610 \uADF8 \uB2E4\uC74C\uC774 \uBB38\uC81C\uB2E4."
     charName: 0
@@ -287,6 +292,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB54\uAC00 \uB531\uB531 \uC5F0\uACB0\uB418\uB294 \uAC8C \uC5C6\uB294
       \uAC78 \uBCF4\uBA74... \uC774\uAC83\uB3C4 \uC815\uB2F5\uC774 \uC544\uB2CC \uAC74\uAC00?"
     charName: 1
@@ -333,6 +339,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB108\uBB34 \uC77C\uCC0D \uD3EC\uAE30\uD558\uB294 \uAC70 \uC544\uB0D0?"
     charName: 2
     h_Anim: 1
@@ -378,6 +385,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uB2C8, \uADF8... \uBB54\uAC00 \uAC10\uC774 \uC624\uC9C8 \uC54A\uB294\uB2E4\uACE0
       \uD574\uC57C \uD558\uB098. \n\uC774\uAC70\uB77C\uB294 \uB290\uB08C\uC774 \uB4E4\uC9C0\uAC00
       \uC54A\uB124."
@@ -425,6 +433,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uAE4C\uB294 \uB531 \uC774\uAC70\uB77C\uBA70."
     charName: 3
     h_Anim: 0
@@ -470,6 +479,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uCD94\uB9AC\uC758 \uB2F5\uC774 \uC774\uAC70\uB77C\uB294 \uAC8C \uC544\uB2C8\uB77C,
       \uC554\uD638\uC758 \uB2F5\uC774 \uC774\uAC70\uB77C\uB294 \uAC70\uC600\uC9C0."
     charName: 1
@@ -516,6 +526,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADFC\uB370 \uD56D\uC0C1 \uB124 \uAC10\uC774 \uB9DE\uB294 \uAC74 \uC544\uB2D0
       \uAC70 \uC544\uB0D0."
     charName: 3
@@ -562,6 +573,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB50... \uADF8\uAC74 \uADF8\uB807\uAE34 \uD558\uC9C0."
     charName: 1
     h_Anim: 0
@@ -607,6 +619,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC77C\uB2E8 \uC880 \uB354 \uC0DD\uAC01\uD574\uBCF4\uB294 \uAC8C \uB0AB\uC9C0
       \uC54A\uACA0\uB0D0?"
     charName: 3
@@ -653,6 +666,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB798. \uB610 \uBB54\uAC00 \uCD94\uB9AC\uD558\uB2E4 \uBCF4\uBA74
       \uAE38\uC774 \uB098\uC62C\uC9C0\uB3C4 \uBAA8\uB974\uB294 \uBC95\uC774\uACE0."
     charName: 2
@@ -699,6 +713,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uD558\uAE34, \uB0B4\uAC00 \uB108\uBB34 \uC9C0\uAE08\uC758 \uCD94\uB9AC\uC5D0
       \uBD80\uC815\uC801\uC778 \uBAA8\uC2B5\uC744 \uBCF4\uC778 \uAC83 \uAC19\uB2E4."
     charName: 0
@@ -745,6 +760,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uBB34\uB9AC \uC55E\uC5D0 \uB450 \uBC88\uC758 \uCD94\uB9AC\uAC00
       \uC798 \uB4E4\uC5B4\uB9DE\uC558\uB2E4\uACE0 \uD558\uB354\uB77C\uB3C4,\n\uB0B4
       \uCD94\uB9AC\uAC00 \uBB34\uC870\uAC74 \uB9DE\uB294\uB2E4\uB294 \uBCF4\uC7A5\uB3C4
@@ -793,6 +809,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 0
@@ -838,6 +855,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB54\uAC00 \uC88B\uC740 \uC758\uACAC \uC788\uC5B4? \uB098\uB294 \uC9C0\uAE08
       \uB2F9\uC7A5 \uB5A0\uC624\uB974\uB294 \uAC8C \uC5C6\uB124."
     charName: 1
@@ -884,6 +902,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uBB34\uB798\uB3C4, \uD3B8\uC9C0\uC9C0\uC758 \uC54C\uD30C\uBCB3\uB4E4\uACFC
       \uC5F0\uACB0\uB418\uB294 \uBD80\uBD84\uC774 \uC788\uC9C0 \uC54A\uC744\uAE4C\uC694?"
     charName: 4
@@ -930,6 +949,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uAC74... \uC544\uB9C8 \uD655\uC2E4\uD558\uB2E4\uACE0 \uBD10\uB3C4
       \uB418\uACA0\uC9C0?"
     charName: 1
@@ -976,6 +996,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC0DD\uAC01\uC744 \uC870\uAE08 \uD574\uBCF4\uAE34 \uD588\uB294\uB370...
       \uD3B8\uC9C0\uC9C0\uC758 \uB0B4\uC6A9\uC774 \uC911\uC2EC\uC774\uC9C0 \uC54A\uC744\uAE4C
       \uC2F6\uC5B4\uC694."
@@ -1023,6 +1044,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB34\uC2A8 \uB73B\uC774\uC57C?"
     charName: 2
     h_Anim: 1
@@ -1068,6 +1090,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC9C0\uAE08 \uC774 '\uC0C1\uD558\uC88C\uC6B0'\uB77C\uB294 \uB2F5\uC744
       \uB4E3\uACE0 \uB098\uC11C \uC0DD\uAC01\uD55C \uC810\uC778\uB370,\n'\uC0C1\uD558\uC88C\uC6B0'\uB294
       \uBC29\uD5A5\uC758 \uD45C\uAE30\uC796\uC544\uC694."
@@ -1115,6 +1138,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB807\uC9C0?"
     charName: 2
     h_Anim: 0
@@ -1160,6 +1184,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBCF4\uD1B5 \uBC29\uD5A5\uC758 \uD45C\uAE30\uB294, \uC9C1\uC811\uC801\uC778
       \uC554\uD638\uB77C\uAE30\uBCF4\uB2E8 '\uC554\uD638\uB97C \uD480 \uC218 \uC788\uB3C4\uB85D
       \uB3D5\uB294 \uD78C\uD2B8'\uC758 \uC5ED\uD560\uC744 \uB9CE\uC774 \uD558\uC9C0
@@ -1208,11 +1233,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uD655\uC2E4\uD788... \uADF8\uB7F0 \uACBD\uC6B0\uAC00 \uB9CE\uC558\uB358
       \uAC83 \uAC19\uC544."
     charName: 2
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1254,12 +1280,13 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uAC8C\uB2E4\uAC00, \uC77C\uBC18\uC801\uC73C\uB85C '\uD3B8\uC9C0'\uB77C\uB294
       \uC0DD\uAC01\uC744 \uD55C\uB2E4\uBA74 '\uD3B8\uC9C0\uC9C0'\uAC00 \uBA54\uC778\uC774\uAE30\uB3C4
       \uD558\uAD6C\uC694."
     charName: 4
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1301,11 +1328,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "'\uD3B8\uC9C0\uBD09\uD22C'\uC758 \uB0B4\uC6A9\uC744 \uBCF4\uB294 \uACBD\uC6B0\uB294
       \uC5C6\uC73C\uB2C8\uAE4C\uC694."
     charName: 4
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1347,12 +1375,13 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB7EC\uB2C8\uAE4C, \uC800 '\uC0C1\uD558\uC88C\uC6B0'\uB77C\uB294
       \uBA54\uC2DC\uC9C0\uB294 \uD3B8\uC9C0\uC9C0\uC758 'L', 'O', 'v', 'e'\uB97C\n\uD574\uC11D\uD558\uAE30
       \uC704\uD55C \uB3C4\uAD6C\uB77C\uB294 \uC598\uAE30?"
     charName: 1
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1394,11 +1423,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB124. \uADF8\uCABD\uC774 \uAC00\uB2A5\uC131\uC774 \uB192\uC544 \uBCF4\uC778\uB2E4\uACE0
       \uC0DD\uAC01\uD574\uC11C\uC694."
     charName: 4
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1440,11 +1470,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "...\uAD49\uC7A5\uD788 \uC77C\uB9AC \uC788\uB294 \uBD84\uC11D\uC774\uAE34
       \uD558\uB124. \uC55E\uB4A4\uB3C4 \uB9DE\uACE0."
     charName: 1
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1486,11 +1517,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB2E4\uB9CC \uC774 \uC774\uD6C4\uB294 \uC7AC\uCC28 \uCD94\uB9AC\uC758
       \uC601\uC5ED\uC774\uB2E4 \uBCF4\uB2C8... \uC870\uAE08 \uC5B4\uB835\uB124\uC694."
     charName: 4
     h_Anim: 0
-    h_sprite: 3
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1532,6 +1564,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC9C0\uC218\uB294 \uC554\uD638 \uAC19\uC740 \uD37C\uC990 \uD480\uC5B4\uBCF8
       \uC801\uC740 \uC5C6\uC5B4?"
     charName: 2
@@ -1578,6 +1611,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uAC70\uC758 \uC5C6\uC5B4\uC694. \uC6D0\uB798 \uCD94\uB9AC \uBD84\uC57C\uC5D0\uB294
       \uADF8\uB2E4\uC9C0 \uD765\uBBF8\uAC00 \uC798 \uC5C6\uC5C8\uB358 \uAC83\uB3C4
       \uC788\uACE0..."
@@ -1625,11 +1659,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uACBD\uD5D8\uC774 \uBCC4\uB85C \uC5C6\uC5B4\uC11C \uC790\uC2E0\uC774
       \uC5C6\uB294 \uAC70\uC57C?"
     charName: 2
     h_Anim: 0
-    h_sprite: 0
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1671,11 +1706,12 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC790\uC2E0\uC774 \uBCC4\uB85C \uC5C6\uB2E4\uAE30\uBCF4\uB2E8...  \uCD94\uB9AC\uC5D0
       \uBC29\uD574\uB418\uC9C0 \uC54A\uC744\uAE4C \uC2F6\uC5B4\uC11C."
     charName: 4
     h_Anim: 0
-    h_sprite: 0
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1717,10 +1753,11 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB108\uBB34 \uC9C4\uC9C0\uD558\uB124."
     charName: 1
     h_Anim: 0
-    h_sprite: 0
+    h_sprite: 4
     h_Direction: 2
     isHujung_CloseUp: 0
     y_Anim: 0
@@ -1762,6 +1799,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB9DE\uC544. \uC9C0\uC218\uAC00 \uC548 \uADF8\uB7F4 \uAC83 \uAC19\uC73C\uBA74\uC11C\uB3C4
       \uC740\uADFC\uD788 \uC774\uB7F0 \uAC70 \uC2E0\uACBD\uC4F0\uB354\uB77C."
     charName: 2
@@ -1808,6 +1846,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: ...?
     charName: 4
     h_Anim: 0
@@ -1853,6 +1892,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC6B0\uB9AC\uAC00 \uBB34\uC2A8 \uC804\uBB38 \uC218\uC0AC\uAE30\uAD00\uC774\uB098
       \uD765\uC2E0\uC18C \uAC19\uC740 \uAC83\uB3C4 \uC544\uB2CC\uB370, \uBE57\uB098\uAC00\uBA74
       \uBB50\uAC00 \uC5B4\uB54C\uC11C."
@@ -1900,6 +1940,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uAC00\uBCCD\uAC8C \uC0DD\uAC01\uD574, \uAC00\uBCCD\uAC8C. \n\uB9DE\uC73C\uBA74
       \uC88B\uC740 \uAC70\uACE0, \uD2C0\uB9AC\uBA74 \uC544\uC27D\uAC8C \uB41C \uAC70\uC9C0
       \uBB50."
@@ -1947,6 +1988,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "...\uC81C\uAC00 \uADF8\uB807\uAC8C \uC9C4\uC9C0\uD588\uB098\uC694?"
     charName: 4
     h_Anim: 0
@@ -1992,6 +2034,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB108\uBB34 \uACB0\uACFC\uC5D0 \uC2E0\uACBD \uC4F0\uB294 \uAC83 \uAC19\uB354\uB77C\uAD6C.
       \uC774\uB7F0 \uAC74 \uACFC\uC815\uC774 \uC7AC\uBC0C\uB294 \uAC70\uC796\uC544."
     charName: 2
@@ -2038,6 +2081,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB7F4 \uC0DD\uAC01\uC740 \uC5C6\uC5C8\uB294\uB370..."
     charName: 4
     h_Anim: 0
@@ -2083,6 +2127,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC9C0\uC218\uAC00 \uB9D0\uD22C\uB3C4 \uADF8\uB807\uACE0 \uC870\uAE08
       \uC9C4\uC9C0\uD55C \uBA74\uC774 \uC788\uC73C\uB2C8\uAE4C. \n\uBB34\uC758\uC2DD\uC801\uC73C\uB85C
       \uB098\uC628 \uD589\uB3D9\uC77C\uC9C0\uB3C4 \uBAA8\uB974\uACA0\uB124."
@@ -2130,6 +2175,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB9D0\uD22C\uB294 \uAD00\uB828 \uC5C6\uC796\uC544\uC694."
     charName: 4
     h_Anim: 0
@@ -2175,6 +2221,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB9AC\uACE0 \uB9D0\uC774\uC57C. \uBD84\uC11D\uB3C4 \uCD94\uB9AC\uC5D0\uC11C
       \uAD49\uC7A5\uD788 \uC911\uC694\uD55C \uC694\uC18C\uB2C8\uAE4C,\n\uC790\uC2E0\uC774
       \uC5C6\uC744 \uC774\uC720\uB3C4 \uC5C6\uB2E4\uACE0 \uC0DD\uAC01\uD574."
@@ -2222,6 +2269,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB0B4 \uB9D0\uC774! \n\uC9C0\uAE08 \uC8FC\uC5B4\uC9C4 \uB2E8\uC11C\uB97C
       \uAC00\uC9C0\uACE0 \uC815\uB9AC\uD558\uACE0 \uBD84\uC11D\uD558\uB294 \uAC83\uB3C4
       \uD6CC\uB96D\uD55C \uD0D0\uC815\uC758 \uB355\uBAA9\uC774\uB2C8\uAE4C."
@@ -2269,6 +2317,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uD0D0\uC815\uC774 \uB418\uACE0 \uC2F6\uB2E4\uACE0 \uC0DD\uAC01\uD55C
       \uC801\uC740 \uD55C \uBC88\uB3C4 \uC5C6\uC9C0\uB9CC\uC694."
     charName: 4
@@ -2315,6 +2364,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 4
     h_Anim: 2
@@ -2360,6 +2410,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uCE6D\uCC2C\uC740 \uC774\uB9CC\uD558\uBA74 \uB410\uACE0, \uADF8\uB798\uC11C
       \uACB0\uAD6D \uC774 \uB2E4\uC74C\uC740 \uBB54\uB370."
     charName: 3
@@ -2406,6 +2457,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uAC00\uB9CC\uD788 \uC788\uB2E4\uAC00 \uAC11\uC790\uAE30 \uB07C\uC5B4\uB4DC\uB294
       \uAC83 \uBD10\uB77C. \n\uB9D0 \uBF44\uC0C8\uB3C4 \uADF8\uB807\uACE0 \uC544\uC8FC
       \uB208\uCE58\uB77C\uACE0\uB294 \uBC25\uB9D0\uC544\uBA39\uC740\uAC8C \uBD84\uBA85\uD558\uB2E4."
@@ -2453,6 +2505,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC54C\uBA74 \uC774\uB7EC\uACE0 \uC788\uACA0\uB0D0?"
     charName: 1
     h_Anim: 0
@@ -2498,6 +2551,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uD760... \uADF8\uB798?"
     charName: 3
     h_Anim: 0
@@ -2543,6 +2597,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB50\uC57C? \uD45C\uC815\uC774 \uC65C \uC800\uB798? \uBB50\uB77C\uB3C4
       \uC0DD\uAC01\uB0AC\uC5B4?"
     charName: 2
@@ -2589,6 +2644,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uB2C8...\uBB50. \uC0DD\uAC01\uB0AC\uB2E4\uACE0 \uD574\uC57C \uD558\uB098.
       \uBB50\uB77C\uACE0 \uD574\uC57C \uD558\uB098."
     charName: 3
@@ -2635,6 +2691,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB50\uB77C\uB294 \uAC70\uC57C?"
     charName: 1
     h_Anim: 0
@@ -2680,6 +2737,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 2
@@ -2725,6 +2783,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uAC04\uB2E8\uD558\uAC8C \uC0DD\uAC01\uD558\uBA74, \uC0C1\uD558\uC88C\uC6B0\uB97C
       \uBCF4\uB77C\uB294 \uAC70 \uC544\uB2C8\uC57C?"
     charName: 3
@@ -2771,6 +2830,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC0C1\uD558\uC88C\uC6B0\uB97C \uBCF4\uB77C\uACE0?"
     charName: 1
     h_Anim: 0
@@ -2816,6 +2876,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB50... \uD3B8\uC9C0\uC758 \uC0C1\uD558\uC88C\uC6B0\uB97C \uBCF4\uB77C\uB358\uAC00."
     charName: 3
     h_Anim: 0
@@ -2861,6 +2922,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uBB34 \uAC83\uB3C4 \uC5C6\uC5C8\uC796\uC544."
     charName: 1
     h_Anim: 0
@@ -2906,6 +2968,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC544\uB2C8\uBA74, \uD3B8\uC9C0\uAC00 \uC788\uB358 \uACF3\uC758 \uC0C1\uD558\uC88C\uC6B0\uB97C
       \uBCFC \uC218\uB3C4 \uC788\uC796\uC544."
     charName: 3
@@ -2952,6 +3015,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uD3B8\uC9C0\uAC00 \uC788\uB358 \uACF3?"
     charName: 1
     h_Anim: 0
@@ -2997,6 +3061,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC774 \uB7EC\uBE0C\uB808\uD130, \uC0AC\uBB3C\uD568\uC5D0 \uC788\uB358
       \uAC70 \uC544\uB0D0?"
     charName: 3
@@ -3043,6 +3108,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC6A9\uC9C4\uC774\uAC00 \uADF8 \uB9D0\uC744 \uAEBC\uB0B8 \uC21C\uAC04,
       \uBB34\uC2A8 \uB9D0\uC744 \uD558\uACE0 \uC2F6\uC5B4\uD558\uB294\uC9C0 \uC774\uD574\uD588\uB2E4."
     charName: 0
@@ -3089,6 +3155,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 0
@@ -3134,6 +3201,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC6B0\uB9AC \uD559\uAD50\uC758 \uC0AC\uBB3C\uD568\uC740 \uC2E0\uBC1C\uC7A5\uACFC
       \uACB0\uD569\uB41C \uD615\uD0DC\uC774\uACE0, \uAC01\uAC01\uC758 \uC0AC\uBB3C\uD568\uC758
       \uD06C\uAE30\uAC00 \uADF8\uB2E4\uC9C0 \uD06C\uC9C0 \uC54A\uB2E4."
@@ -3181,6 +3249,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC77C\uBC18\uC801\uC778 \uC2E0\uBC1C\uC7A5\uBCF4\uB2E4\uB294 \uC870\uAE08
       \uD06C\uC9C0\uB9CC, \uC2E0\uBC1C\uC7A5\uACFC \uBE44\uC2B7\uD55C \uD615\uD0DC\uB77C\uACE0
       \uC0DD\uAC01\uD574\uB3C4\n\uBB34\uBC29\uD558\uB2E4."
@@ -3228,6 +3297,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uACA9\uC790 \uD615\uD0DC\uC758 \uC0AC\uBB3C\uD568\uC774\uAE30 \uB54C\uBB38\uC5D0...\n\uAC01\uAC01\uC758
       \uC0AC\uBB3C\uD568\uC5D0\uB294 '\uC0C1\uD558\uC88C\uC6B0'\uC5D0 \uC704\uCE58\uD55C
       \uC0AC\uBB3C\uD568\uC774 \uC874\uC7AC\uD55C\uB2E4."
@@ -3275,6 +3345,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uD655\uC2E4\uD55C \uAC74 \uC9C1\uC811 \uAC00\uC11C \uD655\uC778\uD574\uBD10\uC57C
       \uC54C \uC218 \uC788\uACA0\uC9C0\uB9CC, \uD655\uC778\uD574 \uBCFC \uAC00\uCE58\uB294
       \uCDA9\uBD84\uD558\uB2E4."
@@ -3322,6 +3393,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB7F0 \uC0DD\uAC01\uC744 \uD558\uBA70 \uC8FC\uBCC0\uC744 \uB458\uB7EC\uBCF4\uB2C8,
       \uC9C0\uC218\uC640 \uD6A8\uC815\uC774\uB3C4\n\uC6A9\uC9C4\uC774\uAC00 \uBB34\uC2A8
       \uB9D0\uC744 \uD558\uACE0 \uC2F6\uC5B4 \uD558\uB294\uC9C0 \uC774\uD574\uD55C
@@ -3370,6 +3442,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 0
@@ -3415,6 +3488,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC624\uB298 \uB108 \uBB50 \uC798\uBABB \uBA39\uC740 \uAC70 \uC544\uB2C8\uC57C?
       \uBA38\uB9AC\uAC00 \uAD74\uB7EC\uAC00\uB294 \uAC8C \uB2E4\uB978\uB370..."
     charName: 2
@@ -3461,6 +3535,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uBB50, \uC774 \uC815\uB3C4\uB294 \uAE30\uBCF8\uC774\uC9C0."
     charName: 3
     h_Anim: 0
@@ -3506,6 +3581,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC7AC\uC218 \uC5C6\uB2E4\uACE0 \uD558\uBA74 \uC548 \uB418\uACA0\uC8E0?"
     charName: 4
     h_Anim: 0
@@ -3551,6 +3627,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC57C, \uC774\uBBF8 \uD588\uC796\uC544."
     charName: 3
     h_Anim: 0
@@ -3596,6 +3673,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 2
@@ -3641,6 +3719,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB2E4\uB9CC, \uC774\uBC88\uC5D0\uB3C4 \uC774\uC0C1\uD560 \uC815\uB3C4\uB85C
       \uBB34\uC5B8\uAC00 \uB9C8\uC74C\uC5D0 \uAC78\uB9B0\uB2E4."
     charName: 0
@@ -3687,6 +3766,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC774 \uBC29\uD5A5\uC774 \uC544\uB2CC \uAC83 \uAC19\uB2E4\uB294 \uB290\uB08C.
       \uB17C\uB9AC\uC801\uC73C\uB85C \uC798\uBABB\uB41C \uBD80\uBD84\uC740 \uC5C6\uB294
       \uAC83 \uAC19\uC740\uB370."
@@ -3734,6 +3814,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB0E5 \uB2E8\uC21C\uD788 \uC6A9\uC9C4\uC774\uAC00 \uD574\uB2F5\uC5D0
       \uADFC\uC811\uD574\uAC00\uACE0 \uC788\uB2E4\uB294 \uAC8C \uC9DC\uC99D \uB098\uC11C
       \uC774\uB7EC\uB294 \uAC74\uAC00?"
@@ -3781,6 +3862,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB7F4\uC9C0\uB3C4 \uBAA8\uB978\uB2E4. \uB9CE\uC740 \uC0AC\uAC74\uC744
       \uD574\uACB0\uD55C \uAC74 \uC544\uB2C8\uC9C0\uB9CC,\n\uC9C0\uAE08\uAE4C\uC9C0
       \uB0B4\uAC00 \uC0AC\uAC74 \uD574\uACB0\uC5D0 \uAF64 \uB9CE\uC740 \uBE44\uC911\uC744
@@ -3829,6 +3911,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC6A9\uC9C4\uC774\uC758 \uC758\uACAC\uC740 \uBD84\uBA85\uD788 \uAC80\uC99D\uD574\uBCFC
       \uD544\uC694\uC640 \uAC00\uCE58\uAC00 \uC788\uB2E4."
     charName: 0
@@ -3875,6 +3958,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uADF8\uB7FC\uC5D0\uB3C4 \uC544\uB2CC \uAC83 \uAC19\uB2E4\uB294 \uC0DD\uAC01\uC774
       \uB4DC\uB294 \uC774\uC720\uAC00 \uBB58\uAE4C."
     charName: 0
@@ -3921,6 +4005,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uB098 \uC0AC\uC2E4 \uCD94\uB9AC\uC5D0 \uC7AC\uB2A5\uC774 \uC788\uC5C8\uB098?
       \uD760... \uC880 \uACE4\uB780\uD55C\uB370..."
     charName: 3
@@ -3967,6 +4052,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 0
@@ -4012,6 +4098,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: "\uC808\uB300 \uC800 \uC790\uC2DD\uC774 \uD3C9\uC18C\uC5D4 \uC758\uC695\uB3C4
       \uC5C6\uC73C\uBA74\uC11C \uC9C0\uAE08 \uC880 \uC798 \uD480\uB9B0\uB2E4\uACE0
       \n\uC800\uB807\uAC8C \uBED7\uB300\uB294 \uAC8C \uC7AC\uC218 \uC5C6\uC5B4\uC11C
@@ -4060,6 +4147,7 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0
   - myText: 
     charName: 0
     h_Anim: 0
@@ -4105,3 +4193,4 @@ MonoBehaviour:
     isChapter1Close: 0
     isChapter2Close: 0
     isChapter3Close: 0
+    isEpilogueClose: 0

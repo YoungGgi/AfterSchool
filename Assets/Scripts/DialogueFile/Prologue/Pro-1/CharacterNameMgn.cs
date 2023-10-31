@@ -192,6 +192,10 @@ public class CharacterNameMgn : MonoBehaviour
                 hujungImg.sprite = hujung_Sprite.characterSprite[3];
                 dialogue.hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[3];
                 break;
+            case 4:
+                hujungImg.sprite = hujung_Sprite.characterSprite[4];
+                dialogue.hujungImg_CloseUp.sprite = hujung_Sprite.characterSprite[4];
+                break;
         }
     }
 

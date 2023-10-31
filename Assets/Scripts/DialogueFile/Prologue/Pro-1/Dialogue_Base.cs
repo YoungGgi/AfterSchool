@@ -109,15 +109,7 @@ public enum H_Anim                // ȿ�� �ִϸ��̼� ���
     H_Appear,
     H_DisAppear,
     Start,
-    Bangbang,
-    Center_Left,
-    Center_Right,
-    Left_Center,
-    Right_Center,
-    Left_Out,
-    Right_Out,
-    Out_Left,
-    Out_Right
+    Bangbang
 }
 
 public enum H_Direction           // ȿ�� ���� ��ġ ���
@@ -133,7 +125,8 @@ public enum H_Sprite              // ȿ�� ǥ�� ���
     Idle,
     Angry,
     Smile,
-    Surprise
+    Surprise,
+    Think
 }
 
 #endregion

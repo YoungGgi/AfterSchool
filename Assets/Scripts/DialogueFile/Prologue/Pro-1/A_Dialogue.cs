@@ -500,6 +500,9 @@ public class A_Dialogue : MonoBehaviour
             case H_Sprite.Surprise:
                 nameChanges.HujungSpriteDirection(3);
                 break;
+            case H_Sprite.Think:
+                nameChanges.HujungSpriteDirection(4);
+                break;
         }
         #endregion
 
