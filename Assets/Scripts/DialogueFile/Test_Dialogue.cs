@@ -110,7 +110,7 @@ public class Test_Dialogue : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Return))
             {
                 StartCoroutine(NextDelay());
-                a_Dialogue.DequeueDialogue();
+                Next();
             }
 
             // 대화 전용 오토 상태이고 대화 인덱스 모두 출력시 다음 인덱스 출력

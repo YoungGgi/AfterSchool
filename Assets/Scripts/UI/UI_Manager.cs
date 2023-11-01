@@ -35,7 +35,7 @@ public class UI_Manager : MonoBehaviour
 
     private void Update()
     {
-        NowScene = SceneManager.GetActiveScene(); // �� �����Ӹ��� ���� �� Ȯ���ϱ�
+        NowScene = SceneManager.GetActiveScene(); 
         SceneNum = NowScene.buildIndex;
     }
 
@@ -85,6 +85,10 @@ public class UI_Manager : MonoBehaviour
         SceneManager.LoadScene(77);
     }
 
+    public void StartEndingCredit()
+    {
+        SceneManager.LoadScene(78);
+    }
     
     public void GameExit()
     {
