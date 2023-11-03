@@ -142,7 +142,7 @@ public class CharacterNameMgn : MonoBehaviour
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;
             case 19:
-                dialogue.nameTxt.text = "기지개를 펴는 곰탱이";
+                dialogue.nameTxt.text = "기지개를 펴는 곰";
                 NameColor_Color();
                 hujungImg.color = youngjinImg.color = jisuImg.color = minSeckImg.color = Color.gray;
                 break;

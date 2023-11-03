@@ -47,19 +47,24 @@ public class MainScene : MonoBehaviour
         
         BGM_Mgn.instance.BGM_Change(mainBGM_Index);
 
-        if(SaveLoadMgn.instance.loadNum == 13)
+        if(PlayerPrefs.HasKey("PrologueClear") && SaveLoadMgn.instance.loadNum == 13)
         {
             SaveLoadMgn.instance.SaveData(14);
         }
 
-        if (SaveLoadMgn.instance.loadNum == 39)
+        if (PlayerPrefs.HasKey("Chapter1Clear") && SaveLoadMgn.instance.loadNum == 39)
         {
             SaveLoadMgn.instance.SaveData(40);
         }
 
-        if (SaveLoadMgn.instance.loadNum == 52)
+        if (PlayerPrefs.HasKey("Chapter2Clear") && SaveLoadMgn.instance.loadNum == 52)
         {
             SaveLoadMgn.instance.SaveData(53);
+        }
+
+        if (PlayerPrefs.HasKey("Chapter3Clear") && SaveLoadMgn.instance.loadNum == 76)
+        {
+            SaveLoadMgn.instance.SaveData(77);
         }
 
 
@@ -84,6 +89,10 @@ public class MainScene : MonoBehaviour
         else if(indexnum >= 53 && indexnum <= 76)
         {
             chapterTitle.text = chapter3Title;
+        }
+        else if(indexnum == 77)
+        {
+            chapterTitle.text = epilogueTitle;
         }
 
         
