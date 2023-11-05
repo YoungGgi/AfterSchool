@@ -130,5 +130,7 @@ public class Test_Dialogue : MonoBehaviour
     // 화면 클릭시 다음 대화 인덱스 출력(DeQueue)
     public void Next() => a_Dialogue.DequeueDialogue();
 
+    public void DialgoueBtnActivate() => nextBtn.enabled = true;
+
 
 }

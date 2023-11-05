@@ -34,7 +34,7 @@ public class ChapterPopUp : MonoBehaviour
             chapter3OpenPopup.gameObject.SetActive(true);
         }
 
-        if(ChapterCheck.instance.epilogue == 1 && !PlayerPrefs.HasKey("EpilogueCheck"))
+        if(ChapterCheck.instance.chapter3 == 1 && !PlayerPrefs.HasKey("Chapter3Check"))
         {
             epilogueOpenPopup.gameObject.SetActive(true);
         }

@@ -62,11 +62,12 @@ public class MainScene : MonoBehaviour
             SaveLoadMgn.instance.SaveData(53);
         }
 
+        /*
         if (PlayerPrefs.HasKey("Chapter3Clear") && SaveLoadMgn.instance.loadNum == 76)
         {
             SaveLoadMgn.instance.SaveData(77);
         }
-
+        */
 
     }
 
