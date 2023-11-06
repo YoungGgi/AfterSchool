@@ -868,6 +868,11 @@ public class A_Dialogue : MonoBehaviour
         {
             SFX_Mgn.instance.SFX_Emotion_Play(info.SFX_Index);
         }
+
+        if(info.isSFX_Off)
+        {
+            SFX_Mgn.instance.SFX_Stop();
+        }
     }
 
     // 텍스트 타이핑 코루틴

@@ -48,7 +48,8 @@ public class Dialogue_Base : ScriptableObject
         public bool isDirectionSFX;                  
         public bool isClueOnSfx;                     
         public bool isEmotionSFx;                    
-        public int SFX_Index;                        
+        public int SFX_Index;
+        public bool isSFX_Off;                        
 
         [Header("암전 연출")]
         public Direction direction;                  

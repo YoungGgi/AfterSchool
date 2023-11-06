@@ -34,26 +34,27 @@ public class SFX_Mgn : MonoBehaviour
         SFX_Source.PlayOneShot(btnClick_Clip);
     }
 
-    // �ܺο��� ����� ȿ���� index ȣ�� �� SFXs ����Ʈ�� index ���� AudioClip ���� ��ü �� ���
     public void SFX_Direction_Play(int index)
     {
-        SFX_Source.Stop();
         sfx_Clip = SFXs.direction_sfx_Clips[index];
         SFX_Source.PlayOneShot(sfx_Clip);
     }
 
     public void SFX_Clue_Play(int index)
     {
-        SFX_Source.Stop();
         sfx_Clip = SFXs.clue_sfx_Clips[index];
         SFX_Source.PlayOneShot(sfx_Clip);
     }
 
     public void SFX_Emotion_Play(int index)
     {
-        SFX_Source.Stop();
         sfx_Clip = SFXs.emotion_sfx_Clips[index];
         SFX_Source.PlayOneShot(sfx_Clip);
+    }
+
+    public void SFX_Stop()
+    {
+        SFX_Source.Stop();
     }
 
 }
