@@ -56,9 +56,9 @@ public class ChapterPopUp : MonoBehaviour
         ChapterCheck.instance.Chapter2Check();
     }
 
-    public void CheckEpilogue()
+    public void CheckChapter3()
     {
-        ChapterCheck.instance.EpilogueCheck();
+        ChapterCheck.instance.Chapter3Check();
     }
 
 }
