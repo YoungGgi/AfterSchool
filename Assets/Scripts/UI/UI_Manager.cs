@@ -17,6 +17,8 @@ public class UI_Manager : MonoBehaviour
     private GameObject gameOptionObj;                  // ���� �κ� ��� ���(�ӽ�)
     [SerializeField]
     private GameObject chapterSelectObj;               // é�� ���� ���
+    [SerializeField]
+    private GameObject mainFadeMgn;
 
     [Header("추리 게임")]
     [SerializeField]
@@ -53,6 +55,7 @@ public class UI_Manager : MonoBehaviour
 
     IEnumerator Scene1Loading()
     {
+        mainFadeMgn.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(1);
     }

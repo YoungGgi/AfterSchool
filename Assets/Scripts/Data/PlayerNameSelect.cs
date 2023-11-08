@@ -36,19 +36,16 @@ public class PlayerNameSelect : MonoBehaviour
         {
             button.SetActive(true);
         }
+
+        if(nameTexts == " " || nameTexts == "  " || nameTexts == "   " || nameTexts == "    " || nameTexts == "     ")
+        {
+            button.SetActive(true);
+        }
     }
 
     public void TextOn()
     {
         
-        /*
-        if(nameText.text == "")
-        {
-            Debug.Log("NoName");
-            return;
-        }
-        */
-
         string name = nameTexts;
         PlayerName.instance.SaveName(name);
         nameSelectPopUP.gameObject.SetActive(false);
