@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayerNameSelect : MonoBehaviour
@@ -13,26 +14,46 @@ public class PlayerNameSelect : MonoBehaviour
 
     public GameObject button;
 
-    
-    private void Update()
+    public TMP_InputField inputField;
+
+    string nameTexts = null;
+
+    void Awake()
     {
-        
+        inputField = GetComponent<TMP_InputField>();
+        nameTexts = inputField.text;
+    }
+    
+    void Update()
+    {
+        nameTexts = inputField.text;
+
+        if (nameTexts != "")
+        {
+            button.SetActive(false);
+        }
+        else
+        {
+            button.SetActive(true);
+        }
     }
 
     public void TextOn()
     {
-        string name = nameText.text;
-
-        if(name == "")
+        
+        /*
+        if(nameText.text == "")
         {
             Debug.Log("NoName");
+            return;
         }
-        else
-        {
-            PlayerName.instance.SaveName(name);
-            nameSelectPopUP.gameObject.SetActive(false);
-            ui.GameStart();
-        }
+        */
+
+        string name = nameTexts;
+        PlayerName.instance.SaveName(name);
+        nameSelectPopUP.gameObject.SetActive(false);
+        ui.GameStart();
+        
 
     }
 
