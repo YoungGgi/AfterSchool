@@ -223,7 +223,7 @@ public class A_Dialogue : MonoBehaviour
 
         #region UI_Off_Direction
         // StroyDataMgn의 isAutoStroy 상태일경우 대화 UI 비활성화
-        StroyDataMgn.instance.IsAutoStory = info.UI_Off;
+        StroyDataMgn.instance.IsAutoStory = info.UI_Off_Story;
         #endregion
 
         #region ChapterClose
@@ -701,13 +701,19 @@ public class A_Dialogue : MonoBehaviour
             dialogueSetting.gameObject.SetActive(false);
             isMainMenu_RedDot = true;
         }
+        else if (info.UI_Off_Story)
+        {
+            dialoguePanelText.gameObject.SetActive(false);
+            dialogueSetting.gameObject.SetActive(false);
+            isMainMenu_RedDot = true;
+        }
         else
         {
             dialoguePanelText.gameObject.SetActive(true);
             dialogueSetting.gameObject.SetActive(true);
             isMainMenu_RedDot = false;
         }
-
+        
         if (info.Title_On)
         {
             titleObj.gameObject.SetActive(true);
@@ -884,12 +890,13 @@ public class A_Dialogue : MonoBehaviour
         // 현재 인덱스의 대화 텍스트 출력 기능
         foreach(char c in info.myText.ToCharArray())
         {
-            // 단서 획득 시를 제외한 모든 구간에서 타이핑 효과음 출력
+            /* 단서 획득 시를 제외한 모든 구간에서 타이핑 효과음 출력
             if (!info.UI_Off)
             {
                TextTyping_Player.instance.Typing_Play();    
             }
-            
+            */
+
             // 2배속 설정 시 텍스트 출력 속도 변화
             if(StroyDataMgn.instance.IsTwoSpeed)
             {

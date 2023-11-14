@@ -28,7 +28,7 @@ public class PlayerNameSelect : MonoBehaviour
     {
         nameTexts = inputField.text;
 
-        if (nameTexts != "")
+        if (nameTexts.Length > 0)
         {
             button.SetActive(false);
         }

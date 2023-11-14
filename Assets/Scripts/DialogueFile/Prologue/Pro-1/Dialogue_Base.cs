@@ -68,7 +68,8 @@ public class Dialogue_Base : ScriptableObject
         public bool isClueReplace;
 
         [Header("UI 창 끄기")]
-        public bool UI_Off;                           
+        public bool UI_Off;         
+        public bool UI_Off_Story;                  
 
         [Header("배경 흔들기 연출")]
         public BackGroundDirections back;             
