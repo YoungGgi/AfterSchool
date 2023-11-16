@@ -42,6 +42,8 @@ public class MiniGameMgn : MonoBehaviour
     public GameObject startBGM_Obj;           // BGM 시작 오브젝트
     public GameObject mainMenuGroup;          // 추리 게임 메인 메뉴
 
+    public GameObject effectGroup;
+
     // 로딩 논리 변수 캡슐화
     public bool IsLoading { get => isLoading; set => isLoading = value; }
 
@@ -51,6 +53,7 @@ public class MiniGameMgn : MonoBehaviour
         miniGameGroup.gameObject.SetActive(false);
         isLoading = true;
         StartCoroutine(LoadingAnim());
+        effectGroup.SetActive(false);
 
         // 현재 씬 넘버를 자동저장(SaveLoadMgn)에 저장
         NowScene = SceneManager.GetActiveScene();
@@ -114,12 +117,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0] && isClear[1])
         {
-            Time.timeScale = 0;
+            effectGroup.SetActive(true);
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
-            Time.timeScale = 0;
+            effectGroup.SetActive(false);
             failGroup.gameObject.SetActive(true);
         }
     }
@@ -128,12 +131,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0])
         {
-            Time.timeScale = 0;
+            effectGroup.SetActive(true);
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
-            Time.timeScale = 0;
+            effectGroup.SetActive(false);
             failGroup.gameObject.SetActive(true);
         }
     }
@@ -142,12 +145,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0] && isClear[1] && isClear[2])
         {
-            Time.timeScale = 0;
+            effectGroup.SetActive(true);
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
-            Time.timeScale = 0;
+            effectGroup.SetActive(false);
             failGroup.gameObject.SetActive(true);
         }
     }
