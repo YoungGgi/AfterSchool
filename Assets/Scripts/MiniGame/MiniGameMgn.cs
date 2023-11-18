@@ -53,7 +53,7 @@ public class MiniGameMgn : MonoBehaviour
         miniGameGroup.gameObject.SetActive(false);
         isLoading = true;
         StartCoroutine(LoadingAnim());
-        effectGroup.SetActive(false);
+        //effectGroup.SetActive(false);
 
         // 현재 씬 넘버를 자동저장(SaveLoadMgn)에 저장
         NowScene = SceneManager.GetActiveScene();
@@ -117,12 +117,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0] && isClear[1])
         {
-            effectGroup.SetActive(true);
+            //effectGroup.SetActive(true);
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
-            effectGroup.SetActive(false);
+            //effectGroup.SetActive(false);
             failGroup.gameObject.SetActive(true);
         }
     }
@@ -131,12 +131,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0])
         {
-            effectGroup.SetActive(true);
+            //effectGroup.SetActive(true);
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
-            effectGroup.SetActive(false);
+            //effectGroup.SetActive(false);
             failGroup.gameObject.SetActive(true);
         }
     }
@@ -145,12 +145,12 @@ public class MiniGameMgn : MonoBehaviour
     {
         if (isClear[0] && isClear[1] && isClear[2])
         {
-            effectGroup.SetActive(true);
+            //effectGroup.SetActive(true);
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
-            effectGroup.SetActive(false);
+            //effectGroup.SetActive(false);
             failGroup.gameObject.SetActive(true);
         }
     }
