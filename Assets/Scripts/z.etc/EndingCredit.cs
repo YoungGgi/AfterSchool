@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Timeline;
 
 public class EndingCredit : MonoBehaviour
 {
@@ -13,7 +11,6 @@ public class EndingCredit : MonoBehaviour
     [SerializeField]
     private GameObject gameLogo;
 
-    public TimelineAsset timelineAsset;
 
     private void Update() 
     {
@@ -27,7 +24,7 @@ public class EndingCredit : MonoBehaviour
     {
         yield return new WaitForSeconds(45);
 
-        Debug.Log("End");
+        //Debug.Log("End");
 
         //ChapterCheck.instance.EpilogueClear(1);
         //SceneManager.LoadScene(0);
