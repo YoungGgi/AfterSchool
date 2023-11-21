@@ -65,37 +65,37 @@ public class UI_Manager : MonoBehaviour
 
     public void StartPrologue()
     {
+        BGM_Mgn.instance.BGM_Stop();
         SceneManager.LoadScene(1);
     }
 
     
     public void StartChapter1()
     {
+        BGM_Mgn.instance.BGM_Stop();
         SceneManager.LoadScene(14);
     }
 
     
     public void StartChapter2()
     {
+        BGM_Mgn.instance.BGM_Stop();
         SceneManager.LoadScene(40);
     }
 
     
     public void StartChapter3()
     {
+        BGM_Mgn.instance.BGM_Stop();
         SceneManager.LoadScene(53);
     }
 
     public void StartEpilogue()
     {
+        BGM_Mgn.instance.BGM_Stop();
         SceneManager.LoadScene(77);
     }
 
-    public void StartEndingCredit()
-    {
-        SceneManager.LoadScene(78);
-    }
-    
     public void GameExit()
     {
         Application.Quit();
@@ -155,6 +155,7 @@ public class UI_Manager : MonoBehaviour
     #region SceneLoading
     public void LoadScene()
     {
+        BGM_Mgn.instance.BGM_Stop();
         StartCoroutine(SceneLoading());
     }
 
@@ -174,14 +175,17 @@ public class UI_Manager : MonoBehaviour
             case 36:
             case 37:
             case 38:
+            case 71:
+            case 72:
+            case 74:
+                BGM_Mgn.instance.BGM_Change(6);
+                break;
             case 62:
             case 63:
             case 64:
             case 65:
             case 66:
-            case 71:
-            case 72:
-                BGM_Mgn.instance.BGM_Change(6);
+                BGM_Mgn.instance.BGM_Change(5);
                 break;
         }
 
