@@ -24,9 +24,15 @@ public class EndingCredit : MonoBehaviour
     {
         yield return new WaitForSeconds(43);
 
-        
-        ChapterCheck.instance.EpilogueClear(1);
-        SceneManager.LoadScene(0);
+        if (!PlayerPrefs.HasKey("EpilogueClear"))
+        {
+            ChapterCheck.instance.EpilogueClear(1);
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
 
