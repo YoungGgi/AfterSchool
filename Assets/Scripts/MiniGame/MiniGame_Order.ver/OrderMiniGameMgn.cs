@@ -80,12 +80,10 @@ public class OrderMiniGameMgn : MonoBehaviour
     {
         if (isClear[0] == 1 && isClear[1] == 2 && isClear[2] == 3 && isClear[3] == 4)
         {
-            Time.timeScale = 0;
             clearGroup.gameObject.SetActive(true);
         }
         else
         {
-            Time.timeScale = 0;
             failGroup.gameObject.SetActive(true);
         }
     }

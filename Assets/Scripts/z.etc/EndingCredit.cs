@@ -22,12 +22,11 @@ public class EndingCredit : MonoBehaviour
 
     IEnumerator TimeDelay()
     {
-        yield return new WaitForSeconds(45);
+        yield return new WaitForSeconds(43);
 
-        //Debug.Log("End");
-
-        //ChapterCheck.instance.EpilogueClear(1);
-        //SceneManager.LoadScene(0);
+        
+        ChapterCheck.instance.EpilogueClear(1);
+        SceneManager.LoadScene(0);
     }
 
 
